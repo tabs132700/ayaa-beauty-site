@@ -1,0 +1,474 @@
+- main [ref=f5e2]:
+  - navigation [ref=f5e3]:
+    - link "Ayaa Beauty & Skin آيا بيوتي آند سكين" [ref=f5e4] [cursor=pointer]:
+      - /url: "#top"
+      - img "Ayaa Beauty & Skin" [ref=f5e5]
+      - generic [ref=f5e6]: آيا بيوتي آند سكين
+    - generic [ref=f5e7]:
+      - link "العلاجات" [ref=f5e8] [cursor=pointer]:
+        - /url: "#behandelingen"
+      - link "الأجهزة" [ref=f5e9] [cursor=pointer]:
+        - /url: "#apparatuur"
+      - link "طريقة العمل" [ref=f5e10] [cursor=pointer]:
+        - /url: "#werkwijze"
+      - link "الاستوديو" [ref=f5e11] [cursor=pointer]:
+        - /url: "#studio"
+      - link "أسئلة شائعة" [ref=f5e12] [cursor=pointer]:
+        - /url: "#vragen"
+    - group "Taal / اللغة" [ref=f5e13]:
+      - button "NL" [ref=f5e14] [cursor=pointer]
+      - button "ع" [pressed] [ref=f5e15] [cursor=pointer]
+    - link "احجزي موعدك" [ref=f5e16] [cursor=pointer]:
+      - /url: "#afspraak"
+  - generic [ref=f5e17]:
+    - generic [ref=f5e20]:
+      - paragraph [ref=f5e21]: أخصائية عناية بالبشرة · روتردام
+      - heading "بشرة تبدو صحية، مو مفلترة." [level=1] [ref=f5e22]
+      - paragraph [ref=f5e23]: تحليل بشرة وشعر ثلاثي الأبعاد بالذكاء الاصطناعي، هيدروفيشل، ميكرونيدلينغ وRF مع الإكسوزومات، إزالة شعر بالليزر، وتوريد الشفايف — بهدوء وعلى راحتك، وبعد استشارة صادقة. مع سمر تيناوي.
+      - generic [ref=f5e24]:
+        - link "احجزي موعدك" [ref=f5e25] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "شوفي العلاجات" [ref=f5e28] [cursor=pointer]:
+          - /url: "#behandelingen"
+    - generic [ref=f5e29]: مرّري
+  - generic [ref=f5e33]:
+    - generic [ref=f5e34]: تحليل ثلاثي الأبعاد
+    - generic [ref=f5e35]: هيدروفيشل
+    - generic [ref=f5e36]: ميكرونيدلينغ
+    - generic [ref=f5e37]: RF ميكرونيدلينغ
+    - generic [ref=f5e38]: إكسوزومات
+    - generic [ref=f5e39]: تفتيح البشرة
+    - generic [ref=f5e40]: ليزر
+    - generic [ref=f5e41]: توريد الشفايف
+    - generic [ref=f5e42]: روتردام
+    - generic [ref=f5e43]: تحليل ثلاثي الأبعاد
+    - generic [ref=f5e44]: هيدروفيشل
+    - generic [ref=f5e45]: ميكرونيدلينغ
+    - generic [ref=f5e46]: RF ميكرونيدلينغ
+    - generic [ref=f5e47]: إكسوزومات
+    - generic [ref=f5e48]: تفتيح البشرة
+    - generic [ref=f5e49]: ليزر
+    - generic [ref=f5e50]: توريد الشفايف
+    - generic [ref=f5e51]: روتردام
+  - generic [ref=f5e53]:
+    - paragraph [ref=f5e54]:
+      - generic [ref=f5e55]: مين رح تقابلي
+    - paragraph [ref=f5e56]:
+      - generic [ref=f5e57]: أنا
+      - generic [ref=f5e58]: ما
+      - generic [ref=f5e59]: بعالج
+      - generic [ref=f5e60]: موضة.
+      - generic [ref=f5e61]: أنا
+      - generic [ref=f5e62]: بعالج
+      - generic [ref=f5e63]: بشرة
+      - generic [ref=f5e64]: —
+      - generic [ref=f5e65]: بخطة
+      - generic [ref=f5e66]: تناسب
+      - generic [ref=f5e67]: وجهك
+      - generic [ref=f5e68]: ونوع
+      - generic [ref=f5e69]: بشرتك
+      - generic [ref=f5e70]: وإيقاعك
+      - generic [ref=f5e71]: إنتِ.
+      - generic [ref=f5e72]: أول
+      - generic [ref=f5e73]: شي
+      - generic [ref=f5e74]: منشوف،
+      - generic [ref=f5e75]: وبعدين
+      - generic [ref=f5e76]: منقرّر.
+    - generic [ref=f5e77]:
+      - paragraph [ref=f5e78]: "سمر تيناوي أخصائية عناية بالبشرة في روتردام. كل جلسة بتبدأ بتحليل للبشرة: شو القصة، شو فينا نعمل اليوم، وشو بدّو وقت. بدون باقات ما إلك حاجة فيها. منحكي هولندي وعربي وإنجليزي."
+      - paragraph [ref=f5e79]:
+        - text: سمر تيناوي
+        - generic [ref=f5e80]: آيا بيوتي آند سكين · روتردام
+  - generic [ref=f5e82]:
+    - generic [ref=f5e84]:
+      - heading "ثمان طرق لبشرة هادئة." [level=2] [ref=f5e85]
+      - paragraph [ref=f5e86]: أي طريق بيناسبك بيحدده السكان ثلاثي الأبعاد لحاله تقريباً. غالباً بتكون خلطة بينهن — وأحياناً الأقل بيكون كافي.
+      - paragraph [ref=f5e87]
+    - generic [ref=f5e88]:
+      - article [ref=f5e89]:
+        - generic [ref=f5e90]:
+          - heading [level=3] [ref=f5e91]:
+            - text: تحليل
+            - emphasis [ref=f5e92]: بشرة وشعر
+          - paragraph [ref=f5e93]: "سكان ثلاثي الأبعاد لبشرتك ولفروة راسك كمان، بيقراه الذكاء الاصطناعي: التصبغ، المسام، نسبة الترطيب، الاحمرار والخطوط الرفيعة — وكمان كثافة الشعر ونموّه. بتشوفي شو عم يصير تحت السطح، وبعد الكورس منعيد القياس."
+          - generic [ref=f5e94]:
+            - generic [ref=f5e95]: سكان وتقرير
+            - generic [ref=f5e96]: بشرة وشعر
+            - generic [ref=f5e97]: بداية كل كورس
+            - button "احجزي هاي" [ref=f5e98] [cursor=pointer]
+      - article [ref=f5e100]:
+        - generic [ref=f5e101]:
+          - heading [level=3] [ref=f5e102]:
+            - text: هيدرو
+            - emphasis [ref=f5e103]: فيشل
+          - paragraph [ref=f5e104]: "تقشير مائي بجهاز هيدرا ديرمابريژن متعدد الوظائف: الأوساخ والدهون بتنشفط من المسام، وبنفس الوقت البشرة بتاخد رطوبة ومضادات أكسدة. تنظيف وتقشير وترطيب بجلسة وحدة — النتيجة مباشرة وبدون فترة نقاهة."
+          - generic [ref=f5e105]:
+            - generic [ref=f5e106]: ٦٠ دقيقة
+            - generic [ref=f5e107]: بدون نقاهة
+            - generic [ref=f5e108]: تقشير مائي
+            - button "احجزي هاي" [ref=f5e109] [cursor=pointer]
+      - article [ref=f5e111]:
+        - generic [ref=f5e112]:
+          - heading [level=3] [ref=f5e113]:
+            - text: ميكرو
+            - emphasis [ref=f5e114]: نيدلينغ
+          - paragraph [ref=f5e115]: قنوات دقيقة بتحفّز الكولاجين الطبيعي عندك، مع سيروم مختار حسب حالتك. لآثار حب الشباب والمسام والخطوط الرفيعة.
+          - generic [ref=f5e116]:
+            - generic [ref=f5e117]: كورس ٣–٤ جلسات
+            - generic [ref=f5e118]: سيروم مخصص
+            - generic [ref=f5e119]: آثار ومسام
+            - button "احجزي هاي" [ref=f5e120] [cursor=pointer]
+      - article [ref=f5e122]:
+        - generic [ref=f5e123]:
+          - heading [level=3] [ref=f5e124]:
+            - text: ميكرونيدلينغ
+            - emphasis [ref=f5e125]: RF
+          - paragraph [ref=f5e126]: "ميكرونيدلينغ مع موجات راديو: الإبر بتوصّل حرارة للطبقة العميقة. هنيك الكولاجين الموجود بينكمش والبشرة بتصنّع كولاجين جديد. لشدّ خط الفك، الترهل، وآثار حب الشباب العميقة."
+          - generic [ref=f5e127]:
+            - generic [ref=f5e128]: كورس ٣ جلسات
+            - generic [ref=f5e129]: شدّ وتمتين
+            - generic [ref=f5e130]: خط الفك والآثار
+            - button "احجزي هاي" [ref=f5e131] [cursor=pointer]
+      - article [ref=f5e133]:
+        - generic [ref=f5e134]:
+          - heading [level=3] [ref=f5e135]:
+            - text: إكسوزومات و
+            - emphasis [ref=f5e136]: كولاجين
+          - paragraph [ref=f5e137]: مواد فعّالة بتسرّع تعافي البشرة بعد النيدلينغ أو التقشير. شدّ أكتر، لون أوحد، واحمرار أقل مع الوقت.
+          - generic [ref=f5e138]:
+            - generic [ref=f5e139]: بعد الجلسة
+            - generic [ref=f5e140]: شدّ
+            - generic [ref=f5e141]: تعافي
+            - button "احجزي هاي" [ref=f5e142] [cursor=pointer]
+      - article [ref=f5e144]:
+        - generic [ref=f5e145]:
+          - heading [level=3] [ref=f5e146]:
+            - text: تفتيح و
+            - emphasis [ref=f5e147]: توحيد اللون
+          - paragraph [ref=f5e148]: كورس موجّه للتصبغات والبقع والبشرة غير الموحّدة — للوجه أو الرقبة أو الجسم. منبنيه على مراحل، مع عناية بيتية بين الجلسات.
+          - generic [ref=f5e149]:
+            - generic [ref=f5e150]: كورس جلسات
+            - generic [ref=f5e151]: تصبغات
+            - generic [ref=f5e152]: رقبة وجسم
+            - button "احجزي هاي" [ref=f5e153] [cursor=pointer]
+      - article [ref=f5e155]:
+        - generic [ref=f5e156]:
+          - heading [level=3] [ref=f5e157]:
+            - text: إزالة الشعر
+            - emphasis [ref=f5e158]: بالليزر
+          - paragraph [ref=f5e159]: تخفيف دائم للشعر بليزر طبي — الوجه، الإبط، الساقين أو منطقة البيكيني. منقيس كثافة الشعر قبل بالسكان ثلاثي الأبعاد، هيك بتشوفي الفرق كل جلسة بالأرقام. ودائماً منبلّش بتجربة على منطقة صغيرة.
+          - generic [ref=f5e160]:
+            - generic [ref=f5e161]: كورس ٦–٨ جلسات
+            - generic [ref=f5e162]: وجه وجسم
+            - generic [ref=f5e163]: تجربة مسبقة
+            - button "احجزي هاي" [ref=f5e164] [cursor=pointer]
+      - article [ref=f5e166]:
+        - generic [ref=f5e167]:
+          - heading [level=3] [ref=f5e168]:
+            - text: توريد
+            - emphasis [ref=f5e169]: الشفايف
+          - paragraph [ref=f5e170]: تصبيغ ناعم بيرجّع لون الشفايف الطبيعي ويوضّح الحدود. طبيعي من قريب — بدون حدّ قاسي ولا لون صارخ.
+          - generic [ref=f5e171]:
+            - generic [ref=f5e172]: جلستين
+            - generic [ref=f5e173]: شبه دائم
+            - generic [ref=f5e174]: لون طبيعي
+            - button "احجزي هاي" [ref=f5e175] [cursor=pointer]
+  - generic [ref=f5e178]:
+    - generic [ref=f5e179]:
+      - heading "أربع أجهزة ورا الثمان علاجات." [level=2] [ref=f5e180]
+      - paragraph [ref=f5e182]: "ولا جهاز فيهن بيعمل كل شي. مشان هيك موجودين الأربعة: السكان بيحدد أي واحد بيشتغل، وبأي ترتيب."
+    - generic [ref=f5e183]:
+      - article [ref=f5e184]:
+        - heading "سكانر ثلاثي الأبعاد بالـ AI" [level=3] [ref=f5e185]
+        - paragraph [ref=f5e186]: "بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: التصبغ، المسام، الترطيب، الاحمرار، الخطوط الرفيعة — وكثافة الشعر على فروة الراس. هو اللي بيحدد الخطة وبيقيس النتيجة."
+        - paragraph [ref=f5e187]: بشرة وفروة راس · قياس قبل وبعد
+      - article [ref=f5e188]:
+        - heading "جهاز التقشير المائي" [level=3] [ref=f5e189]
+        - paragraph [ref=f5e190]: بيشفط الأوساخ والدهون من المسام وبنفس الوقت بيدخّل رطوبة ومضادات أكسدة. متعدد الوظائف، فالتنظيف والتقشير والترطيب بجلسة وحدة.
+        - paragraph [ref=f5e191]: ٦٠ دقيقة · بدون نقاهة
+      - article [ref=f5e192]:
+        - heading "ميكرونيدلينغ RF" [level=3] [ref=f5e193]
+        - paragraph [ref=f5e194]: كورس ٣ · شدّ وتمتين
+      - article [ref=f5e195]:
+        - heading "ليزر طبي" [level=3] [ref=f5e196]
+        - paragraph [ref=f5e197]: كورس ٦–٨ · تجربة مسبقة
+    - generic [ref=f5e198]:
+      - button [expanded] [ref=f5e199] [cursor=pointer]:
+        - generic [ref=f5e200]:
+          - heading "التصبغات" [level=4] [ref=f5e201]
+          - paragraph [ref=f5e202]: اللون غير الموحّد نادر يكون من سبب واحد. السكان بيفصل ضرر الشمس عن تصبغ الآثار عن الاحمرار، مشان الكورس يعالج الصح مو كل شي سوا.
+      - button [ref=f5e203] [cursor=pointer]:
+        - generic [ref=f5e204]:
+          - heading "الشفايف" [level=4] [ref=f5e205]
+          - paragraph [ref=f5e206]: التوريد بيرجّع اللون الطبيعي وبيوضّح الحدود. جلستين، لأن التانية بتصحّح اللي ما ثبّت من الأولى.
+      - button [ref=f5e207] [cursor=pointer]:
+        - generic [ref=f5e208]:
+          - heading "التعافي" [level=4] [ref=f5e209]
+          - paragraph [ref=f5e210]: "الإكسوزومات والكولاجين بيدخلوا بالوقت اللي البشرة فيه أكتر شي بتمتصّ: مباشرة بعد النيدلينغ أو التقشير. هيك بتقلّ أيام الاحمرار وبتثبت النتيجة."
+      - button [ref=f5e211] [cursor=pointer]:
+        - generic [ref=f5e212]:
+          - heading "الآثار والمسام" [level=4] [ref=f5e213]
+          - paragraph [ref=f5e214]: النيدلينغ بيعمل قنوات دقيقة بتحفّز الكولاجين عندك. ومع موجات الراديو الحرارة بتنزل أعمق، وهاد اللازم للآثار الغائرة.
+  - generic [ref=f5e215]:
+    - generic [ref=f5e217]:
+      - heading "من جوّا الاستوديو، مو من بنك صور." [level=2] [ref=f5e218]
+      - link "@ayaa_beauty.skin →" [ref=f5e219] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f5e220]: "@ayaa_beauty.skin"
+        - text: →
+    - generic [ref=f5e223]:
+      - figure "نيدلينغ · سيروم مخصص" [ref=f5e224]
+      - figure "الاستوديو" [ref=f5e226]
+      - figure "توريد الشفايف · النتيجة" [ref=f5e228]
+      - figure "تفتيح البشرة" [ref=f5e230]
+      - figure "التحضير" [ref=f5e232]
+      - figure "كولاجين" [ref=f5e234]
+      - figure "توريد الشفايف · الجلسة" [ref=f5e236]
+      - figure "إكسوزومات" [ref=f5e238]
+      - figure "بعد الجلسة" [ref=f5e240]
+    - paragraph [ref=f5e243]: مرّري لتتصفحي أفقياً
+  - generic [ref=f5e245]:
+    - generic [ref=f5e246]:
+      - heading "أربع خطوات، بدون مفاجآت." [level=2] [ref=f5e247]
+      - paragraph [ref=f5e248]: من أول رسالة لحدّ العناية بعد الجلسة، بتعرفي بالضبط شو رح يصير، شو التكلفة، وقدّيش بشرتك بدها وقت.
+    - generic [ref=f5e249]:
+      - article [ref=f5e250]:
+        - generic [ref=f5e251]: "01"
+        - generic [ref=f5e252]:
+          - heading "الاستشارة والتحليل ثلاثي الأبعاد" [level=3] [ref=f5e253]
+          - paragraph [ref=f5e254]: "منعمل سكان ثلاثي الأبعاد لبشرتك ومنقرا التحليل سوا: التصبغ، المسام، الترطيب، الاحمرار. ومن هون بتطلع خطة صادقة — حتى لو كانت إنو ما نعمل شي هلق."
+      - article [ref=f5e256]:
+        - generic [ref=f5e257]: "02"
+        - generic [ref=f5e258]:
+          - heading "التحضير" [level=3] [ref=f5e259]
+          - paragraph [ref=f5e260]: تعقيم كامل، وكل شي بيكون جاهز قبل ما تستلقي. المنتجات بتنختار لكل جلسة، مو محضّرة مسبقاً عالرفّ.
+      - article [ref=f5e262]:
+        - generic [ref=f5e263]: "03"
+        - generic [ref=f5e264]:
+          - heading "الجلسة" [level=3] [ref=f5e265]
+          - paragraph [ref=f5e266]: إيقاع هادي وشرح لكل خطوة. بتحسّي شو عم يصير، وفيكي بأي لحظة تقولي خفّفي.
+      - article [ref=f5e268]:
+        - generic [ref=f5e269]: "04"
+        - generic [ref=f5e270]:
+          - heading "العناية بعد الجلسة" [level=3] [ref=f5e271]
+          - paragraph [ref=f5e272]: بتروحي عالبيت مع تعليمات واضحة لأول كم يوم، وموعد متابعة بس إذا فعلاً بتحتاجيه.
+  - generic [ref=f5e277]:
+    - heading "صغير، هادئ، وإلك إنتِ طول ما إنتِ فيه." [level=2] [ref=f5e278]
+    - paragraph [ref=f5e279]: غرفة علاج وحدة، وزبونة وحدة بنفس الوقت. ما في صالة انتظار مليانة، ولا جلسة مستعجلة بعشرين دقيقة. بتدخلي، مناخد وقتنا، وبتطلعي ببشرة فيكي تحافظي عليها لحالك.
+    - generic [ref=f5e280]:
+      - generic [ref=f5e281]:
+        - generic [ref=f5e282]: روتردام
+        - text: الموقع بموعد مسبق
+      - generic [ref=f5e283]:
+        - generic [ref=f5e284]: "0"
+        - text: متابع على إنستغرام
+      - generic [ref=f5e285]:
+        - generic [ref=f5e286]: هولندي · عربي · إنجليزي
+        - text: اللغات
+      - generic [ref=f5e287]:
+        - generic [ref=f5e288]: واحد لواحد
+        - text: دائماً شخصي
+  - generic [ref=f5e290]:
+    - generic [ref=f5e291]:
+      - heading "اختاري العلاج ووقت فاضي." [level=2] [ref=f5e292]
+      - paragraph [ref=f5e293]: كل الأوقات تحت متاحة فعلاً. اختاري علاج، وقت بيناسبك، والتأكيد بيوصلك علطول.
+    - generic [ref=f5e294]:
+      - generic [ref=f5e295]:
+        - paragraph [ref=f5e296]:
+          - generic [ref=f5e297]: "1"
+          - generic [ref=f5e298]: اختاري العلاج
+        - group [ref=f5e299]:
+          - button "تحليل البشرة والشعر ثلاثي الأبعاد (AI)" [pressed] [ref=f5e300] [cursor=pointer]
+          - button "هيدروفيشل" [ref=f5e301] [cursor=pointer]
+          - button "ميكرونيدلينغ" [ref=f5e302] [cursor=pointer]
+          - button "ميكرونيدلينغ بالراديو فريكونسي (RF)" [ref=f5e303] [cursor=pointer]
+          - button "إكسوزومات وكولاجين" [ref=f5e304] [cursor=pointer]
+          - button "تفتيح وتوحيد لون البشرة" [ref=f5e305] [cursor=pointer]
+          - button "إزالة الشعر بالليزر" [ref=f5e306] [cursor=pointer]
+          - button "توريد الشفايف" [ref=f5e307] [cursor=pointer]
+      - generic [ref=f5e308]:
+        - paragraph [ref=f5e309]:
+          - generic [ref=f5e310]: "2"
+          - generic [ref=f5e311]: اختاري اليوم والوقت
+        - generic [ref=f5e312]:
+          - button "الاثنين ٢٨ سبتمبر" [pressed] [ref=f5e313] [cursor=pointer]:
+            - generic [ref=f5e314]: الاثنين
+            - generic [ref=f5e315]: ٢٨
+            - generic [ref=f5e316]: سبتمبر
+          - button "الثلاثاء ٢٩ سبتمبر" [ref=f5e317] [cursor=pointer]:
+            - generic [ref=f5e318]: الثلاثاء
+            - generic [ref=f5e319]: ٢٩
+            - generic [ref=f5e320]: سبتمبر
+          - button "الأربعاء ٣٠ سبتمبر" [ref=f5e321] [cursor=pointer]:
+            - generic [ref=f5e322]: الأربعاء
+            - generic [ref=f5e323]: ٣٠
+            - generic [ref=f5e324]: سبتمبر
+          - button "الخميس ١ أكتوبر" [ref=f5e325] [cursor=pointer]:
+            - generic [ref=f5e326]: الخميس
+            - generic [ref=f5e327]: ١
+            - generic [ref=f5e328]: أكتوبر
+          - button "الجمعة ٢ أكتوبر" [ref=f5e329] [cursor=pointer]:
+            - generic [ref=f5e330]: الجمعة
+            - generic [ref=f5e331]: ٢
+            - generic [ref=f5e332]: أكتوبر
+          - button "السبت ٣ أكتوبر" [ref=f5e333] [cursor=pointer]:
+            - generic [ref=f5e334]: السبت
+            - generic [ref=f5e335]: ٣
+            - generic [ref=f5e336]: أكتوبر
+          - button "الأحد ٤ أكتوبر" [disabled] [ref=f5e337]:
+            - generic [ref=f5e338]: الأحد
+            - generic [ref=f5e339]: ٤
+            - generic [ref=f5e340]: أكتوبر
+          - button "الاثنين ٥ أكتوبر" [ref=f5e341] [cursor=pointer]:
+            - generic [ref=f5e342]: الاثنين
+            - generic [ref=f5e343]: ٥
+            - generic [ref=f5e344]: أكتوبر
+          - button "الثلاثاء ٦ أكتوبر" [ref=f5e345] [cursor=pointer]:
+            - generic [ref=f5e346]: الثلاثاء
+            - generic [ref=f5e347]: ٦
+            - generic [ref=f5e348]: أكتوبر
+          - button "الأربعاء ٧ أكتوبر" [ref=f5e349] [cursor=pointer]:
+            - generic [ref=f5e350]: الأربعاء
+            - generic [ref=f5e351]: ٧
+            - generic [ref=f5e352]: أكتوبر
+          - button "الخميس ٨ أكتوبر" [ref=f5e353] [cursor=pointer]:
+            - generic [ref=f5e354]: الخميس
+            - generic [ref=f5e355]: ٨
+            - generic [ref=f5e356]: أكتوبر
+          - button "الجمعة ٩ أكتوبر" [ref=f5e357] [cursor=pointer]:
+            - generic [ref=f5e358]: الجمعة
+            - generic [ref=f5e359]: ٩
+            - generic [ref=f5e360]: أكتوبر
+          - button "السبت ١٠ أكتوبر" [ref=f5e361] [cursor=pointer]:
+            - generic [ref=f5e362]: السبت
+            - generic [ref=f5e363]: ١٠
+            - generic [ref=f5e364]: أكتوبر
+          - button "الأحد ١١ أكتوبر" [disabled] [ref=f5e365]:
+            - generic [ref=f5e366]: الأحد
+            - generic [ref=f5e367]: ١١
+            - generic [ref=f5e368]: أكتوبر
+          - button "الاثنين ١٢ أكتوبر" [ref=f5e369] [cursor=pointer]:
+            - generic [ref=f5e370]: الاثنين
+            - generic [ref=f5e371]: ١٢
+            - generic [ref=f5e372]: أكتوبر
+          - button "الثلاثاء ١٣ أكتوبر" [ref=f5e373] [cursor=pointer]:
+            - generic [ref=f5e374]: الثلاثاء
+            - generic [ref=f5e375]: ١٣
+            - generic [ref=f5e376]: أكتوبر
+          - button "الأربعاء ١٤ أكتوبر" [ref=f5e377] [cursor=pointer]:
+            - generic [ref=f5e378]: الأربعاء
+            - generic [ref=f5e379]: ١٤
+            - generic [ref=f5e380]: أكتوبر
+          - button "الخميس ١٥ أكتوبر" [ref=f5e381] [cursor=pointer]:
+            - generic [ref=f5e382]: الخميس
+            - generic [ref=f5e383]: ١٥
+            - generic [ref=f5e384]: أكتوبر
+          - button "الجمعة ١٦ أكتوبر" [ref=f5e385] [cursor=pointer]:
+            - generic [ref=f5e386]: الجمعة
+            - generic [ref=f5e387]: ١٦
+            - generic [ref=f5e388]: أكتوبر
+          - button "السبت ١٧ أكتوبر" [ref=f5e389] [cursor=pointer]:
+            - generic [ref=f5e390]: السبت
+            - generic [ref=f5e391]: ١٧
+            - generic [ref=f5e392]: أكتوبر
+          - button "الأحد ١٨ أكتوبر" [disabled] [ref=f5e393]:
+            - generic [ref=f5e394]: الأحد
+            - generic [ref=f5e395]: ١٨
+            - generic [ref=f5e396]: أكتوبر
+        - group [ref=f5e397]:
+          - button "12:30" [ref=f5e398] [cursor=pointer]
+          - button "12:45" [ref=f5e399] [cursor=pointer]
+          - button "13:00" [ref=f5e400] [cursor=pointer]
+          - button "13:15" [ref=f5e401] [cursor=pointer]
+          - button "13:30" [ref=f5e402] [cursor=pointer]
+          - button "13:45" [ref=f5e403] [cursor=pointer]
+          - button "14:00" [ref=f5e404] [cursor=pointer]
+          - button "14:15" [ref=f5e405] [cursor=pointer]
+          - button "14:30" [ref=f5e406] [cursor=pointer]
+          - button "14:45" [ref=f5e407] [cursor=pointer]
+          - button "15:00" [ref=f5e408] [cursor=pointer]
+          - button "15:15" [ref=f5e409] [cursor=pointer]
+          - button "15:30" [ref=f5e410] [cursor=pointer]
+          - button "15:45" [ref=f5e411] [cursor=pointer]
+          - button "16:00" [ref=f5e412] [cursor=pointer]
+          - button "16:15" [ref=f5e413] [cursor=pointer]
+          - button "16:30" [ref=f5e414] [cursor=pointer]
+          - button "16:45" [ref=f5e415] [cursor=pointer]
+          - button "17:00" [ref=f5e416] [cursor=pointer]
+          - button "17:15" [ref=f5e417] [cursor=pointer]
+      - generic [ref=f5e418]:
+        - paragraph [ref=f5e419]:
+          - generic [ref=f5e420]: "3"
+          - generic [ref=f5e421]: معلوماتك
+        - generic [ref=f5e422]:
+          - generic [ref=f5e423]:
+            - generic [ref=f5e424]: الاسم
+            - textbox "الاسم" [ref=f5e425]
+          - generic [ref=f5e426]:
+            - generic [ref=f5e427]: الإيميل
+            - textbox "الإيميل" [ref=f5e428]
+          - generic [ref=f5e429]:
+            - generic [ref=f5e430]: رقم الهاتف (اختياري)
+            - textbox "رقم الهاتف (اختياري)" [ref=f5e431]
+          - generic [ref=f5e432]:
+            - generic [ref=f5e433]: شو بدك تعالجي؟ (اختياري)
+            - textbox "شو بدك تعالجي؟ (اختياري)" [ref=f5e434]:
+              - /placeholder: "مثلاً: تصبغات على خدودي من سنتين."
+          - generic [ref=f5e436]:
+            - text: Website
+            - textbox [ref=f5e437]
+          - button "تأكيد الموعد" [disabled] [ref=f5e439]
+      - paragraph [ref=f5e442]: "الأوقات فوق جاية مباشرة من أجندة الاستوديو: اللي بتشوفيه متاح فعلاً. أول ما تأكّدي بيصير الوقت إلك وبيوصلك إيميل علطول."
+  - generic [ref=f5e444]:
+    - heading "أسئلة بتتكرر كتير." [level=2] [ref=f5e445]
+    - generic [ref=f5e446]:
+      - generic [ref=f5e447]:
+        - button "كيف بطلب موعد؟" [ref=f5e448] [cursor=pointer]
+        - generic: اختاري العلاج فوق، وقت فاضي من الأجندة، وعبّي معلوماتك. التأكيد بيوصلك عالإيميل مباشرة — والموعد بيصير مؤكّد. التعديل أو الإلغاء من الرابط بنفس الإيميل.
+      - generic [ref=f5e450]:
+        - button "قدّيش تكلفة الجلسة؟" [ref=f5e451] [cursor=pointer]
+        - generic: السعر بيعتمد على نوع العلاج وإذا كانت جلسة وحدة أو كورس. بتعرفي المبلغ كامل بجلسة الاستشارة، قبل ما يصير أي شي — مو بعدين مفاجأة.
+      - generic [ref=f5e453]:
+        - button "بدي فترة نقاهة؟" [ref=f5e454] [cursor=pointer]
+        - generic: مع الهيدروفيشل لأ، فيكي تطلعي عادي بعدها. مع الميكرونيدلينغ وتوريد الشفايف بتكون بشرتك أحمر وأحسّ لكم يوم. بتعرفي بالضبط كم يوم لازم تحسبي.
+      - generic [ref=f5e456]:
+        - button "مناسب للبشرة الحساسة أو الغامقة؟" [ref=f5e457] [cursor=pointer]
+        - generic: إي، بس الطريقة بتختلف. نوع البشرة وحساسيتها للتصبغ وردّة فعلها على علاجات سابقة هنّي اللي بيحددوا قوة الجلسة وتدرّج الكورس. وهاد بالضبط سبب وجود الاستشارة.
+      - generic [ref=f5e459]:
+        - button "شو بستفيد من التحليل ثلاثي الأبعاد؟" [ref=f5e460] [cursor=pointer]
+        - generic: أرقام واضحة للتصبغ والمسام ونسبة الترطيب والاحمرار والخطوط الرفيعة — ولكثافة الشعر ونموّه على فروة الراس — ونفس السكان مرة تانية بعد الكورس. هيك بتشوفي التحسّن بالأرقام، مو بس بالإحساس. والتحليل كمان بيحدد أي علاج فعلاً بتحتاجيه.
+      - generic [ref=f5e462]:
+        - button "بأي لغة فيني إحكي؟" [ref=f5e463] [cursor=pointer]
+        - generic [ref=f5e464]:
+          - text: عربي أو هولندي أو إنجليزي — اللي بترتاحي فيه.
+          - generic [ref=f5e465]: Nederlands, Arabisch of Engels.
+  - generic [ref=f5e467]:
+    - heading "ابدأي باستشارة صادقة لبشرتك." [level=2] [ref=f5e468]
+    - paragraph [ref=f5e469]: اطلبي موعدك واكتبيلنا شو عم تعمل بشرتك. بيجيكي ردّ من سمر شخصياً، مو نصّ جاهز.
+    - generic [ref=f5e470]:
+      - link "احجزي موعدك" [ref=f5e471] [cursor=pointer]:
+        - /url: "#afspraak"
+      - link "شوفي إنستغرام" [ref=f5e474] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+  - generic [ref=f5e476]:
+    - generic [ref=f5e477]:
+      - heading "آيا بيوتي آند سكين" [level=3] [ref=f5e478]
+      - generic [ref=f5e479]:
+        - strong [ref=f5e480]: تواصل
+        - link "@ayaa_beauty.skin" [ref=f5e481] [cursor=pointer]:
+          - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f5e483]: روتردام، هولندا
+        - generic [ref=f5e484]: بموعد مسبق
+      - generic [ref=f5e485]:
+        - strong [ref=f5e486]: العلاجات
+        - link "تحليل بشرة وشعر" [ref=f5e487] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "هيدروفيشل" [ref=f5e488] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "ميكرونيدلينغ RF" [ref=f5e489] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "إزالة الشعر بالليزر" [ref=f5e490] [cursor=pointer]:
+          - /url: "#afspraak"
+    - generic [ref=f5e491]:
+      - generic [ref=f5e492]: © 2026 آيا بيوتي آند سكين — سمر تيناوي
+      - generic [ref=f5e493]: أخصائية عناية بالبشرة · روتردام

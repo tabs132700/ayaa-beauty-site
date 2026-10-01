@@ -1,0 +1,363 @@
+- main [ref=f3e2]:
+  - navigation [ref=f3e3]:
+    - link "Ayaa Beauty & Skin Ayaa" [ref=f3e4] [cursor=pointer]:
+      - /url: "#top"
+      - img "Ayaa Beauty & Skin" [ref=f3e5]
+      - generic [ref=f3e6]: Ayaa
+    - group "Taal / اللغة" [ref=f3e7]:
+      - button "NL" [pressed] [ref=f3e8] [cursor=pointer]
+      - button "ع" [ref=f3e9] [cursor=pointer]
+    - link "Afspraak maken" [ref=f3e10] [cursor=pointer]:
+      - /url: "#afspraak"
+  - generic [ref=f3e11]:
+    - generic [ref=f3e14]:
+      - paragraph [ref=f3e15]: Schoonheidsspecialist · Rotterdam
+      - heading "Huid die er gezond uitziet, niet gefilterd." [level=1] [ref=f3e16]
+      - paragraph [ref=f3e17]: 3D-huid- en haaranalyse met AI, hydrofacial, RF-microneedling met exosomen, laserontharing en lip blush — rustig uitgevoerd, altijd na een eerlijk advies. Door Samar Tinawi.
+      - generic [ref=f3e18]:
+        - link "Afspraak maken" [ref=f3e19] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Bekijk behandelingen" [ref=f3e22] [cursor=pointer]:
+          - /url: "#behandelingen"
+    - generic [ref=f3e23]: Scroll
+  - generic [ref=f3e27]:
+    - generic [ref=f3e28]: 3D Huid- & haaranalyse
+    - generic [ref=f3e29]: Hydrofacial
+    - generic [ref=f3e30]: Microneedling
+    - generic [ref=f3e31]: RF Microneedling
+    - generic [ref=f3e32]: Exosomen
+    - generic [ref=f3e33]: Huidverbetering
+    - generic [ref=f3e34]: Laserontharing
+    - generic [ref=f3e35]: Lip Blush
+    - generic [ref=f3e36]: Rotterdam
+    - generic [ref=f3e37]: 3D Huid- & haaranalyse
+    - generic [ref=f3e38]: Hydrofacial
+    - generic [ref=f3e39]: Microneedling
+    - generic [ref=f3e40]: RF Microneedling
+    - generic [ref=f3e41]: Exosomen
+    - generic [ref=f3e42]: Huidverbetering
+    - generic [ref=f3e43]: Laserontharing
+    - generic [ref=f3e44]: Lip Blush
+    - generic [ref=f3e45]: Rotterdam
+  - generic [ref=f3e47]:
+    - paragraph [ref=f3e48]:
+      - generic [ref=f3e49]: Wie je voor je hebt
+    - paragraph [ref=f3e50]:
+      - generic [ref=f3e51]: Ik
+      - generic [ref=f3e52]: behandel
+      - generic [ref=f3e53]: geen
+      - generic [ref=f3e54]: trends.
+      - generic [ref=f3e55]: Ik
+      - generic [ref=f3e56]: behandel
+      - generic [ref=f3e57]: huid
+      - generic [ref=f3e58]: —
+      - generic [ref=f3e59]: met
+      - generic [ref=f3e60]: een
+      - generic [ref=f3e61]: plan
+      - generic [ref=f3e62]: dat
+      - generic [ref=f3e63]: bij
+      - generic [ref=f3e64]: jouw
+      - generic [ref=f3e65]: gezicht,
+      - generic [ref=f3e66]: jouw
+      - generic [ref=f3e67]: huidtype
+      - generic [ref=f3e68]: en
+      - generic [ref=f3e69]: jouw
+      - generic [ref=f3e70]: tempo
+      - generic [ref=f3e71]: past.
+      - generic [ref=f3e72]: Eerst
+      - generic [ref=f3e73]: kijken,
+      - generic [ref=f3e74]: dan
+      - generic [ref=f3e75]: pas
+      - generic [ref=f3e76]: kiezen.
+    - generic [ref=f3e77]:
+      - paragraph [ref=f3e78]: "Samar Tinawi is schoonheidsspecialist in Rotterdam. Elke behandeling begint met een huidanalyse: wat is er aan de hand, wat kan er nu, en wat heeft tijd nodig. Geen pakketten die je niet nodig hebt. Nederlands, Arabisch en Engels gesproken."
+      - paragraph [ref=f3e79]:
+        - text: Samar Tinawi
+        - generic [ref=f3e80]: Ayaa Beauty & Skin · Rotterdam
+  - generic [ref=f3e82]:
+    - generic [ref=f3e84]:
+      - heading "Acht routes naar een rustige huid." [level=2] [ref=f3e85]
+      - paragraph [ref=f3e86]: Welke route past, leest de 3D-scan grotendeels voor ons uit. Vaak is het een combinatie — soms is minder genoeg.
+      - paragraph [ref=f3e87]
+    - generic [ref=f3e88]:
+      - article [ref=f3e89]:
+        - generic [ref=f3e90]:
+          - heading [level=3] [ref=f3e91]:
+            - text: 3D
+            - emphasis [ref=f3e92]: huid- & haaranalyse
+          - paragraph [ref=f3e93]: "Een 3D-scan van je huid én hoofdhuid, gelezen door AI: pigment, poriën, vochtgehalte, roodheid en fijne lijnen — plus haardichtheid en haargroei. Je ziet wat er onder de oppervlakte speelt, en na je kuur meten we opnieuw."
+          - generic [ref=f3e94]:
+            - generic [ref=f3e95]: Scan + rapport
+            - generic [ref=f3e96]: Huid & haar
+            - generic [ref=f3e97]: Start van elke kuur
+            - button "Boek deze" [ref=f3e98] [cursor=pointer]
+      - article [ref=f3e100]:
+        - generic [ref=f3e101]:
+          - heading [level=3] [ref=f3e102]:
+            - text: Hydro
+            - emphasis [ref=f3e103]: facial
+          - paragraph [ref=f3e104]: "Aqua peeling met een multifunctioneel hydra-dermabrasieapparaat: vuil en talg worden uit de poriën gezogen terwijl vocht en antioxidanten erin gaan. Reiniging, exfoliatie en hydratatie in één sessie — direct zichtbaar, geen hersteltijd."
+          - generic [ref=f3e105]:
+            - generic [ref=f3e106]: 60 min
+            - generic [ref=f3e107]: Geen downtime
+            - generic [ref=f3e108]: Aqua peel
+            - button "Boek deze" [ref=f3e109] [cursor=pointer]
+      - article [ref=f3e111]:
+        - generic [ref=f3e112]:
+          - heading [level=3] [ref=f3e113]:
+            - text: Micro
+            - emphasis [ref=f3e114]: needling
+          - paragraph [ref=f3e115]: Micro-kanaaltjes die je eigen collageen aanzetten, gecombineerd met een serum op maat. Voor littekens van acne, poriën en fijne lijntjes.
+          - generic [ref=f3e116]:
+            - generic [ref=f3e117]: Kuur van 3–4
+            - generic [ref=f3e118]: Serum op maat
+            - generic [ref=f3e119]: Littekens & poriën
+            - button "Boek deze" [ref=f3e120] [cursor=pointer]
+      - article [ref=f3e122]:
+        - generic [ref=f3e123]:
+          - heading [level=3] [ref=f3e124]:
+            - text: RF
+            - emphasis [ref=f3e125]: microneedling
+          - paragraph [ref=f3e126]: "Microneedling met radiofrequentie: de naaldjes brengen warmte tot in de diepere laag. Daar trekt bestaand collageen samen én maakt je huid nieuw aan. Voor een strakkere kaaklijn, verslapping en diepere acnelittekens."
+          - generic [ref=f3e127]:
+            - generic [ref=f3e128]: Kuur van 3
+            - generic [ref=f3e129]: Verstevigend
+            - generic [ref=f3e130]: Kaaklijn & littekens
+            - button "Boek deze" [ref=f3e131] [cursor=pointer]
+      - article [ref=f3e133]:
+        - generic [ref=f3e134]:
+          - heading [level=3] [ref=f3e135]:
+            - text: Exosomen &
+            - emphasis [ref=f3e136]: collageen
+          - paragraph [ref=f3e137]: Werkstoffen die het herstel van de huid versnellen na needling of peeling. Meer stevigheid, gelijkmatiger tint, minder roodheid op termijn.
+          - generic [ref=f3e138]:
+            - generic [ref=f3e139]: Na-behandeling
+            - generic [ref=f3e140]: Stevigheid
+            - generic [ref=f3e141]: Herstel
+            - button "Boek deze" [ref=f3e142] [cursor=pointer]
+      - article [ref=f3e144]:
+        - generic [ref=f3e145]:
+          - heading [level=3] [ref=f3e146]:
+            - text: Huid
+            - emphasis [ref=f3e147]: verbetering
+          - paragraph [ref=f3e148]: Gerichte kuur voor pigment, doffe plekken en een ongelijke tint — gezicht, hals of lichaam. Opgebouwd in stappen, met thuisverzorging ertussen.
+          - generic [ref=f3e149]:
+            - generic [ref=f3e150]: Kuurbehandeling
+            - generic [ref=f3e151]: Pigment
+            - generic [ref=f3e152]: Hals & lichaam
+            - button "Boek deze" [ref=f3e153] [cursor=pointer]
+      - article [ref=f3e155]:
+        - generic [ref=f3e156]:
+          - heading [level=3] [ref=f3e157]:
+            - text: Laser
+            - emphasis [ref=f3e158]: ontharing
+          - paragraph [ref=f3e159]: Definitieve haarvermindering met een medische laser — gezicht, oksels, benen of bikinilijn. De 3D-scan meet je haardichtheid vooraf, zodat je het verschil per sessie zwart-op-wit ziet. Altijd eerst een testvlek.
+          - generic [ref=f3e160]:
+            - generic [ref=f3e161]: Kuur van 6–8
+            - generic [ref=f3e162]: Gezicht & lichaam
+            - generic [ref=f3e163]: Testvlek vooraf
+            - button "Boek deze" [ref=f3e164] [cursor=pointer]
+      - article [ref=f3e166]:
+        - generic [ref=f3e167]:
+          - heading [level=3] [ref=f3e168]:
+            - text: Lip
+            - emphasis [ref=f3e169]: blush
+          - paragraph [ref=f3e170]: Zachte pigmentatie die de eigen lipkleur terugbrengt en de lijn scherper maakt. Natuurlijk van dichtbij — geen harde rand, geen felle kleur.
+          - generic [ref=f3e171]:
+            - generic [ref=f3e172]: 2 sessies
+            - generic [ref=f3e173]: Semi-permanent
+            - generic [ref=f3e174]: Natuurlijke tint
+            - button "Boek deze" [ref=f3e175] [cursor=pointer]
+  - generic [ref=f3e178]:
+    - generic [ref=f3e179]:
+      - heading "Vier machines achter de acht behandelingen." [level=2] [ref=f3e180]
+      - paragraph [ref=f3e182]: "Geen van deze apparaten doet alles. Daarom staan ze er alle vier: de scan bepaalt welke aan gaat, en in welke volgorde."
+    - generic [ref=f3e183]:
+      - article [ref=f3e184]:
+        - heading "3D-scanner met AI" [level=3] [ref=f3e185]
+        - paragraph [ref=f3e186]: "Fotografeert je huid in drie dimensies en zet er meetwaarden op: pigment, poriën, vocht, roodheid, fijne lijnen — en haardichtheid op de hoofdhuid. Bepaalt het plan en meet het resultaat terug."
+        - paragraph [ref=f3e187]: Huid + hoofdhuid · nulmeting en hermeting
+      - article [ref=f3e188]:
+        - heading "Hydra-dermabrasie" [level=3] [ref=f3e189]
+        - paragraph [ref=f3e190]: "Aqua peeling: zuigt vuil en talg uit de poriën terwijl het vocht en antioxidanten naar binnen brengt. Multifunctioneel, dus reinigen, exfoliëren en hydrateren gaan in één doorloop."
+        - paragraph [ref=f3e191]: 60 min · geen hersteltijd
+      - article [ref=f3e192]:
+        - heading "RF-microneedling" [level=3] [ref=f3e193]
+        - paragraph [ref=f3e194]: Kuur van 3 · verstevigend
+      - article [ref=f3e195]:
+        - heading "Medische laser" [level=3] [ref=f3e196]
+        - paragraph [ref=f3e197]: Kuur van 6–8 · testvlek vooraf
+    - generic [ref=f3e198]:
+      - button [expanded] [ref=f3e199] [cursor=pointer]:
+        - generic [ref=f3e200]:
+          - heading "Pigment" [level=4] [ref=f3e201]
+          - paragraph [ref=f3e202]: Een ongelijke tint komt zelden van één oorzaak. De scan splitst zonschade, littekenpigment en roodheid uit elkaar, zodat de kuur het juiste aanpakt in plaats van alles tegelijk.
+      - button [ref=f3e203] [cursor=pointer]:
+        - generic [ref=f3e204]:
+          - heading "Lippen" [level=4] [ref=f3e205]
+          - paragraph [ref=f3e206]: Lip blush brengt de eigen kleur terug en maakt de rand scherper. Twee sessies, want de tweede corrigeert wat de huid van de eerste heeft laten zitten.
+      - button [ref=f3e207] [cursor=pointer]:
+        - generic [ref=f3e208]:
+          - heading "Herstel" [level=4] [ref=f3e209]
+          - paragraph [ref=f3e210]: "Exosomen en collageen gaan erin op het moment dat de huid het meest opneemt: direct na needling of peeling. Dat verkort de rode dagen en maakt het resultaat steviger."
+      - button [ref=f3e211] [cursor=pointer]:
+        - generic [ref=f3e212]:
+          - heading "Littekens" [level=4] [ref=f3e213]
+          - paragraph [ref=f3e214]: Needling maakt micro-kanaaltjes die je eigen collageen aanzetten. Met radiofrequentie erbij gaat de warmte dieper, wat nodig is bij ingezakte littekens.
+  - generic [ref=f3e215]:
+    - generic [ref=f3e217]:
+      - heading "Uit de studio, niet uit een stockbank." [level=2] [ref=f3e218]
+      - link "@ayaa_beauty.skin →" [ref=f3e219] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f3e220]: "@ayaa_beauty.skin"
+        - text: →
+    - generic [ref=f3e222]:
+      - figure "Needling · serum op maat" [ref=f3e223]
+      - figure "De studio" [ref=f3e225]
+      - figure "Lip blush · resultaat" [ref=f3e227]
+      - figure "Huidverbetering" [ref=f3e229]
+      - figure "Voorbereiding" [ref=f3e231]
+      - figure "Collageen" [ref=f3e233]
+      - figure "Lip blush · sessie" [ref=f3e235]
+      - figure "Exosomen" [ref=f3e237]
+      - figure "Na de behandeling" [ref=f3e239]
+    - paragraph [ref=f3e242]: Scroll om horizontaal te bladeren
+  - generic [ref=f3e244]:
+    - generic [ref=f3e245]:
+      - heading "Vier stappen, geen verrassingen." [level=2] [ref=f3e246]
+      - paragraph [ref=f3e247]: Van het eerste bericht tot de nazorg weet je precies wat er gebeurt, wat het kost en hoelang je huid nodig heeft.
+    - generic [ref=f3e248]:
+      - article [ref=f3e249]:
+        - generic [ref=f3e250]: "01"
+        - generic [ref=f3e251]:
+          - heading "Intake & 3D-huidanalyse" [level=3] [ref=f3e252]
+          - paragraph [ref=f3e253]: "We scannen je huid in 3D en lezen de AI-analyse samen: pigment, poriën, vocht, roodheid. Daar komt een eerlijk plan uit — ook als dat betekent dat we eerst niets doen."
+      - article [ref=f3e255]:
+        - generic [ref=f3e256]: "02"
+        - generic [ref=f3e257]:
+          - heading "Voorbereiding" [level=3] [ref=f3e258]
+          - paragraph [ref=f3e259]: Steriel werken, alles klaargezet voordat je gaat liggen. Producten worden per behandeling gekozen, niet vooraf op de plank gelegd.
+      - article [ref=f3e261]:
+        - generic [ref=f3e262]: "03"
+        - generic [ref=f3e263]:
+          - heading "De behandeling" [level=3] [ref=f3e264]
+          - paragraph [ref=f3e265]: Rustig tempo, uitleg bij elke stap. Je voelt wat er gebeurt en je mag op elk moment zeggen dat het minder moet.
+      - article [ref=f3e267]:
+        - generic [ref=f3e268]: "04"
+        - generic [ref=f3e269]:
+          - heading "Nazorg" [level=3] [ref=f3e270]
+          - paragraph [ref=f3e271]: Je gaat naar huis met concrete instructies voor de eerste dagen en een vervolgafspraak alleen als je die echt nodig hebt.
+  - generic [ref=f3e276]:
+    - heading "Klein, rustig, en van jou zolang je er bent." [level=2] [ref=f3e277]
+    - paragraph [ref=f3e278]: Eén behandelkamer, één klant tegelijk. Geen wachtruimte vol mensen, geen gehaaste sessie van twintig minuten. Je komt binnen, we nemen de tijd, en je gaat weg met een huid die je zelf kunt onderhouden.
+    - generic [ref=f3e279]:
+      - generic [ref=f3e280]:
+        - generic [ref=f3e281]: Rotterdam
+        - text: Locatie op afspraak
+      - generic [ref=f3e282]:
+        - generic [ref=f3e283]: "0"
+        - text: Volgers op Instagram
+      - generic [ref=f3e284]:
+        - generic [ref=f3e285]: NL · AR · EN
+        - text: Gesproken talen
+      - generic [ref=f3e286]:
+        - generic [ref=f3e287]: 1 op 1
+        - text: Altijd persoonlijk
+  - generic [ref=f3e289]:
+    - generic [ref=f3e290]:
+      - heading "Kies je behandeling en een vrij moment." [level=2] [ref=f3e291]
+      - paragraph [ref=f3e292]: Alle tijden hieronder zijn echt beschikbaar. Kies een behandeling, pak een moment dat je uitkomt en je bevestiging is direct binnen.
+    - generic [ref=f3e293]:
+      - generic [ref=f3e294]:
+        - paragraph [ref=f3e295]:
+          - generic [ref=f3e296]: "1"
+          - generic [ref=f3e297]: Kies je behandeling
+        - group [ref=f3e298]:
+          - button "3D-huid- & haaranalyse (AI)" [pressed] [ref=f3e299] [cursor=pointer]
+          - button "Hydrofacial" [ref=f3e300] [cursor=pointer]
+          - button "Microneedling" [ref=f3e301] [cursor=pointer]
+          - button "RF microneedling" [ref=f3e302] [cursor=pointer]
+          - button "Exosomen & collageen" [ref=f3e303] [cursor=pointer]
+          - button "Huidverbetering" [ref=f3e304] [cursor=pointer]
+          - button "Laserontharing" [ref=f3e305] [cursor=pointer]
+          - button "Lip blush" [ref=f3e306] [cursor=pointer]
+      - generic [ref=f3e307]:
+        - paragraph [ref=f3e308]:
+          - generic [ref=f3e309]: "2"
+          - generic [ref=f3e310]: Kies een dag en tijd
+        - group [ref=f3e312]:
+          - paragraph [ref=f3e313]: Vrije tijden laden…
+      - generic [ref=f3e314]:
+        - paragraph [ref=f3e315]:
+          - generic [ref=f3e316]: "3"
+          - generic [ref=f3e317]: Jouw gegevens
+        - generic [ref=f3e318]:
+          - generic [ref=f3e319]:
+            - generic [ref=f3e320]: Naam
+            - textbox "Naam" [ref=f3e321]
+          - generic [ref=f3e322]:
+            - generic [ref=f3e323]: E-mailadres
+            - textbox "E-mailadres" [ref=f3e324]
+          - generic [ref=f3e325]:
+            - generic [ref=f3e326]: Telefoon (optioneel)
+            - textbox "Telefoon (optioneel)" [ref=f3e327]
+          - generic [ref=f3e328]:
+            - generic [ref=f3e329]: Wat wil je aanpakken? (optioneel)
+            - textbox "Wat wil je aanpakken? (optioneel)" [ref=f3e330]:
+              - /placeholder: Bijv. pigmentvlekken op mijn wangen, al twee jaar.
+          - generic [ref=f3e332]:
+            - text: Website
+            - textbox [ref=f3e333]
+          - button "Afspraak bevestigen" [disabled] [ref=f3e335]
+      - paragraph [ref=f3e338]: "De tijden hierboven komen rechtstreeks uit de agenda van de studio: wat je ziet is echt vrij. Zodra je bevestigt is de tijd van jou en krijg je meteen een mail."
+  - generic [ref=f3e340]:
+    - heading "Wat mensen meestal vragen." [level=2] [ref=f3e341]
+    - generic [ref=f3e342]:
+      - generic [ref=f3e343]:
+        - button "Hoe werkt het aanvragen van een afspraak?" [ref=f3e344] [cursor=pointer]
+        - generic: Kies hierboven je behandeling, pak een vrij moment in de agenda en vul je gegevens in. Je bevestiging komt meteen per mail binnen — de afspraak staat dan vast. Verzetten of annuleren kan via de link in die mail.
+      - generic [ref=f3e346]:
+        - button "Wat kost een behandeling?" [ref=f3e347] [cursor=pointer]
+        - generic: De prijs hangt af van de behandeling en of het om één sessie of een kuur gaat. Je krijgt het volledige bedrag te horen tijdens de intake, vóórdat er iets gebeurt — nooit achteraf een verrassing.
+      - generic [ref=f3e349]:
+        - button "Heb ik hersteltijd nodig?" [ref=f3e350] [cursor=pointer]
+        - generic: "Bij een hydrofacial niet: je kunt daarna gewoon de deur uit. Bij microneedling en lip blush is je huid een paar dagen roder en gevoeliger. Je krijgt precies te horen hoeveel dagen je moet inplannen."
+      - generic [ref=f3e352]:
+        - button "Is het geschikt voor een gevoelige of donkere huid?" [ref=f3e353] [cursor=pointer]
+        - generic: Ja, maar de aanpak verschilt. Huidtype, pigmentgevoeligheid en je reactie op eerdere behandelingen bepalen de sterkte en de opbouw van de kuur. Dat is precies waarom de intake er is.
+      - generic [ref=f3e355]:
+        - button "Wat levert de 3D-huidanalyse op?" [ref=f3e356] [cursor=pointer]
+        - generic: Meetwaarden voor pigment, poriën, vochtgehalte, roodheid en fijne lijnen — en voor haardichtheid en haargroei op je hoofdhuid — plus dezelfde scan opnieuw na je kuur. Zo zie je vooruitgang in cijfers, niet alleen in een gevoel. De analyse bepaalt ook welke behandeling je écht nodig hebt.
+      - generic [ref=f3e358]:
+        - button "In welke taal kan ik terecht?" [ref=f3e359] [cursor=pointer]
+        - generic: Nederlands, Arabisch of Engels — wat voor jou het prettigst praat. نتكلم العربية.
+  - generic [ref=f3e362]:
+    - heading "Begin met een eerlijk huidadvies." [level=2] [ref=f3e363]
+    - paragraph [ref=f3e364]: Vraag je afspraak aan en schrijf erbij wat je huid doet. Je krijgt antwoord van Samar zelf, geen standaardtekst.
+    - generic [ref=f3e365]:
+      - link "Afspraak maken" [ref=f3e366] [cursor=pointer]:
+        - /url: "#afspraak"
+      - link "Bekijk Instagram" [ref=f3e369] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+  - generic [ref=f3e371]:
+    - generic [ref=f3e372]:
+      - heading "Ayaa Beauty & Skin" [level=3] [ref=f3e373]
+      - generic [ref=f3e374]:
+        - strong [ref=f3e375]: Contact
+        - link "@ayaa_beauty.skin" [ref=f3e376] [cursor=pointer]:
+          - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f3e378]: Rotterdam, Nederland
+        - generic [ref=f3e379]: Op afspraak
+      - generic [ref=f3e380]:
+        - strong [ref=f3e381]: Behandelingen
+        - link "3D-huid- & haaranalyse" [ref=f3e382] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Hydrofacial" [ref=f3e383] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "RF microneedling" [ref=f3e384] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Laserontharing" [ref=f3e385] [cursor=pointer]:
+          - /url: "#afspraak"
+    - generic [ref=f3e386]:
+      - generic [ref=f3e387]: © 2026 Ayaa Beauty & Skin — Samar Tinawi
+      - generic [ref=f3e388]: Schoonheidsspecialist · Rotterdam

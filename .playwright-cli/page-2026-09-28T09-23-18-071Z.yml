@@ -1,0 +1,478 @@
+- main [ref=f2e2]:
+  - navigation [ref=f2e3]:
+    - link "Ayaa Beauty & Skin Ayaa Beauty & Skin" [ref=f2e4] [cursor=pointer]:
+      - /url: "#top"
+      - img "Ayaa Beauty & Skin" [ref=f2e5]
+      - generic [ref=f2e6]: Ayaa Beauty & Skin
+    - generic [ref=f2e7]:
+      - link "Behandelingen" [ref=f2e8] [cursor=pointer]:
+        - /url: "#behandelingen"
+      - link "Apparatuur" [ref=f2e9] [cursor=pointer]:
+        - /url: "#apparatuur"
+      - link "Werkwijze" [ref=f2e10] [cursor=pointer]:
+        - /url: "#werkwijze"
+      - link "Studio" [ref=f2e11] [cursor=pointer]:
+        - /url: "#studio"
+      - link "Vragen" [ref=f2e12] [cursor=pointer]:
+        - /url: "#vragen"
+    - group "Taal / اللغة" [ref=f2e13]:
+      - button "NL" [pressed] [ref=f2e14] [cursor=pointer]
+      - button "ع" [ref=f2e15] [cursor=pointer]
+    - link "Afspraak maken" [ref=f2e16] [cursor=pointer]:
+      - /url: "#afspraak"
+  - generic [ref=f2e17]:
+    - generic [ref=f2e20]:
+      - paragraph [ref=f2e21]: Schoonheidsspecialist · Rotterdam
+      - heading "Huid die er gezond uitziet, niet gefilterd." [level=1] [ref=f2e22]
+      - paragraph [ref=f2e23]: 3D-huid- en haaranalyse met AI, hydrofacial, RF-microneedling met exosomen, laserontharing en lip blush — rustig uitgevoerd, altijd na een eerlijk advies. Door Samar Tinawi.
+      - generic [ref=f2e24]:
+        - link "Afspraak maken" [ref=f2e25] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Bekijk behandelingen" [ref=f2e28] [cursor=pointer]:
+          - /url: "#behandelingen"
+    - generic [ref=f2e29]: Scroll
+  - generic [ref=f2e33]:
+    - generic [ref=f2e34]: 3D Huid- & haaranalyse
+    - generic [ref=f2e35]: Hydrofacial
+    - generic [ref=f2e36]: Microneedling
+    - generic [ref=f2e37]: RF Microneedling
+    - generic [ref=f2e38]: Exosomen
+    - generic [ref=f2e39]: Huidverbetering
+    - generic [ref=f2e40]: Laserontharing
+    - generic [ref=f2e41]: Lip Blush
+    - generic [ref=f2e42]: Rotterdam
+    - generic [ref=f2e43]: 3D Huid- & haaranalyse
+    - generic [ref=f2e44]: Hydrofacial
+    - generic [ref=f2e45]: Microneedling
+    - generic [ref=f2e46]: RF Microneedling
+    - generic [ref=f2e47]: Exosomen
+    - generic [ref=f2e48]: Huidverbetering
+    - generic [ref=f2e49]: Laserontharing
+    - generic [ref=f2e50]: Lip Blush
+    - generic [ref=f2e51]: Rotterdam
+  - generic [ref=f2e53]:
+    - paragraph [ref=f2e54]:
+      - generic [ref=f2e55]: Wie je voor je hebt
+    - paragraph [ref=f2e56]:
+      - generic [ref=f2e57]: Ik
+      - generic [ref=f2e58]: behandel
+      - generic [ref=f2e59]: geen
+      - generic [ref=f2e60]: trends.
+      - generic [ref=f2e61]: Ik
+      - generic [ref=f2e62]: behandel
+      - generic [ref=f2e63]: huid
+      - generic [ref=f2e64]: —
+      - generic [ref=f2e65]: met
+      - generic [ref=f2e66]: een
+      - generic [ref=f2e67]: plan
+      - generic [ref=f2e68]: dat
+      - generic [ref=f2e69]: bij
+      - generic [ref=f2e70]: jouw
+      - generic [ref=f2e71]: gezicht,
+      - generic [ref=f2e72]: jouw
+      - generic [ref=f2e73]: huidtype
+      - generic [ref=f2e74]: en
+      - generic [ref=f2e75]: jouw
+      - generic [ref=f2e76]: tempo
+      - generic [ref=f2e77]: past.
+      - generic [ref=f2e78]: Eerst
+      - generic [ref=f2e79]: kijken,
+      - generic [ref=f2e80]: dan
+      - generic [ref=f2e81]: pas
+      - generic [ref=f2e82]: kiezen.
+    - generic [ref=f2e83]:
+      - paragraph [ref=f2e84]: "Samar Tinawi is schoonheidsspecialist in Rotterdam. Elke behandeling begint met een huidanalyse: wat is er aan de hand, wat kan er nu, en wat heeft tijd nodig. Geen pakketten die je niet nodig hebt. Nederlands, Arabisch en Engels gesproken."
+      - paragraph [ref=f2e85]:
+        - text: Samar Tinawi
+        - generic [ref=f2e86]: Ayaa Beauty & Skin · Rotterdam
+  - generic [ref=f2e88]:
+    - generic [ref=f2e90]:
+      - heading "Acht routes naar een rustige huid." [level=2] [ref=f2e91]
+      - paragraph [ref=f2e92]: Welke route past, leest de 3D-scan grotendeels voor ons uit. Vaak is het een combinatie — soms is minder genoeg.
+      - paragraph [ref=f2e93]
+    - generic [ref=f2e94]:
+      - article [ref=f2e95]:
+        - generic [ref=f2e96]:
+          - heading [level=3] [ref=f2e97]:
+            - text: 3D
+            - emphasis [ref=f2e98]: huid- & haaranalyse
+          - paragraph [ref=f2e99]: "Een 3D-scan van je huid én hoofdhuid, gelezen door AI: pigment, poriën, vochtgehalte, roodheid en fijne lijnen — plus haardichtheid en haargroei. Je ziet wat er onder de oppervlakte speelt, en na je kuur meten we opnieuw."
+          - generic [ref=f2e100]:
+            - generic [ref=f2e101]: Scan + rapport
+            - generic [ref=f2e102]: Huid & haar
+            - generic [ref=f2e103]: Start van elke kuur
+            - button "Boek deze" [ref=f2e104] [cursor=pointer]
+      - article [ref=f2e106]:
+        - generic [ref=f2e107]:
+          - heading [level=3] [ref=f2e108]:
+            - text: Hydro
+            - emphasis [ref=f2e109]: facial
+          - paragraph [ref=f2e110]: "Aqua peeling met een multifunctioneel hydra-dermabrasieapparaat: vuil en talg worden uit de poriën gezogen terwijl vocht en antioxidanten erin gaan. Reiniging, exfoliatie en hydratatie in één sessie — direct zichtbaar, geen hersteltijd."
+          - generic [ref=f2e111]:
+            - generic [ref=f2e112]: 60 min
+            - generic [ref=f2e113]: Geen downtime
+            - generic [ref=f2e114]: Aqua peel
+            - button "Boek deze" [ref=f2e115] [cursor=pointer]
+      - article [ref=f2e117]:
+        - generic [ref=f2e118]:
+          - heading [level=3] [ref=f2e119]:
+            - text: Micro
+            - emphasis [ref=f2e120]: needling
+          - paragraph [ref=f2e121]: Micro-kanaaltjes die je eigen collageen aanzetten, gecombineerd met een serum op maat. Voor littekens van acne, poriën en fijne lijntjes.
+          - generic [ref=f2e122]:
+            - generic [ref=f2e123]: Kuur van 3–4
+            - generic [ref=f2e124]: Serum op maat
+            - generic [ref=f2e125]: Littekens & poriën
+            - button "Boek deze" [ref=f2e126] [cursor=pointer]
+      - article [ref=f2e128]:
+        - generic [ref=f2e129]:
+          - heading [level=3] [ref=f2e130]:
+            - text: RF
+            - emphasis [ref=f2e131]: microneedling
+          - paragraph [ref=f2e132]: "Microneedling met radiofrequentie: de naaldjes brengen warmte tot in de diepere laag. Daar trekt bestaand collageen samen én maakt je huid nieuw aan. Voor een strakkere kaaklijn, verslapping en diepere acnelittekens."
+          - generic [ref=f2e133]:
+            - generic [ref=f2e134]: Kuur van 3
+            - generic [ref=f2e135]: Verstevigend
+            - generic [ref=f2e136]: Kaaklijn & littekens
+            - button "Boek deze" [ref=f2e137] [cursor=pointer]
+      - article [ref=f2e139]:
+        - generic [ref=f2e140]:
+          - heading [level=3] [ref=f2e141]:
+            - text: Exosomen &
+            - emphasis [ref=f2e142]: collageen
+          - paragraph [ref=f2e143]: Werkstoffen die het herstel van de huid versnellen na needling of peeling. Meer stevigheid, gelijkmatiger tint, minder roodheid op termijn.
+          - generic [ref=f2e144]:
+            - generic [ref=f2e145]: Na-behandeling
+            - generic [ref=f2e146]: Stevigheid
+            - generic [ref=f2e147]: Herstel
+            - button "Boek deze" [ref=f2e148] [cursor=pointer]
+      - article [ref=f2e150]:
+        - generic [ref=f2e151]:
+          - heading [level=3] [ref=f2e152]:
+            - text: Huid
+            - emphasis [ref=f2e153]: verbetering
+          - paragraph [ref=f2e154]: Gerichte kuur voor pigment, doffe plekken en een ongelijke tint — gezicht, hals of lichaam. Opgebouwd in stappen, met thuisverzorging ertussen.
+          - generic [ref=f2e155]:
+            - generic [ref=f2e156]: Kuurbehandeling
+            - generic [ref=f2e157]: Pigment
+            - generic [ref=f2e158]: Hals & lichaam
+            - button "Boek deze" [ref=f2e159] [cursor=pointer]
+      - article [ref=f2e161]:
+        - generic [ref=f2e162]:
+          - heading [level=3] [ref=f2e163]:
+            - text: Laser
+            - emphasis [ref=f2e164]: ontharing
+          - paragraph [ref=f2e165]: Definitieve haarvermindering met een medische laser — gezicht, oksels, benen of bikinilijn. De 3D-scan meet je haardichtheid vooraf, zodat je het verschil per sessie zwart-op-wit ziet. Altijd eerst een testvlek.
+          - generic [ref=f2e166]:
+            - generic [ref=f2e167]: Kuur van 6–8
+            - generic [ref=f2e168]: Gezicht & lichaam
+            - generic [ref=f2e169]: Testvlek vooraf
+            - button "Boek deze" [ref=f2e170] [cursor=pointer]
+      - article [ref=f2e172]:
+        - generic [ref=f2e173]:
+          - heading [level=3] [ref=f2e174]:
+            - text: Lip
+            - emphasis [ref=f2e175]: blush
+          - paragraph [ref=f2e176]: Zachte pigmentatie die de eigen lipkleur terugbrengt en de lijn scherper maakt. Natuurlijk van dichtbij — geen harde rand, geen felle kleur.
+          - generic [ref=f2e177]:
+            - generic [ref=f2e178]: 2 sessies
+            - generic [ref=f2e179]: Semi-permanent
+            - generic [ref=f2e180]: Natuurlijke tint
+            - button "Boek deze" [ref=f2e181] [cursor=pointer]
+  - generic [ref=f2e184]:
+    - generic [ref=f2e185]:
+      - heading "Vier machines achter de acht behandelingen." [level=2] [ref=f2e186]
+      - paragraph [ref=f2e188]: "Geen van deze apparaten doet alles. Daarom staan ze er alle vier: de scan bepaalt welke aan gaat, en in welke volgorde."
+    - generic [ref=f2e189]:
+      - article [ref=f2e190]:
+        - heading "3D-scanner met AI" [level=3] [ref=f2e191]
+        - paragraph [ref=f2e192]: "Fotografeert je huid in drie dimensies en zet er meetwaarden op: pigment, poriën, vocht, roodheid, fijne lijnen — en haardichtheid op de hoofdhuid. Bepaalt het plan en meet het resultaat terug."
+        - paragraph [ref=f2e193]: Huid + hoofdhuid · nulmeting en hermeting
+      - article [ref=f2e194]:
+        - heading "Hydra-dermabrasie" [level=3] [ref=f2e195]
+        - paragraph [ref=f2e196]: "Aqua peeling: zuigt vuil en talg uit de poriën terwijl het vocht en antioxidanten naar binnen brengt. Multifunctioneel, dus reinigen, exfoliëren en hydrateren gaan in één doorloop."
+        - paragraph [ref=f2e197]: 60 min · geen hersteltijd
+      - article [ref=f2e198]:
+        - heading "RF-microneedling" [level=3] [ref=f2e199]
+        - paragraph [ref=f2e200]: Kuur van 3 · verstevigend
+      - article [ref=f2e201]:
+        - heading "Medische laser" [level=3] [ref=f2e202]
+        - paragraph [ref=f2e203]: Kuur van 6–8 · testvlek vooraf
+    - generic [ref=f2e204]:
+      - button [expanded] [ref=f2e205] [cursor=pointer]:
+        - generic [ref=f2e206]:
+          - heading "Pigment" [level=4] [ref=f2e207]
+          - paragraph [ref=f2e208]: Een ongelijke tint komt zelden van één oorzaak. De scan splitst zonschade, littekenpigment en roodheid uit elkaar, zodat de kuur het juiste aanpakt in plaats van alles tegelijk.
+      - button [ref=f2e209] [cursor=pointer]:
+        - generic [ref=f2e210]:
+          - heading "Lippen" [level=4] [ref=f2e211]
+          - paragraph [ref=f2e212]: Lip blush brengt de eigen kleur terug en maakt de rand scherper. Twee sessies, want de tweede corrigeert wat de huid van de eerste heeft laten zitten.
+      - button [ref=f2e213] [cursor=pointer]:
+        - generic [ref=f2e214]:
+          - heading "Herstel" [level=4] [ref=f2e215]
+          - paragraph [ref=f2e216]: "Exosomen en collageen gaan erin op het moment dat de huid het meest opneemt: direct na needling of peeling. Dat verkort de rode dagen en maakt het resultaat steviger."
+      - button [ref=f2e217] [cursor=pointer]:
+        - generic [ref=f2e218]:
+          - heading "Littekens" [level=4] [ref=f2e219]
+          - paragraph [ref=f2e220]: Needling maakt micro-kanaaltjes die je eigen collageen aanzetten. Met radiofrequentie erbij gaat de warmte dieper, wat nodig is bij ingezakte littekens.
+  - generic [ref=f2e221]:
+    - generic [ref=f2e223]:
+      - heading "Uit de studio, niet uit een stockbank." [level=2] [ref=f2e224]
+      - link "@ayaa_beauty.skin →" [ref=f2e225] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f2e226]: "@ayaa_beauty.skin"
+        - text: →
+    - generic [ref=f2e229]:
+      - figure "Needling · serum op maat" [ref=f2e230]
+      - figure "De studio" [ref=f2e232]
+      - figure "Lip blush · resultaat" [ref=f2e234]
+      - figure "Huidverbetering" [ref=f2e236]
+      - figure "Voorbereiding" [ref=f2e238]
+      - figure "Collageen" [ref=f2e240]
+      - figure "Lip blush · sessie" [ref=f2e242]
+      - figure "Exosomen" [ref=f2e244]
+      - figure "Na de behandeling" [ref=f2e246]
+    - paragraph [ref=f2e249]: Scroll om horizontaal te bladeren
+  - generic [ref=f2e251]:
+    - generic [ref=f2e252]:
+      - heading "Vier stappen, geen verrassingen." [level=2] [ref=f2e253]
+      - paragraph [ref=f2e254]: Van het eerste bericht tot de nazorg weet je precies wat er gebeurt, wat het kost en hoelang je huid nodig heeft.
+    - generic [ref=f2e255]:
+      - article [ref=f2e256]:
+        - generic [ref=f2e257]: "01"
+        - generic [ref=f2e258]:
+          - heading "Intake & 3D-huidanalyse" [level=3] [ref=f2e259]
+          - paragraph [ref=f2e260]: "We scannen je huid in 3D en lezen de AI-analyse samen: pigment, poriën, vocht, roodheid. Daar komt een eerlijk plan uit — ook als dat betekent dat we eerst niets doen."
+      - article [ref=f2e262]:
+        - generic [ref=f2e263]: "02"
+        - generic [ref=f2e264]:
+          - heading "Voorbereiding" [level=3] [ref=f2e265]
+          - paragraph [ref=f2e266]: Steriel werken, alles klaargezet voordat je gaat liggen. Producten worden per behandeling gekozen, niet vooraf op de plank gelegd.
+      - article [ref=f2e268]:
+        - generic [ref=f2e269]: "03"
+        - generic [ref=f2e270]:
+          - heading "De behandeling" [level=3] [ref=f2e271]
+          - paragraph [ref=f2e272]: Rustig tempo, uitleg bij elke stap. Je voelt wat er gebeurt en je mag op elk moment zeggen dat het minder moet.
+      - article [ref=f2e274]:
+        - generic [ref=f2e275]: "04"
+        - generic [ref=f2e276]:
+          - heading "Nazorg" [level=3] [ref=f2e277]
+          - paragraph [ref=f2e278]: Je gaat naar huis met concrete instructies voor de eerste dagen en een vervolgafspraak alleen als je die echt nodig hebt.
+  - generic [ref=f2e283]:
+    - heading "Klein, rustig, en van jou zolang je er bent." [level=2] [ref=f2e284]
+    - paragraph [ref=f2e285]: Eén behandelkamer, één klant tegelijk. Geen wachtruimte vol mensen, geen gehaaste sessie van twintig minuten. Je komt binnen, we nemen de tijd, en je gaat weg met een huid die je zelf kunt onderhouden.
+    - generic [ref=f2e286]:
+      - generic [ref=f2e287]:
+        - generic [ref=f2e288]: Rotterdam
+        - text: Locatie op afspraak
+      - generic [ref=f2e289]:
+        - generic [ref=f2e290]: "0"
+        - text: Volgers op Instagram
+      - generic [ref=f2e291]:
+        - generic [ref=f2e292]: NL · AR · EN
+        - text: Gesproken talen
+      - generic [ref=f2e293]:
+        - generic [ref=f2e294]: 1 op 1
+        - text: Altijd persoonlijk
+  - generic [ref=f2e296]:
+    - generic [ref=f2e297]:
+      - heading "Kies je behandeling en een vrij moment." [level=2] [ref=f2e298]
+      - paragraph [ref=f2e299]: Alle tijden hieronder zijn echt beschikbaar. Kies een behandeling, pak een moment dat je uitkomt en je bevestiging is direct binnen.
+    - generic [ref=f2e300]:
+      - generic [ref=f2e301]:
+        - paragraph [ref=f2e302]:
+          - generic [ref=f2e303]: "1"
+          - generic [ref=f2e304]: Kies je behandeling
+        - group [ref=f2e305]:
+          - button "3D-huid- & haaranalyse (AI)" [pressed] [ref=f2e306] [cursor=pointer]
+          - button "Hydrofacial" [ref=f2e307] [cursor=pointer]
+          - button "Microneedling" [ref=f2e308] [cursor=pointer]
+          - button "RF microneedling" [ref=f2e309] [cursor=pointer]
+          - button "Exosomen & collageen" [ref=f2e310] [cursor=pointer]
+          - button "Huidverbetering" [ref=f2e311] [cursor=pointer]
+          - button "Laserontharing" [ref=f2e312] [cursor=pointer]
+          - button "Lip blush" [ref=f2e313] [cursor=pointer]
+      - generic [ref=f2e314]:
+        - paragraph [ref=f2e315]:
+          - generic [ref=f2e316]: "2"
+          - generic [ref=f2e317]: Kies een dag en tijd
+        - generic [ref=f2e318]:
+          - button "ma 28 sep" [pressed] [ref=f2e319] [cursor=pointer]:
+            - generic [ref=f2e320]: ma
+            - generic [ref=f2e321]: "28"
+            - generic [ref=f2e322]: sep
+          - button "di 29 sep" [ref=f2e323] [cursor=pointer]:
+            - generic [ref=f2e324]: di
+            - generic [ref=f2e325]: "29"
+            - generic [ref=f2e326]: sep
+          - button "wo 30 sep" [ref=f2e327] [cursor=pointer]:
+            - generic [ref=f2e328]: wo
+            - generic [ref=f2e329]: "30"
+            - generic [ref=f2e330]: sep
+          - button "do 1 okt" [ref=f2e331] [cursor=pointer]:
+            - generic [ref=f2e332]: do
+            - generic [ref=f2e333]: "1"
+            - generic [ref=f2e334]: okt
+          - button "vr 2 okt" [ref=f2e335] [cursor=pointer]:
+            - generic [ref=f2e336]: vr
+            - generic [ref=f2e337]: "2"
+            - generic [ref=f2e338]: okt
+          - button "za 3 okt" [ref=f2e339] [cursor=pointer]:
+            - generic [ref=f2e340]: za
+            - generic [ref=f2e341]: "3"
+            - generic [ref=f2e342]: okt
+          - button "zo 4 okt" [disabled] [ref=f2e343]:
+            - generic [ref=f2e344]: zo
+            - generic [ref=f2e345]: "4"
+            - generic [ref=f2e346]: okt
+          - button "ma 5 okt" [ref=f2e347] [cursor=pointer]:
+            - generic [ref=f2e348]: ma
+            - generic [ref=f2e349]: "5"
+            - generic [ref=f2e350]: okt
+          - button "di 6 okt" [ref=f2e351] [cursor=pointer]:
+            - generic [ref=f2e352]: di
+            - generic [ref=f2e353]: "6"
+            - generic [ref=f2e354]: okt
+          - button "wo 7 okt" [ref=f2e355] [cursor=pointer]:
+            - generic [ref=f2e356]: wo
+            - generic [ref=f2e357]: "7"
+            - generic [ref=f2e358]: okt
+          - button "do 8 okt" [ref=f2e359] [cursor=pointer]:
+            - generic [ref=f2e360]: do
+            - generic [ref=f2e361]: "8"
+            - generic [ref=f2e362]: okt
+          - button "vr 9 okt" [ref=f2e363] [cursor=pointer]:
+            - generic [ref=f2e364]: vr
+            - generic [ref=f2e365]: "9"
+            - generic [ref=f2e366]: okt
+          - button "za 10 okt" [ref=f2e367] [cursor=pointer]:
+            - generic [ref=f2e368]: za
+            - generic [ref=f2e369]: "10"
+            - generic [ref=f2e370]: okt
+          - button "zo 11 okt" [disabled] [ref=f2e371]:
+            - generic [ref=f2e372]: zo
+            - generic [ref=f2e373]: "11"
+            - generic [ref=f2e374]: okt
+          - button "ma 12 okt" [ref=f2e375] [cursor=pointer]:
+            - generic [ref=f2e376]: ma
+            - generic [ref=f2e377]: "12"
+            - generic [ref=f2e378]: okt
+          - button "di 13 okt" [ref=f2e379] [cursor=pointer]:
+            - generic [ref=f2e380]: di
+            - generic [ref=f2e381]: "13"
+            - generic [ref=f2e382]: okt
+          - button "wo 14 okt" [ref=f2e383] [cursor=pointer]:
+            - generic [ref=f2e384]: wo
+            - generic [ref=f2e385]: "14"
+            - generic [ref=f2e386]: okt
+          - button "do 15 okt" [ref=f2e387] [cursor=pointer]:
+            - generic [ref=f2e388]: do
+            - generic [ref=f2e389]: "15"
+            - generic [ref=f2e390]: okt
+          - button "vr 16 okt" [ref=f2e391] [cursor=pointer]:
+            - generic [ref=f2e392]: vr
+            - generic [ref=f2e393]: "16"
+            - generic [ref=f2e394]: okt
+          - button "za 17 okt" [ref=f2e395] [cursor=pointer]:
+            - generic [ref=f2e396]: za
+            - generic [ref=f2e397]: "17"
+            - generic [ref=f2e398]: okt
+          - button "zo 18 okt" [disabled] [ref=f2e399]:
+            - generic [ref=f2e400]: zo
+            - generic [ref=f2e401]: "18"
+            - generic [ref=f2e402]: okt
+        - group [ref=f2e403]:
+          - button "12:30" [ref=f2e404] [cursor=pointer]
+          - button "12:45" [ref=f2e405] [cursor=pointer]
+          - button "13:00" [ref=f2e406] [cursor=pointer]
+          - button "13:15" [ref=f2e407] [cursor=pointer]
+          - button "13:30" [ref=f2e408] [cursor=pointer]
+          - button "13:45" [ref=f2e409] [cursor=pointer]
+          - button "14:00" [ref=f2e410] [cursor=pointer]
+          - button "14:15" [ref=f2e411] [cursor=pointer]
+          - button "14:30" [ref=f2e412] [cursor=pointer]
+          - button "14:45" [ref=f2e413] [cursor=pointer]
+          - button "15:00" [ref=f2e414] [cursor=pointer]
+          - button "15:15" [ref=f2e415] [cursor=pointer]
+          - button "15:30" [ref=f2e416] [cursor=pointer]
+          - button "15:45" [ref=f2e417] [cursor=pointer]
+          - button "16:00" [ref=f2e418] [cursor=pointer]
+          - button "16:15" [ref=f2e419] [cursor=pointer]
+          - button "16:30" [ref=f2e420] [cursor=pointer]
+          - button "16:45" [ref=f2e421] [cursor=pointer]
+          - button "17:00" [ref=f2e422] [cursor=pointer]
+          - button "17:15" [ref=f2e423] [cursor=pointer]
+      - generic [ref=f2e424]:
+        - paragraph [ref=f2e425]:
+          - generic [ref=f2e426]: "3"
+          - generic [ref=f2e427]: Jouw gegevens
+        - generic [ref=f2e428]:
+          - generic [ref=f2e429]:
+            - generic [ref=f2e430]: Naam
+            - textbox "Naam" [ref=f2e431]
+          - generic [ref=f2e432]:
+            - generic [ref=f2e433]: E-mailadres
+            - textbox "E-mailadres" [ref=f2e434]
+          - generic [ref=f2e435]:
+            - generic [ref=f2e436]: Telefoon (optioneel)
+            - textbox "Telefoon (optioneel)" [ref=f2e437]
+          - generic [ref=f2e438]:
+            - generic [ref=f2e439]: Wat wil je aanpakken? (optioneel)
+            - textbox "Wat wil je aanpakken? (optioneel)" [ref=f2e440]:
+              - /placeholder: Bijv. pigmentvlekken op mijn wangen, al twee jaar.
+          - generic [ref=f2e442]:
+            - text: Website
+            - textbox [ref=f2e443]
+          - button "Afspraak bevestigen" [disabled] [ref=f2e445]
+      - paragraph [ref=f2e448]: "De tijden hierboven komen rechtstreeks uit de agenda van de studio: wat je ziet is echt vrij. Zodra je bevestigt is de tijd van jou en krijg je meteen een mail."
+  - generic [ref=f2e450]:
+    - heading "Wat mensen meestal vragen." [level=2] [ref=f2e451]
+    - generic [ref=f2e452]:
+      - generic [ref=f2e453]:
+        - button "Hoe werkt het aanvragen van een afspraak?" [ref=f2e454] [cursor=pointer]
+        - generic: Kies hierboven je behandeling, pak een vrij moment in de agenda en vul je gegevens in. Je bevestiging komt meteen per mail binnen — de afspraak staat dan vast. Verzetten of annuleren kan via de link in die mail.
+      - generic [ref=f2e456]:
+        - button "Wat kost een behandeling?" [ref=f2e457] [cursor=pointer]
+        - generic: De prijs hangt af van de behandeling en of het om één sessie of een kuur gaat. Je krijgt het volledige bedrag te horen tijdens de intake, vóórdat er iets gebeurt — nooit achteraf een verrassing.
+      - generic [ref=f2e459]:
+        - button "Heb ik hersteltijd nodig?" [ref=f2e460] [cursor=pointer]
+        - generic: "Bij een hydrofacial niet: je kunt daarna gewoon de deur uit. Bij microneedling en lip blush is je huid een paar dagen roder en gevoeliger. Je krijgt precies te horen hoeveel dagen je moet inplannen."
+      - generic [ref=f2e462]:
+        - button "Is het geschikt voor een gevoelige of donkere huid?" [ref=f2e463] [cursor=pointer]
+        - generic: Ja, maar de aanpak verschilt. Huidtype, pigmentgevoeligheid en je reactie op eerdere behandelingen bepalen de sterkte en de opbouw van de kuur. Dat is precies waarom de intake er is.
+      - generic [ref=f2e465]:
+        - button "Wat levert de 3D-huidanalyse op?" [ref=f2e466] [cursor=pointer]
+        - generic: Meetwaarden voor pigment, poriën, vochtgehalte, roodheid en fijne lijnen — en voor haardichtheid en haargroei op je hoofdhuid — plus dezelfde scan opnieuw na je kuur. Zo zie je vooruitgang in cijfers, niet alleen in een gevoel. De analyse bepaalt ook welke behandeling je écht nodig hebt.
+      - generic [ref=f2e468]:
+        - button "In welke taal kan ik terecht?" [ref=f2e469] [cursor=pointer]
+        - generic: Nederlands, Arabisch of Engels — wat voor jou het prettigst praat. نتكلم العربية.
+  - generic [ref=f2e472]:
+    - heading "Begin met een eerlijk huidadvies." [level=2] [ref=f2e473]
+    - paragraph [ref=f2e474]: Vraag je afspraak aan en schrijf erbij wat je huid doet. Je krijgt antwoord van Samar zelf, geen standaardtekst.
+    - generic [ref=f2e475]:
+      - link "Afspraak maken" [ref=f2e476] [cursor=pointer]:
+        - /url: "#afspraak"
+      - link "Bekijk Instagram" [ref=f2e479] [cursor=pointer]:
+        - /url: https://www.instagram.com/ayaa_beauty.skin/
+  - generic [ref=f2e481]:
+    - generic [ref=f2e482]:
+      - heading "Ayaa Beauty & Skin" [level=3] [ref=f2e483]
+      - generic [ref=f2e484]:
+        - strong [ref=f2e485]: Contact
+        - link "@ayaa_beauty.skin" [ref=f2e486] [cursor=pointer]:
+          - /url: https://www.instagram.com/ayaa_beauty.skin/
+        - generic [ref=f2e488]: Rotterdam, Nederland
+        - generic [ref=f2e489]: Op afspraak
+      - generic [ref=f2e490]:
+        - strong [ref=f2e491]: Behandelingen
+        - link "3D-huid- & haaranalyse" [ref=f2e492] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Hydrofacial" [ref=f2e493] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "RF microneedling" [ref=f2e494] [cursor=pointer]:
+          - /url: "#afspraak"
+        - link "Laserontharing" [ref=f2e495] [cursor=pointer]:
+          - /url: "#afspraak"
+    - generic [ref=f2e496]:
+      - generic [ref=f2e497]: © 2026 Ayaa Beauty & Skin — Samar Tinawi
+      - generic [ref=f2e498]: Schoonheidsspecialist · Rotterdam

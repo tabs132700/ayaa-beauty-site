@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Agenda — Ayaa Beauty &amp; Skin</title>
+<link rel="icon" href="img/profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFE9;--ink:#17120F;--clay:#B4735A;--sand:#E3D3C6;--night:#0E0B0A;
+  --muted:#7C6B60;--line:rgba(23,18,15,.12);
+  --display:'Instrument Serif',Georgia,serif;--ui:'Outfit',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bone);color:var(--ink);font-family:var(--ui);font-weight:300;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,4vw,3.2rem)}
+h2{font-size:clamp(1.3rem,2.2vw,1.9rem);margin-bottom:18px}
+button,input,select{font:inherit;color:inherit}
+.shell{max-width:1120px;margin:0 auto;padding:clamp(28px,5vw,60px) clamp(18px,4vw,48px)}
+header.top{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+header.top p{color:var(--muted);font-size:13px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:clamp(20px,2.6vw,32px);margin-top:clamp(22px,3vw,34px)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{cursor:pointer;border:0;border-radius:999px;padding:11px 22px;font-size:14px;
+  background:var(--ink);color:var(--bone);transition:background .3s}
+.btn:hover{background:var(--clay)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{background:var(--sand)}
+.btn.tiny{padding:7px 14px;font-size:12.5px}
+input[type=text],input[type=password],input[type=date],input[type=time],select{
+  background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px}
+input:focus,select:focus{outline:0;border-color:var(--clay)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);padding:0 12px 12px 0;border-bottom:1px solid var(--line)}
+td{padding:13px 12px 13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+tr.off td{opacity:.42;text-decoration:line-through}
+.badge{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:99px;background:var(--sand);color:var(--ink)}
+.badge.no{background:#EDD6D6;color:#8A3B48}
+.day-row{display:grid;grid-template-columns:110px repeat(2,minmax(0,1fr)) auto;
+  gap:10px;align-items:center;margin-bottom:10px}
+.day-row label{color:var(--muted);font-size:13px}
+.msg{margin-top:14px;font-size:13.5px;color:var(--clay);min-height:1.2em}
+.empty{color:var(--muted);font-size:14px;padding:18px 0}
+.gate{max-width:440px}
+.gate p{color:var(--muted);margin-bottom:18px;font-size:14px}
+code{background:var(--sand);padding:2px 7px;border-radius:5px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="top">
+    <h1>Agenda</h1>
+    <p>Ayaa Beauty &amp; Skin — Rotterdam</p>
+  </header>
+
+  <!-- token gate -->
+  <div class="panel gate" id="gate">
+    <h2>Inloggen</h2>
+    <p>Plak hier het token dat in de terminal staat waar <code>server.py</code> draait
+       (of uit <code>admin-token.txt</code>).</p>
+    <div class="row">
+      <input type="password" id="tok" placeholder="Token" style="flex:1;min-width:200px">
+      <button class="btn" id="tokGo">Open agenda</button>
+    </div>
+    <p class="msg" id="gateMsg"></p>
+  </div>
+
+  <main id="app" hidden>
+
+    <section class="panel">
+      <h2>Afspraken</h2>
+      <div class="row" style="margin-bottom:20px">
+        <label>Van <input type="date" id="from"></label>
+        <label>Tot <input type="date" id="to"></label>
+        <button class="btn ghost tiny" id="reload">Ververs</button>
+        <button class="btn ghost tiny" id="logout" style="margin-inline-start:auto">Uitloggen</button>
+      </div>
+      <div id="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Openingstijden</h2>
+      <div id="hours"></div>
+      <div class="row" style="margin-top:18px">
+        <button class="btn" id="saveHours">Opslaan</button>
+        <p class="msg" id="hoursMsg" style="margin:0"></p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Vrij / gesloten</h2>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:16px">
+        Blokkeer een hele dag of een deel ervan. Die tijd verdwijnt meteen van de site.</p>
+      <div class="row">
+        <input type="date" id="clDate">
+        <input type="time" id="clFrom" value="00:00">
+        <input type="time" id="clTo" value="23:59">
+        <input type="text" id="clNote" placeholder="Notitie (optioneel)">
+        <button class="btn" id="clAdd">Blokkeer</button>
+      </div>
+      <p class="msg" id="clMsg"></p>
+      <div id="closures" style="margin-top:18px"></div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+const NAMES = {
+  analyse:'3D huid- & haaranalyse', hydrofacial:'Hydrofacial', microneedling:'Microneedling',
+  rf:'RF microneedling', exosomen:'Exosomen & collageen', huidverbetering:'Huidverbetering',
+  laser:'Laserontharing', lipblush:'Lip blush'
+};
+const WD = ['Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag','Zondag'];
+const pad = v => String(v).padStart(2,'0');
+const hhmm = m => pad(Math.floor(m/60)) + ':' + pad(m%60);
+const toMin = s => { const [h,m] = s.split(':').map(Number); return h*60+m; };
+let TOKEN = '';
+
+async function api(path, opts){
+  const r = await fetch('/api' + path, Object.assign({
+    headers: { 'X-Admin-Token': TOKEN, 'Content-Type': 'application/json' }
+  }, opts || {}));
+  if (r.status === 401) { logout(); throw new Error('unauthorised'); }
+  return r.json();
+}
+
+/* ── gate ── */
+function logout(){
+  TOKEN = '';
+  try { localStorage.removeItem('ayaa-admin'); } catch(e){}
+  document.getElementById('app').hidden = true;
+  document.getElementById('gate').hidden = false;
+}
+async function unlock(tok){
+  TOKEN = tok;
+  const r = await fetch('/api/admin/hours', { headers:{ 'X-Admin-Token': TOKEN } });
+  if (!r.ok){
+    document.getElementById('gateMsg').textContent = 'Token klopt niet.';
+    return false;
+  }
+  try { localStorage.setItem('ayaa-admin', tok); } catch(e){}
+  document.getElementById('gate').hidden = true;
+  document.getElementById('app').hidden = false;
+  await Promise.all([loadBookings(), loadHours(), loadClosures()]);
+  return true;
+}
+document.getElementById('tokGo').addEventListener('click',
+  () => unlock(document.getElementById('tok').value.trim()));
+document.getElementById('tok').addEventListener('keydown',
+  e => { if (e.key === 'Enter') document.getElementById('tokGo').click(); });
+document.getElementById('logout').addEventListener('click', logout);
+
+/* ── bookings ── */
+async function loadBookings(){
+  const f = document.getElementById('from').value, t = document.getElementById('to').value;
+  const d = await api('/admin/bookings?from=' + f + '&to=' + t);
+  const box = document.getElementById('list');
+  if (!d.bookings.length){ box.innerHTML = '<p class="empty">Nog geen afspraken in deze periode.</p>'; return; }
+
+  const rows = d.bookings.map(b => {
+    const off = b.status !== 'confirmed';
+    return '<tr class="' + (off ? 'off' : '') + '">'
+      + '<td><b>' + b.date + '</b><br>' + hhmm(b.start) + ' – ' + hhmm(b.end) + '</td>'
+      + '<td>' + (NAMES[b.treatment] || b.treatment) + '</td>'
+      + '<td>' + esc(b.name) + '<br><span style="color:var(--muted);font-size:13px">'
+      + esc(b.email) + (b.phone ? ' · ' + esc(b.phone) : '') + '</span></td>'
+      + '<td style="max-width:220px">' + esc(b.notes || '') + '</td>'
+      + '<td><span class="badge' + (off ? ' no' : '') + '">'
+      + (off ? 'geannuleerd' : 'bevestigd') + '</span></td>'
+      + '<td>' + (off ? '' :
+          '<button class="btn ghost tiny" data-cancel="' + b.id + '">Annuleren</button>') + '</td>'
+      + '</tr>';
+  }).join('');
+
+  box.innerHTML = '<table><thead><tr><th>Wanneer</th><th>Behandeling</th><th>Klant</th>'
+    + '<th>Notitie</th><th>Status</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>';
+
+  box.querySelectorAll('[data-cancel]').forEach(b =>
+    b.addEventListener('click', async () => {
+      if (!confirm('Deze afspraak annuleren? De klant krijgt hier geen bericht van.')) return;
+      await api('/admin/bookings/' + b.dataset.cancel + '/cancel', { method: 'POST' });
+      loadBookings();
+    }));
+}
+function esc(s){ const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+/* ── hours ── */
+async function loadHours(){
+  const d = await api('/admin/hours');
+  const byDay = {};
+  d.hours.forEach(h => { byDay[h.weekday] = h; });
+  document.getElementById('hours').innerHTML = WD.map((name, i) => {
+    const h = byDay[i];
+    return '<div class="day-row">'
+      + '<label>' + name + '</label>'
+      + '<input type="time" data-wd="' + i + '" data-k="start" value="' + (h ? hhmm(h.start) : '') + '">'
+      + '<input type="time" data-wd="' + i + '" data-k="end" value="' + (h ? hhmm(h.end) : '') + '">'
+      + '<label style="font-size:13px"><input type="checkbox" data-wd="' + i + '" data-k="open"'
+      + (h ? ' checked' : '') + '> open</label>'
+      + '</div>';
+  }).join('');
+}
+document.getElementById('saveHours').addEventListener('click', async () => {
+  const hours = [];
+  for (let i = 0; i < 7; i++){
+    const open = document.querySelector('[data-wd="' + i + '"][data-k="open"]').checked;
+    if (!open) continue;
+    const s = document.querySelector('[data-wd="' + i + '"][data-k="start"]').value;
+    const e = document.querySelector('[data-wd="' + i + '"][data-k="end"]').value;
+    if (!s || !e || toMin(s) >= toMin(e)){
+      document.getElementById('hoursMsg').textContent = WD[i] + ': tijden kloppen niet.';
+      return;
+    }
+    hours.push({ weekday: i, start: toMin(s), end: toMin(e) });
+  }
+  const r = await api('/admin/hours', { method: 'PUT', body: JSON.stringify({ hours }) });
+  document.getElementById('hoursMsg').textContent = r.ok ? 'Opgeslagen.' : 'Mislukt.';
+  setTimeout(() => { document.getElementById('hoursMsg').textContent = ''; }, 2500);
+});
+
+/* ── closures ── */
+async function loadClosures(){
+  const d = await api('/admin/closures');
+  const box = document.getElementById('closures');
+  if (!d.closures.length){ box.innerHTML = '<p class="empty">Niets geblokkeerd.</p>'; return; }
+  box.innerHTML = '<table><tbody>' + d.closures.map(c =>
+    '<tr><td><b>' + c.date + '</b></td><td>' + hhmm(c.start) + ' – ' + hhmm(c.end) + '</td>'
+    + '<td>' + esc(c.note || '') + '</td>'
+    + '<td><button class="btn ghost tiny" data-del="' + c.id + '">Verwijder</button></td></tr>'
+  ).join('') + '</tbody></table>';
+  box.querySelectorAll('[data-del]').forEach(b =>
+    b.addEventListener('click', async () => {
+      await api('/admin/closures/' + b.dataset.del, { method: 'DELETE' });
+      loadClosures();
+    }));
+}
+document.getElementById('clAdd').addEventListener('click', async () => {
+  const date = document.getElementById('clDate').value;
+  if (!date){ document.getElementById('clMsg').textContent = 'Kies een datum.'; return; }
+  const r = await api('/admin/closures', { method: 'POST', body: JSON.stringify({
+    date, start: toMin(document.getElementById('clFrom').value || '00:00'),
+    end: toMin(document.getElementById('clTo').value || '23:59'),
+    note: document.getElementById('clNote').value
+  })});
+  document.getElementById('clMsg').textContent = r.ok ? 'Geblokkeerd.' : 'Mislukt.';
+  document.getElementById('clNote').value = '';
+  setTimeout(() => { document.getElementById('clMsg').textContent = ''; }, 2500);
+  loadClosures();
+});
+
+document.getElementById('reload').addEventListener('click', loadBookings);
+['from','to'].forEach(id =>
+  document.getElementById(id).addEventListener('change', loadBookings));
+
+/* ── boot ── */
+const today = new Date();
+document.getElementById('from').value = today.toISOString().slice(0,10);
+document.getElementById('to').value =
+  new Date(today.getTime() + 120*864e5).toISOString().slice(0,10);
+let saved = null;
+try { saved = localStorage.getItem('ayaa-admin'); } catch(e){}
+if (saved) unlock(saved);
+</script>
+</body>
+</html>

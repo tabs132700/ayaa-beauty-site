@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aya Beauty &amp; Skin — Huidstudio Rotterdam</title>
+<meta name="description" id="metaDesc" content="Aya Beauty &amp; Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi.">
+<meta name="theme-color" content="#0E0B0A">
+<meta property="og:title" content="Aya Beauty &amp; Skin — Huidstudio Rotterdam">
+<meta property="og:description" content="Hydrofacial, microneedling met exosomen, huidverbetering en lip blush. Rotterdam.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/profile.jpg">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@200;300;400;500&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bone:#F4EFE9; --ink:#17120F; --clay:#B4735A; --clay-soft:#E7D2C6;
+  --sand:#E3D3C6; --night:#0E0B0A; --muted:#7C6B60; --line:rgba(23,18,15,.12);
+  --display:'Instrument Serif',Georgia,serif;
+  --ui:'Outfit',system-ui,-apple-system,sans-serif;
+  --track:.34em;
+  --gutter:clamp(20px,5vw,80px);
+  --maxw:1440px;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
+
+/* ── Arabic type system: no tracking, no uppercase, more leading ── */
+html[lang="ar"]{
+  --display:'Amiri','Instrument Serif',Georgia,serif;
+  --ui:'IBM Plex Sans Arabic','Outfit',system-ui,sans-serif;
+  --track:0;
+}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .display{line-height:1.3;letter-spacing:0}
+html[lang="ar"] .scrub-text{line-height:1.5}
+html[lang="ar"] .it,html[lang="ar"] em,html[lang="ar"] .sig{font-style:normal}
+html[lang="ar"] .kicker,html[lang="ar"] .intro-label,html[lang="ar"] .chip,
+html[lang="ar"] .brand-sub,html[lang="ar"] .foot-col strong,html[lang="ar"] .fact span,
+html[lang="ar"] .frame figcaption,html[lang="ar"] .svc-count,html[lang="ar"] .gal-scroll-note,
+html[lang="ar"] .scroll-hint,html[lang="ar"] .foot-base,html[lang="ar"] .nav-link,
+html[lang="ar"] .btn,html[lang="ar"] .nav-cta,html[lang="ar"] .field label,
+html[lang="ar"] .bk-note,html[lang="ar"] .sum-row span{letter-spacing:0;text-transform:none}
+html[lang="ar"] .kicker,html[lang="ar"] .intro-label,html[lang="ar"] .chip,
+html[lang="ar"] .brand-sub,html[lang="ar"] .foot-col strong,html[lang="ar"] .fact span,
+html[lang="ar"] .svc-count,html[lang="ar"] .gal-scroll-note,html[lang="ar"] .field label,
+html[lang="ar"] .sum-row span{font-size:12.5px}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--bone);color:var(--ink);
+  font-family:var(--ui);font-weight:300;font-size:clamp(15px,1.05vw,17px);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:clip;width:100%;max-width:100%;
+}
+main{overflow-x:clip;width:100%;max-width:100%}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--clay);color:var(--bone)}
+
+h1,h2,h3,.display{font-family:var(--display);font-weight:400;line-height:.95;letter-spacing:-.02em}
+.it{font-style:italic;color:var(--clay)}
+.shell{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter);width:100%}
+.sec{padding-block:clamp(90px,14vh,190px)}
+.ltr{direction:ltr;display:inline-block;unicode-bidi:isolate}
+
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:200;
+  background-image:var(--grain);opacity:.22;mix-blend-mode:multiply}
+
+/* ─────────────── NAV ─────────────── */
+.nav{
+  position:fixed;top:clamp(12px,2vh,22px);inset-inline-start:50%;translate:-50% 0;z-index:120;
+  width:min(1180px,calc(100% - 2*var(--gutter)));
+  display:flex;align-items:center;gap:16px;
+  padding:9px 9px 9px 20px;border-radius:999px;
+  background:rgba(244,239,233,.66);backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 12px 40px -18px rgba(23,18,15,.5);
+  transition:background .5s ease,color .5s ease,border-color .5s ease;
+}
+[dir="rtl"] .nav{translate:50% 0;padding:9px 20px 9px 9px}
+.nav.on-dark{background:rgba(14,11,10,.5);border-color:rgba(255,255,255,.14);color:var(--bone)}
+.nav.on-dark .nav-link{color:rgba(244,239,233,.7)}
+.nav.on-dark .nav-link:hover{color:var(--bone)}
+.nav.on-dark .brand-sub{color:rgba(244,239,233,.5)}
+.nav.on-dark .lang{border-color:rgba(244,239,233,.24)}
+.nav.on-dark .lang button{color:rgba(244,239,233,.55)}
+.nav.on-dark .lang button[aria-pressed="true"]{background:rgba(244,239,233,.14);color:var(--bone)}
+.brand{display:flex;align-items:center;gap:11px;margin-inline-end:auto;min-width:0}
+.brand{border:0;background:none;cursor:pointer;font:inherit;color:inherit;padding:0;text-align:start}
+.brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
+.brand-name{font-family:var(--display);font-size:19px;line-height:1}
+.brand-sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1;margin-top:3px}
+.nav-links{display:flex;gap:24px}
+.nav-link{font-size:13.5px;color:var(--muted);position:relative;padding-block:4px;transition:color .3s;white-space:nowrap}
+.nav-link::after{content:'';position:absolute;inset-inline-start:0;bottom:0;height:1px;width:0;background:currentColor;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.nav-link:hover{color:var(--ink)}
+.nav-link:hover::after{width:100%}
+.lang{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;flex:none}
+.lang button{border:0;background:none;cursor:pointer;border-radius:999px;padding:6px 11px;
+  font-size:11.5px;letter-spacing:.1em;color:var(--muted);transition:background .35s,color .35s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bone)}
+.nav-cta{font-size:13.5px;padding:11px 22px;border-radius:999px;background:var(--ink);color:var(--bone);
+  white-space:nowrap;transition:background .4s,scale .4s cubic-bezier(.2,.8,.2,1)}
+.nav-cta:hover{background:var(--clay);scale:1.03}
+@media(max-width:1000px){.nav-links{display:none}.nav{padding-inline-start:14px}}
+@media(max-width:460px){.brand-sub{display:none}}
+
+/* ─────────────── QUICK-JUMP SIDE NAV ─────────────── */
+.quicknav{position:fixed;inset-inline-end:22px;top:50%;translate:0 -50%;z-index:110;
+  display:flex;flex-direction:column;gap:16px}
+.quicknav a{position:relative;display:block;width:9px;height:9px;flex:none}
+.quicknav a i{display:block;width:9px;height:9px;border-radius:50%;border:1.4px solid rgba(23,18,15,.3);
+  background:transparent;transition:background .35s,border-color .35s,scale .35s cubic-bezier(.2,.8,.2,1)}
+.quicknav a:hover i{border-color:var(--ink);scale:1.2}
+.quicknav a.is-active i{background:var(--clay);border-color:var(--clay);scale:1.25}
+.quicknav a::after{content:attr(aria-label);position:absolute;inset-inline-end:22px;top:50%;translate:0 -50%;
+  white-space:nowrap;font-size:11.5px;letter-spacing:.06em;color:var(--ink);background:#fff;
+  padding:6px 12px;border-radius:999px;box-shadow:0 10px 30px -14px rgba(23,18,15,.5);
+  opacity:0;pointer-events:none;transition:opacity .3s,translate .3s}
+.quicknav a:hover::after{opacity:1;translate:-4px -50%}
+[dir="rtl"] .quicknav a::after{inset-inline-end:auto;inset-inline-start:22px}
+.nav.on-dark ~ .quicknav a i{border-color:rgba(244,239,233,.4)}
+.nav.on-dark ~ .quicknav a.is-active i{background:var(--clay-soft);border-color:var(--clay-soft)}
+@media(max-width:1100px){.quicknav{display:none}}
+@media(prefers-reduced-motion:reduce){.quicknav a i,.quicknav a::after{transition:none}}
+
+/* ─────────────── BRAND MENU ─────────────── */
+.site-menu{position:fixed;inset:0;z-index:150;display:flex;justify-content:flex-end}
+.site-menu[hidden]{display:none}
+.site-menu::before{content:'';position:absolute;inset:0;background:rgba(14,11,10,.5);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.site-menu-panel{position:relative;z-index:1;width:min(420px,88vw);height:100%;background:var(--bone);
+  padding:clamp(90px,14vh,120px) clamp(28px,4vw,44px) 40px;overflow-y:auto;
+  box-shadow:-30px 0 70px -40px rgba(23,18,15,.7);
+  translate:100% 0;transition:translate .5s cubic-bezier(.2,.8,.2,1)}
+[dir="rtl"] .site-menu{justify-content:flex-start}
+[dir="rtl"] .site-menu-panel{translate:-100% 0}
+.site-menu.is-open .site-menu-panel{translate:0 0}
+.site-menu-close{position:absolute;top:clamp(20px,3vh,30px);inset-inline-end:clamp(20px,3vw,30px);
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;
+  font-size:20px;line-height:1;cursor:pointer;color:var(--ink);transition:border-color .3s,background .3s}
+.site-menu-close:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+.site-menu-links{display:flex;flex-direction:column;gap:4px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.site-menu-links a{font-family:var(--display);font-size:clamp(1.4rem,3vw,1.9rem);padding-block:9px;
+  color:var(--ink);transition:color .3s,translate .3s cubic-bezier(.2,.8,.2,1)}
+.site-menu-links a:hover{color:var(--clay);translate:6px 0}
+[dir="rtl"] .site-menu-links a:hover{translate:-6px 0}
+.site-menu-h{display:block;margin-top:26px;margin-bottom:6px;font-size:11px;letter-spacing:var(--track);
+  text-transform:uppercase;color:var(--muted);font-weight:400}
+html[lang="ar"] .site-menu-h{letter-spacing:0;text-transform:none;font-size:12.5px}
+.site-menu-sub{display:flex;flex-direction:column}
+.site-menu-sub button{border:0;background:none;cursor:pointer;font:inherit;color:var(--muted);text-align:start;
+  font-size:14.5px;padding-block:8px;transition:color .3s,translate .3s cubic-bezier(.2,.8,.2,1)}
+.site-menu-sub button:hover{color:var(--clay);translate:6px 0}
+[dir="rtl"] .site-menu-sub button:hover{translate:-6px 0}
+
+/* ─────────────── CONTENT PAGE OVERLAY ─────────────── */
+.page-view{position:fixed;inset:0;z-index:160;display:flex;align-items:flex-start;justify-content:center;
+  overflow-y:auto;padding:clamp(70px,10vh,120px) 18px 60px}
+.page-view[hidden]{display:none}
+.page-view::before{content:'';position:fixed;inset:0;z-index:-1;background:rgba(14,11,10,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.page-view-panel{position:relative;width:min(720px,100%);background:var(--bone);border-radius:24px;
+  padding:clamp(36px,5vw,60px);box-shadow:0 50px 100px -40px rgba(23,18,15,.7);
+  opacity:0;translate:0 26px;transition:opacity .4s,translate .4s cubic-bezier(.2,.8,.2,1)}
+.page-view.is-open .page-view-panel{opacity:1;translate:0 0}
+.page-view-close{position:absolute;top:clamp(16px,2.4vw,24px);inset-inline-end:clamp(16px,2.4vw,24px);
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;
+  font-size:20px;line-height:1;cursor:pointer;color:var(--ink);transition:border-color .3s,background .3s}
+.page-view-close:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+#pageViewTitle{font-family:var(--display);font-size:clamp(1.7rem,3.6vw,2.6rem);max-width:20ch;
+  margin-bottom:20px;padding-inline-end:44px}
+#pageViewBody{color:var(--muted);font-size:15.5px;line-height:1.75}
+#pageViewBody p + p{margin-top:14px}
+.page-view-cta{margin-top:28px;width:fit-content}
+
+/* ─────────────── HERO ─────────────── */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;background:var(--night);isolation:isolate}
+.hero-bg{position:absolute;inset:-12% 0;z-index:0;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;filter:contrast(1.04) saturate(.9) brightness(.86)}
+.hero-wash{position:absolute;inset:0;z-index:1;background:
+  radial-gradient(85% 70% at 50% 46%,rgba(14,11,10,.14) 0%,rgba(14,11,10,.62) 58%,rgba(14,11,10,.9) 100%),
+  linear-gradient(to bottom,rgba(14,11,10,.55) 0%,transparent 26%,transparent 60%,rgba(14,11,10,.88) 100%)}
+.hero-inner{position:relative;z-index:2;text-align:center;color:var(--bone);padding-block:140px 90px}
+.kicker{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.62);margin-bottom:clamp(20px,3vh,34px)}
+.hero h1{font-size:clamp(2.6rem,7.4vw,7.2rem);max-width:20ch;margin-inline:auto;letter-spacing:-.025em}
+html[lang="ar"] .hero h1{font-size:clamp(2.2rem,6.2vw,5.9rem);max-width:17ch}
+.hero h1 .it{color:var(--clay-soft)}
+.hero-lede{margin:clamp(24px,3.4vh,38px) auto 0;max-width:52ch;font-size:clamp(15px,1.25vw,18px);color:rgba(244,239,233,.74);font-weight:200}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(30px,4vh,48px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:999px;
+  font-size:14.5px;border:0;cursor:pointer;transition:background .45s,color .45s,border-color .45s,translate .45s cubic-bezier(.2,.8,.2,1)}
+.btn-solid{background:var(--bone);color:var(--ink)}
+.btn-solid:hover{background:var(--clay);color:#fff;translate:0 -3px}
+.btn-ghost{border:1px solid rgba(244,239,233,.34);color:var(--bone);background:none}
+.btn-ghost:hover{border-color:var(--bone);background:rgba(244,239,233,.1);translate:0 -3px}
+.btn-ink{background:var(--ink);color:var(--bone)}
+.btn-ink:hover{background:var(--clay);color:#fff;translate:0 -3px}
+.arrow{width:6px;height:6px;border-inline-end:1.4px solid currentColor;border-bottom:1.4px solid currentColor;rotate:-45deg;translate:0 -1px;flex:none}
+[dir="rtl"] .arrow{rotate:135deg}
+.scroll-hint{position:absolute;bottom:26px;inset-inline-start:50%;translate:-50% 0;z-index:3;
+  font-size:10px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.5);
+  display:flex;flex-direction:column;align-items:center;gap:10px}
+[dir="rtl"] .scroll-hint{translate:50% 0}
+.scroll-hint i{display:block;width:1px;height:46px;background:linear-gradient(to bottom,rgba(244,239,233,.55),transparent);animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{0%,100%{transform:scaleY(.35);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+
+/* ─────────────── MARQUEE (locked LTR) ─────────────── */
+.marquee{background:var(--ink);color:var(--bone);padding-block:20px;overflow:hidden;white-space:nowrap;position:relative}
+.marquee-track{display:inline-flex;will-change:transform}
+.marquee .mq-item{font-family:var(--display);font-size:clamp(20px,2.4vw,32px);padding-inline:26px;display:inline-flex;align-items:center;gap:26px;opacity:.9;
+  background:none;border:0;color:inherit;font-weight:400;transition:opacity .3s,color .3s}
+button.mq-item{cursor:pointer}
+button.mq-item:hover{opacity:1;color:var(--clay-soft)}
+.marquee .mq-item::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--clay);flex:none}
+html[lang="ar"] .marquee .mq-item{font-size:clamp(17px,2vw,27px)}
+
+/* ─────────────── SCRUB INTRO ─────────────── */
+.intro{max-width:1100px;margin-inline:auto;text-align:start}
+.intro-label{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--clay);
+  margin-bottom:clamp(30px,5vh,56px);display:flex;align-items:center;gap:14px}
+.intro-label::before{content:'';width:42px;height:1px;background:var(--clay);opacity:.5;flex:none}
+.scrub-text{font-family:var(--display);font-size:clamp(1.55rem,4.1vw,3.7rem);line-height:1.16;letter-spacing:-.015em}
+.scrub-text .w{opacity:.14;display:inline-block}
+.intro-foot{display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,80px);align-items:flex-start;margin-top:clamp(44px,7vh,86px);padding-top:34px;border-top:1px solid var(--line)}
+.intro-foot p{max-width:46ch;color:var(--muted);font-size:15.5px}
+.sig{font-family:var(--display);font-style:italic;font-size:26px;color:var(--ink);line-height:1.3}
+.sig small{display:block;font-family:var(--ui);font-style:normal;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+/* ─────────────── PINNED SERVICES ─────────────── */
+.svc{background:var(--night);color:var(--bone);position:relative}
+.svc .shell{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(30px,6vw,110px);align-items:stretch}
+.svc-sticky{position:relative}
+.svc-stick-in{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:100px}
+.svc-stick-in .kicker{color:rgba(244,239,233,.5)}
+.svc-stick-in h2{font-size:clamp(2.2rem,5vw,4.6rem);max-width:12ch}
+.svc-stick-in p{margin-top:24px;max-width:38ch;color:rgba(244,239,233,.6);font-size:15.5px;font-weight:200}
+.svc-count{margin-top:34px;font-size:12px;letter-spacing:.22em;color:rgba(244,239,233,.45);min-height:1.3em}
+
+/* ─────────────── EQUIPMENT BENTO ─────────────── */
+.kit{background:var(--bone)}
+.kit-head{max-width:900px;margin-bottom:clamp(36px,6vh,72px)}
+.kit-head h2{font-size:clamp(1.9rem,4.4vw,4rem);max-width:17ch}
+.kit-head p{margin-top:22px;max-width:52ch;color:var(--muted);font-size:16px}
+.bento{
+  display:grid;grid-auto-flow:dense;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-auto-rows:minmax(190px,auto);
+  gap:clamp(12px,1.4vw,18px);
+  perspective:1400px;
+}
+.cell{
+  position:relative;overflow:hidden;border-radius:20px;isolation:isolate;
+  background:var(--night);color:var(--bone);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(20px,2.2vw,30px);min-width:0;
+  transform-style:preserve-3d;will-change:transform;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
+}
+.cell:hover{box-shadow:0 30px 60px -24px rgba(14,11,10,.55)}
+.cell img{
+  position:absolute;inset:0;width:112%;height:112%;object-fit:cover;z-index:-2;
+  filter:grayscale(.3) contrast(1.05) brightness(.78);
+  transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .7s;
+}
+.cell:hover img{transform:scale(1.06);filter:grayscale(0) contrast(1.1) brightness(.92)}
+.cell::after{content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top,rgba(14,11,10,.92) 8%,rgba(14,11,10,.34) 62%,rgba(14,11,10,.1) 100%);
+  transition:background .5s}
+.cell:hover::after{background:linear-gradient(to top,rgba(14,11,10,.86) 4%,rgba(14,11,10,.2) 58%,rgba(14,11,10,.05) 100%)}
+.cell h3{font-size:clamp(1.15rem,1.9vw,1.75rem);margin-bottom:8px;transition:translate .5s cubic-bezier(.2,.8,.2,1)}
+.cell p{font-size:13.5px;font-weight:200;color:rgba(244,239,233,.7);max-width:38ch;
+  opacity:0;translate:0 10px;transition:opacity .5s,translate .5s cubic-bezier(.2,.8,.2,1)}
+.cell:hover p{opacity:1;translate:0 0}
+.cell:hover h3{translate:0 -2px}
+.cell .spec{
+  margin-top:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--clay-soft);font-variant-numeric:tabular-nums;
+}
+html[lang="ar"] .cell .spec{letter-spacing:0;text-transform:none;font-size:13px}
+.c-a{grid-column:span 2;grid-row:span 2}
+.c-b{grid-column:span 2}
+.c-c{grid-column:span 1}
+.c-d{grid-column:span 1}
+.c-e{grid-column:span 2}
+.c-f{grid-column:span 2}
+/* this source frame carries a story sticker mid-height: hold the clean top band */
+.c-d img{object-position:50% 12%}
+@media(max-width:900px){
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(168px,auto)}
+  .c-a{grid-column:span 2;grid-row:span 1}
+  .c-b{grid-column:span 2}
+  .c-c,.c-d{grid-column:span 1}
+  .c-e,.c-f{grid-column:span 2}
+}
+@media(max-width:520px){
+  .bento{grid-template-columns:1fr}
+  .c-a,.c-b,.c-c,.c-d,.c-e,.c-f{grid-column:span 1}
+}
+@media(hover:none){
+  .cell p{opacity:1;translate:0 0}
+}
+
+/* ─────────────── HORIZONTAL ACCORDION ─────────────── */
+.acc{display:flex;gap:10px;margin-top:clamp(28px,4vh,48px);height:clamp(260px,38vh,380px)}
+.acc-pane{
+  position:relative;flex:1 1 0;min-width:0;overflow:hidden;border-radius:18px;
+  background:var(--night);cursor:pointer;
+  transition:flex-grow .7s cubic-bezier(.2,.8,.2,1);
+}
+.acc-pane[aria-expanded="true"]{flex-grow:3.4}
+.acc-pane{background:var(--night)}
+.acc-pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(.42) brightness(.6);transition:filter .7s}
+.acc-pane[aria-expanded="true"] img{filter:grayscale(0) brightness(.82)}
+.acc-pane::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(14,11,10,.9),transparent 60%)}
+.acc-in{position:absolute;inset:auto 0 0 0;padding:clamp(16px,1.8vw,24px);z-index:1;color:var(--bone)}
+.acc-in h4{font-family:var(--display);font-weight:400;font-size:clamp(1.05rem,1.7vw,1.5rem);
+  line-height:1.15;overflow-wrap:break-word;hyphens:auto}
+.acc-in p{
+  font-size:13.5px;font-weight:200;color:rgba(244,239,233,.74);max-width:44ch;
+  margin-top:8px;opacity:0;translate:0 10px;
+  transition:opacity .5s .12s,translate .5s .12s;
+}
+.acc-pane[aria-expanded="true"] .acc-in p{opacity:1;translate:0 0}
+.acc-pane:focus-visible{outline:2px solid var(--clay-soft);outline-offset:3px}
+@media(max-width:760px){
+  .acc{flex-direction:column;height:auto}
+  .acc-pane{flex:none;height:150px}
+  .acc-pane[aria-expanded="true"]{height:280px}
+  .acc-in p{opacity:1;translate:0 0}
+}
+.svc-count b{color:var(--clay-soft);font-weight:400}
+.svc-list{display:flex;flex-direction:column;gap:clamp(20px,4vh,40px);padding-block:clamp(90px,16vh,190px)}
+.card{position:relative;overflow:hidden;border-radius:22px;border:1px solid rgba(244,239,233,.12);
+  background:rgba(244,239,233,.035);display:grid;grid-template-columns:minmax(0,1fr) 38%;min-height:250px;
+  transition:border-color .6s,background .6s}
+.card:hover{border-color:rgba(244,239,233,.3);background:rgba(244,239,233,.07)}
+.card-body{padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:clamp(1.45rem,2.5vw,2.2rem);letter-spacing:-.01em}
+.card h3 em{font-style:italic;color:var(--clay-soft)}
+.card p{color:rgba(244,239,233,.6);font-size:14.5px;font-weight:200;max-width:40ch}
+.card-meta{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:18px;align-items:center}
+.chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:999px;border:1px solid rgba(244,239,233,.2);color:rgba(244,239,233,.68)}
+.card-book{font-size:12.5px;color:var(--clay-soft);background:none;cursor:pointer;
+  border:0;border-bottom:1px solid rgba(231,210,198,.4);padding:0 0 3px;
+  margin-inline-start:auto;transition:color .35s,border-color .35s}
+.card-book:hover{color:#fff;border-color:#fff}
+.card-more{font-size:12.5px;color:rgba(244,239,233,.5);background:none;cursor:pointer;
+  border:0;padding:0;transition:color .35s}
+.card-more:hover{color:rgba(244,239,233,.85)}
+.card-media{position:relative;overflow:hidden;background:var(--night)}
+.card-media img{width:100%;height:100%;object-fit:cover;filter:grayscale(.28) contrast(1.06) brightness(.88)}
+.card-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.85),transparent 55%)}
+[dir="rtl"] .card-media::after{background:linear-gradient(270deg,rgba(14,11,10,.85),transparent 55%)}
+@media(max-width:940px){
+  .svc .shell{grid-template-columns:1fr}
+  .svc-stick-in{position:static;height:auto;padding-block:0 40px}
+  .svc-list{padding-block:0}
+  .card{grid-template-columns:1fr;min-height:0}
+  .card-media{height:200px;order:-1}
+  .card-media::after,[dir="rtl"] .card-media::after{background:linear-gradient(0deg,rgba(14,11,10,.8),transparent 60%)}
+}
+
+/* ─────────────── HORIZONTAL GALLERY (locked LTR) ─────────────── */
+.gal{background:var(--night);color:var(--bone);overflow-x:clip}
+.gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;padding-bottom:clamp(30px,5vh,56px)}
+.gal-head h2{font-size:clamp(1.9rem,4.4vw,4rem);max-width:16ch}
+.gal-head a{font-size:13px;color:rgba(244,239,233,.6);border-bottom:1px solid rgba(244,239,233,.3);padding-bottom:5px;transition:color .4s,border-color .4s}
+.gal-head a:hover{color:var(--bone);border-color:var(--bone)}
+.gal-view{position:relative;height:100svh;display:flex;align-items:center;overflow:hidden;max-width:100%}
+.gal-track{display:flex;gap:clamp(14px,1.8vw,26px);padding-inline:var(--gutter);will-change:transform}
+.frame{position:relative;flex:none;border-radius:16px;overflow:hidden;background:#1b1512;width:clamp(220px,25vw,380px);height:clamp(300px,58vh,520px)}
+.frame:nth-child(3n+2){height:clamp(240px,44vh,400px);align-self:flex-start;margin-top:clamp(20px,6vh,70px)}
+.frame:nth-child(4n+3){width:clamp(270px,32vw,470px)}
+.frame img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(.92);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.frame figcaption{position:absolute;inset-inline:0;bottom:0;padding:34px 18px 16px;
+  background:linear-gradient(to top,rgba(14,11,10,.86),transparent);
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,233,.82)}
+html[lang="ar"] .frame figcaption{direction:rtl;text-align:right;letter-spacing:0;text-transform:none;font-size:13px}
+.gal-scroll-note{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.38);padding-top:clamp(24px,4vh,44px)}
+@media(max-width:940px){
+  .gal-view{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-block:10px}
+  .gal-view::-webkit-scrollbar{display:none}
+  .gal-track{transform:none!important}
+  .frame{scroll-snap-align:center;height:56vh!important;margin-top:0!important;align-self:auto!important}
+}
+
+/* ─────────────── STACKING RITUAL ─────────────── */
+.ritual{background:var(--bone)}
+.ritual-head{max-width:900px;margin-bottom:clamp(40px,7vh,90px)}
+.ritual-head h2{font-size:clamp(2rem,4.8vw,4.4rem);max-width:15ch}
+.ritual-head p{margin-top:22px;max-width:50ch;color:var(--muted);font-size:16px}
+.stack{position:relative}
+.step{position:sticky;top:clamp(90px,14vh,140px);
+  display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,.66fr);gap:clamp(20px,4vw,52px);align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,3vw,44px);
+  margin-bottom:clamp(20px,4vh,34px);box-shadow:0 30px 70px -50px rgba(23,18,15,.6);will-change:transform}
+.step-n{font-family:var(--display);font-size:clamp(2.2rem,4.6vw,4.4rem);color:var(--clay);opacity:.34;line-height:.8}
+.step h3{font-size:clamp(1.35rem,2.6vw,2.3rem);margin-bottom:12px}
+.step p{color:var(--muted);font-size:15px;max-width:48ch}
+.step-img{border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:var(--sand)}
+.step-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.94)}
+@media(max-width:860px){
+  .step{grid-template-columns:auto minmax(0,1fr);position:relative;top:auto}
+  .step-img{grid-column:1/-1;aspect-ratio:16/9}
+}
+
+/* ─────────────── STUDIO ─────────────── */
+.studio{background:var(--bone);position:relative}
+.studio-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(30px,6vw,90px);align-items:center}
+.studio-media{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/4;background:var(--sand)}
+.studio-media img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.studio-copy h2{font-size:clamp(1.9rem,4.4vw,4rem);max-width:13ch}
+.studio-copy p{margin-top:24px;color:var(--muted);max-width:46ch;font-size:16px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:clamp(34px,5vh,54px)}
+.fact{background:var(--bone);padding:clamp(20px,2.4vw,30px)}
+.fact b{display:block;font-family:var(--display);font-size:clamp(1.7rem,3.2vw,2.9rem);line-height:1.15;margin-bottom:9px}
+.fact span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.studio-grid{grid-template-columns:1fr}.studio-media{aspect-ratio:4/5}}
+
+/* ─────────────── BOOKING ─────────────── */
+.book{background:var(--bone);border-top:1px solid var(--line)}
+.book-head{max-width:820px;margin-bottom:clamp(38px,6vh,72px)}
+.book-head h2{font-size:clamp(2rem,4.6vw,4.2rem);max-width:15ch}
+.book-head p{margin-top:22px;color:var(--muted);max-width:52ch;font-size:16px}
+.book-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(26px,4vw,64px);align-items:start}
+@media(max-width:940px){.book-grid{grid-template-columns:1fr}}
+
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.field.wide{grid-column:1/-1}
+@media(max-width:640px){.fields{grid-template-columns:1fr}}
+.field label{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{
+  width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;font-size:15px;font-weight:300;color:var(--ink);
+  transition:border-color .35s,box-shadow .35s;
+}
+.field textarea{resize:vertical;min-height:104px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:0;border-color:var(--clay);box-shadow:0 0 0 3px rgba(180,115,90,.14);
+}
+.field input::placeholder,.field textarea::placeholder{color:#B3A498}
+.field[data-invalid="1"] input,.field[data-invalid="1"] textarea{border-color:#B4485A}
+.parts{display:flex;gap:10px;flex-wrap:wrap}
+.parts label{position:relative;display:inline-flex;align-items:center;cursor:pointer;
+  padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;
+  font-size:13.5px;letter-spacing:0;text-transform:none;color:var(--muted);
+  transition:border-color .35s,background .35s,color .35s}
+.parts input{position:absolute;opacity:0;width:0;height:0}
+.parts label:hover{border-color:var(--ink);color:var(--ink)}
+.parts label:has(input:checked){background:var(--ink);border-color:var(--ink);color:var(--bone)}
+.parts label:has(input:focus-visible){box-shadow:0 0 0 3px rgba(180,115,90,.25)}
+.book-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:clamp(24px,3.4vh,34px)}
+.book-err{font-size:13.5px;color:#9E3D4E;display:none}
+.book-err[data-show="1"]{display:block}
+
+.summary{position:sticky;top:clamp(96px,14vh,132px);
+  background:var(--night);color:var(--bone);border-radius:22px;
+  padding:clamp(24px,2.6vw,34px);box-shadow:0 40px 90px -60px rgba(23,18,15,.9)}
+@media(max-width:940px){.summary{position:static}}
+.summary h3{font-size:clamp(1.3rem,2vw,1.7rem);margin-bottom:22px}
+.sum-row{display:flex;justify-content:space-between;gap:16px;padding-block:13px;border-top:1px solid rgba(244,239,233,.13);font-size:14px}
+.sum-row span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45);flex:none;padding-top:2px}
+.sum-row b{font-weight:400;text-align:end;color:var(--bone);min-width:0;overflow-wrap:anywhere}
+.sum-row b.empty{color:rgba(244,239,233,.3)}
+.bk-note{margin-top:22px;padding-top:18px;border-top:1px solid rgba(244,239,233,.13);
+  font-size:12.5px;line-height:1.55;color:rgba(244,239,233,.5)}
+.send{display:none;margin-top:22px;flex-direction:column;gap:10px}
+.send[data-show="1"]{display:flex}
+.send .btn{width:100%;font-size:14px;padding:14px 22px}
+.copied{font-size:12.5px;color:var(--clay-soft);min-height:1.2em}
+.msgbox{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.msgbox span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45)}
+html[lang="ar"] .msgbox span{letter-spacing:0;text-transform:none;font-size:12.5px}
+.msgbox textarea{
+  width:100%;min-height:132px;resize:vertical;
+  background:rgba(244,239,233,.06);border:1px solid rgba(244,239,233,.16);
+  border-radius:12px;padding:13px 15px;color:var(--bone);
+  font-family:var(--ui);font-size:13px;line-height:1.55;font-weight:300;
+}
+.msgbox textarea:focus{outline:0;border-color:var(--clay-soft)}
+@media(max-width:640px){.msgbox textarea{min-height:84px}}
+
+/* live availability, served by the booking API in server.py */
+.book-live{display:none}
+.book-live[data-on="1"]{display:block}
+.book-grid[data-off="1"]{display:none}
+
+.step-label{
+  font-size:11px;letter-spacing:var(--track);text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:12px;
+}
+html[lang="ar"] .step-label{letter-spacing:0;text-transform:none;font-size:12.5px}
+.step-label b{
+  font-weight:400;width:22px;height:22px;border-radius:50%;flex:none;
+  display:grid;place-items:center;background:var(--ink);color:var(--bone);font-size:11px;
+}
+.live-block{margin-bottom:clamp(30px,4.6vh,52px)}
+
+.picker{display:flex;flex-wrap:wrap;gap:10px}
+.picker button{
+  cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:11px 20px;font-size:13.5px;color:var(--muted);
+  transition:border-color .35s,background .35s,color .35s,translate .35s cubic-bezier(.2,.8,.2,1);
+}
+.picker button:hover{border-color:var(--ink);color:var(--ink);translate:0 -2px}
+.picker button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+
+.days{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x proximity}
+.days::-webkit-scrollbar{height:6px}
+.days::-webkit-scrollbar-thumb{background:var(--sand);border-radius:99px}
+.day{
+  flex:none;scroll-snap-align:start;cursor:pointer;background:#fff;
+  border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:82px;
+  text-align:center;color:var(--ink);line-height:1.25;
+  transition:border-color .3s,background .3s,color .3s,translate .3s cubic-bezier(.2,.8,.2,1);
+}
+.day small{display:block;font-size:11px;color:var(--muted);text-transform:capitalize}
+.day b{display:block;font-family:var(--display);font-size:21px;font-weight:400;margin-top:3px}
+.day i{display:block;font-style:normal;font-size:10.5px;color:var(--clay);margin-top:5px}
+.day:hover:not(:disabled){border-color:var(--ink);translate:0 -2px}
+.day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+.day[aria-pressed="true"] small,.day[aria-pressed="true"] i{color:rgba(244,239,233,.66)}
+.day:disabled{opacity:.34;cursor:not-allowed}
+
+.slots{display:flex;flex-wrap:wrap;gap:9px;min-height:46px}
+.slot{
+  cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:11px 16px;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink);
+  transition:border-color .3s,background .3s,color .3s,translate .3s cubic-bezier(.2,.8,.2,1);
+}
+.slot:hover{border-color:var(--ink);translate:0 -2px}
+.slot[aria-pressed="true"]{background:var(--clay);border-color:var(--clay);color:#fff}
+.slots-msg{font-size:14px;color:var(--muted)}
+
+.live-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.live-form .field.wide{grid-column:1/-1}
+@media(max-width:640px){.live-form{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.live-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:clamp(22px,3vh,32px)}
+.live-actions .btn:disabled{opacity:.45;cursor:not-allowed;translate:0}
+.live-err{font-size:13.5px;color:#9E3D4E;display:none}
+.live-err[data-show="1"]{display:block}
+.live-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:62ch}
+.chosen{
+  margin-top:16px;font-size:14px;color:var(--ink);
+  background:var(--clay-soft);border-radius:12px;padding:13px 17px;display:none;
+}
+.chosen[data-show="1"]{display:block}
+
+.done{
+  display:none;background:var(--night);color:var(--bone);border-radius:22px;
+  padding:clamp(28px,3.4vw,46px);box-shadow:0 40px 90px -60px rgba(23,18,15,.9);
+}
+.done[data-show="1"]{display:block}
+.done h3{font-size:clamp(1.6rem,3vw,2.6rem);margin-bottom:16px}
+.done p{color:rgba(244,239,233,.66);max-width:52ch;font-size:15px}
+.done .ref{
+  margin:24px 0;padding:16px 20px;border:1px dashed rgba(244,239,233,.3);border-radius:12px;
+  display:inline-flex;flex-direction:column;gap:5px;
+}
+.done .ref span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45)}
+html[lang="ar"] .done .ref span{letter-spacing:0;text-transform:none;font-size:12.5px}
+.done .ref b{font-family:var(--display);font-size:24px;font-weight:400;letter-spacing:.04em}
+.done-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+
+/* ─────────────── FAQ ─────────────── *//* ─────────────── FAQ ─────────────── */
+.faq{background:var(--bone);border-top:1px solid var(--line)}
+.faq h2{font-size:clamp(1.8rem,4vw,3.4rem);margin-bottom:clamp(30px,5vh,56px);max-width:14ch}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa > button{width:100%;background:none;border:0;cursor:pointer;text-align:start;
+  font-family:var(--display);font-size:clamp(1.05rem,2.1vw,1.75rem);color:var(--ink);
+  padding-block:clamp(20px,2.6vw,32px);padding-inline:0 52px;position:relative;
+  transition:color .4s,padding-inline-start .5s cubic-bezier(.2,.8,.2,1)}
+.qa > button:hover{color:var(--clay);padding-inline-start:12px}
+.qa > button::after,.qa > button::before{content:'';position:absolute;top:50%;background:currentColor;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.qa > button::after{width:15px;height:1.4px;inset-inline-end:14px;translate:0 -50%}
+.qa > button::before{width:1.4px;height:15px;inset-inline-end:20.8px;translate:0 -50%}
+.qa[data-open="1"] > button::before{transform:scaleY(0)}
+.qa-body{overflow:hidden;height:0}
+.qa-body div{padding-block:0 clamp(24px,3vw,36px);padding-inline:0 clamp(40px,8vw,140px);color:var(--muted);font-size:15.5px;max-width:64ch}
+
+/* ─────────────── CTA + FOOTER ─────────────── */
+.cta{background:var(--night);color:var(--bone);text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:-40% -10% auto;height:120%;
+  background:radial-gradient(50% 50% at 50% 42%,rgba(180,115,90,.34),transparent 68%);filter:blur(28px);pointer-events:none}
+.cta .shell{position:relative;z-index:1}
+.cta h2{font-size:clamp(2.2rem,7vw,6.4rem);max-width:15ch;margin-inline:auto}
+.cta p{margin:26px auto 0;max-width:44ch;color:rgba(244,239,233,.6);font-size:16px;font-weight:200}
+.cta .hero-cta{margin-top:clamp(32px,5vh,52px)}
+footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid rgba(244,239,233,.12);padding-block:clamp(44px,7vh,80px) 34px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:clamp(26px,4vw,60px);align-items:start}
+.foot-grid h3{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.2rem);color:var(--bone);max-width:16ch}
+.foot-col strong{display:block;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.42);font-weight:400;margin-bottom:16px}
+.foot-col a,.foot-col span{display:block;font-size:14.5px;margin-bottom:9px;transition:color .35s}
+.foot-col a:hover{color:var(--bone)}
+.foot-base{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:clamp(40px,6vh,72px);padding-top:24px;border-top:1px solid rgba(244,239,233,.12);font-size:12px;color:rgba(244,239,233,.4)}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid h3{grid-column:1/-1}}
+
+/* word-by-word heading reveal */
+.word{overflow:hidden;display:inline-block;vertical-align:top}
+.word-in{display:inline-block;will-change:transform}
+.nav-cta,.hero-cta .btn,.cta .btn{will-change:transform}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  html{scroll-behavior:auto}
+  .scrub-text .w{opacity:1!important}
+  .word-in{transform:none!important}
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <button type="button" class="brand" id="brandBtn" aria-haspopup="dialog" aria-expanded="false">
+    <img src="img/profile.jpg" alt="Aya Beauty &amp; Skin">
+    <span>
+      <span class="brand-name" data-i18n="brand">Aya</span>
+      <span class="brand-sub" data-i18n="brandSub">Beauty &amp; Skin</span>
+    </span>
+  </button>
+  <div class="nav-links">
+    <a class="nav-link" href="#behandelingen" data-i18n="navTreat">Behandelingen</a>
+    <a class="nav-link" href="#apparatuur" data-i18n="navKit">Apparatuur</a>
+    <a class="nav-link" href="#werkwijze" data-i18n="navWork">Werkwijze</a>
+    <a class="nav-link" href="#studio" data-i18n="navStudio">Studio</a>
+    <a class="nav-link" href="#vragen" data-i18n="navFaq">Vragen</a>
+  </div>
+  <div class="lang" role="group" aria-label="Taal / اللغة">
+    <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-lang="ar" aria-pressed="false">ع</button>
+  </div>
+  <a class="nav-cta" href="#afspraak" data-i18n="ctaNav">Afspraak maken</a>
+</nav>
+
+<!-- QUICK-JUMP SIDE NAV -->
+<nav class="quicknav" id="quicknav" aria-label="Snel naar sectie">
+  <a href="#behandelingen" data-i18n-attr="navTreat" data-sec="behandelingen"><i></i></a>
+  <a href="#apparatuur" data-i18n-attr="navKit" data-sec="apparatuur"><i></i></a>
+  <a href="#werkwijze" data-i18n-attr="navWork" data-sec="werkwijze"><i></i></a>
+  <a href="#studio" data-i18n-attr="navStudio" data-sec="studio"><i></i></a>
+  <a href="#afspraak" data-i18n-attr="ctaNav" data-sec="afspraak"><i></i></a>
+  <a href="#vragen" data-i18n-attr="navFaq" data-sec="vragen"><i></i></a>
+</nav>
+
+<!-- BRAND MENU (opened from the logo — section links + treatment/legal redirects) -->
+<div class="site-menu" id="siteMenu" hidden>
+  <div class="site-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <button type="button" class="site-menu-close" id="siteMenuClose" aria-label="Sluiten">&times;</button>
+    <div class="site-menu-links">
+      <a href="#behandelingen" data-i18n="navTreat"></a>
+      <a href="#apparatuur" data-i18n="navKit"></a>
+      <a href="#werkwijze" data-i18n="navWork"></a>
+      <a href="#studio" data-i18n="navStudio"></a>
+      <a href="#afspraak" data-i18n="ctaNav"></a>
+      <a href="#vragen" data-i18n="navFaq"></a>
+    </div>
+    <strong class="site-menu-h" data-i18n="fTreat"></strong>
+    <div class="site-menu-sub" id="menuTreatList">
+      <button type="button" data-page="analyse"></button>
+      <button type="button" data-page="hydrofacial"></button>
+      <button type="button" data-page="microneedling"></button>
+      <button type="button" data-page="rf"></button>
+      <button type="button" data-page="exosomen"></button>
+      <button type="button" data-page="huidverbetering"></button>
+      <button type="button" data-page="laser"></button>
+      <button type="button" data-page="lipblush"></button>
+    </div>
+    <strong class="site-menu-h" data-i18n="legalInfo"></strong>
+    <div class="site-menu-sub">
+      <button type="button" data-page="quals" data-i18n="legalQuals"></button>
+      <button type="button" data-page="contact" data-i18n="legalContact"></button>
+      <button type="button" data-page="terms" data-i18n="legalTerms"></button>
+      <button type="button" data-page="privacy" data-i18n="legalPrivacy"></button>
+      <button type="button" data-page="dmca" data-i18n="legalDmca"></button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT PAGE OVERLAY (treatments in full + legal/contact/qualifications) -->
+<div class="page-view" id="pageView" hidden>
+  <div class="page-view-panel" role="dialog" aria-modal="true" aria-label="Pagina">
+    <button type="button" class="page-view-close" id="pageViewClose" aria-label="Sluiten">&times;</button>
+    <h2 id="pageViewTitle"></h2>
+    <div id="pageViewBody"></div>
+    <a class="btn btn-ink page-view-cta" href="#afspraak" data-i18n="ctaNav"></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg" id="heroBg"><img src="img/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero-wash"></div>
+  <div class="hero-inner shell">
+    <p class="kicker" data-hero data-i18n="heroKicker">Schoonheidsspecialist &middot; Rotterdam</p>
+    <h1 data-hero data-i18n-html="heroTitle">Huid die er <span class="it">gezond</span> uitziet, niet gefilterd.</h1>
+    <p class="hero-lede" data-hero data-i18n="heroLede"></p>
+    <div class="hero-cta" data-hero>
+      <a class="btn btn-solid" href="#afspraak"><span data-i18n="ctaHero1">Afspraak maken</span> <i class="arrow"></i></a>
+      <a class="btn btn-ghost" href="#behandelingen" data-i18n="ctaHero2">Bekijk behandelingen</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><i></i><span data-i18n="scroll">Scroll</span></div>
+</header>
+
+<!-- MARQUEE -->
+<nav class="marquee" dir="ltr" aria-label="Snel naar een behandeling"><div class="marquee-track" id="mq"></div></nav>
+
+<!-- SCRUB INTRO -->
+<section class="sec shell">
+  <div class="intro">
+    <p class="intro-label"><span data-i18n="introLabel">Wie je voor je hebt</span></p>
+    <p class="scrub-text" id="scrub"></p>
+    <div class="intro-foot">
+      <p data-i18n="introBody"></p>
+      <p class="sig"><span data-i18n="sigName">Samar Tinawi</span><small data-i18n="sigSub"></small></p>
+    </div>
+  </div>
+</section>
+
+<!-- PINNED SERVICES -->
+<section class="svc sec" id="behandelingen">
+  <div class="shell">
+    <div class="svc-sticky"><div class="svc-stick-in">
+      <h2 data-i18n="svcTitle"></h2>
+      <p data-i18n="svcLede"></p>
+      <p class="svc-count"><b id="svcNow"></b></p>
+    </div></div>
+
+    <div class="svc-list" id="svcList">
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="sAt">3D <em>huidanalyse</em></h3>
+          <p data-i18n="sAd"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="sAc1"></span><span class="chip" data-i18n="sAc2"></span><span class="chip" data-i18n="sAc3"></span>
+            <button type="button" class="card-book" data-book="analyse" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="analyse" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-scanner-real.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="s1t">Hydro<em>facial</em></h3>
+          <p data-i18n="s1d"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="s1c1"></span><span class="chip" data-i18n="s1c2"></span><span class="chip" data-i18n="s1c3"></span>
+            <button type="button" class="card-book" data-book="hydrofacial" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="hydrofacial" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-hydro-real.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="s2t">Micro<em>needling</em></h3>
+          <p data-i18n="s2d"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="s2c1"></span><span class="chip" data-i18n="s2c2"></span><span class="chip" data-i18n="s2c3"></span>
+            <button type="button" class="card-book" data-book="microneedling" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="microneedling" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-microneedling.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="sRt">RF <em>microneedling</em></h3>
+          <p data-i18n="sRd"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="sRc1"></span><span class="chip" data-i18n="sRc2"></span><span class="chip" data-i18n="sRc3"></span>
+            <button type="button" class="card-book" data-book="rf" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="rf" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-rf.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="s3t">Exosomen &amp; <em>collageen</em></h3>
+          <p data-i18n="s3d"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="s3c1"></span><span class="chip" data-i18n="s3c2"></span><span class="chip" data-i18n="s3c3"></span>
+            <button type="button" class="card-book" data-book="exosomen" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="exosomen" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-exosome.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="s4t">Huid<em>verbetering</em></h3>
+          <p data-i18n="s4d"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="s4c1"></span><span class="chip" data-i18n="s4c2"></span><span class="chip" data-i18n="s4c3"></span>
+            <button type="button" class="card-book" data-book="huidverbetering" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="huidverbetering" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-brighten2.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="sLt">Laser <em>ontharing</em></h3>
+          <p data-i18n="sLd"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="sLc1"></span><span class="chip" data-i18n="sLc2"></span><span class="chip" data-i18n="sLc3"></span>
+            <button type="button" class="card-book" data-book="laser" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="laser" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-laser-real.jpg" alt="" loading="lazy"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 data-i18n-html="s5t">Lip <em>blush</em></h3>
+          <p data-i18n="s5d"></p>
+          <div class="card-meta">
+            <span class="chip" data-i18n="s5c1"></span><span class="chip" data-i18n="s5c2"></span><span class="chip" data-i18n="s5c3"></span>
+            <button type="button" class="card-book" data-book="lipblush" data-i18n="bookThis">Boek deze</button>
+            <button type="button" class="card-more" data-page="lipblush" data-i18n="readMore"></button>
+          </div>
+        </div>
+        <div class="card-media"><img src="img/r-lipblush.jpg" alt="" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section class="kit sec" id="apparatuur">
+  <div class="shell">
+    <div class="kit-head">
+      <h2 data-i18n-html="kitTitle"></h2>
+      <p data-i18n="kitLede"></p>
+    </div>
+
+    <div class="bento">
+      <article class="cell c-a">
+        <img src="img/r-scanner-clean.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k1t"></h3>
+        <p data-i18n="k1d"></p>
+        <p class="spec" data-i18n="k1s"></p>
+      </article>
+      <article class="cell c-b">
+        <img src="img/r-hydra-clean.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k2t"></h3>
+        <p data-i18n="k2d"></p>
+        <p class="spec" data-i18n="k2s"></p>
+      </article>
+      <article class="cell c-c">
+        <img src="img/r-rf.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k3t"></h3>
+        <p class="spec" data-i18n="k3s"></p>
+      </article>
+      <article class="cell c-d">
+        <img src="img/r-laser-clean.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k4t"></h3>
+        <p class="spec" data-i18n="k4s"></p>
+      </article>
+      <article class="cell c-e">
+        <img src="img/r-cavitation-clean.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k5t"></h3>
+        <p class="spec" data-i18n="k5s"></p>
+      </article>
+      <article class="cell c-f">
+        <img src="img/r-o2machine2-clean.jpg" alt="" loading="lazy">
+        <h3 data-i18n="k6t"></h3>
+        <p class="spec" data-i18n="k6s"></p>
+      </article>
+    </div>
+
+    <div class="acc" id="acc">
+      <div class="acc-pane" role="button" tabindex="0" aria-expanded="true">
+        <img src="img/r-brighten2.jpg" alt="" loading="lazy">
+        <div class="acc-in"><h4 data-i18n="a1t"></h4><p data-i18n="a1d"></p></div>
+      </div>
+      <div class="acc-pane" role="button" tabindex="0" aria-expanded="false">
+        <img src="img/r-lipblush.jpg" alt="" loading="lazy">
+        <div class="acc-in"><h4 data-i18n="a2t"></h4><p data-i18n="a2d"></p></div>
+      </div>
+      <div class="acc-pane" role="button" tabindex="0" aria-expanded="false">
+        <img src="img/r-exosome.jpg" alt="" loading="lazy">
+        <div class="acc-in"><h4 data-i18n="a3t"></h4><p data-i18n="a3d"></p></div>
+      </div>
+      <div class="acc-pane" role="button" tabindex="0" aria-expanded="false">
+        <img src="img/r-rf.jpg" alt="" loading="lazy">
+        <div class="acc-in"><h4 data-i18n="a4t"></h4><p data-i18n="a4d"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORIZONTAL GALLERY -->
+<section class="gal sec">
+  <div class="shell">
+    <div class="gal-head">
+      <h2 data-i18n="galTitle"></h2>
+      <a href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener"><span class="ltr">@ayaa_beauty.skin</span> &rarr;</a>
+    </div>
+  </div>
+  <div class="gal-view" id="galView" dir="ltr">
+    <div class="gal-track" id="galTrack">
+      <figure class="frame"><img src="img/r-microneedling.jpg" alt="" loading="lazy"><figcaption data-i18n="g1"></figcaption></figure>
+      <figure class="frame"><img src="img/r-studio-real.jpg" alt="" loading="lazy"><figcaption data-i18n="g2"></figcaption></figure>
+      <figure class="frame"><img src="img/r-lipblush.jpg" alt="" loading="lazy"><figcaption data-i18n="g3"></figcaption></figure>
+      <figure class="frame"><img src="img/r-brighten2.jpg" alt="" loading="lazy"><figcaption data-i18n="g4"></figcaption></figure>
+      <figure class="frame"><img src="img/r-shelf-real.jpg" alt="" loading="lazy"><figcaption data-i18n="g5"></figcaption></figure>
+      <figure class="frame"><img src="img/r-product.jpg" alt="" loading="lazy"><figcaption data-i18n="g6"></figcaption></figure>
+      <figure class="frame"><img src="img/r-lipblush.jpg" alt="" loading="lazy"><figcaption data-i18n="g7"></figcaption></figure>
+      <figure class="frame"><img src="img/r-exosome.jpg" alt="" loading="lazy"><figcaption data-i18n="g8"></figcaption></figure>
+      <figure class="frame"><img src="img/r-consult2.jpg" alt="" loading="lazy"><figcaption data-i18n="g9"></figcaption></figure>
+    </div>
+  </div>
+  <div class="shell"><p class="gal-scroll-note" data-i18n="galNote"></p></div>
+</section>
+
+<!-- STACKING RITUAL -->
+<section class="ritual sec" id="werkwijze">
+  <div class="shell">
+    <div class="ritual-head">
+      <h2 data-i18n="wTitle"></h2>
+      <p data-i18n="wLede"></p>
+    </div>
+    <div class="stack" id="stack">
+      <article class="step"><span class="step-n">01</span>
+        <div><h3 data-i18n="w1t"></h3><p data-i18n="w1d"></p></div>
+        <div class="step-img"><img src="img/r-consult2.jpg" alt="" loading="lazy"></div></article>
+      <article class="step"><span class="step-n">02</span>
+        <div><h3 data-i18n="w2t"></h3><p data-i18n="w2d"></p></div>
+        <div class="step-img"><img src="img/r-shelf-real.jpg" alt="" loading="lazy"></div></article>
+      <article class="step"><span class="step-n">03</span>
+        <div><h3 data-i18n="w3t"></h3><p data-i18n="w3d"></p></div>
+        <div class="step-img"><img src="img/r-microneedling.jpg" alt="" loading="lazy"></div></article>
+      <article class="step"><span class="step-n">04</span>
+        <div><h3 data-i18n="w4t"></h3><p data-i18n="w4d"></p></div>
+        <div class="step-img"><img src="img/r-brighten2.jpg" alt="" loading="lazy"></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="studio sec" id="studio">
+  <div class="shell studio-grid">
+    <div class="studio-media"><img src="img/r-studio-real.jpg" alt="" id="studioImg" loading="lazy"></div>
+    <div class="studio-copy">
+      <h2 data-i18n="stTitle"></h2>
+      <p data-i18n="stBody"></p>
+      <div class="facts">
+        <div class="fact"><b data-i18n="f1a">Rotterdam</b><span data-i18n="f1b"></span></div>
+        <div class="fact"><b data-count="1341">0</b><span data-i18n="f2b"></span></div>
+        <div class="fact"><b data-i18n="f3a"></b><span data-i18n="f3b"></span></div>
+        <div class="fact"><b data-i18n="f4a"></b><span data-i18n="f4b"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book sec" id="afspraak">
+  <div class="shell">
+    <div class="book-head">
+      <h2 data-i18n="bkTitle"></h2>
+      <p data-i18n="bkLede"></p>
+    </div>
+
+    <!-- live availability, backed by server.py; falls back to the request form -->
+    <div class="book-live" id="bkLive">
+
+      <div class="live-block">
+        <p class="step-label"><b>1</b><span data-i18n="stepTreat"></span></p>
+        <div class="picker" id="pickTreat" role="group"></div>
+      </div>
+
+      <div class="live-block">
+        <p class="step-label"><b>2</b><span data-i18n="stepDay"></span></p>
+        <div class="days" id="pickDay"></div>
+        <div class="slots" id="pickSlot" role="group" aria-live="polite"></div>
+        <p class="chosen" id="chosen"></p>
+      </div>
+
+      <div class="live-block">
+        <p class="step-label"><b>3</b><span data-i18n="stepYou"></span></p>
+        <form class="live-form" id="liveForm" novalidate>
+          <div class="field" id="lfName">
+            <label for="lvName" data-i18n="lblName"></label>
+            <input type="text" id="lvName" autocomplete="name">
+          </div>
+          <div class="field" id="lfEmail">
+            <label for="lvEmail" data-i18n="lblEmail"></label>
+            <input type="email" id="lvEmail" autocomplete="email" inputmode="email">
+          </div>
+          <div class="field">
+            <label for="lvPhone" data-i18n="lblPhone"></label>
+            <input type="tel" id="lvPhone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="lvNotes" data-i18n="lblNotes"></label>
+            <input type="text" id="lvNotes" data-i18n-ph="phNotes">
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label>Website<input type="text" id="lvHp" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="live-actions wide">
+            <button type="submit" class="btn btn-ink" id="lvSubmit" disabled>
+              <span data-i18n="confirmBtn"></span> <i class="arrow"></i>
+            </button>
+            <p class="live-err" id="lvErr"></p>
+          </div>
+        </form>
+      </div>
+
+      <p class="live-note" data-i18n="calNote"></p>
+
+      <div class="done" id="lvDone" role="status">
+        <h3 data-i18n="okTitle"></h3>
+        <p id="okWhen"></p>
+        <p class="ref"><span data-i18n="refLabel"></span><b id="okRef"></b></p>
+        <p data-i18n="okBody"></p>
+        <div class="done-actions">
+          <a class="btn btn-solid" id="okIcs" data-i18n="icsBtn"></a>
+          <button type="button" class="btn btn-ghost" id="okCancel" data-i18n="cancelBtn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-grid" id="bkRequest">    <div class="book-grid" id="bkRequest">
+      <form class="fields" id="bkForm" novalidate>
+        <div class="field wide">
+          <label for="bkTreat" data-i18n="lblTreat">Behandeling</label>
+          <select id="bkTreat" name="treatment">
+            <option value="ask" data-i18n="optAsk"></option>
+            <option value="analyse" data-i18n="sAp"></option>
+            <option value="hydrofacial" data-i18n="s1p"></option>
+            <option value="microneedling" data-i18n="s2p"></option>
+            <option value="rf" data-i18n="sRp"></option>
+            <option value="exosomen" data-i18n="s3p"></option>
+            <option value="huidverbetering" data-i18n="s4p"></option>
+            <option value="laser" data-i18n="sLp"></option>
+            <option value="lipblush" data-i18n="s5p"></option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="bkDate" data-i18n="lblDate">Voorkeursdatum</label>
+          <input type="date" id="bkDate" name="date">
+        </div>
+
+        <div class="field">
+          <label data-i18n="lblPart">Dagdeel</label>
+          <div class="parts">
+            <label><input type="radio" name="part" value="am" checked><span data-i18n="partAM">Ochtend</span></label>
+            <label><input type="radio" name="part" value="pm"><span data-i18n="partPM">Middag</span></label>
+            <label><input type="radio" name="part" value="eve"><span data-i18n="partEve">Avond</span></label>
+          </div>
+        </div>
+
+        <div class="field" id="fName">
+          <label for="bkName" data-i18n="lblName">Naam</label>
+          <input type="text" id="bkName" name="name" autocomplete="name">
+        </div>
+
+        <div class="field" id="fContact">
+          <label for="bkContact" data-i18n="lblContact">Telefoon of e-mail</label>
+          <input type="text" id="bkContact" name="contact" autocomplete="tel">
+        </div>
+
+        <div class="field wide">
+          <label for="bkNotes" data-i18n="lblNotes">Wat wil je aanpakken?</label>
+          <textarea id="bkNotes" name="notes" data-i18n-ph="phNotes"></textarea>
+        </div>
+
+        <div class="book-actions wide">
+          <button type="submit" class="btn btn-ink"><span data-i18n="bkSubmit">Aanvraag versturen</span> <i class="arrow"></i></button>
+          <p class="book-err" id="bkErr" data-i18n="bkErr"></p>
+        </div>
+      </form>
+
+      <aside class="summary">
+        <h3 data-i18n="bkSumTitle">Jouw aanvraag</h3>
+        <div class="sum-row"><span data-i18n="lblTreat"></span><b id="sumTreat" class="empty">—</b></div>
+        <div class="sum-row"><span data-i18n="lblDate"></span><b id="sumDate" class="empty">—</b></div>
+        <div class="sum-row"><span data-i18n="lblPart"></span><b id="sumPart" class="empty">—</b></div>
+        <div class="sum-row"><span data-i18n="lblName"></span><b id="sumName" class="empty">—</b></div>
+        <div class="sum-row"><span data-i18n="lblContact"></span><b id="sumContact" class="empty">—</b></div>
+        <p class="bk-note" data-i18n="bkNote"></p>
+
+        <div class="send" id="bkSend">
+          <a class="btn btn-solid" id="sendWa" target="_blank" rel="noopener" data-i18n="bkSendWa"></a>
+          <a class="btn btn-ghost" id="sendIg" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener" data-i18n="bkSendIg"></a>
+          <a class="btn btn-ghost" id="sendMail" data-i18n="bkSendMail"></a>
+          <label class="msgbox">
+            <span data-i18n="bkMsgLabel"></span>
+            <textarea id="bkMsg" readonly rows="6"></textarea>
+          </label>
+          <p class="copied" id="bkCopied"></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="vragen">
+  <div class="shell">
+    <h2 data-i18n="faqTitle"></h2>
+    <div id="faqList">
+      <div class="qa"><button type="button" data-i18n="q1"></button><div class="qa-body"><div data-i18n="a1"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q2"></button><div class="qa-body"><div data-i18n="a2"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q3"></button><div class="qa-body"><div data-i18n="a3"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q4"></button><div class="qa-body"><div data-i18n="a4"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q6"></button><div class="qa-body"><div data-i18n="a6"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q5"></button><div class="qa-body"><div data-i18n-html="a5"></div></div></div>
+      <div class="qa"><button type="button" data-i18n="q7"></button><div class="qa-body"><div data-i18n-html="a7"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta sec">
+  <div class="shell">
+    <h2 data-i18n-html="cTitle"></h2>
+    <p data-i18n="cBody"></p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#afspraak"><span data-i18n="cBtn1">Afspraak maken</span> <i class="arrow"></i></a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener" data-i18n="cBtn2">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="shell">
+    <div class="foot-grid">
+      <h3 data-i18n="fBrand">Aya Beauty &amp; Skin</h3>
+      <div class="foot-col">
+        <strong data-i18n="fContact">Contact</strong>
+        <a href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener"><span class="ltr">@ayaa_beauty.skin</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener" data-i18n="fCity"></a>
+        <span data-i18n="fAppt"></span>
+      </div>
+      <div class="foot-col">
+        <strong data-i18n="fTreat">Behandelingen</strong>
+        <a href="#afspraak" data-i18n="fT1"></a>
+        <a href="#afspraak" data-i18n="fT2"></a>
+        <a href="#afspraak" data-i18n="fT3"></a>
+        <a href="#afspraak" data-i18n="fT4"></a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span id="yr">2026</span> <span data-i18n="fCopy"></span></span>
+      <span data-i18n="fRole"></span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   CONFIG — fill these in and the booking form routes straight to them.
+   Leave whatsapp/email empty and the form falls back to an Instagram
+   DM with the request text copied to the visitor's clipboard.
+   ═══════════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  /* ── LIVE BOOKING ───────────────────────────────────────────────
+     Served by server.py on the same origin. Start it with
+       python server.py
+     and the page books against the real diary: live free slots,
+     no double-bookings, confirmation mail, .ics, self-service cancel.
+     If the API is unreachable (plain static hosting) the page falls
+     back to the request form below on its own. */
+  api: '/api',
+
+  /* ── FALLBACK: used only when the booking API cannot be reached ── */
+  whatsapp:  '',   /* e.g. '31612345678'  — country code, no + and no spaces */
+  email:     '',   /* e.g. 'hallo@ayaabeautyskin.nl' */
+  instagram: 'https://www.instagram.com/ayaa_beauty.skin/'
+};
+
+let LIVE = false;   /* flipped on once /api/treatments answers */
+
+const I18N = {
+nl: {
+  _title:'Aya Beauty & Skin — Huidstudio Rotterdam',
+  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi. Vraag direct een afspraak aan.',
+  _marquee:['3D Huid- & haaranalyse','Hydrofacial','Microneedling','RF Microneedling','Exosomen','Huidverbetering','Laserontharing','Lip Blush','Rotterdam'],
+  _locale:'nl-NL',
+  brand:'Aya', brandSub:'Beauty & Skin',
+  navTreat:'Behandelingen', navKit:'Apparatuur', navWork:'Werkwijze', navStudio:'Studio', navFaq:'Vragen', ctaNav:'Afspraak maken',
+  heroKicker:'Schoonheidsspecialist · Rotterdam',
+  heroTitle:'Huid die er <span class="it">gezond</span> uitziet, niet gefilterd.',
+  heroLede:'3D-huid- en haaranalyse met AI, hydrofacial, RF-microneedling met exosomen, laserontharing en lip blush — rustig uitgevoerd, altijd na een eerlijk advies. Door Samar Tinawi.',
+  ctaHero1:'Afspraak maken', ctaHero2:'Bekijk behandelingen', scroll:'Scroll',
+  introLabel:'Wie je voor je hebt',
+  introScrub:'Ik behandel geen trends. Ik behandel huid — met een plan dat bij jouw gezicht, jouw huidtype en jouw tempo past. Eerst kijken, dan pas kiezen.',
+  introBody:'Samar Tinawi is schoonheidsspecialist in Rotterdam. Elke behandeling begint met een huidanalyse: wat is er aan de hand, wat kan er nu, en wat heeft tijd nodig. Geen pakketten die je niet nodig hebt. Nederlands, Arabisch en Engels gesproken.',
+  sigName:'Samar Tinawi', sigSub:'Aya Beauty & Skin · Rotterdam',
+  svcTitle:'Acht routes naar een rustige huid.',
+  kitTitle:'Zes machines achter de behandelingen.',
+  kitLede:'Geen van deze apparaten doet alles. Daarom staan ze er zes: de scan bepaalt welke aan gaat, en in welke volgorde.',
+  k1t:'3D-scanner met AI',
+  k1d:'Fotografeert je huid in drie dimensies en zet er meetwaarden op: pigment, poriën, vocht, roodheid, fijne lijnen — en haardichtheid op de hoofdhuid. Bepaalt het plan en meet het resultaat terug.',
+  k1s:'Huid + hoofdhuid · nulmeting en hermeting',
+  k2t:'Hydra-dermabrasie',
+  k2d:'Aqua peeling: zuigt vuil en talg uit de poriën terwijl het vocht en antioxidanten naar binnen brengt. Multifunctioneel, dus reinigen, exfoliëren en hydrateren gaan in één doorloop.',
+  k2s:'60 min · geen hersteltijd',
+  k3t:'RF-microneedling', k3s:'Kuur van 3 · verstevigend',
+  k4t:'Medische laser', k4s:'Kuur van 6–8 · testvlek vooraf',
+  k5t:'RF & cavitatie', k5s:'Meerdere koppen · verstevigend',
+  k6t:'Zuurstoftherapie', k6s:'H2-O2 bubble · kalmerende diepreiniging',
+  a1t:'Pigment',
+  a1d:'Een ongelijke tint komt zelden van één oorzaak. De scan splitst zonschade, littekenpigment en roodheid uit elkaar, zodat de kuur het juiste aanpakt in plaats van alles tegelijk.',
+  a2t:'Lippen',
+  a2d:'Lip blush brengt de eigen kleur terug en maakt de rand scherper. Twee sessies, want de tweede corrigeert wat de huid van de eerste heeft laten zitten.',
+  a3t:'Herstel',
+  a3d:'Exosomen en collageen gaan erin op het moment dat de huid het meest opneemt: direct na needling of peeling. Dat verkort de rode dagen en maakt het resultaat steviger.',
+  a4t:'Littekens',
+  a4d:'Needling maakt micro-kanaaltjes die je eigen collageen aanzetten. Met radiofrequentie erbij gaat de warmte dieper, wat nodig is bij ingezakte littekens.',
+  svcLede:'Welke route past, leest de 3D-scan grotendeels voor ons uit. Vaak is het een combinatie — soms is minder genoeg.',
+  bookThis:'Boek behandeling', readMore:'Meer lezen',
+  sAt:'3D <em>huid- &amp; haaranalyse</em>', sAp:'3D-huid- & haaranalyse (AI)',
+  sAd:'Een 3D-scan van je huid én hoofdhuid, gelezen door AI: pigment, poriën, vochtgehalte, roodheid en fijne lijnen — plus haardichtheid en haargroei. Je ziet wat er onder de oppervlakte speelt, en na je kuur meten we opnieuw.',
+  sAc1:'Scan + rapport', sAc2:'Huid & haar', sAc3:'Start van elke kuur',
+  sLt:'Laser <em>ontharing</em>', sLp:'Laserontharing',
+  sLd:'Definitieve haarvermindering met een medische laser — gezicht, oksels, benen of bikinilijn. De 3D-scan meet je haardichtheid vooraf, zodat je het verschil per sessie zwart-op-wit ziet. Altijd eerst een testvlek.',
+  sLc1:'Kuur van 6–8', sLc2:'Gezicht & lichaam', sLc3:'Testvlek vooraf',
+  s1t:'Hydro<em>facial</em>', s1p:'Hydrofacial',
+  s1d:'Aqua peeling met een multifunctioneel hydra-dermabrasieapparaat: vuil en talg worden uit de poriën gezogen terwijl vocht en antioxidanten erin gaan. Reiniging, exfoliatie en hydratatie in één sessie — direct zichtbaar, geen hersteltijd.',
+  s1c1:'60 min', s1c2:'Geen downtime', s1c3:'Aqua peel',
+  sRt:'RF <em>microneedling</em>', sRp:'RF microneedling',
+  sRd:'Microneedling met radiofrequentie: de naaldjes brengen warmte tot in de diepere laag. Daar trekt bestaand collageen samen én maakt je huid nieuw aan. Voor een strakkere kaaklijn, verslapping en diepere acnelittekens.',
+  sRc1:'Kuur van 3', sRc2:'Verstevigend', sRc3:'Kaaklijn & littekens',
+  s2t:'Micro<em>needling</em>', s2p:'Microneedling',
+  s2d:'Micro-kanaaltjes die je eigen collageen aanzetten, gecombineerd met een serum op maat. Voor littekens van acne, poriën en fijne lijntjes.',
+  s2c1:'Kuur van 3–4', s2c2:'Serum op maat', s2c3:'Littekens & poriën',
+  s3t:'Exosomen &amp; <em>collageen</em>', s3p:'Exosomen & collageen',
+  s3d:'Werkstoffen die het herstel van de huid versnellen na needling of peeling. Meer stevigheid, gelijkmatiger tint, minder roodheid op termijn.',
+  s3c1:'Na-behandeling', s3c2:'Stevigheid', s3c3:'Herstel',
+  s4t:'Huid<em>verbetering</em>', s4p:'Huidverbetering',
+  s4d:'Gerichte kuur voor pigment, doffe plekken en een ongelijke tint — gezicht, hals of lichaam. Opgebouwd in stappen, met thuisverzorging ertussen.',
+  s4c1:'Kuurbehandeling', s4c2:'Pigment', s4c3:'Hals & lichaam',
+  s5t:'Lip <em>blush</em>', s5p:'Lip blush',
+  s5d:'Zachte pigmentatie die de eigen lipkleur terugbrengt en de lijn scherper maakt. Natuurlijk van dichtbij — geen harde rand, geen felle kleur.',
+  s5c1:'2 sessies', s5c2:'Semi-permanent', s5c3:'Natuurlijke tint',
+  galTitle:'Uit de studio, niet uit een stockbank.',
+  g1:'Needling · serum op maat', g2:'De studio', g3:'Lip blush · resultaat', g4:'Huidverbetering',
+  g5:'Voorbereiding', g6:'Collageen', g7:'Lip blush · sessie', g8:'Exosomen', g9:'Na de behandeling',
+  galNote:'Scroll om horizontaal te bladeren',
+  wTitle:'Vier stappen, geen verrassingen.',
+  wLede:'Van het eerste bericht tot de nazorg weet je precies wat er gebeurt, wat het kost en hoelang je huid nodig heeft.',
+  w1t:'Intake & 3D-huidanalyse',
+  w1d:'We scannen je huid in 3D en lezen de AI-analyse samen: pigment, poriën, vocht, roodheid. Daar komt een eerlijk plan uit — ook als dat betekent dat we eerst niets doen.',
+  w2t:'Voorbereiding',
+  w2d:'Steriel werken, alles klaargezet voordat je gaat liggen. Producten worden per behandeling gekozen, niet vooraf op de plank gelegd.',
+  w3t:'De behandeling',
+  w3d:'Rustig tempo, uitleg bij elke stap. Je voelt wat er gebeurt en je mag op elk moment zeggen dat het minder moet.',
+  w4t:'Nazorg',
+  w4d:'Je gaat naar huis met concrete instructies voor de eerste dagen en een vervolgafspraak alleen als je die echt nodig hebt.',
+  stTitle:'Klein, rustig, en van jou zolang je er bent.',
+  stBody:'Eén behandelkamer, één klant tegelijk. Geen wachtruimte vol mensen, geen gehaaste sessie van twintig minuten. Je komt binnen, we nemen de tijd, en je gaat weg met een huid die je zelf kunt onderhouden.',
+  f1a:'Rotterdam', f1b:'Locatie op afspraak', f2b:'Volgers op Instagram',
+  f3a:'NL · AR · EN', f3b:'Gesproken talen', f4a:'1 op 1', f4b:'Altijd persoonlijk',
+  bkTitle:'Vraag je afspraak aan in drie stappen.',
+  bkLede:'Vul in wat je wilt laten doen en wanneer het je uitkomt. Je aanvraag gaat rechtstreeks naar Samar — zij bevestigt de definitieve datum en tijd persoonlijk.',
+  lblTreat:'Behandeling', optAsk:'Weet ik nog niet — adviseer me',
+  lblDate:'Voorkeursdatum', lblPart:'Dagdeel',
+  partAM:'Ochtend', partPM:'Middag', partEve:'Avond',
+  lblName:'Naam', lblContact:'Telefoon of e-mail', lblNotes:'Wat wil je aanpakken? (optioneel)',
+  phNotes:'Bijv. pigmentvlekken op mijn wangen, al twee jaar.',
+  bkSubmit:'Aanvraag versturen', bkSumTitle:'Jouw aanvraag',
+  bkErr:'Vul je naam en contactgegevens in.',
+  bkNote:'Dit is een aanvraag, geen bevestigde afspraak. Samar bevestigt de datum en tijd persoonlijk.',
+  bkSendWa:'Verstuur via WhatsApp', bkSendIg:'Verstuur via Instagram DM', bkSendMail:'Verstuur via e-mail',
+  bkCopied:'Tekst gekopieerd — plak hem in het gesprek.',
+  bkMsgLabel:'Je aanvraag als tekst — kopieer en plak',
+  calLoading:'Vrije tijden laden…',
+  stepTreat:'Kies je behandeling', stepDay:'Kies een dag en tijd', stepYou:'Jouw gegevens',
+  lblEmail:'E-mailadres', lblPhone:'Telefoon (optioneel)',
+  confirmBtn:'Afspraak bevestigen', atWord:'om',
+  noSlots:'Geen vrije tijden op deze dag. Kies een andere dag.',
+  okTitle:'Je afspraak staat vast.',
+  okBody:'De bevestiging is onderweg naar je mail, met een agendabestand erbij. Bewaar je referentie — daarmee kun je de afspraak zelf annuleren.',
+  refLabel:'Referentie', icsBtn:'Zet in mijn agenda', cancelBtn:'Afspraak annuleren',
+  cancelledTitle:'Afspraak geannuleerd.', cancelledBody:'De tijd staat weer vrij. Je kunt hierboven een nieuw moment kiezen.',
+  errTaken:'Die tijd is net door iemand anders geboekt. Kies een ander moment — de lijst is bijgewerkt.',
+  errEmail:'Vul een geldig e-mailadres in.',
+  errTooMany:'Te veel aanvragen achter elkaar. Probeer het over een uur nog eens.',
+  errGeneric:'Er ging iets mis. Probeer het zo nog eens.',
+  calNote:'De tijden hierboven komen rechtstreeks uit de agenda van de studio: wat je ziet is echt vrij. Zodra je bevestigt is de tijd van jou en krijg je meteen een mail.',
+  bkTitleLive:'Kies je behandeling en een vrij moment.',
+  bkLedeLive:'Alle tijden hieronder zijn echt beschikbaar. Kies een behandeling, pak een moment dat je uitkomt en je bevestiging is direct binnen.',
+  a1live:'Kies hierboven je behandeling, pak een vrij moment in de agenda en vul je gegevens in. Je bevestiging komt meteen per mail binnen — de afspraak staat dan vast. Verzetten of annuleren kan via de link in die mail.',
+  bkMsgHead:'Afspraakaanvraag — Aya Beauty & Skin',
+  bkFlex:'Zo snel mogelijk', bkNotesShort:'Huid',
+  faqTitle:'Wat mensen meestal vragen.',
+  q1:'Hoe werkt het aanvragen van een afspraak?',
+  a1:'Vul het formulier hierboven in. Je aanvraag komt binnen via WhatsApp, Instagram of e-mail — wat jij kiest. Samar kijkt in de agenda en bevestigt persoonlijk een datum en tijd.',
+  q2:'Wat kost een behandeling?',
+  a2:'De prijs hangt af van de behandeling en of het om één sessie of een kuur gaat. Je krijgt het volledige bedrag te horen tijdens de intake, vóórdat er iets gebeurt — nooit achteraf een verrassing.',
+  q3:'Heb ik hersteltijd nodig?',
+  a3:'Bij een hydrofacial niet: je kunt daarna gewoon de deur uit. Bij microneedling en lip blush is je huid een paar dagen roder en gevoeliger. Je krijgt precies te horen hoeveel dagen je moet inplannen.',
+  q4:'Is het geschikt voor een gevoelige of donkere huid?',
+  a4:'Ja, maar de aanpak verschilt. Huidtype, pigmentgevoeligheid en je reactie op eerdere behandelingen bepalen de sterkte en de opbouw van de kuur. Dat is precies waarom de intake er is.',
+  q6:'Wat levert de 3D-huidanalyse op?',
+  a6:'Meetwaarden voor pigment, poriën, vochtgehalte, roodheid en fijne lijnen — en voor haardichtheid en haargroei op je hoofdhuid — plus dezelfde scan opnieuw na je kuur. Zo zie je vooruitgang in cijfers, niet alleen in een gevoel. De analyse bepaalt ook welke behandeling je écht nodig hebt.',
+  q5:'In welke taal kan ik terecht?',
+  a5:'Nederlands, Arabisch of Engels — wat voor jou het prettigst praat. نتكلم العربية.',
+  q7:'Waar is de studio?',
+  a7:'In Rotterdam, op afspraak. De exacte locatie krijg je bij het bevestigen van je afspraak. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">Bekijk op Google Maps</a>.',
+  cTitle:'Begin met een <span class="it">eerlijk</span> huidadvies.',
+  cBody:'Vraag je afspraak aan en schrijf erbij wat je huid doet. Je krijgt antwoord van Samar zelf, geen standaardtekst.',
+  cBtn1:'Afspraak maken', cBtn2:'Bekijk Instagram',
+  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Nederland', fAppt:'Op afspraak',
+  fTreat:'Behandelingen', fT1:'3D-huid- & haaranalyse', fT2:'Hydrofacial', fT3:'RF microneedling', fT4:'Laserontharing',
+  fCopy:'Aya Beauty & Skin — Samar Tinawi', fRole:'Schoonheidsspecialist · Rotterdam',
+
+  pages: {
+    analyse: { t:'3D-huid- & haaranalyse', b:'<p>Elke afspraak bij Aya Beauty &amp; Skin begint hier, ook als je eigenlijk voor iets anders komt. De AI-scanner fotografeert je huid in drie dimensies en zet er meetwaarden op: pigmentverdeling, poriegrootte, vochtgehalte, roodheid, fijne lijnen — en op de hoofdhuid haardichtheid en haargroei.</p><p>Het resultaat is geen los rapport dat je nooit meer inkijkt. Samar leest de scan met je door en vertaalt de cijfers naar een plan: welke behandeling nu logisch is, wat kan wachten, en waarom. Na je kuur volgt dezelfde scan opnieuw, zodat vooruitgang iets is wat je terugziet in getallen, niet alleen in een gevoel.</p><p>Duur: circa 30 minuten. Geen voorbereiding nodig, geen hersteltijd. Geschikt voor elke huidtype en -kleur.</p>' },
+    hydrofacial: { t:'Hydrofacial', b:'<p>Een hydrofacial is een aqua peeling: het apparaat zuigt vuil, talg en dode huidcellen uit de poriën terwijl het tegelijk vocht en antioxidanten naar binnen brengt. Reinigen, exfoliëren en hydrateren gebeuren in één doorloop, in plaats van drie losse stappen.</p><p>Je merkt het meteen: een frissere, egalere teint zonder dat je huid rood of geïrriteerd aanvoelt. Er is geen hersteltijd — de meeste mensen plannen ‘m bewust vlak voor een avond waarop ze er goed uit willen zien.</p><p>Duur: circa 60 minuten. Geschikt als losse verfrissing of als vast onderdeel van een langere kuur.</p>' },
+    microneedling: { t:'Microneedling', b:'<p>Microneedling maakt met heel fijne naaldjes microscopisch kleine kanaaltjes in de huid. Dat triggert je eigen collageenproductie én zorgt dat actieve serums dieper inwerken dan wanneer je ze gewoon op de huid smeert.</p><p>Het wordt vooral ingezet tegen fijne lijntjes, oneffen textuur, verwijde poriën en lichte littekens. Omdat het je eigen herstelproces aan het werk zet, zie je het resultaat niet na één keer, maar bouwt het op over een kuur.</p><p>Je huid is de eerste dagen na de behandeling roder en gevoeliger — hoeveel dagen je moet inplannen, hoor je vooraf precies.</p>' },
+    rf: { t:'RF-microneedling', b:'<p>RF-microneedling combineert microneedling met radiofrequentie-energie die via de naaldjes in de diepere huidlagen wordt afgegeven. Waar gewone microneedling vooral de bovenste lagen triggert, verstevigt de RF-component ook het onderliggende weefsel — het verschil dat je voelt als ‘strakker’, niet alleen ‘gladder’.</p><p>Het wordt ingezet bij verslapping, littekenweefsel en een huid die om meer dan oppervlakkige verbetering vraagt. Het is een kuur van meerdere sessies, opgebouwd in overleg op basis van je 3D-analyse.</p><p>Standaard: kuur van 3, verstevigend effect. Herstel duurt iets langer dan bij gewone microneedling.</p>' },
+    exosomen: { t:'Exosomen & collageen', b:'<p>Na microneedling of een andere huidopeningsbehandeling breng je actieve stoffen dieper in de huid dan via een dagcrème ooit zou lukken. Exosomen en collageen-boosters worden ingezet om herstel te versnellen en de opbouw van nieuw, steviger weefsel te ondersteunen.</p><p>Dit is meestal geen behandeling op zichzelf, maar een toevoeging aan een needling-kuur — de combinatie is waar het verschil zit tussen ‘de huid heeft even gereageerd’ en een blijvend zichtbaar resultaat.</p><p>Wordt altijd in overleg toegevoegd, nooit standaard opgelegd.</p>' },
+    huidverbetering: { t:'Huidverbetering', b:'<p>Een verzamelnaam voor de behandelingen die inzetten op een egalere, heldere teint: tegen pigmentvlekken, doffe huid, oneffen textuur en de nasleep van littekens of zon. Welke specifieke aanpak — peeling, LED, actieve serums, of een combinatie — hangt volledig af van wat je 3D-analyse laat zien.</p><p>Dit is geen kant-en-klaar pakket. Samar stelt de opbouw samen op basis van jouw huid, niet op basis van wat er nu toevallig op de planning staat.</p>' },
+    laser: { t:'Laserontharing', b:'<p>Medische laserontharing verzwakt de haarwortel met gebundeld licht, zodat haar geleidelijk dunner terugkomt en er over een kuur steeds minder overblijft. Werkt op de meeste huid- en haartypes; voorafgaand aan de eerste sessie wordt altijd een testvlekje gedaan om de instelling op jouw huid af te stemmen.</p><p>Omdat haar in fases groeit, is één sessie nooit genoeg — vandaar de kuur. Standaard: 6 tot 8 sessies, met tussenpozen die passen bij je haargroeicyclus.</p><p>Duur per sessie hangt af van de zone. Lichte roodheid direct na de sessie is normaal en meestal binnen enkele uren weg.</p>' },
+    lipblush: { t:'Lip blush', b:'<p>Lip blush is semi-permanente pigmentatie van de lippen: een natuurlijke kleurcorrectie en subtiele contourverbetering, geen felle ‘getatoeëerde’ lipstick-look. De pigmentkeuze wordt afgestemd op je huidtype en de kleur die je lippen van nature al hebben.</p><p>De eerste dagen is de kleur intenser dan het eindresultaat — die zet zich na een week of twee op de uiteindelijke, zachtere tint. Een retouchesessie na 4 tot 6 weken hoort standaard bij het traject.</p><p>Duur van de eerste sessie: circa 2 uur, inclusief kleuroverleg vooraf.</p>' },
+  },
+
+  legalPrivacy:'Privacybeleid',
+  legalPrivacyBody:'<p>Aya Beauty &amp; Skin (Samar Tinawi), gevestigd in Rotterdam, verwerkt persoonsgegevens die je zelf invult in het aanvraagformulier op deze site: naam, e-mailadres, telefoonnummer, gewenste behandeling en eventuele opmerkingen. Deze gegevens worden uitsluitend gebruikt om je afspraak te bevestigen, te plannen en — indien nodig — te herinneren of te wijzigen.</p><p>Je gegevens worden niet verkocht en niet gedeeld met derden voor marketingdoeleinden. Ze worden bewaard zolang dat nodig is voor de af handeling van je afspraak en een redelijke administratieve termijn daarna, en daarna verwijderd.</p><p>Deze site plaatst geen trackingcookies en gebruikt geen advertentienetwerken. Onder de AVG/GDPR heb je het recht op inzage, correctie en verwijdering van je gegevens, en het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens. Neem voor een verzoek contact op via Instagram of het aanvraagformulier.</p>',
+  legalTerms:'Servicevoorwaarden',
+  legalTermsBody:'<p>Door een afspraak aan te vragen via deze site ga je akkoord met het volgende. Een aanvraag is geen automatische bevestiging: Samar bevestigt de definitieve datum en tijd persoonlijk. Bij verhindering wordt gevraagd tijdig af te zeggen of te verzetten, zodat de tijd aan iemand anders kan worden aangeboden.</p><p>Sommige behandelingen zijn niet geschikt tijdens zwangerschap, bij bepaalde huidaandoeningen of medicijngebruik — meld dit altijd vooraf zodat de juiste afweging gemaakt kan worden. Resultaten van behandelingen verschillen per persoon; de informatie op deze site is algemeen van aard en vervangt geen persoonlijk advies tijdens de intake.</p><p>Prijzen en beschikbaarheid worden persoonlijk gecommuniceerd en kunnen wijzigen. Deze voorwaarden kunnen worden aangepast; de meest recente versie staat altijd op deze pagina.</p>',
+  legalDmca:'DMCA / auteursrecht',
+  legalDmcaBody:'<p>De foto\'s, teksten en het ontwerp op deze site zijn eigendom van Aya Beauty &amp; Skin of worden gebruikt onder een geldige licentie. Als je van mening bent dat materiaal op deze site inbreuk maakt op jouw auteursrecht, kun je dit melden via Instagram met: (1) een omschrijving van het werk waarop je rechten claimt, (2) de exacte locatie van het materiaal op deze site, en (3) je contactgegevens.</p><p>Meldingen worden serieus en zo snel mogelijk behandeld. Bij een ten onrechte ingediende melding kan de andere partij een tegenmelding indienen.</p>',
+  legalContact:'Contact',
+  legalContactBody:'<p>De snelste manier om iets te vragen of een afspraak aan te vragen is via het formulier onderaan deze site of via een DM op Instagram <span class="ltr">@ayaa_beauty.skin</span>. Telefoon en WhatsApp volgen binnenkort — zodra dat nummer actief is, verschijnt het hier en in de footer.</p><p>Aya Beauty &amp; Skin is gevestigd in Rotterdam, op afspraak. De exacte locatie ontvang je bij bevestiging.</p>',
+  legalInfo:'Informatie',
+  legalQuals:'Kwalificaties',
+  legalQualsBody:'<p>Samar Tinawi is schoonheidsspecialist in Rotterdam, opgeleid en gecertificeerd bij Atres Center. Elke behandeling op deze site wordt door haar persoonlijk uitgevoerd — geen personeel, geen wisselende behandelaars.</p><ul style="margin:14px 0 0;padding-inline-start:20px;line-height:1.9"><li>Mesotherapie Allround — Atres Center, behaald 11-06-2022</li><li>Mesotherapie Haar — Atres Center, behaald 07-02-2022</li></ul><p style="margin-top:16px">Certificaten hangen in de studio en zijn ter plekke in te zien.</p>',
+},
+
+ar: {
+  _title:'آية للجمال والعناية بالبشرة — استوديو العناية بالبشرة في روتردام',
+  _desc:'آية للجمال والعناية بالبشرة في روتردام. هيدروفيشل، ميكرونيدلينغ مع الإكسوزومات، تفتيح وتوحيد لون البشرة، وتوريد الشفايف — مع أخصائية العناية بالبشرة سمر تيناوي. اطلبي موعدك مباشرة.',
+  _marquee:['تحليل ثلاثي الأبعاد','هيدروفيشل','ميكرونيدلينغ','RF ميكرونيدلينغ','إكسوزومات','تفتيح البشرة','ليزر','توريد الشفايف','روتردام'],
+  _locale:'ar-EG',
+  brand:'آية', brandSub:'للجمال والعناية بالبشرة',
+  navTreat:'العلاجات', navKit:'الأجهزة', navWork:'طريقة العمل', navStudio:'الاستوديو', navFaq:'أسئلة شائعة', ctaNav:'احجزي موعدك',
+  heroKicker:'أخصائية عناية بالبشرة · روتردام',
+  heroTitle:'بشرة تبدو <span class="it">صحية</span>، مو مفلترة.',
+  heroLede:'تحليل بشرة وشعر ثلاثي الأبعاد بالذكاء الاصطناعي، هيدروفيشل، ميكرونيدلينغ وRF مع الإكسوزومات، إزالة شعر بالليزر، وتوريد الشفايف — بهدوء وعلى راحتك، وبعد استشارة صادقة. مع سمر تيناوي.',
+  ctaHero1:'احجزي موعدك', ctaHero2:'شوفي العلاجات', scroll:'مرّري',
+  introLabel:'مين رح تقابلي',
+  introScrub:'أنا ما بعالج موضة. أنا بعالج بشرة — بخطة تناسب وجهك ونوع بشرتك وإيقاعك إنتِ. أول شي منشوف، وبعدين منقرّر.',
+  introBody:'سمر تيناوي أخصائية عناية بالبشرة في روتردام. كل جلسة بتبدأ بتحليل للبشرة: شو القصة، شو فينا نعمل اليوم، وشو بدّو وقت. بدون باقات ما إلك حاجة فيها. منحكي هولندي وعربي وإنجليزي.',
+  sigName:'سمر تيناوي', sigSub:'آية للجمال والعناية بالبشرة · روتردام',
+  svcTitle:'ثمان طرق لبشرة هادئة.',
+  kitTitle:'ست أجهزة ورا العلاجات.',
+  kitLede:'ولا جهاز فيهن بيعمل كل شي. مشان هيك موجودين الستة: السكان بيحدد أي واحد بيشتغل، وبأي ترتيب.',
+  k1t:'سكانر ثلاثي الأبعاد بالـ AI',
+  k1d:'بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: التصبغ، المسام، الترطيب، الاحمرار، الخطوط الرفيعة — وكثافة الشعر على فروة الراس. هو اللي بيحدد الخطة وبيقيس النتيجة.',
+  k1s:'بشرة وفروة راس · قياس قبل وبعد',
+  k2t:'جهاز التقشير المائي',
+  k2d:'بيشفط الأوساخ والدهون من المسام وبنفس الوقت بيدخّل رطوبة ومضادات أكسدة. متعدد الوظائف، فالتنظيف والتقشير والترطيب بجلسة وحدة.',
+  k2s:'٦٠ دقيقة · بدون نقاهة',
+  k3t:'ميكرونيدلينغ RF', k3s:'كورس ٣ · شدّ وتمتين',
+  k4t:'ليزر طبي', k4s:'كورس ٦–٨ · تجربة مسبقة',
+  k5t:'RF وكافيتيشن', k5s:'رؤوس متعددة · شدّ وتمتين',
+  k6t:'علاج الأكسجين', k6s:'H2-O2 بابل · تنظيف عميق ومهدّئ',
+  a1t:'التصبغات',
+  a1d:'اللون غير الموحّد نادر يكون من سبب واحد. السكان بيفصل ضرر الشمس عن تصبغ الآثار عن الاحمرار، مشان الكورس يعالج الصح مو كل شي سوا.',
+  a2t:'الشفايف',
+  a2d:'التوريد بيرجّع اللون الطبيعي وبيوضّح الحدود. جلستين، لأن التانية بتصحّح اللي ما ثبّت من الأولى.',
+  a3t:'التعافي',
+  a3d:'الإكسوزومات والكولاجين بيدخلوا بالوقت اللي البشرة فيه أكتر شي بتمتصّ: مباشرة بعد النيدلينغ أو التقشير. هيك بتقلّ أيام الاحمرار وبتثبت النتيجة.',
+  a4t:'الآثار والمسام',
+  a4d:'النيدلينغ بيعمل قنوات دقيقة بتحفّز الكولاجين عندك. ومع موجات الراديو الحرارة بتنزل أعمق، وهاد اللازم للآثار الغائرة.',
+  svcLede:'أي طريق بيناسبك بيحدده السكان ثلاثي الأبعاد لحاله تقريباً. غالباً بتكون خلطة بينهن — وأحياناً الأقل بيكون كافي.',
+  bookThis:'احجزي هاي', readMore:'اقرأ أكتر',
+  sAt:'تحليل <em>بشرة وشعر</em>', sAp:'تحليل البشرة والشعر ثلاثي الأبعاد (AI)',
+  sAd:'سكان ثلاثي الأبعاد لبشرتك ولفروة راسك كمان، بيقراه الذكاء الاصطناعي: التصبغ، المسام، نسبة الترطيب، الاحمرار والخطوط الرفيعة — وكمان كثافة الشعر ونموّه. بتشوفي شو عم يصير تحت السطح، وبعد الكورس منعيد القياس.',
+  sAc1:'سكان وتقرير', sAc2:'بشرة وشعر', sAc3:'بداية كل كورس',
+  sLt:'إزالة الشعر <em>بالليزر</em>', sLp:'إزالة الشعر بالليزر',
+  sLd:'تخفيف دائم للشعر بليزر طبي — الوجه، الإبط، الساقين أو منطقة البيكيني. منقيس كثافة الشعر قبل بالسكان ثلاثي الأبعاد، هيك بتشوفي الفرق كل جلسة بالأرقام. ودائماً منبلّش بتجربة على منطقة صغيرة.',
+  sLc1:'كورس ٦–٨ جلسات', sLc2:'وجه وجسم', sLc3:'تجربة مسبقة',
+  s1t:'هيدرو<em>فيشل</em>', s1p:'هيدروفيشل',
+  s1d:'تقشير مائي بجهاز هيدرا ديرمابريژن متعدد الوظائف: الأوساخ والدهون بتنشفط من المسام، وبنفس الوقت البشرة بتاخد رطوبة ومضادات أكسدة. تنظيف وتقشير وترطيب بجلسة وحدة — النتيجة مباشرة وبدون فترة نقاهة.',
+  s1c1:'٦٠ دقيقة', s1c2:'بدون نقاهة', s1c3:'تقشير مائي',
+  sRt:'ميكرونيدلينغ <em>RF</em>', sRp:'ميكرونيدلينغ بالراديو فريكونسي (RF)',
+  sRd:'ميكرونيدلينغ مع موجات راديو: الإبر بتوصّل حرارة للطبقة العميقة. هنيك الكولاجين الموجود بينكمش والبشرة بتصنّع كولاجين جديد. لشدّ خط الفك، الترهل، وآثار حب الشباب العميقة.',
+  sRc1:'كورس ٣ جلسات', sRc2:'شدّ وتمتين', sRc3:'خط الفك والآثار',
+  s2t:'ميكرو<em>نيدلينغ</em>', s2p:'ميكرونيدلينغ',
+  s2d:'قنوات دقيقة بتحفّز الكولاجين الطبيعي عندك، مع سيروم مختار حسب حالتك. لآثار حب الشباب والمسام والخطوط الرفيعة.',
+  s2c1:'كورس ٣–٤ جلسات', s2c2:'سيروم مخصص', s2c3:'آثار ومسام',
+  s3t:'إكسوزومات و<em>كولاجين</em>', s3p:'إكسوزومات وكولاجين',
+  s3d:'مواد فعّالة بتسرّع تعافي البشرة بعد النيدلينغ أو التقشير. شدّ أكتر، لون أوحد، واحمرار أقل مع الوقت.',
+  s3c1:'بعد الجلسة', s3c2:'شدّ', s3c3:'تعافي',
+  s4t:'تفتيح و<em>توحيد اللون</em>', s4p:'تفتيح وتوحيد لون البشرة',
+  s4d:'كورس موجّه للتصبغات والبقع والبشرة غير الموحّدة — للوجه أو الرقبة أو الجسم. منبنيه على مراحل، مع عناية بيتية بين الجلسات.',
+  s4c1:'كورس جلسات', s4c2:'تصبغات', s4c3:'رقبة وجسم',
+  s5t:'توريد <em>الشفايف</em>', s5p:'توريد الشفايف',
+  s5d:'تصبيغ ناعم بيرجّع لون الشفايف الطبيعي ويوضّح الحدود. طبيعي من قريب — بدون حدّ قاسي ولا لون صارخ.',
+  s5c1:'جلستين', s5c2:'شبه دائم', s5c3:'لون طبيعي',
+  galTitle:'من جوّا الاستوديو، مو من بنك صور.',
+  g1:'نيدلينغ · سيروم مخصص', g2:'الاستوديو', g3:'توريد الشفايف · النتيجة', g4:'تفتيح البشرة',
+  g5:'التحضير', g6:'كولاجين', g7:'توريد الشفايف · الجلسة', g8:'إكسوزومات', g9:'بعد الجلسة',
+  galNote:'مرّري لتتصفحي أفقياً',
+  wTitle:'أربع خطوات، بدون مفاجآت.',
+  wLede:'من أول رسالة لحدّ العناية بعد الجلسة، بتعرفي بالضبط شو رح يصير، شو التكلفة، وقدّيش بشرتك بدها وقت.',
+  w1t:'الاستشارة والتحليل ثلاثي الأبعاد',
+  w1d:'منعمل سكان ثلاثي الأبعاد لبشرتك ومنقرا التحليل سوا: التصبغ، المسام، الترطيب، الاحمرار. ومن هون بتطلع خطة صادقة — حتى لو كانت إنو ما نعمل شي هلق.',
+  w2t:'التحضير',
+  w2d:'تعقيم كامل، وكل شي بيكون جاهز قبل ما تستلقي. المنتجات بتنختار لكل جلسة، مو محضّرة مسبقاً عالرفّ.',
+  w3t:'الجلسة',
+  w3d:'إيقاع هادي وشرح لكل خطوة. بتحسّي شو عم يصير، وفيكي بأي لحظة تقولي خفّفي.',
+  w4t:'العناية بعد الجلسة',
+  w4d:'بتروحي عالبيت مع تعليمات واضحة لأول كم يوم، وموعد متابعة بس إذا فعلاً بتحتاجيه.',
+  stTitle:'صغير، هادئ، وإلك إنتِ طول ما إنتِ فيه.',
+  stBody:'غرفة علاج وحدة، وزبونة وحدة بنفس الوقت. ما في صالة انتظار مليانة، ولا جلسة مستعجلة بعشرين دقيقة. بتدخلي، مناخد وقتنا، وبتطلعي ببشرة فيكي تحافظي عليها لحالك.',
+  f1a:'روتردام', f1b:'الموقع بموعد مسبق', f2b:'متابع على إنستغرام',
+  f3a:'هولندي · عربي · إنجليزي', f3b:'اللغات', f4a:'واحد لواحد', f4b:'دائماً شخصي',
+  bkTitle:'اطلبي موعدك بثلاث خطوات.',
+  bkLede:'عبّي شو بدك تعملي وإيمتى بيناسبك. طلبك بيوصل مباشرة لسمر — وهي بتأكدلك التاريخ والوقت النهائي شخصياً.',
+  lblTreat:'العلاج', optAsk:'لسا ما قررت — انصحيني',
+  lblDate:'التاريخ المفضل', lblPart:'الوقت',
+  partAM:'صباحاً', partPM:'بعد الظهر', partEve:'مساءً',
+  lblName:'الاسم', lblContact:'رقم الهاتف أو الإيميل', lblNotes:'شو بدك تعالجي؟ (اختياري)',
+  phNotes:'مثلاً: تصبغات على خدودي من سنتين.',
+  bkSubmit:'إرسال الطلب', bkSumTitle:'طلبك',
+  bkErr:'عبّي اسمك ومعلومات التواصل.',
+  bkNote:'هاد طلب، مو موعد مؤكد. سمر بتأكدلك التاريخ والوقت شخصياً.',
+  bkSendWa:'أرسلي عبر واتساب', bkSendIg:'أرسلي عبر رسالة إنستغرام', bkSendMail:'أرسلي عبر الإيميل',
+  bkCopied:'تم نسخ النص — الصقيه بالمحادثة.',
+  bkMsgLabel:'طلبك كنص — انسخيه والصقيه',
+  calLoading:'عم نحمّل الأوقات المتاحة…',
+  stepTreat:'اختاري العلاج', stepDay:'اختاري اليوم والوقت', stepYou:'معلوماتك',
+  lblEmail:'الإيميل', lblPhone:'رقم الهاتف (اختياري)',
+  confirmBtn:'تأكيد الموعد', atWord:'الساعة',
+  noSlots:'ما في أوقات متاحة بهاليوم. جرّبي يوم تاني.',
+  okTitle:'موعدك تأكّد.',
+  okBody:'التأكيد عم يوصلك عالإيميل، ومعه ملف للتقويم. احتفظي برقم الحجز — فيكي تلغي الموعد فيه لحالك.',
+  refLabel:'رقم الحجز', icsBtn:'أضيفيه للتقويم', cancelBtn:'إلغاء الموعد',
+  cancelledTitle:'تم إلغاء الموعد.', cancelledBody:'الوقت رجع متاح. فيكي تختاري وقت جديد من فوق.',
+  errTaken:'هالوقت انحجز هلق من حدا تاني. اختاري وقت تاني — اللائحة انحدّثت.',
+  errEmail:'عبّي إيميل صحيح.',
+  errTooMany:'طلبات كتير ورا بعض. جرّبي بعد ساعة.',
+  errGeneric:'صار خطأ. جرّبي كمان مرة.',
+  calNote:'الأوقات فوق جاية مباشرة من أجندة الاستوديو: اللي بتشوفيه متاح فعلاً. أول ما تأكّدي بيصير الوقت إلك وبيوصلك إيميل علطول.',
+  bkTitleLive:'اختاري العلاج ووقت فاضي.',
+  bkLedeLive:'كل الأوقات تحت متاحة فعلاً. اختاري علاج، وقت بيناسبك، والتأكيد بيوصلك علطول.',
+  a1live:'اختاري العلاج فوق، وقت فاضي من الأجندة، وعبّي معلوماتك. التأكيد بيوصلك عالإيميل مباشرة — والموعد بيصير مؤكّد. التعديل أو الإلغاء من الرابط بنفس الإيميل.',
+  bkMsgHead:'طلب موعد — آية للجمال والعناية بالبشرة',
+  bkFlex:'بأقرب وقت ممكن', bkNotesShort:'البشرة',
+  faqTitle:'أسئلة بتتكرر كتير.',
+  q1:'كيف بطلب موعد؟',
+  a1:'عبّي الفورم فوق. طلبك بيوصل عبر واتساب أو إنستغرام أو الإيميل — حسب اللي بتختاريه. سمر بتشوف الأجندة وبتأكدلك التاريخ والوقت شخصياً.',
+  q2:'قدّيش تكلفة الجلسة؟',
+  a2:'السعر بيعتمد على نوع العلاج وإذا كانت جلسة وحدة أو كورس. بتعرفي المبلغ كامل بجلسة الاستشارة، قبل ما يصير أي شي — مو بعدين مفاجأة.',
+  q3:'بدي فترة نقاهة؟',
+  a3:'مع الهيدروفيشل لأ، فيكي تطلعي عادي بعدها. مع الميكرونيدلينغ وتوريد الشفايف بتكون بشرتك أحمر وأحسّ لكم يوم. بتعرفي بالضبط كم يوم لازم تحسبي.',
+  q4:'مناسب للبشرة الحساسة أو الغامقة؟',
+  a4:'إي، بس الطريقة بتختلف. نوع البشرة وحساسيتها للتصبغ وردّة فعلها على علاجات سابقة هنّي اللي بيحددوا قوة الجلسة وتدرّج الكورس. وهاد بالضبط سبب وجود الاستشارة.',
+  q6:'شو بستفيد من التحليل ثلاثي الأبعاد؟',
+  a6:'أرقام واضحة للتصبغ والمسام ونسبة الترطيب والاحمرار والخطوط الرفيعة — ولكثافة الشعر ونموّه على فروة الراس — ونفس السكان مرة تانية بعد الكورس. هيك بتشوفي التحسّن بالأرقام، مو بس بالإحساس. والتحليل كمان بيحدد أي علاج فعلاً بتحتاجيه.',
+  q5:'بأي لغة فيني إحكي؟',
+  a5:'عربي أو هولندي أو إنجليزي — اللي بترتاحي فيه. <span class="ltr">Nederlands, Arabisch of Engels.</span>',
+  q7:'وين الاستوديو؟',
+  a7:'بروتردام، بموعد مسبق. الموقع بالضبط بتوصلك لما تأكدي موعدك. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">شوفي عالخريطة</a>.',
+  cTitle:'ابدأي باستشارة <span class="it">صادقة</span> لبشرتك.',
+  cBody:'اطلبي موعدك واكتبيلنا شو عم تعمل بشرتك. بيجيكي ردّ من سمر شخصياً، مو نصّ جاهز.',
+  cBtn1:'احجزي موعدك', cBtn2:'شوفي إنستغرام',
+  fBrand:'آية للجمال والعناية بالبشرة', fContact:'تواصل', fCity:'روتردام، هولندا', fAppt:'بموعد مسبق',
+  fTreat:'العلاجات', fT1:'تحليل بشرة وشعر', fT2:'هيدروفيشل', fT3:'ميكرونيدلينغ RF', fT4:'إزالة الشعر بالليزر',
+  fCopy:'آية للجمال والعناية بالبشرة — سمر تيناوي', fRole:'أخصائية عناية بالبشرة · روتردام',
+
+  pages: {
+    analyse: { t:'تحليل ثلاثي الأبعاد للبشرة والشعر', b:'<p>كل موعد بستوديو آية بيبدأ من هون، حتى لو جيتِ أصلاً لشي تاني. السكانر بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: توزيع التصبغ، حجم المسام، نسبة الترطيب، الاحمرار، الخطوط الرفيعة — وعلى فروة الراس كثافة الشعر ونموّه.</p><p>النتيجة مش ورقة بتشوفيها مرة وبترميها. سمر بتقرا معك الأرقام وبتحوّلها لخطة: أي علاج منطقي هلق، وأيا ممكن يستنى، وليش. بعد الكورس، نفس السكان بينعاد، فالتحسّن بتشوفيه بالأرقام مو بس بالإحساس.</p><p>المدة: حوالي 30 دقيقة. بدون تحضير، وبدون نقاهة. مناسب لكل أنواع وألوان البشرة.</p>' },
+    hydrofacial: { t:'هيدروفيشل', b:'<p>الهيدروفيشل تقشير مائي: الجهاز بيشفط الأوساخ والدهون وخلايا الجلد الميتة من المسام، وبنفس الوقت بيدخّل رطوبة ومضادات أكسدة. التنظيف والتقشير والترطيب بيصيروا بجلسة وحدة بدل ثلاث خطوات منفصلة.</p><p>بتلاحظي الفرق فوراً: بشرة أنعش وأصفى بدون احمرار أو تهيّج. بدون نقاهة — كتير ناس بيحجزوها قصداً قبل سهرة أو مناسبة.</p><p>المدة: حوالي 60 دقيقة. مناسبة كجلسة منفردة أو كجزء ثابت من كورس أطول.</p>' },
+    microneedling: { t:'ميكرونيدلينغ', b:'<p>الميكرونيدلينغ بيستخدم إبر دقيقة جداً لعمل قنوات مجهرية بالبشرة، وهيك بيحفّز إنتاج الكولاجين الطبيعي عندك وبيخلّي السيرومات الفعّالة توصل لعمق أكتر من مجرد دهنها ع البشرة.</p><p>بيُستخدم خصوصاً للخطوط الرفيعة، عدم انتظام الملمس، توسّع المسام، وآثار خفيفة. لأنو بيشغّل عملية الترميم الطبيعية عندك، النتيجة مش من أول مرة، هي بتتراكم عبر الكورس.</p><p>بشرتك أول كم يوم بعد الجلسة بتكون أحمر وأكتر حساسية — قديش يوم لازم تحسبي له، بتعرفي بالضبط قبل ما تبدي.</p>' },
+    rf: { t:'ميكرونيدلينغ RF', b:'<p>ميكرونيدلينغ RF بيجمع بين الإبر الدقيقة وطاقة الراديو فريكونسي اللي بتوصل لطبقات أعمق من الجلد عبر نفس الإبر. الميكرونيدلينغ العادي بيشتغل ع الطبقات العلوية، أما الـRF فبيشدّ النسيج تحتها كمان — هو الفرق يلي حاسّة فيه إنو "مشدود" مو بس "أنعم".</p><p>بيُستخدم للترهّل، آثار الندبات، وبشرة بدها أكتر من تحسّن سطحي. كورس من عدة جلسات، بينبنى بالتنسيق حسب نتيجة التحليل ثلاثي الأبعاد.</p><p>الافتراضي: كورس ٣ جلسات، تأثير شدّ وتمتين. النقاهة أطول شوي من الميكرونيدلينغ العادي.</p>' },
+    exosomen: { t:'إكسوزومات وكولاجين', b:'<p>بعد الميكرونيدلينغ أو أي علاج بيفتح البشرة، فينا ندخّل مواد فعّالة لعمق ما بتوصله أي كريم يومي. الإكسوزومات ومعزّزات الكولاجين بتُستخدم لتسريع الترميم ودعم بناء نسيج جديد أمتن.</p><p>عادة مش علاج لحاله، هو إضافة لكورس الميكرونيدلينغ — والفرق يبين بين "البشرة تفاعلت شوي" ونتيجة ثابتة وواضحة.</p><p>بينضاف دايماً بالتنسيق، ما بيُفرض كخيار ثابت.</p>' },
+    huidverbetering: { t:'تفتيح وتحسين البشرة', b:'<p>اسم شامل للعلاجات يلي هدفها بشرة أصفى وموحّدة اللون: ضد التصبغات، البهتان، عدم انتظام الملمس، وآثار الندبات أو الشمس. أي أسلوب بالتحديد — تقشير، LED، سيرومات فعّالة، أو مزيج — بيعتمد كلياً ع نتيجة التحليل ثلاثي الأبعاد.</p><p>مش باقة جاهزة. سمر بتبني الخطة حسب بشرتك، مو حسب شو موجود بالجدول هلق.</p>' },
+    laser: { t:'ليزر إزالة الشعر', b:'<p>الليزر الطبي بيضعّف جذر الشعرة بالضوء المركّز، فالشعر بيرجع أرفع تدريجياً وبيقل مع الكورس. بيشتغل مع أغلب أنواع البشرة والشعر؛ قبل أول جلسة دايماً في تجربة على بقعة صغيرة لضبط الإعداد ع بشرتك.</p><p>لأنو الشعر بينمو على مراحل، جلسة وحدة مش كفاية — من هون الكورس. الافتراضي: ٦ إلى ٨ جلسات، بفواصل حسب دورة نمو شعرك.</p><p>مدة الجلسة بتعتمد ع المنطقة. احمرار خفيف بعد الجلسة طبيعي وبيروح خلال ساعات.</p>' },
+    lipblush: { t:'توريد الشفايف', b:'<p>توريد الشفايف تصبيغ شبه دائم للشفايف: تصحيح لون طبيعي وتحسين بسيط بالكونتور، مش لون "وشم" فاقع. اختيار الصبغة بيعتمد على نوع بشرتك ولون شفايفك الطبيعي.</p><p>أول كم يوم اللون بيكون أغمق من النتيجة النهائية — بيهدا بعد أسبوعين للدرجة الأخف الثابتة. جلسة تعديل بعد ٤-٦ أسابيع جزء أساسي من الخطة.</p><p>مدة الجلسة الأولى: حوالي ساعتين، وفيها نقاش اللون قبل البدء.</p>' },
+  },
+
+  legalPrivacy:'سياسة الخصوصية',
+  legalPrivacyBody:'<p>آية للجمال والعناية بالبشرة (سمر تيناوي)، بروتردام، بتعالج بيانات شخصية بتعبّيها بنفسك بفورم طلب الموعد: الاسم، الإيميل، رقم الهاتف، العلاج المطلوب، وأي ملاحظات. هاد البيانات بتُستخدم بس لتأكيد موعدك وتنظيمه، وللتذكير أو التعديل إذا لزم.</p><p>بياناتك ما بتنباع وما بتنشارك مع طرف تالت لأهداف تسويقية. بتضل محفوظة للمدة اللازمة لإنجاز موعدك وفترة إدارية معقولة بعدها، وبعدين بتنمسح.</p><p>هاد الموقع ما بيحط كوكيز تتبّع وما بيستخدم شبكات إعلانات. حسب قانون حماية البيانات الأوروبي (GDPR)، إلك الحق بالاطّلاع، والتصحيح، والحذف، وتقديم شكوى للجهة المختصة بهولندا. للتواصل بخصوص أي طلب، عبر إنستغرام أو فورم الطلب.</p>',
+  legalTerms:'شروط الخدمة',
+  legalTermsBody:'<p>بطلبك موعد عبر هاد الموقع، معناها موافقة على التالي: الطلب مش تأكيد أوتوماتيكي — سمر بتأكد التاريخ والوقت النهائي بنفسها. إذا في ظرف، منرجو الإلغاء أو التأجيل بوقت مبكر مشان الوقت ينعطى لحدا تاني.</p><p>بعض العلاجات مش مناسبة وقت الحمل، أو مع بعض حالات البشرة أو الأدوية — لازم تخبري قبل الموعد مشان القرار الصح ينعمل. نتائج العلاجات بتختلف من شخص لتاني؛ المعلومات بهاد الموقع عامة وما بتعوّض عن الاستشارة الشخصية وقت المعاينة.</p><p>الأسعار والمواعيد المتاحة بتنحكى شخصياً وممكن تتغيّر. هاد الشروط ممكن تتحدّث؛ آخر نسخة دايماً هون.</p>',
+  legalDmca:'حقوق النشر (DMCA)',
+  legalDmcaBody:'<p>الصور والنصوص والتصميم بهاد الموقع ملك آية للجمال والعناية بالبشرة أو مستخدمة برخصة قانونية. إذا حاسّة إنو في مادة عم تنتهك حقوقك، بلّغي عبر إنستغرام مع: (١) وصف العمل يلي بتطالبي بحقوقه، (٢) مكان المادة بالضبط بالموقع، (٣) بيانات التواصل معك.</p><p>البلاغات بتنعالج بجدّية وبأسرع وقت. إذا بلاغ انحطّ بشكل غير صحيح، الطرف التاني فيه يقدّم اعتراض.</p>',
+  legalContact:'تواصل',
+  legalContactBody:'<p>أسرع طريقة تسألي أو تطلبي موعد هي عبر الفورم بآخر الموقع أو رسالة على إنستغرام <span class="ltr">@ayaa_beauty.skin</span>. الهاتف والواتساب جايين قريب — لما الرقم يصير فعّال، بيظهر هون وبالفوتر.</p><p>آية للجمال والعناية بالبشرة بروتردام، بموعد مسبق. الموقع بالضبط بيوصلك مع تأكيد الموعد.</p>',
+  legalInfo:'معلومات',
+  legalQuals:'المؤهلات',
+  legalQualsBody:'<p>سمر تيناوي أخصائية عناية بالبشرة بروتردام، متدرّبة ومعتمدة من Atres Center. كل علاج بهاد الموقع هي شخصياً يلي بتنفّذه — بدون موظفين، بدون تبديل بالمعالِجين.</p><ul style="margin:14px 0 0;padding-inline-start:20px;line-height:1.9"><li>Mesotherapie Allround — Atres Center، بتاريخ ١١-٠٦-٢٠٢٢</li><li>Mesotherapie Haar — Atres Center، بتاريخ ٠٧-٠٢-٢٠٢٢</li></ul><p style="margin-top:16px">الشهادات معلّقة بالاستوديو وفينا تشوفيها هناك.</p>',
+}};
+
+
+const htmlEl = document.documentElement;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let scrubTween = null, lang = 'nl';
+const D = () => I18N[lang];
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* a visitor should never be able to request a date in the past */
+const dateEl = document.getElementById('bkDate');
+dateEl.min = new Date().toISOString().slice(0, 10);
+
+/* ═══════════════ i18n ═══════════════ */
+const MARQUEE_SLUGS = ['analyse','hydrofacial','microneedling','rf','exosomen','huidverbetering','laser','lipblush'];
+function buildMarquee(){
+  const one = D()._marquee.map((w, i) => MARQUEE_SLUGS[i]
+    ? '<button type="button" class="mq-item card-book" data-book="' + MARQUEE_SLUGS[i] + '">' + w + '</button>'
+    : '<span class="mq-item">' + w + '</span>').join('');
+  document.getElementById('mq').innerHTML = one + one;   /* doubled: modulo loop */
+}
+
+function buildScrub(){
+  const el = document.getElementById('scrub');
+  el.innerHTML = D().introScrub.split(/\s+/).map(w => '<span class="w">' + w + '</span>').join(' ');
+  if (scrubTween){
+    if (scrubTween.scrollTrigger) scrubTween.scrollTrigger.kill();
+    scrubTween.kill(); scrubTween = null;
+  }
+  if (reduce || !window.gsap){ el.querySelectorAll('.w').forEach(w => w.style.opacity = 1); return; }
+  scrubTween = gsap.to(el.querySelectorAll('.w'), {
+    opacity: 1, ease: 'none', stagger: 1,
+    scrollTrigger: { trigger: el, start: 'top 78%', end: 'bottom 52%', scrub: .7 }
+  });
+}
+
+function setLang(next, initial){
+  lang = next;
+  const d = I18N[next];
+  htmlEl.lang = next;
+  htmlEl.dir  = next === 'ar' ? 'rtl' : 'ltr';
+  document.title = d._title;
+  document.getElementById('metaDesc').setAttribute('content', d._desc);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = d[el.dataset.i18n]; if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const v = d[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = d[el.dataset.i18nPh]; if (v != null) el.placeholder = v;
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const v = d[el.dataset.i18nAttr]; if (v != null) el.setAttribute('aria-label', v);
+  });
+
+  document.querySelectorAll('.lang button').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.lang === next)));
+
+  refreshLive();
+
+  buildScrub();
+  buildMarquee();
+  renderSummary();
+
+  /* an open FAQ/legal row still carries a pixel height measured in the old language */
+  document.querySelectorAll('#faqList .qa[data-open="1"]').forEach(qa => {
+    const body = qa.querySelector('.qa-body');
+    body.style.height = body.firstElementChild.offsetHeight + 'px';
+  });
+
+  buildMenuTreatList();
+  if (document.getElementById('pageView').dataset.page) openPage(document.getElementById('pageView').dataset.page, true);
+
+  try { localStorage.setItem('ayaa-lang', next); } catch(e){}
+  if (!initial && window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+}
+
+document.querySelectorAll('.lang button').forEach(b =>
+  b.addEventListener('click', () => { if (b.dataset.lang !== lang) setLang(b.dataset.lang); }));
+
+/* ═══════════════ booking ═══════════════ */
+const form   = document.getElementById('bkForm');
+const sendEl = document.getElementById('bkSend');
+const errEl  = document.getElementById('bkErr');
+const copied = document.getElementById('bkCopied');
+const TREAT_KEY = { analyse:'sAp', hydrofacial:'s1p', microneedling:'s2p', rf:'sRp',
+                    exosomen:'s3p', huidverbetering:'s4p', laser:'sLp', lipblush:'s5p' };
+/* the pinned column reports the visible card's real duration, in card order */
+const CARD_META = ['sAc1','s1c1','s2c1','sRc1','s3c1','s4c1','sLc1','s5c1'];
+
+const val = id => document.getElementById(id).value.trim();
+
+function treatLabel(){
+  const v = document.getElementById('bkTreat').value;
+  return v === 'ask' ? D().optAsk : D()[TREAT_KEY[v]];
+}
+function partLabel(){
+  const el = form.querySelector('input[name="part"]:checked');
+  return el ? { am: D().partAM, pm: D().partPM, eve: D().partEve }[el.value] : '';
+}
+function dateLabel(){
+  const v = val('bkDate');
+  if (!v) return D().bkFlex;
+  const p = v.split('-').map(Number);
+  return new Date(p[0], p[1] - 1, p[2])
+    .toLocaleDateString(D()._locale, { weekday:'long', day:'numeric', month:'long' });
+}
+
+function setRow(id, text){
+  const el = document.getElementById(id);
+  el.textContent = text || '—';
+  el.classList.toggle('empty', !text);
+}
+function renderSummary(){
+  setRow('sumTreat',   treatLabel());
+  setRow('sumDate',    val('bkDate') ? dateLabel() : '');
+  setRow('sumPart',    partLabel());
+  setRow('sumName',    val('bkName'));
+  setRow('sumContact', val('bkContact'));
+}
+
+function buildMessage(){
+  const d = D(), notes = val('bkNotes');
+  const lines = [
+    d.bkMsgHead, '',
+    d.lblTreat   + ': ' + treatLabel(),
+    d.lblDate    + ': ' + dateLabel(),
+    d.lblPart    + ': ' + partLabel(),
+    d.lblName    + ': ' + val('bkName'),
+    d.lblContact + ': ' + val('bkContact')
+  ];
+  if (notes) lines.push(d.bkNotesShort + ': ' + notes);
+  return lines.join('\n');
+}
+
+form.addEventListener('input',  () => { renderSummary(); errEl.dataset.show = '0'; });
+form.addEventListener('change', renderSummary);
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = val('bkName'), contact = val('bkContact');
+  document.getElementById('fName').dataset.invalid    = name ? '0' : '1';
+  document.getElementById('fContact').dataset.invalid = contact ? '0' : '1';
+
+  if (!name || !contact){
+    errEl.dataset.show = '1';
+    document.getElementById(name ? 'bkContact' : 'bkName').focus();
+    return;
+  }
+
+  const msg = buildMessage(), enc = encodeURIComponent(msg);
+
+  const wa = document.getElementById('sendWa');
+  if (CONFIG.whatsapp){ wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + enc; wa.style.display = ''; }
+  else wa.style.display = 'none';
+
+  const mail = document.getElementById('sendMail');
+  if (CONFIG.email){
+    mail.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(D().bkMsgHead) + '&body=' + enc;
+    mail.style.display = '';
+  } else mail.style.display = 'none';
+
+  document.getElementById('sendIg').href = CONFIG.instagram;
+
+  /* Instagram has no prefill: show the text so it can always be copied by hand,
+     and put it on the clipboard too when the browser allows it */
+  const box = document.getElementById('bkMsg');
+  box.value = msg;
+  copied.textContent = '';
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(msg).then(() => { copied.textContent = D().bkCopied; }, () => {});
+  }
+  box.addEventListener('focus', () => box.select(), { once: true });
+
+  sendEl.dataset.show = '1';
+  if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 80);
+  sendEl.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+});
+
+/* ═══════════════ live availability (booking API in server.py) ═══════════════
+   Free slots come from the real diary and every booking is re-checked server
+   side before it is written, so a slot cannot be sold twice. If the API is not
+   reachable the request form stays up instead. */
+const API = CONFIG.api;
+let liveSlugs = [], liveTreat = 'analyse', liveDays = [], liveDay = null,
+    liveSlot = null, liveRef = null, liveBusy = false;
+
+const pad2 = v => String(v).padStart(2, '0');
+const hhmm = m => pad2(Math.floor(m / 60)) + ':' + pad2(m % 60);
+const dayOf = iso => { const p = iso.split('-').map(Number);
+                       return new Date(p[0], p[1] - 1, p[2]); };
+
+async function apiGet(path){
+  const r = await fetch(API + path, { cache: 'no-store' });
+  if (!r.ok) throw new Error('http ' + r.status);
+  return r.json();
+}
+async function apiPost(path, body){
+  const r = await fetch(API + path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body || {})
+  });
+  let data = {};
+  try { data = await r.json(); } catch(e){}
+  return { ok: r.ok, status: r.status, data };
+}
+
+/* ── step 1: treatment ── */
+function buildPicker(){
+  if (!LIVE) return;
+  const box = document.getElementById('pickTreat');
+  box.innerHTML = '';
+  liveSlugs.forEach(slug => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = D()[TREAT_KEY[slug]] || slug;
+    b.setAttribute('aria-pressed', String(slug === liveTreat));
+    b.addEventListener('click', () => {
+      if (slug === liveTreat) return;
+      liveTreat = slug;
+      box.querySelectorAll('button').forEach(o => o.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true');
+      loadDays();
+    });
+    box.appendChild(b);
+  });
+}
+
+/* ── step 2: day + slot ── */
+async function loadDays(keepDay){
+  if (!LIVE) return;
+  const slotBox = document.getElementById('pickSlot');
+  slotBox.innerHTML = '<p class="slots-msg">' + D().calLoading + '</p>';
+  try {
+    const data = await apiGet('/availability?treatment=' + encodeURIComponent(liveTreat) + '&days=21');
+    liveDays = data.days || [];
+  } catch(e){
+    liveDays = [];
+    slotBox.innerHTML = '<p class="slots-msg">' + D().errGeneric + '</p>';
+    return;
+  }
+  const open = liveDays.filter(d => d.slots.length);
+  if (!(keepDay && liveDays.some(d => d.date === liveDay && d.slots.length))){
+    liveDay = open.length ? open[0].date : null;
+  }
+  liveSlot = null;
+  renderDays();
+  renderSlots();
+  updateChosen();
+}
+
+function renderDays(){
+  const box = document.getElementById('pickDay');
+  box.innerHTML = '';
+  liveDays.forEach(d => {
+    const dt = dayOf(d.date);
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'day';
+    b.disabled = !d.slots.length;
+    b.setAttribute('aria-pressed', String(d.date === liveDay));
+    b.innerHTML = '<small>' + dt.toLocaleDateString(D()._locale, { weekday: 'short' }) + '</small>'
+                + '<b>' + dt.toLocaleDateString(D()._locale, { day: 'numeric' }) + '</b>'
+                + '<i>' + dt.toLocaleDateString(D()._locale, { month: 'short' }) + '</i>';
+    b.addEventListener('click', () => {
+      liveDay = d.date; liveSlot = null;
+      renderDays(); renderSlots(); updateChosen();
+    });
+    box.appendChild(b);
+  });
+  const active = box.querySelector('[aria-pressed="true"]');
+  if (active) active.scrollIntoView({ block: 'nearest', inline: 'center' });
+}
+
+function renderSlots(){
+  const box = document.getElementById('pickSlot');
+  box.innerHTML = '';
+  const day = liveDays.find(d => d.date === liveDay);
+  if (!day || !day.slots.length){
+    box.innerHTML = '<p class="slots-msg">' + D().noSlots + '</p>';
+    return;
+  }
+  day.slots.forEach(m => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'slot';
+    b.textContent = hhmm(m);
+    b.setAttribute('aria-pressed', String(m === liveSlot));
+    b.addEventListener('click', () => {
+      liveSlot = m;
+      box.querySelectorAll('.slot').forEach(o => o.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true');
+      updateChosen();
+    });
+    box.appendChild(b);
+  });
+}
+
+function updateChosen(){
+  const el = document.getElementById('chosen');
+  if (liveDay === null || liveSlot === null){
+    el.dataset.show = '0'; el.textContent = '';
+  } else {
+    const dt = dayOf(liveDay).toLocaleDateString(D()._locale,
+      { weekday: 'long', day: 'numeric', month: 'long' });
+    el.textContent = (D()[TREAT_KEY[liveTreat]] || liveTreat) + ' — ' + dt
+                   + ' ' + D().atWord + ' ' + hhmm(liveSlot);
+    el.dataset.show = '1';
+  }
+  validateLive();
+}
+
+/* ── step 3: details + confirm ── */
+function validateLive(){
+  const ok = liveSlot !== null
+    && document.getElementById('lvName').value.trim().length > 0
+    && /^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(document.getElementById('lvEmail').value.trim());
+  document.getElementById('lvSubmit').disabled = !ok || liveBusy;
+  return ok;
+}
+
+function liveError(msg){
+  const e = document.getElementById('lvErr');
+  e.textContent = msg || '';
+  e.dataset.show = msg ? '1' : '0';
+}
+
+async function submitLive(ev){
+  ev.preventDefault();
+  if (!validateLive() || liveBusy) return;
+  liveBusy = true;
+  document.getElementById('lvSubmit').disabled = true;
+  liveError('');
+
+  const res = await apiPost('/bookings', {
+    treatment: liveTreat,
+    date: liveDay,
+    start: liveSlot,
+    name:  document.getElementById('lvName').value.trim(),
+    email: document.getElementById('lvEmail').value.trim(),
+    phone: document.getElementById('lvPhone').value.trim(),
+    notes: document.getElementById('lvNotes').value.trim(),
+    website: document.getElementById('lvHp').value,
+    lang
+  });
+
+  liveBusy = false;
+  if (res.ok){
+    liveRef = res.data.ref;
+    showDone(res.data);
+  } else {
+    if (res.status === 409){
+      liveError(D().errTaken);
+      await loadDays();                 /* someone else took it: refresh */
+    } else if (res.status === 429){
+      liveError(D().errTooMany);
+    } else if (res.data && res.data.error === 'invalid_email'){
+      liveError(D().errEmail);
+    } else {
+      liveError(D().errGeneric);
+    }
+    validateLive();
+  }
+}
+
+function showDone(b){
+  const dt = dayOf(b.date).toLocaleDateString(D()._locale,
+    { weekday: 'long', day: 'numeric', month: 'long' });
+  document.getElementById('okWhen').textContent =
+    (D()[TREAT_KEY[b.treatment]] || b.treatment) + ' — ' + dt
+    + ' ' + D().atWord + ' ' + hhmm(b.start) + ' – ' + hhmm(b.end);
+  document.getElementById('okRef').textContent = b.ref;
+  document.getElementById('okIcs').href = API + '/bookings/' + b.ref + '.ics';
+  document.getElementById('lvDone').dataset.show = '1';
+  document.getElementById('liveForm').style.display = 'none';
+  document.getElementById('lvDone').scrollIntoView(
+    { behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+  if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 120);
+}
+
+async function cancelLive(){
+  if (!liveRef) return;
+  const res = await apiPost('/bookings/' + liveRef + '/cancel');
+  const done = document.getElementById('lvDone');
+  if (res.ok){
+    done.querySelector('h3').textContent = D().cancelledTitle;
+    document.getElementById('okWhen').textContent = D().cancelledBody;
+    done.querySelector('.ref').style.display = 'none';
+    done.querySelector('.done-actions').style.display = 'none';
+    liveRef = null;
+    loadDays();
+  }
+}
+
+function refreshLive(){
+  if (!LIVE) return;
+  const d = D();
+  const h2 = document.querySelector('.book-head h2'), lede = document.querySelector('.book-head p');
+  if (d.bkTitleLive) h2.textContent = d.bkTitleLive;
+  if (d.bkLedeLive)  lede.textContent = d.bkLedeLive;
+  const a1 = document.querySelector('[data-i18n="a1"]');
+  if (a1 && d.a1live) a1.textContent = d.a1live;
+  buildPicker(); renderDays(); renderSlots(); updateChosen();
+}
+
+async function initLive(){
+  try {
+    const data = await apiGet('/treatments');
+    liveSlugs = (data.treatments || []).map(t => t.slug).filter(x => TREAT_KEY[x]);
+    if (!liveSlugs.length) throw new Error('no treatments');
+  } catch(e){
+    LIVE = false;                       /* static hosting: request form stays */
+    return;
+  }
+  LIVE = true;
+  if (!liveSlugs.includes(liveTreat)) liveTreat = liveSlugs[0];
+  document.getElementById('bkLive').dataset.on = '1';
+  document.getElementById('bkRequest').dataset.off = '1';
+
+  document.getElementById('liveForm').addEventListener('submit', submitLive);
+  ['lvName', 'lvEmail'].forEach(id =>
+    document.getElementById(id).addEventListener('input', () => { liveError(''); validateLive(); }));
+  document.getElementById('okCancel').addEventListener('click', cancelLive);
+
+  refreshLive();
+  await loadDays();
+  if (window.ScrollTrigger) ScrollTrigger.refresh();
+}
+
+/* "Boek behandeling" on a treatment card (or the marquee) preselects it and jumps to
+   the form. Delegated on document since the marquee rebuilds its buttons on language switch. */
+document.addEventListener('click', e => {
+  const b = e.target.closest('.card-book');
+  if (!b) return;
+  if (LIVE){
+    if (liveSlugs.includes(b.dataset.book)){
+      liveTreat = b.dataset.book;
+      buildPicker();
+      loadDays();
+    }
+  } else {
+    document.getElementById('bkTreat').value = b.dataset.book;
+    renderSummary();
+  }
+  document.getElementById('afspraak').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  if (!LIVE) setTimeout(() => document.getElementById('bkName').focus({ preventScroll: true }), reduce ? 0 : 750);
+});
+
+/* ═══════════════ horizontal accordion ═══════════════ */
+(function(){
+  const panes = [...document.querySelectorAll('#acc .acc-pane')];
+  const open = p => panes.forEach(o => o.setAttribute('aria-expanded', String(o === p)));
+  panes.forEach(p => {
+    p.addEventListener('mouseenter', () => open(p));
+    p.addEventListener('click', () => open(p));
+    p.addEventListener('focus', () => open(p));
+    p.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(p); }
+    });
+  });
+})();
+
+/* ═══════════════ FAQ accordion ═══════════════ */
+document.querySelectorAll('#faqList .qa').forEach(qa => {
+  const btn = qa.querySelector('button'), body = qa.querySelector('.qa-body');
+  btn.addEventListener('click', () => {
+    const open = qa.dataset.open === '1';
+    document.querySelectorAll('#faqList .qa[data-open="1"]').forEach(o => {
+      if (o !== qa){ o.dataset.open = '0'; o.querySelector('.qa-body').style.height = '0px'; }
+    });
+    qa.dataset.open = open ? '0' : '1';
+    body.style.transition = 'height .55s cubic-bezier(.2,.8,.2,1)';
+    body.style.height = open ? '0px' : body.firstElementChild.offsetHeight + 'px';
+    if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 620);
+  });
+});
+
+/* ═══════════════ brand menu ═══════════════ */
+const siteMenu = document.getElementById('siteMenu');
+const brandBtn = document.getElementById('brandBtn');
+function openMenu(){
+  siteMenu.hidden = false;
+  requestAnimationFrame(() => siteMenu.classList.add('is-open'));
+  brandBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu(){
+  siteMenu.classList.remove('is-open');
+  brandBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+  setTimeout(() => { siteMenu.hidden = true; }, 500);
+}
+brandBtn.addEventListener('click', () => siteMenu.classList.contains('is-open') ? closeMenu() : openMenu());
+document.getElementById('siteMenuClose').addEventListener('click', closeMenu);
+siteMenu.addEventListener('click', e => { if (e.target === siteMenu) closeMenu(); });
+document.querySelectorAll('.site-menu-links a').forEach(a => a.addEventListener('click', closeMenu));
+
+function buildMenuTreatList(){
+  document.querySelectorAll('#menuTreatList button').forEach(b => {
+    const p = D().pages && D().pages[b.dataset.page];
+    if (p) b.textContent = p.t;
+  });
+}
+
+/* ═══════════════ content page overlay (treatments + legal/contact/quals) ═══════════════ */
+const pageView = document.getElementById('pageView');
+function openPage(id, fromBoot){
+  const p = D().pages && D().pages[id];
+  if (!p) return;
+  document.getElementById('pageViewTitle').textContent = p.t;
+  document.getElementById('pageViewBody').innerHTML = p.b;
+  pageView.dataset.page = id;
+  pageView.hidden = false;
+  requestAnimationFrame(() => pageView.classList.add('is-open'));
+  document.body.style.overflow = 'hidden';
+  if (!fromBoot) history.pushState({ page:id }, '', '#p-' + id);
+  closeMenu();
+}
+function closePage(skipHistory){
+  pageView.classList.remove('is-open');
+  document.body.style.overflow = '';
+  delete pageView.dataset.page;
+  setTimeout(() => { pageView.hidden = true; }, 400);
+  if (!skipHistory && location.hash.indexOf('#p-') === 0) history.pushState({}, '', location.pathname + location.search);
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-page]');
+  if (t) openPage(t.dataset.page);
+});
+document.getElementById('pageViewClose').addEventListener('click', () => closePage());
+pageView.addEventListener('click', e => { if (e.target === pageView) closePage(); });
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (!pageView.hidden) closePage();
+  else if (siteMenu.classList.contains('is-open')) closeMenu();
+});
+window.addEventListener('popstate', () => {
+  const m = location.hash.match(/^#p-(.+)$/);
+  if (m) openPage(m[1], true); else if (!pageView.hidden) closePage(true);
+});
+{
+  const m = location.hash.match(/^#p-(.+)$/);
+  if (m) pageView.dataset.page = m[1];
+}
+
+/* ═══════════════ language boot ═══════════════ */
+let saved = null;
+try { saved = localStorage.getItem('ayaa-lang'); } catch(e){}
+setLang(saved || ((navigator.language || '').toLowerCase().indexOf('ar') === 0 ? 'ar' : 'nl'), true);
+initLive();
+
+/* ═══════════════ motion ═══════════════ */
+if (!reduce && window.gsap){
+  gsap.registerPlugin(ScrollTrigger);
+  const mm = gsap.matchMedia();
+
+  gsap.timeline({ defaults:{ ease:'expo.out' } })
+    .from('[data-hero]', { y:44, opacity:0, duration:1.5, stagger:.1, delay:.15 })
+    .from('.scroll-hint', { opacity:0, duration:1 }, '-=.7');
+
+  gsap.to('#heroBg', { yPercent:16, ease:'none',
+    scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+  gsap.to('.hero-inner', { yPercent:-22, opacity:0, ease:'none',
+    scrollTrigger:{ trigger:'.hero', start:'25% top', end:'bottom top', scrub:true } });
+
+  document.querySelectorAll('.svc, .gal, .cta, footer').forEach(sec =>
+    ScrollTrigger.create({ trigger:sec, start:'top 70px', end:'bottom 70px',
+      onToggle:self => document.getElementById('nav').classList.toggle('on-dark', self.isActive) }));
+
+  /* quick-jump side nav: highlight the dot for whichever section is in view */
+  document.querySelectorAll('.quicknav a').forEach(dot => {
+    const sec = document.getElementById(dot.dataset.sec);
+    if (!sec) return;
+    ScrollTrigger.create({ trigger:sec, start:'top 55%', end:'bottom 55%',
+      onToggle:self => dot.classList.toggle('is-active', self.isActive) });
+  });
+
+  const mqEl = document.getElementById('mq');
+  const half = () => mqEl.scrollWidth / 2;
+  const loop = gsap.to(mqEl, { x:() => -half(), duration:26, ease:'none', repeat:-1,
+    modifiers:{ x: gsap.utils.unitize(x => parseFloat(x) % half()) } });
+  ScrollTrigger.create({ onUpdate:self => loop.timeScale(self.direction === 1 ? 1 : -1) });
+
+  /* the marquee doubles as a quick-jump treatment nav: pause the drift so it can be read and tapped */
+  const marqueeEl = document.querySelector('.marquee');
+  marqueeEl.addEventListener('pointerenter', () => loop.pause());
+  marqueeEl.addEventListener('pointerleave', () => loop.play());
+  marqueeEl.addEventListener('touchstart', () => loop.pause(), { passive:true });
+
+  /* machines bento: wipe-reveal entrance + continuous image parallax + pointer tilt */
+  gsap.utils.toArray('#apparatuur .cell').forEach((cell, i) => {
+    gsap.fromTo(cell,
+      { clipPath: 'inset(0% 0% 100% 0%)', y: 70, rotateX: 10, scale: .92, opacity: 0 },
+      { clipPath: 'inset(0% 0% 0% 0%)', y: 0, rotateX: 0, scale: 1, opacity: 1,
+        duration: 1.3, ease: 'expo.out', delay: (i % 4) * .1,
+        scrollTrigger: { trigger: cell, start: 'top 92%', once: true } });
+
+    gsap.to(cell.querySelector('img'), {
+      yPercent: 10, ease: 'none',
+      scrollTrigger: { trigger: cell, start: 'top bottom', end: 'bottom top', scrub: .8 } });
+
+    if (matchMedia('(hover:hover)').matches) {
+      const strength = 10;
+      cell.addEventListener('pointermove', e => {
+        const r = cell.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - .5;
+        const py = (e.clientY - r.top) / r.height - .5;
+        gsap.to(cell, { rotateY: px * strength, rotateX: -py * strength, duration: .5, ease: 'power2.out' });
+      });
+      cell.addEventListener('pointerleave', () => {
+        gsap.to(cell, { rotateY: 0, rotateX: 0, duration: .7, ease: 'expo.out' });
+      });
+    }
+  });
+  gsap.from('#acc .acc-pane', {
+    y: 34, opacity: 0, duration: 1, ease: 'expo.out', stagger: .07,
+    scrollTrigger: { trigger: '#acc', start: 'top 90%', once: true } });
+
+  document.querySelectorAll('.kit-head, .intro-label, .intro-foot, .ritual-head, .gal-head, .studio-copy > *, .book-head, .fields > *, .summary, .faq h2, .qa, .cta h2, .cta p, .cta .hero-cta, .foot-grid > *')
+    .forEach(el => gsap.from(el, { y:32, opacity:0, duration:1.15, ease:'expo.out',
+      scrollTrigger:{ trigger:el, start:'top 88%', once: true } }));
+
+  /* word-by-word clip-reveal on the big section headings, on top of their block fade */
+  /* plain-text headings only: kit-head h2 and cta h2 carry inner <span class="it"> markup
+     (data-i18n-html) that a textContent split would flatten, so they're left alone */
+  document.querySelectorAll('.ritual-head h2, .gal-head h2, .book-head h2, .studio-copy h2, .svc-stick-in h2, .faq h2')
+    .forEach(h => {
+      const words = h.textContent.trim().split(/\s+/);
+      h.innerHTML = words.map(w => `<span class="word"><span class="word-in">${w}</span></span>`).join(' ');
+      gsap.from(h.querySelectorAll('.word-in'), {
+        yPercent: 115, rotate: 4, duration: 1, ease: 'expo.out', stagger: .035,
+        scrollTrigger: { trigger: h, start: 'top 90%', once: true } });
+    });
+
+  /* magnetic pull on the primary call-to-action buttons */
+  if (matchMedia('(hover:hover)').matches) {
+    document.querySelectorAll('.nav-cta, .hero-cta .btn, .cta .btn').forEach(btn => {
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        gsap.to(btn, { x: (e.clientX - r.left - r.width / 2) * .35,
+          y: (e.clientY - r.top - r.height / 2) * .5, duration: .5, ease: 'power2.out' });
+      });
+      btn.addEventListener('pointerleave', () =>
+        gsap.to(btn, { x: 0, y: 0, duration: .6, ease: 'elastic.out(1, .4)' }));
+    });
+  }
+
+  document.querySelectorAll('#svcList .card').forEach((card, i) => {
+    gsap.fromTo(card, { scale:.88, opacity:0, y:60 },
+      { scale:1, opacity:1, y:0, ease:'none',
+        scrollTrigger:{ trigger:card, start:'top 92%', end:'top 46%', scrub:.6 } });
+    gsap.to(card, { opacity:.34, scale:.95, ease:'none',
+      scrollTrigger:{ trigger:card, start:'bottom 46%', end:'bottom 6%', scrub:.6 } });
+    ScrollTrigger.create({ trigger:card, start:'top 60%', end:'bottom 60%',
+      onToggle:self => { if (self.isActive)
+        document.getElementById('svcNow').textContent = CARD_META[i] ? D()[CARD_META[i]] : ''; } });
+  });
+
+  mm.add('(min-width: 861px)', () => {
+    const steps = gsap.utils.toArray('#stack .step');
+    steps.forEach((step, i) => {
+      if (i === steps.length - 1) return;
+      gsap.to(step, { scale:1 - (steps.length - i) * .022, yPercent:-4,
+        filter:'brightness(.94)', ease:'none',
+        scrollTrigger:{ trigger:steps[i + 1], start:'top 85%', end:'top 25%', scrub:true } });
+    });
+  });
+
+  /* phone: the sticky-stack trick needs desktop's tall viewport headroom
+     to feel intentional rather than claustrophobic, so below 861px each
+     step instead scrubs in on its own — scale and lift settling into
+     place as it's swiped up the screen, thumb-paced rather than time-paced */
+  mm.add('(max-width: 860px)', () => {
+    gsap.utils.toArray('#stack .step').forEach((step, i) => {
+      gsap.fromTo(step, { opacity:0, y:64, scale:.92 },
+        { opacity:1, y:0, scale:1, ease:'none',
+          scrollTrigger:{ trigger:step, start:'top 92%', end:'top 58%', scrub:.5 } });
+      gsap.fromTo(step.querySelector('.step-img'), { scale:1.22 }, { scale:1, ease:'none',
+        scrollTrigger:{ trigger:step, start:'top 92%', end:'top 40%', scrub:.5 } });
+      gsap.fromTo(step.querySelector('.step-n'), { opacity:0, x:-14 }, { opacity:.34, x:0, ease:'none',
+        scrollTrigger:{ trigger:step, start:'top 90%', end:'top 68%', scrub:.5 } });
+    });
+  });
+
+  mm.add('(min-width: 941px)', () => {
+    const track = document.getElementById('galTrack'), view = document.getElementById('galView');
+    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth + 40);
+    const tween = gsap.to(track, { x:() => -dist(), ease:'none',
+      scrollTrigger:{ trigger:view, pin:true, scrub:.8, invalidateOnRefresh:true, end:() => '+=' + dist() } });
+    gsap.utils.toArray('#galTrack .frame').forEach(f =>
+      gsap.fromTo(f, { scale:.9, opacity:.45 }, { scale:1, opacity:1, ease:'power2.out',
+        scrollTrigger:{ trigger:f, containerAnimation:tween, start:'left 88%', end:'left 46%', scrub:.6 } }));
+    return () => gsap.set(track, { clearProps:'transform' });
+  });
+
+  /* phone: no room to pin a vertical scroll into horizontal motion, so the
+     gallery is a native swipeable strip instead (see CSS). Two effects
+     replace the desktop scrub: each frame scrubs in as the strip enters
+     view vertically, and — the actual "phone" motion — whichever frame
+     sits nearest the strip's centre as the visitor swipes grows slightly
+     while its neighbours recede, so the thing you're looking at is always
+     the thing that's biggest, driven by touch, not by time. */
+  mm.add('(max-width: 940px)', () => {
+    const frames = gsap.utils.toArray('#galTrack .frame');
+    const view = document.getElementById('galView');
+
+    frames.forEach(f => gsap.fromTo(f, { opacity:.3, scale:.88 }, { opacity:1, scale:1, ease:'none',
+      scrollTrigger:{ trigger:f, start:'top 94%', end:'top 55%', scrub:.4 } }));
+
+    let raf = null;
+    const settle = () => {
+      raf = null;
+      const mid = view.getBoundingClientRect().left + view.clientWidth / 2;
+      frames.forEach(f => {
+        const r = f.getBoundingClientRect();
+        const dist = Math.abs((r.left + r.width / 2) - mid);
+        const t = Math.max(0, 1 - dist / (view.clientWidth * .68));
+        gsap.to(f, { scale: .93 + t * .07, opacity: .55 + t * .45, duration:.35, ease:'power2.out', overwrite:'auto' });
+      });
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(settle); };
+    view.addEventListener('scroll', onScroll, { passive:true });
+    settle();
+
+    return () => {
+      view.removeEventListener('scroll', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+      gsap.set(frames, { clearProps:'transform,opacity' });
+    };
+  });
+
+  gsap.fromTo('#studioImg', { scale:1.16 }, { scale:1, ease:'none',
+    scrollTrigger:{ trigger:'.studio-media', start:'top bottom', end:'bottom top', scrub:true } });
+
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    ScrollTrigger.create({ trigger:el, start:'top 90%', once:true,
+      onEnter:() => gsap.to({ v:0 }, { v:target, duration:2, ease:'expo.out',
+        onUpdate(){ el.textContent = Math.round(this.targets()[0].v).toLocaleString(D()._locale); } }) });
+  });
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+}
+</script>
+</body>
+</html>
