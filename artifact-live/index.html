@@ -1,15 +1,15 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Aya Beauty &amp; Skin</title>
 <meta name="description" id="metaDesc" content="Aya Beauty &amp; Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi.">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@200;300;400;500&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bone:#F4EFE9; --ink:#17120F; --clay:#B4735A; --clay-soft:#E7D2C6;
-  --sand:#E3D3C6; --night:#0E0B0A; --muted:#7C6B60; --line:rgba(23,18,15,.12);
+  --sand:#E3D3C6; --night:#0E0B0A; --muted:#6B5B50; --clay-deep:#8F5640; --line:rgba(23,18,15,.12);
   --display:'Instrument Serif',Georgia,serif;
   --ui:'Outfit',system-ui,-apple-system,sans-serif;
   --track:.34em;
-  --gutter:clamp(20px,5vw,80px);
-  --maxw:1440px;
+  --gutter:clamp(20px,5vw,140px);
+  --maxw:2400px;
   --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
 }
 
@@ -45,7 +45,7 @@ main{overflow-x:clip;width:100%;max-width:100%}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
-::selection{background:var(--clay);color:var(--bone)}
+::selection{background:var(--clay-deep);color:#fff}
 
 h1,h2,h3,.display{font-family:var(--display);font-weight:400;line-height:.95;letter-spacing:-.02em}
 .it{font-style:italic;color:var(--clay)}
@@ -59,7 +59,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:200;
 /* ─────────────── NAV ─────────────── */
 .nav{
   position:fixed;top:calc(env(safe-area-inset-top,0px) + clamp(12px,2vh,22px));inset-inline-start:50%;translate:-50% 0;z-index:120;
-  width:min(1180px,calc(100% - 2*var(--gutter)));
+  width:min(1560px,calc(100% - 2*var(--gutter)));
   display:flex;align-items:center;gap:16px;
   padding:9px 9px 9px 20px;border-radius:999px;
   background:rgba(244,239,233,.66);backdrop-filter:blur(18px) saturate(1.4);
@@ -92,28 +92,58 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:200;
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bone)}
 .nav-cta{font-size:13.5px;padding:11px 22px;border-radius:999px;background:var(--ink);color:var(--bone);
   white-space:nowrap;transition:background .4s,scale .4s cubic-bezier(.2,.8,.2,1)}
-.nav-cta:hover{background:var(--clay);scale:1.03}
+.nav-cta:hover{background:var(--clay-deep);scale:1.03}
 @media(max-width:1000px){.nav-links{display:none}.nav{padding-inline-start:14px}}
 @media(max-width:460px){.brand-sub{display:none}}
 
 /* ─────────────── QUICK-JUMP SIDE NAV ─────────────── */
 .quicknav{position:fixed;inset-inline-end:22px;top:50%;translate:0 -50%;z-index:110;
-  display:flex;flex-direction:column;gap:16px}
-.quicknav a{position:relative;display:block;width:9px;height:9px;flex:none}
-.quicknav a i{display:block;width:9px;height:9px;border-radius:50%;border:1.4px solid rgba(23,18,15,.3);
+  display:flex;flex-direction:column;gap:10px;padding:18px 11px;border-radius:999px;
+  background:rgba(244,239,233,.82);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);
+  border:1px solid rgba(23,18,15,.16);box-shadow:0 14px 40px -16px rgba(23,18,15,.55);
+  transition:background .5s,border-color .5s}
+.quicknav a{position:relative;display:grid;place-items:center;width:34px;height:34px;flex:none}
+.quicknav a i{display:block;width:17px;height:17px;border-radius:50%;border:2.5px solid rgba(23,18,15,.5);
   background:transparent;transition:background .35s,border-color .35s,scale .35s cubic-bezier(.2,.8,.2,1)}
-.quicknav a:hover i{border-color:var(--ink);scale:1.2}
-.quicknav a.is-active i{background:var(--clay);border-color:var(--clay);scale:1.25}
-.quicknav a::after{content:attr(aria-label);position:absolute;inset-inline-end:22px;top:50%;translate:0 -50%;
-  white-space:nowrap;font-size:11.5px;letter-spacing:.06em;color:var(--ink);background:#fff;
-  padding:6px 12px;border-radius:999px;box-shadow:0 10px 30px -14px rgba(23,18,15,.5);
-  opacity:0;pointer-events:none;transition:opacity .3s,translate .3s}
-.quicknav a:hover::after{opacity:1;translate:-4px -50%}
-[dir="rtl"] .quicknav a::after{inset-inline-end:auto;inset-inline-start:22px}
-.nav.on-dark ~ .quicknav a i{border-color:rgba(244,239,233,.4)}
+.quicknav a{--sx:18px}
+[dir="rtl"] .quicknav a{--sx:-18px}
+.quicknav a i{transition:background .35s,border-color .35s,scale .45s cubic-bezier(.34,1.8,.5,1),box-shadow .35s}
+.quicknav a:hover i,.quicknav a:focus-visible i{border-color:var(--clay);background:var(--clay-deep);scale:1.55;box-shadow:0 0 0 6px rgba(180,115,90,.22)}
+/* dock-style magnify: neighbours swell a little as the pointer passes */
+.quicknav a:hover + a i,.quicknav a:has(+ a:hover) i{scale:1.28}
+.quicknav a.is-active i{background:var(--clay-deep);border-color:var(--clay);scale:1.2;animation:qn-ping 2.2s ease-out infinite}
+@keyframes qn-ping{0%{box-shadow:0 0 0 0 rgba(180,115,90,.55)}70%,100%{box-shadow:0 0 0 11px rgba(180,115,90,0)}}
+.quicknav a::after{content:attr(aria-label);position:absolute;inset-inline-end:48px;top:50%;
+  translate:var(--sx) -50%;scale:.82;transform-origin:right center;
+  white-space:nowrap;font-size:15px;font-weight:400;letter-spacing:.04em;color:var(--bone);background:var(--ink);
+  padding:9px 18px;border-radius:999px;box-shadow:0 10px 30px -14px rgba(23,18,15,.6);
+  opacity:0;pointer-events:none;
+  transition:opacity .25s,translate .55s cubic-bezier(.34,1.56,.64,1),scale .55s cubic-bezier(.34,1.56,.64,1),background .3s}
+[dir="rtl"] .quicknav a::after{inset-inline-end:auto;inset-inline-start:48px;transform-origin:left center}
+/* hover the rail: every label springs out in a quick stagger; the current one is always visible */
+.quicknav:hover a::after,.quicknav a:focus-visible::after,.quicknav.qn-intro a::after,.quicknav a.qn-flash::after{opacity:1;translate:0 -50%;scale:1}
+/* on arrival every label shows for a moment (see script), then folds away; afterwards they only open on hover / focus */
+.quicknav.qn-intro a:nth-child(2)::after{transition-delay:.07s}
+.quicknav.qn-intro a:nth-child(3)::after{transition-delay:.14s}
+.quicknav.qn-intro a:nth-child(4)::after{transition-delay:.21s}
+.quicknav.qn-intro a:nth-child(5)::after{transition-delay:.28s}
+.quicknav.qn-intro a:nth-child(6)::after{transition-delay:.35s}
+.quicknav:hover a:nth-child(2)::after{transition-delay:.04s}
+.quicknav:hover a:nth-child(3)::after{transition-delay:.08s}
+.quicknav:hover a:nth-child(4)::after{transition-delay:.12s}
+.quicknav:hover a:nth-child(5)::after{transition-delay:.16s}
+.quicknav:hover a:nth-child(6)::after{transition-delay:.2s}
+.quicknav a:hover::after{background:var(--clay-deep);color:#fff;scale:1.08;transition-delay:0s}
+.quicknav a.is-active:not(:hover)::after{background:var(--clay-deep);color:#fff}
+.quicknav:hover{box-shadow:0 18px 50px -14px rgba(23,18,15,.6)}
+.quicknav a:focus-visible{outline:2px solid var(--clay);outline-offset:2px;border-radius:50%}
+.nav.on-dark ~ .quicknav{background:rgba(14,11,10,.7);border-color:rgba(244,239,233,.22)}
+.nav.on-dark ~ .quicknav a i{border-color:rgba(244,239,233,.6)}
 .nav.on-dark ~ .quicknav a.is-active i{background:var(--clay-soft);border-color:var(--clay-soft)}
+.nav.on-dark ~ .quicknav a::after{background:var(--bone);color:var(--ink)}
+.nav.on-dark ~ .quicknav a.is-active:not(:hover)::after{background:var(--clay-soft);color:var(--ink)}
 @media(max-width:1100px){.quicknav{display:none}}
-@media(prefers-reduced-motion:reduce){.quicknav a i,.quicknav a::after{transition:none}}
+@media(prefers-reduced-motion:reduce){.quicknav a i,.quicknav a::after{transition:none}.quicknav a.is-active i{animation:none}}
 
 /* ─────────────── BRAND MENU ─────────────── */
 .site-menu{position:fixed;inset:0;z-index:150;display:flex;justify-content:flex-end}
@@ -130,7 +160,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:200;
 .site-menu-close{position:absolute;top:clamp(20px,3vh,30px);inset-inline-end:clamp(20px,3vw,30px);
   width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;
   font-size:20px;line-height:1;cursor:pointer;color:var(--ink);transition:border-color .3s,background .3s}
-.site-menu-close:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+.site-menu-close:hover{background:var(--clay-deep);color:#fff;border-color:var(--clay)}
 .site-menu-links{display:flex;flex-direction:column;gap:4px;padding-bottom:28px;border-bottom:1px solid var(--line)}
 .site-menu-links a{font-family:var(--display);font-size:clamp(1.4rem,3vw,1.9rem);padding-block:9px;
   color:var(--ink);transition:color .3s,translate .3s cubic-bezier(.2,.8,.2,1)}
@@ -158,11 +188,21 @@ html[lang="ar"] .site-menu-h{letter-spacing:0;text-transform:none;font-size:12.5
 .page-view-close{position:absolute;top:clamp(16px,2.4vw,24px);inset-inline-end:clamp(16px,2.4vw,24px);
   width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;
   font-size:20px;line-height:1;cursor:pointer;color:var(--ink);transition:border-color .3s,background .3s}
-.page-view-close:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+.page-view-close:hover{background:var(--clay-deep);color:#fff;border-color:var(--clay)}
 #pageViewTitle{font-family:var(--display);font-size:clamp(1.7rem,3.6vw,2.6rem);max-width:20ch;
   margin-bottom:20px;padding-inline-end:44px}
 #pageViewBody{color:var(--muted);font-size:15.5px;line-height:1.75}
 #pageViewBody p + p{margin-top:14px}
+.ba{position:relative;margin:0 0 22px;border-radius:16px;overflow:hidden;background:#e9e2da}
+.ba img{display:block;width:100%;object-fit:cover}
+.ba--w img{aspect-ratio:16/9;object-position:50% 40%}
+.ba--sq img{aspect-ratio:1/1;max-height:52vh;object-position:50% 38%}
+.ba-b,.ba-a{position:absolute;top:12px;padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(23,18,15,.55);color:#f4efe9;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ba-b{left:12px}.ba-a{right:12px;background:rgba(244,239,233,.85);color:#17120f}
+html[lang="ar"] .ba-b,html[lang="ar"] .ba-a{letter-spacing:0;text-transform:none;font-size:13px}
+.ba figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 9px;font-size:11.5px;color:rgba(244,239,233,.88);text-align:center;
+  background:linear-gradient(to top,rgba(23,18,15,.55),transparent)}
 .page-view-cta{margin-top:28px;width:fit-content}
 
 /* ─────────────── HERO ─────────────── */
@@ -182,11 +222,26 @@ html[lang="ar"] .hero h1{font-size:clamp(2.2rem,6.2vw,5.9rem);max-width:17ch}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:999px;
   font-size:14.5px;border:0;cursor:pointer;transition:background .45s,color .45s,border-color .45s,translate .45s cubic-bezier(.2,.8,.2,1)}
 .btn-solid{background:var(--bone);color:var(--ink)}
-.btn-solid:hover{background:var(--clay);color:#fff;translate:0 -3px}
+.btn-solid:hover{background:var(--clay-deep);color:#fff;translate:0 -3px}
 .btn-ghost{border:1px solid rgba(244,239,233,.34);color:var(--bone);background:none}
 .btn-ghost:hover{border-color:var(--bone);background:rgba(244,239,233,.1);translate:0 -3px}
 .btn-ink{background:var(--ink);color:var(--bone)}
-.btn-ink:hover{background:var(--clay);color:#fff;translate:0 -3px}
+.btn-ink:hover{background:var(--clay-deep);color:#fff;translate:0 -3px}
+/* hover-aware fill: the colour floods in from the side the pointer entered, and drains out the side it left */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--fill,var(--clay-deep));
+  clip-path:circle(0% at var(--hx,50%) var(--hy,50%));transition:clip-path .6s cubic-bezier(.2,.8,.2,1)}
+.btn:hover::before,.btn:focus-visible::before{clip-path:circle(150% at var(--hx,50%) var(--hy,50%))}
+.btn:disabled::before{display:none}
+.btn-solid:hover{background:var(--bone);color:#fff}
+.btn-ink:hover{background:var(--ink)}
+.btn-ghost{--fill:var(--bone)}
+.btn-ghost:hover{background:none;color:var(--ink)}
+/* spotlight border on the machine cards: a ring of light follows the pointer */
+.cell::before{content:'';position:absolute;inset:0;z-index:3;border-radius:inherit;padding:1.5px;pointer-events:none;opacity:0;
+  transition:opacity .4s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(236,200,180,.95),rgba(236,200,180,0) 70%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.cell:hover::before{opacity:1}
 .arrow{width:6px;height:6px;border-inline-end:1.4px solid currentColor;border-bottom:1.4px solid currentColor;rotate:-45deg;translate:0 -1px;flex:none}
 [dir="rtl"] .arrow{rotate:135deg}
 .scroll-hint{position:absolute;bottom:26px;inset-inline-start:50%;translate:-50% 0;z-index:3;
@@ -203,14 +258,14 @@ html[lang="ar"] .hero h1{font-size:clamp(2.2rem,6.2vw,5.9rem);max-width:17ch}
   background:none;border:0;color:inherit;font-weight:400;transition:opacity .3s,color .3s}
 button.mq-item{cursor:pointer}
 button.mq-item:hover{opacity:1;color:var(--clay-soft)}
-.marquee .mq-item::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--clay);flex:none}
+.marquee .mq-item::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--clay-deep);flex:none}
 html[lang="ar"] .marquee .mq-item{font-size:clamp(17px,2vw,27px)}
 
 /* ─────────────── SCRUB INTRO ─────────────── */
 .intro{max-width:1100px;margin-inline:auto;text-align:start}
-.intro-label{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--clay);
+.intro-label{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--clay-deep);
   margin-bottom:clamp(30px,5vh,56px);display:flex;align-items:center;gap:14px}
-.intro-label::before{content:'';width:42px;height:1px;background:var(--clay);opacity:.5;flex:none}
+.intro-label::before{content:'';width:42px;height:1px;background:var(--clay-deep);opacity:.5;flex:none}
 .scrub-text{font-family:var(--display);font-size:clamp(1.55rem,4.1vw,3.7rem);line-height:1.16;letter-spacing:-.015em}
 .scrub-text .w{opacity:.14;display:inline-block}
 .intro-foot{display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,80px);align-items:flex-start;margin-top:clamp(44px,7vh,86px);padding-top:34px;border-top:1px solid var(--line)}
@@ -226,7 +281,7 @@ html[lang="ar"] .marquee .mq-item{font-size:clamp(17px,2vw,27px)}
 .svc-stick-in .kicker{color:rgba(244,239,233,.5)}
 .svc-stick-in h2{font-size:clamp(2.2rem,5vw,4.6rem);max-width:12ch}
 .svc-stick-in p{margin-top:24px;max-width:38ch;color:rgba(244,239,233,.6);font-size:15.5px;font-weight:200}
-.svc-count{margin-top:34px;font-size:12px;letter-spacing:.22em;color:rgba(244,239,233,.45);min-height:1.3em}
+.svc-count{margin-top:34px;font-size:12px;letter-spacing:.22em;color:rgba(244,239,233,.7);min-height:1.3em}
 
 /* ─────────────── EQUIPMENT BENTO ─────────────── */
 .kit{background:var(--bone)}
@@ -248,6 +303,19 @@ html[lang="ar"] .marquee .mq-item{font-size:clamp(17px,2vw,27px)}
   transform-style:preserve-3d;will-change:transform;
   transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
 }
+.cell-more{position:absolute;top:clamp(14px,1.6vw,20px);inset-inline-end:clamp(14px,1.6vw,20px);z-index:2;
+  display:inline-flex;align-items:center;gap:9px;padding:6px 6px 6px 14px;border-radius:999px;
+  background:rgba(244,239,233,.92);color:var(--ink);font-size:12.5px;font-weight:400;line-height:1;
+  box-shadow:0 8px 24px -12px rgba(14,11,10,.7);transition:background .35s,color .35s}
+[dir="rtl"] .cell-more{padding:6px 14px 6px 6px}
+.cell-more i{position:relative;width:24px;height:24px;border-radius:50%;background:var(--clay-deep);flex:none;transition:rotate .5s cubic-bezier(.2,.8,.2,1),background .35s}
+.cell-more i::before,.cell-more i::after{content:'';position:absolute;left:50%;top:50%;background:#fff;translate:-50% -50%}
+.cell-more i::before{width:10px;height:1.6px}.cell-more i::after{width:1.6px;height:10px}
+.cell:hover .cell-more,.cell:focus-visible .cell-more{background:var(--clay-deep);color:#fff}
+.cell:hover .cell-more i,.cell:focus-visible .cell-more i{rotate:90deg;background:#fff}
+.cell:hover .cell-more i::before,.cell:hover .cell-more i::after,.cell:focus-visible .cell-more i::before,.cell:focus-visible .cell-more i::after{background:var(--clay-deep)}
+.cell{cursor:pointer}
+.cell:focus-visible{outline:2px solid var(--clay-soft);outline-offset:3px}
 .cell:hover{box-shadow:0 30px 60px -24px rgba(14,11,10,.55)}
 .cell img{
   position:absolute;inset:0;width:112%;height:112%;object-fit:cover;z-index:-2;
@@ -323,10 +391,11 @@ html[lang="ar"] .cell .spec{letter-spacing:0;text-transform:none;font-size:13px}
   .acc-in p{opacity:1;translate:0 0}
 }
 .svc-count b{color:var(--clay-soft);font-weight:400}
-.svc-list{display:flex;flex-direction:column;gap:clamp(20px,4vh,40px);padding-block:clamp(90px,16vh,190px)}
+.svc-list{display:flex;flex-direction:column;gap:clamp(20px,4vh,40px);padding-block:clamp(90px,16vh,190px);perspective:1500px}
 .card{position:relative;overflow:hidden;border-radius:22px;border:1px solid rgba(244,239,233,.12);
-  background:rgba(244,239,233,.035);display:grid;grid-template-columns:minmax(0,1fr) 38%;min-height:250px;
-  transition:border-color .6s,background .6s}
+  background:rgba(244,239,233,.035);display:grid;grid-template-columns:minmax(0,1fr) 40%;min-height:clamp(290px,38vh,400px);
+  transition:border-color .6s,background .6s,box-shadow .9s;will-change:transform,opacity}
+.card.is-active{border-color:rgba(231,210,198,.42);background:rgba(244,239,233,.075);box-shadow:0 50px 100px -60px rgba(180,115,90,.6)}
 .card:hover{border-color:rgba(244,239,233,.3);background:rgba(244,239,233,.07)}
 .card-body{padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:14px}
 .card h3{font-size:clamp(1.45rem,2.5vw,2.2rem);letter-spacing:-.01em}
@@ -342,7 +411,40 @@ html[lang="ar"] .cell .spec{letter-spacing:0;text-transform:none;font-size:13px}
   border:0;padding:0;transition:color .35s}
 .card-more:hover{color:rgba(244,239,233,.85)}
 .card-media{position:relative;overflow:hidden;background:var(--night)}
-.card-media img{width:100%;height:100%;object-fit:cover;filter:grayscale(.28) contrast(1.06) brightness(.88)}
+/* the photo is out of flow: lazy-loading it can never change a card's height, so scroll positions stay put */
+.card-media img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;
+  filter:grayscale(.28) contrast(1.06) brightness(.88);transition:filter .9s}
+.card.is-active .card-media img{filter:grayscale(.05) contrast(1.06) brightness(.98)}
+.card-n{position:absolute;z-index:2;top:clamp(14px,2vw,26px);inset-inline-end:clamp(16px,2.2vw,30px);
+  font-family:var(--display);font-size:clamp(2.4rem,4vw,3.8rem);line-height:1;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(244,239,233,.6);pointer-events:none}
+/* signature moment: each photo "comes into focus" as its card arrives: a soft blush haze melts away
+   behind a warm band of light that glides down the photo, like skin catching the light. */
+.card-scan{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.cs-veil{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(243,222,212,.62),rgba(226,190,176,.5));
+  -webkit-backdrop-filter:blur(9px) saturate(.9);backdrop-filter:blur(9px) saturate(.9)}
+.cs-line{position:absolute;left:-10%;right:-10%;top:-34%;height:34%;
+  background:linear-gradient(180deg,rgba(255,240,230,0),rgba(255,238,228,.55) 62%,rgba(255,246,240,.9) 100%)}
+
+
+/* treatment section: focus index + segmented progress */
+.svc-idx{display:flex;align-items:flex-end;gap:14px;margin-bottom:clamp(14px,2.4vh,26px);color:var(--clay-soft);direction:ltr}
+.svc-idx-win{display:block;overflow:hidden;height:1em;font-family:var(--display);font-size:clamp(3.4rem,7.4vw,6.8rem);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.svc-idx-n{display:block}
+.svc-idx-of{font-size:13px;letter-spacing:.2em;color:rgba(244,239,233,.55);padding-bottom:.9em;font-variant-numeric:tabular-nums}
+.svc-seg{display:flex;gap:6px;margin-top:clamp(18px,3vh,30px);max-width:420px}
+.svc-seg button{flex:1;height:26px;background:none;border:0;cursor:pointer;position:relative;padding:0}
+.svc-seg button::before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;translate:0 -50%;border-radius:2px;
+  background:rgba(244,239,233,.2);transition:background .5s,height .5s cubic-bezier(.2,.8,.2,1)}
+.svc-seg button:hover::before{background:rgba(244,239,233,.5)}
+.svc-seg button.is-done::before{background:rgba(231,210,198,.62)}
+.svc-seg button.is-active::before{background:var(--clay-soft);height:5px}
+.svc-seg button:focus-visible{outline:2px solid var(--clay-soft);outline-offset:2px;border-radius:4px}
+.svc-count{letter-spacing:.12em;max-width:46ch;line-height:1.55;text-wrap:balance}
+@media(min-width:1101px){.svc .shell{padding-inline-end:calc(var(--gutter) + 28px)}}
+@media(max-width:940px){.svc-idx,.svc-seg,.svc-count{display:none}}
+@media(max-height:760px){.svc-idx-win{font-size:3.2rem}.svc-stick-in{padding-block:84px}}
 .card-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.85),transparent 55%)}
 [dir="rtl"] .card-media::after{background:linear-gradient(270deg,rgba(14,11,10,.85),transparent 55%)}
 @media(max-width:940px){
@@ -370,7 +472,7 @@ html[lang="ar"] .cell .spec{letter-spacing:0;text-transform:none;font-size:13px}
   background:linear-gradient(to top,rgba(14,11,10,.86),transparent);
   font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,233,.82)}
 html[lang="ar"] .frame figcaption{direction:rtl;text-align:right;letter-spacing:0;text-transform:none;font-size:13px}
-.gal-scroll-note{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.38);padding-top:clamp(24px,4vh,44px)}
+.gal-scroll-note{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.7);padding-top:clamp(24px,4vh,44px)}
 @media(max-width:940px){
   .gal-view{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-block:10px}
   .gal-view::-webkit-scrollbar{display:none}
@@ -433,7 +535,7 @@ html[lang="ar"] .frame figcaption{direction:rtl;text-align:right;letter-spacing:
 .field input:focus,.field select:focus,.field textarea:focus{
   outline:0;border-color:var(--clay);box-shadow:0 0 0 3px rgba(180,115,90,.14);
 }
-.field input::placeholder,.field textarea::placeholder{color:#B3A498}
+.field input::placeholder,.field textarea::placeholder{color:#74655A}
 .field[data-invalid="1"] input,.field[data-invalid="1"] textarea{border-color:#B4485A}
 .parts{display:flex;gap:10px;flex-wrap:wrap}
 .parts label{position:relative;display:inline-flex;align-items:center;cursor:pointer;
@@ -454,9 +556,9 @@ html[lang="ar"] .frame figcaption{direction:rtl;text-align:right;letter-spacing:
 @media(max-width:940px){.summary{position:static}}
 .summary h3{font-size:clamp(1.3rem,2vw,1.7rem);margin-bottom:22px}
 .sum-row{display:flex;justify-content:space-between;gap:16px;padding-block:13px;border-top:1px solid rgba(244,239,233,.13);font-size:14px}
-.sum-row span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45);flex:none;padding-top:2px}
+.sum-row span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.7);flex:none;padding-top:2px}
 .sum-row b{font-weight:400;text-align:end;color:var(--bone);min-width:0;overflow-wrap:anywhere}
-.sum-row b.empty{color:rgba(244,239,233,.3)}
+.sum-row b.empty{color:rgba(244,239,233,.58)}
 .bk-note{margin-top:22px;padding-top:18px;border-top:1px solid rgba(244,239,233,.13);
   font-size:12.5px;line-height:1.55;color:rgba(244,239,233,.5)}
 .send{display:none;margin-top:22px;flex-direction:column;gap:10px}
@@ -464,7 +566,7 @@ html[lang="ar"] .frame figcaption{direction:rtl;text-align:right;letter-spacing:
 .send .btn{width:100%;font-size:14px;padding:14px 22px}
 .copied{font-size:12.5px;color:var(--clay-soft);min-height:1.2em}
 .msgbox{display:flex;flex-direction:column;gap:8px;margin-top:4px}
-.msgbox span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45)}
+.msgbox span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.7)}
 html[lang="ar"] .msgbox span{letter-spacing:0;text-transform:none;font-size:12.5px}
 .msgbox textarea{
   width:100%;min-height:132px;resize:vertical;
@@ -511,7 +613,7 @@ html[lang="ar"] .step-label{letter-spacing:0;text-transform:none;font-size:12.5p
 }
 .day small{display:block;font-size:11px;color:var(--muted);text-transform:capitalize}
 .day b{display:block;font-family:var(--display);font-size:21px;font-weight:400;margin-top:3px}
-.day i{display:block;font-style:normal;font-size:10.5px;color:var(--clay);margin-top:5px}
+.day i{display:block;font-style:normal;font-size:11px;color:var(--clay-deep);margin-top:5px}
 .day:hover:not(:disabled){border-color:var(--ink);translate:0 -2px}
 .day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bone)}
 .day[aria-pressed="true"] small,.day[aria-pressed="true"] i{color:rgba(244,239,233,.66)}
@@ -524,7 +626,7 @@ html[lang="ar"] .step-label{letter-spacing:0;text-transform:none;font-size:12.5p
   transition:border-color .3s,background .3s,color .3s,translate .3s cubic-bezier(.2,.8,.2,1);
 }
 .slot:hover{border-color:var(--ink);translate:0 -2px}
-.slot[aria-pressed="true"]{background:var(--clay);border-color:var(--clay);color:#fff}
+.slot[aria-pressed="true"]{background:var(--clay-deep);border-color:var(--clay);color:#fff}
 .slots-msg{font-size:14px;color:var(--muted)}
 
 .live-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
@@ -553,7 +655,7 @@ html[lang="ar"] .step-label{letter-spacing:0;text-transform:none;font-size:12.5p
   margin:24px 0;padding:16px 20px;border:1px dashed rgba(244,239,233,.3);border-radius:12px;
   display:inline-flex;flex-direction:column;gap:5px;
 }
-.done .ref span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.45)}
+.done .ref span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.7)}
 html[lang="ar"] .done .ref span{letter-spacing:0;text-transform:none;font-size:12.5px}
 .done .ref b{font-family:var(--display);font-size:24px;font-weight:400;letter-spacing:.04em}
 .done-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
@@ -586,16 +688,48 @@ html[lang="ar"] .done .ref span{letter-spacing:0;text-transform:none;font-size:1
 footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid rgba(244,239,233,.12);padding-block:clamp(44px,7vh,80px) 34px}
 .foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:clamp(26px,4vw,60px);align-items:start}
 .foot-grid h3{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.2rem);color:var(--bone);max-width:16ch}
-.foot-col strong{display:block;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.42);font-weight:400;margin-bottom:16px}
+.foot-col strong{display:block;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:rgba(244,239,233,.7);font-weight:400;margin-bottom:16px}
 .foot-col a,.foot-col span{display:block;font-size:14.5px;margin-bottom:9px;transition:color .35s}
 .foot-col a:hover{color:var(--bone)}
-.foot-base{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:clamp(40px,6vh,72px);padding-top:24px;border-top:1px solid rgba(244,239,233,.12);font-size:12px;color:rgba(244,239,233,.4)}
+.foot-base{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:clamp(40px,6vh,72px);padding-top:24px;border-top:1px solid rgba(244,239,233,.12);font-size:12px;color:rgba(244,239,233,.7)}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid h3{grid-column:1/-1}}
 
 /* word-by-word heading reveal */
 .word{overflow:hidden;display:inline-block;vertical-align:top}
 .word-in{display:inline-block;will-change:transform}
 .nav-cta,.hero-cta .btn,.cta .btn{will-change:transform}
+
+
+/* ─────────────── ACCESSIBILITY / COMPLIANCE ADDITIONS ─────────────── */
+:focus-visible{outline:2px solid var(--clay-deep);outline-offset:3px}
+.svc :focus-visible,.gal :focus-visible,.cta :focus-visible,footer :focus-visible,.nav.on-dark :focus-visible,.cell:focus-visible,.acc-pane:focus-visible{outline-color:var(--clay-soft)}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--clay-deep);outline-offset:1px}
+.skip{position:fixed;inset-inline-start:12px;top:-80px;z-index:300;background:var(--ink);color:var(--bone);padding:12px 20px;border-radius:999px;font-size:14px;transition:top .25s}
+.skip:focus{top:12px}
+.quicknav:focus-within a::after{opacity:1;translate:0 -50%;scale:1}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--clay-deep);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.linkbtn:hover{color:var(--ink)}
+#pageViewBody strong{color:var(--ink);font-weight:500}
+#pageViewBody ul{margin:14px 0 0;padding-inline-start:20px;line-height:1.9}
+.ph{background:#FFE9A8;color:#17120F;padding:1px 6px;border-radius:5px;font-weight:400}
+.consents{grid-column:1/-1;display:flex;flex-direction:column;gap:12px}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--muted);cursor:pointer}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--clay-deep);flex:none}
+.consents[data-invalid="1"] .check{color:#9E3D4E}
+.field-hint{font-size:12.5px;color:var(--muted);line-height:1.5}
+.cookie-bar{position:fixed;inset-inline:0;bottom:0;margin:0 auto clamp(12px,2vh,22px);width:min(780px,calc(100% - 24px));z-index:140;
+  background:var(--bone);border:1px solid rgba(23,18,15,.2);border-radius:22px;padding:20px 24px;
+  box-shadow:0 30px 70px -30px rgba(23,18,15,.65);display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.cb-copy{flex:1 1 340px;min-width:0}
+.cb-title{font-family:var(--display);font-size:1.3rem;line-height:1.1;margin-bottom:6px}
+.cb-text{font-size:13.5px;line-height:1.55;color:var(--muted)}
+.cb-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cb-btn{border:1.5px solid var(--ink);background:#fff;color:var(--ink);padding:11px 24px;border-radius:999px;cursor:pointer;font-size:14px;transition:background .3s,color .3s}
+.cb-btn:hover{background:var(--ink);color:var(--bone)}
+.foot-legal{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:clamp(30px,5vh,48px)}
+.foot-legal button{background:none;border:0;color:rgba(244,239,233,.72);font:inherit;font-size:13px;cursor:pointer;padding:6px 0;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.foot-legal button:hover{color:var(--bone)}
+html[lang="ar"] .foot-legal button{font-size:14px}
 
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important}
@@ -604,7 +738,8 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
   .word-in{transform:none!important}
 }
 </style>
-<main>
+<main id="main" tabindex="-1">
+<a class="skip" href="#main" data-i18n="skip">Naar de inhoud</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -622,8 +757,9 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
     <a class="nav-link" href="#studio" data-i18n="navStudio">Studio</a>
     <a class="nav-link" href="#vragen" data-i18n="navFaq">Vragen</a>
   </div>
-  <div class="lang" role="group" aria-label="Taal / اللغة">
+  <div class="lang" role="group" aria-label="Taal / Language / اللغة">
     <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
     <button type="button" data-lang="ar" aria-pressed="false">ع</button>
   </div>
   <a class="nav-cta" href="#afspraak" data-i18n="ctaNav">Afspraak maken</a>
@@ -641,7 +777,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
 
 <!-- BRAND MENU (opened from the logo — section links + treatment/legal redirects) -->
 <div class="site-menu" id="siteMenu" hidden>
-  <div class="site-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="site-menu-panel" role="dialog" aria-modal="true" aria-label="Menu" id="siteMenuPanel">
     <button type="button" class="site-menu-close" id="siteMenuClose" aria-label="Sluiten">&times;</button>
     <div class="site-menu-links">
       <a href="#behandelingen" data-i18n="navTreat"></a>
@@ -668,6 +804,11 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
       <button type="button" data-page="contact" data-i18n="legalContact"></button>
       <button type="button" data-page="terms" data-i18n="legalTerms"></button>
       <button type="button" data-page="privacy" data-i18n="legalPrivacy"></button>
+      <button type="button" data-page="refund" data-i18n="legalRefund"></button>
+      <button type="button" data-page="cookies" data-i18n="legalCookies"></button>
+      <button type="button" data-page="biz" data-i18n="legalBiz"></button>
+      <button type="button" data-page="delete" data-i18n="legalDelete"></button>
+      <button type="button" data-page="lic" data-i18n="legalLic"></button>
       <button type="button" data-page="dmca" data-i18n="legalDmca"></button>
     </div>
   </div>
@@ -675,7 +816,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
 
 <!-- CONTENT PAGE OVERLAY (treatments in full + legal/contact/qualifications) -->
 <div class="page-view" id="pageView" hidden>
-  <div class="page-view-panel" role="dialog" aria-modal="true" aria-label="Pagina">
+  <div class="page-view-panel" role="dialog" aria-modal="true" aria-labelledby="pageViewTitle">
     <button type="button" class="page-view-close" id="pageViewClose" aria-label="Sluiten">&times;</button>
     <h2 id="pageViewTitle"></h2>
     <div id="pageViewBody"></div>
@@ -718,9 +859,13 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
 <section class="svc sec" id="behandelingen">
   <div class="shell">
     <div class="svc-sticky"><div class="svc-stick-in">
+      <div class="svc-idx" aria-hidden="true"><span class="svc-idx-win"><span class="svc-idx-n" id="svcIdx">01</span></span><span class="svc-idx-of">/ 08</span></div>
       <h2 data-i18n="svcTitle"></h2>
       <p data-i18n="svcLede"></p>
-      <p class="svc-count"><b id="svcNow"></b></p>
+      <p class="svc-count" aria-live="polite"><b id="svcNow"></b></p>
+      <div class="svc-seg" id="svcSeg" role="group">
+        <button type="button" data-i="0"></button><button type="button" data-i="1"></button><button type="button" data-i="2"></button><button type="button" data-i="3"></button><button type="button" data-i="4"></button><button type="button" data-i="5"></button><button type="button" data-i="6"></button><button type="button" data-i="7"></button>
+      </div>
     </div></div>
 
     <div class="svc-list" id="svcList">
@@ -734,7 +879,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
             <button type="button" class="card-more" data-page="analyse" data-i18n="readMore"></button>
           </div>
         </div>
-        <div class="card-media"><img src="img/r-scanner-real.jpg" alt="" loading="lazy"></div>
+        <div class="card-media"><img src="img/r-ai-face2.jpg" alt="" loading="lazy"></div>
       </article>
 
       <article class="card">
@@ -812,7 +957,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
             <button type="button" class="card-more" data-page="laser" data-i18n="readMore"></button>
           </div>
         </div>
-        <div class="card-media"><img src="img/r-laser-real.jpg" alt="" loading="lazy"></div>
+        <div class="card-media"><img src="img/r-laser-n.jpg" alt="" loading="lazy"></div>
       </article>
 
       <article class="card">
@@ -840,34 +985,40 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
     </div>
 
     <div class="bento">
-      <article class="cell c-a">
+      <article class="cell c-a" data-page="m1" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
         <img src="img/r-scanner-clean.jpg" alt="" loading="lazy">
         <h3 data-i18n="k1t"></h3>
         <p data-i18n="k1d"></p>
         <p class="spec" data-i18n="k1s"></p>
       </article>
-      <article class="cell c-b">
+      <article class="cell c-b" data-page="m2" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
         <img src="img/r-hydra-clean.jpg" alt="" loading="lazy">
         <h3 data-i18n="k2t"></h3>
         <p data-i18n="k2d"></p>
         <p class="spec" data-i18n="k2s"></p>
       </article>
-      <article class="cell c-c">
+      <article class="cell c-c" data-page="m3" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
         <img src="img/r-rf.jpg" alt="" loading="lazy">
         <h3 data-i18n="k3t"></h3>
         <p class="spec" data-i18n="k3s"></p>
       </article>
-      <article class="cell c-d">
-        <img src="img/r-laser-clean.jpg" alt="" loading="lazy">
+      <article class="cell c-d" data-page="m4" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
+        <img src="img/r-laser-n.jpg" alt="" loading="lazy">
         <h3 data-i18n="k4t"></h3>
         <p class="spec" data-i18n="k4s"></p>
       </article>
-      <article class="cell c-e">
+      <article class="cell c-e" data-page="m5" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
         <img src="img/r-cavitation-clean.jpg" alt="" loading="lazy">
         <h3 data-i18n="k5t"></h3>
         <p class="spec" data-i18n="k5s"></p>
       </article>
-      <article class="cell c-f">
+      <article class="cell c-f" data-page="m6" role="button" tabindex="0">
+        <span class="cell-more"><span data-i18n="kitMore"></span><i aria-hidden="true"></i></span>
         <img src="img/r-o2machine2-clean.jpg" alt="" loading="lazy">
         <h3 data-i18n="k6t"></h3>
         <p class="spec" data-i18n="k6s"></p>
@@ -952,7 +1103,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
       <p data-i18n="stBody"></p>
       <div class="facts">
         <div class="fact"><b data-i18n="f1a">Rotterdam</b><span data-i18n="f1b"></span></div>
-        <div class="fact"><b data-count="1341">0</b><span data-i18n="f2b"></span></div>
+        <div class="fact"><b data-i18n="f2a">Instagram</b><span class="ltr">@ayaa_beauty.skin</span></div>
         <div class="fact"><b data-i18n="f3a"></b><span data-i18n="f3b"></span></div>
         <div class="fact"><b data-i18n="f4a"></b><span data-i18n="f4b"></span></div>
       </div>
@@ -1002,6 +1153,10 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
             <label for="lvNotes" data-i18n="lblNotes"></label>
             <input type="text" id="lvNotes" data-i18n-ph="phNotes">
           </div>
+          <div class="consents">
+            <label class="check"><input type="checkbox" id="lvC1"><span data-i18n-html="cons1"></span></label>
+            <label class="check"><input type="checkbox" id="lvC2"><span data-i18n-html="cons2"></span></label>
+          </div>
           <div class="hp" aria-hidden="true">
             <label>Website<input type="text" id="lvHp" tabindex="-1" autocomplete="off"></label>
           </div>
@@ -1028,7 +1183,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
       </div>
     </div>
 
-    <div class="book-grid" id="bkRequest">    <div class="book-grid" id="bkRequest">
+    <div class="book-grid" id="bkRequest">
       <form class="fields" id="bkForm" novalidate>
         <div class="field wide">
           <label for="bkTreat" data-i18n="lblTreat">Behandeling</label>
@@ -1059,6 +1214,11 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
           </div>
         </div>
 
+        <div class="field">
+          <label for="bkTime" data-i18n="lblTime"></label>
+          <input type="time" id="bkTime" name="time" step="900">
+        </div>
+
         <div class="field" id="fName">
           <label for="bkName" data-i18n="lblName">Naam</label>
           <input type="text" id="bkName" name="name" autocomplete="name">
@@ -1071,7 +1231,14 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
 
         <div class="field wide">
           <label for="bkNotes" data-i18n="lblNotes">Wat wil je aanpakken?</label>
-          <textarea id="bkNotes" name="notes" data-i18n-ph="phNotes"></textarea>
+          <textarea id="bkNotes" name="notes" data-i18n-ph="phNotes" aria-describedby="bkNotesHint"></textarea>
+          <p class="field-hint" id="bkNotesHint" data-i18n="noteHint"></p>
+        </div>
+
+        <div class="consents" id="fConsent">
+          <label class="check"><input type="checkbox" id="bkC1"><span data-i18n-html="cons1"></span></label>
+          <label class="check"><input type="checkbox" id="bkC2"><span data-i18n-html="cons2"></span></label>
+          <p class="book-err" id="bkConsErr" data-i18n="consErr"></p>
         </div>
 
         <div class="book-actions wide">
@@ -1085,6 +1252,7 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
         <div class="sum-row"><span data-i18n="lblTreat"></span><b id="sumTreat" class="empty">—</b></div>
         <div class="sum-row"><span data-i18n="lblDate"></span><b id="sumDate" class="empty">—</b></div>
         <div class="sum-row"><span data-i18n="lblPart"></span><b id="sumPart" class="empty">—</b></div>
+        <div class="sum-row"><span data-i18n="lblTime"></span><b id="sumTime" class="empty">—</b></div>
         <div class="sum-row"><span data-i18n="lblName"></span><b id="sumName" class="empty">—</b></div>
         <div class="sum-row"><span data-i18n="lblContact"></span><b id="sumContact" class="empty">—</b></div>
         <p class="bk-note" data-i18n="bkNote"></p>
@@ -1151,6 +1319,16 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
         <a href="#afspraak" data-i18n="fT4"></a>
       </div>
     </div>
+    <div class="foot-legal">
+      <button type="button" data-page="privacy" data-i18n="legalPrivacy"></button>
+      <button type="button" data-page="terms" data-i18n="legalTerms"></button>
+      <button type="button" data-page="refund" data-i18n="legalRefund"></button>
+      <button type="button" data-page="cookies" data-i18n="legalCookies"></button>
+      <button type="button" data-page="biz" data-i18n="legalBiz"></button>
+      <button type="button" data-page="delete" data-i18n="legalDelete"></button>
+      <button type="button" data-page="lic" data-i18n="legalLic"></button>
+      <button type="button" id="cookieSettings" data-i18n="cbSettings"></button>
+    </div>
     <div class="foot-base">
       <span>&copy; <span id="yr">2026</span> <span data-i18n="fCopy"></span></span>
       <span data-i18n="fRole"></span>
@@ -1158,10 +1336,21 @@ footer{background:var(--night);color:rgba(244,239,233,.62);border-top:1px solid 
   </div>
 </footer>
 
+<div class="cookie-bar" id="cookieBar" role="region" aria-labelledby="cbTitle" hidden>
+  <div class="cb-copy">
+    <p class="cb-title" id="cbTitle" data-i18n="cbTitle"></p>
+    <p class="cb-text"><span data-i18n="cbText"></span> <button type="button" class="linkbtn" data-page="cookies" data-i18n="cbMore"></button></p>
+  </div>
+  <div class="cb-actions">
+    <button type="button" class="cb-btn" id="cbDecline" data-i18n="cbDecline"></button>
+    <button type="button" class="cb-btn" id="cbAccept" data-i18n="cbAccept"></button>
+  </div>
+</div>
+
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════════════
    CONFIG — fill these in and the booking form routes straight to them.
@@ -1204,6 +1393,7 @@ nl: {
   sigName:'Samar Tinawi', sigSub:'Aya Beauty & Skin · Rotterdam',
   svcTitle:'Acht routes naar een rustige huid.',
   kitTitle:'Zes machines achter de behandelingen.',
+  kitMore:'Meer info',
   kitLede:'Geen van deze apparaten doet alles. Daarom staan ze er zes: de scan bepaalt welke aan gaat, en in welke volgorde.',
   k1t:'3D-scanner met AI',
   k1d:'Fotografeert je huid in drie dimensies en zet er meetwaarden op: pigment, poriën, vocht, roodheid, fijne lijnen — en haardichtheid op de hoofdhuid. Bepaalt het plan en meet het resultaat terug.',
@@ -1220,7 +1410,7 @@ nl: {
   a2t:'Lippen',
   a2d:'Lip blush brengt de eigen kleur terug en maakt de rand scherper. Twee sessies, want de tweede corrigeert wat de huid van de eerste heeft laten zitten.',
   a3t:'Herstel',
-  a3d:'Exosomen en collageen gaan erin op het moment dat de huid het meest opneemt: direct na needling of peeling. Dat verkort de rode dagen en maakt het resultaat steviger.',
+  a3d:'Exosomen en collageen gaan erin op het moment dat de huid het meest opneemt: direct na needling of peeling. Dat kan de rode dagen verkorten; resultaten verschillen per persoon.',
   a4t:'Littekens',
   a4d:'Needling maakt micro-kanaaltjes die je eigen collageen aanzetten. Met radiofrequentie erbij gaat de warmte dieper, wat nodig is bij ingezakte littekens.',
   svcLede:'Welke route past, leest de 3D-scan grotendeels voor ons uit. Vaak is het een combinatie — soms is minder genoeg.',
@@ -1229,10 +1419,10 @@ nl: {
   sAd:'Een 3D-scan van je huid én hoofdhuid, gelezen door AI: pigment, poriën, vochtgehalte, roodheid en fijne lijnen — plus haardichtheid en haargroei. Je ziet wat er onder de oppervlakte speelt, en na je kuur meten we opnieuw.',
   sAc1:'Scan + rapport', sAc2:'Huid & haar', sAc3:'Start van elke kuur',
   sLt:'Laser <em>ontharing</em>', sLp:'Laserontharing',
-  sLd:'Definitieve haarvermindering met een medische laser — gezicht, oksels, benen of bikinilijn. De 3D-scan meet je haardichtheid vooraf, zodat je het verschil per sessie zwart-op-wit ziet. Altijd eerst een testvlek.',
+  sLd:'Langdurige haarvermindering met een medische laser — gezicht, oksels, benen of bikinilijn. De 3D-scan meet je haardichtheid vooraf, zodat je het verschil per sessie zwart-op-wit ziet. Altijd eerst een testvlek.',
   sLc1:'Kuur van 6–8', sLc2:'Gezicht & lichaam', sLc3:'Testvlek vooraf',
   s1t:'Hydro<em>facial</em>', s1p:'Hydrofacial',
-  s1d:'Aqua peeling met een multifunctioneel hydra-dermabrasieapparaat: vuil en talg worden uit de poriën gezogen terwijl vocht en antioxidanten erin gaan. Reiniging, exfoliatie en hydratatie in één sessie — direct zichtbaar, geen hersteltijd.',
+  s1d:'Aqua peeling met een multifunctioneel hydra-dermabrasieapparaat: vuil en talg worden uit de poriën gezogen terwijl vocht en antioxidanten erin gaan. Reiniging, exfoliatie en hydratatie in één sessie — doorgaans zonder hersteltijd.',
   s1c1:'60 min', s1c2:'Geen downtime', s1c3:'Aqua peel',
   sRt:'RF <em>microneedling</em>', sRp:'RF microneedling',
   sRd:'Microneedling met radiofrequentie: de naaldjes brengen warmte tot in de diepere laag. Daar trekt bestaand collageen samen én maakt je huid nieuw aan. Voor een strakkere kaaklijn, verslapping en diepere acnelittekens.',
@@ -1241,7 +1431,7 @@ nl: {
   s2d:'Micro-kanaaltjes die je eigen collageen aanzetten, gecombineerd met een serum op maat. Voor littekens van acne, poriën en fijne lijntjes.',
   s2c1:'Kuur van 3–4', s2c2:'Serum op maat', s2c3:'Littekens & poriën',
   s3t:'Exosomen &amp; <em>collageen</em>', s3p:'Exosomen & collageen',
-  s3d:'Werkstoffen die het herstel van de huid versnellen na needling of peeling. Meer stevigheid, gelijkmatiger tint, minder roodheid op termijn.',
+  s3d:'Werkstoffen die worden ingezet om het herstel van de huid te ondersteunen na needling of peeling. Bedoeld voor meer stevigheid, een gelijkmatiger tint en minder roodheid op termijn. Resultaten verschillen per persoon.',
   s3c1:'Na-behandeling', s3c2:'Stevigheid', s3c3:'Herstel',
   s4t:'Huid<em>verbetering</em>', s4p:'Huidverbetering',
   s4d:'Gerichte kuur voor pigment, doffe plekken en een ongelijke tint — gezicht, hals of lichaam. Opgebouwd in stappen, met thuisverzorging ertussen.',
@@ -1249,9 +1439,9 @@ nl: {
   s5t:'Lip <em>blush</em>', s5p:'Lip blush',
   s5d:'Zachte pigmentatie die de eigen lipkleur terugbrengt en de lijn scherper maakt. Natuurlijk van dichtbij — geen harde rand, geen felle kleur.',
   s5c1:'2 sessies', s5c2:'Semi-permanent', s5c3:'Natuurlijke tint',
-  galTitle:'Uit de studio, niet uit een stockbank.',
-  g1:'Needling · serum op maat', g2:'De studio', g3:'Lip blush · resultaat', g4:'Huidverbetering',
-  g5:'Voorbereiding', g6:'Collageen', g7:'Lip blush · sessie', g8:'Exosomen', g9:'Na de behandeling',
+  galTitle:'Een kijkje in de studio.',
+  g1:'Microneedling', g2:'De studio', g3:'Lip blush', g4:'Huidverbetering',
+  g5:'Producten', g6:'Producten', g7:'Lip blush', g8:'Exosomen', g9:'Huidanalyse',
   galNote:'Scroll om horizontaal te bladeren',
   wTitle:'Vier stappen, geen verrassingen.',
   wLede:'Van het eerste bericht tot de nazorg weet je precies wat er gebeurt, wat het kost en hoelang je huid nodig heeft.',
@@ -1265,12 +1455,13 @@ nl: {
   w4d:'Je gaat naar huis met concrete instructies voor de eerste dagen en een vervolgafspraak alleen als je die echt nodig hebt.',
   stTitle:'Klein, rustig, en van jou zolang je er bent.',
   stBody:'Eén behandelkamer, één klant tegelijk. Geen wachtruimte vol mensen, geen gehaaste sessie van twintig minuten. Je komt binnen, we nemen de tijd, en je gaat weg met een huid die je zelf kunt onderhouden.',
-  f1a:'Rotterdam', f1b:'Locatie op afspraak', f2b:'Volgers op Instagram',
+  f1a:'Rotterdam', f1b:'Locatie op afspraak', f2a:'Instagram',
   f3a:'NL · AR · EN', f3b:'Gesproken talen', f4a:'1 op 1', f4b:'Altijd persoonlijk',
   bkTitle:'Vraag je afspraak aan in drie stappen.',
   bkLede:'Vul in wat je wilt laten doen en wanneer het je uitkomt. Je aanvraag gaat rechtstreeks naar Samar — zij bevestigt de definitieve datum en tijd persoonlijk.',
   lblTreat:'Behandeling', optAsk:'Weet ik nog niet — adviseer me',
   lblDate:'Voorkeursdatum', lblPart:'Dagdeel',
+  lblTime:'Voorkeurstijd (optioneel)',
   partAM:'Ochtend', partPM:'Middag', partEve:'Avond',
   lblName:'Naam', lblContact:'Telefoon of e-mail', lblNotes:'Wat wil je aanpakken? (optioneel)',
   phNotes:'Bijv. pigmentvlekken op mijn wangen, al twee jaar.',
@@ -1322,27 +1513,236 @@ nl: {
   fCopy:'Aya Beauty & Skin — Samar Tinawi', fRole:'Schoonheidsspecialist · Rotterdam',
 
   pages: {
-    analyse: { t:'3D-huid- & haaranalyse', b:'<p>Elke afspraak bij Aya Beauty &amp; Skin begint hier, ook als je eigenlijk voor iets anders komt. De AI-scanner fotografeert je huid in drie dimensies en zet er meetwaarden op: pigmentverdeling, poriegrootte, vochtgehalte, roodheid, fijne lijnen — en op de hoofdhuid haardichtheid en haargroei.</p><p>Het resultaat is geen los rapport dat je nooit meer inkijkt. Samar leest de scan met je door en vertaalt de cijfers naar een plan: welke behandeling nu logisch is, wat kan wachten, en waarom. Na je kuur volgt dezelfde scan opnieuw, zodat vooruitgang iets is wat je terugziet in getallen, niet alleen in een gevoel.</p><p>Duur: circa 30 minuten. Geen voorbereiding nodig, geen hersteltijd. Geschikt voor elke huidtype en -kleur.</p>' },
+    analyse: { t:'3D-huid- & haaranalyse', b:'<p>Elke afspraak bij Aya Beauty &amp; Skin begint hier, ook als je eigenlijk voor iets anders komt. De AI-scanner fotografeert je huid in drie dimensies en zet er meetwaarden op: pigmentverdeling, poriegrootte, vochtgehalte, roodheid, fijne lijnen — en op de hoofdhuid haardichtheid en haargroei.</p><p>Het resultaat is geen los rapport dat je nooit meer inkijkt. Samar leest de scan met je door en vertaalt de cijfers naar een plan: welke behandeling nu logisch is, wat kan wachten, en waarom. Na je kuur volgt dezelfde scan opnieuw, zodat vooruitgang iets is wat je terugziet in getallen, niet alleen in een gevoel.</p><p>Duur: circa 30 minuten. Geen voorbereiding nodig, geen hersteltijd. Geschikt voor veel huidtypen en huidskleuren; waar dat anders ligt, bespreken we dat vooraf.</p>' },
     hydrofacial: { t:'Hydrofacial', b:'<p>Een hydrofacial is een aqua peeling: het apparaat zuigt vuil, talg en dode huidcellen uit de poriën terwijl het tegelijk vocht en antioxidanten naar binnen brengt. Reinigen, exfoliëren en hydrateren gebeuren in één doorloop, in plaats van drie losse stappen.</p><p>Je merkt het meteen: een frissere, egalere teint zonder dat je huid rood of geïrriteerd aanvoelt. Er is geen hersteltijd — de meeste mensen plannen ‘m bewust vlak voor een avond waarop ze er goed uit willen zien.</p><p>Duur: circa 60 minuten. Geschikt als losse verfrissing of als vast onderdeel van een langere kuur.</p>' },
     microneedling: { t:'Microneedling', b:'<p>Microneedling maakt met heel fijne naaldjes microscopisch kleine kanaaltjes in de huid. Dat triggert je eigen collageenproductie én zorgt dat actieve serums dieper inwerken dan wanneer je ze gewoon op de huid smeert.</p><p>Het wordt vooral ingezet tegen fijne lijntjes, oneffen textuur, verwijde poriën en lichte littekens. Omdat het je eigen herstelproces aan het werk zet, zie je het resultaat niet na één keer, maar bouwt het op over een kuur.</p><p>Je huid is de eerste dagen na de behandeling roder en gevoeliger — hoeveel dagen je moet inplannen, hoor je vooraf precies.</p>' },
     rf: { t:'RF-microneedling', b:'<p>RF-microneedling combineert microneedling met radiofrequentie-energie die via de naaldjes in de diepere huidlagen wordt afgegeven. Waar gewone microneedling vooral de bovenste lagen triggert, verstevigt de RF-component ook het onderliggende weefsel — het verschil dat je voelt als ‘strakker’, niet alleen ‘gladder’.</p><p>Het wordt ingezet bij verslapping, littekenweefsel en een huid die om meer dan oppervlakkige verbetering vraagt. Het is een kuur van meerdere sessies, opgebouwd in overleg op basis van je 3D-analyse.</p><p>Standaard: kuur van 3, verstevigend effect. Herstel duurt iets langer dan bij gewone microneedling.</p>' },
-    exosomen: { t:'Exosomen & collageen', b:'<p>Na microneedling of een andere huidopeningsbehandeling breng je actieve stoffen dieper in de huid dan via een dagcrème ooit zou lukken. Exosomen en collageen-boosters worden ingezet om herstel te versnellen en de opbouw van nieuw, steviger weefsel te ondersteunen.</p><p>Dit is meestal geen behandeling op zichzelf, maar een toevoeging aan een needling-kuur — de combinatie is waar het verschil zit tussen ‘de huid heeft even gereageerd’ en een blijvend zichtbaar resultaat.</p><p>Wordt altijd in overleg toegevoegd, nooit standaard opgelegd.</p>' },
+    exosomen: { t:'Exosomen & collageen', b:'<p>Na microneedling of een andere huidopeningsbehandeling breng je actieve stoffen dieper in de huid dan via een dagcrème ooit zou lukken. Exosomen en collageen-boosters worden ingezet om het herstel te ondersteunen en de opbouw van nieuw, steviger weefsel te helpen. Resultaten verschillen per persoon.</p><p>Dit is meestal geen behandeling op zichzelf, maar een toevoeging aan een needling-kuur — de combinatie is waar het verschil zit tussen ‘de huid heeft even gereageerd’ en een blijvend zichtbaar resultaat.</p><p>Wordt altijd in overleg toegevoegd, nooit standaard opgelegd.</p>' },
     huidverbetering: { t:'Huidverbetering', b:'<p>Een verzamelnaam voor de behandelingen die inzetten op een egalere, heldere teint: tegen pigmentvlekken, doffe huid, oneffen textuur en de nasleep van littekens of zon. Welke specifieke aanpak — peeling, LED, actieve serums, of een combinatie — hangt volledig af van wat je 3D-analyse laat zien.</p><p>Dit is geen kant-en-klaar pakket. Samar stelt de opbouw samen op basis van jouw huid, niet op basis van wat er nu toevallig op de planning staat.</p>' },
     laser: { t:'Laserontharing', b:'<p>Medische laserontharing verzwakt de haarwortel met gebundeld licht, zodat haar geleidelijk dunner terugkomt en er over een kuur steeds minder overblijft. Werkt op de meeste huid- en haartypes; voorafgaand aan de eerste sessie wordt altijd een testvlekje gedaan om de instelling op jouw huid af te stemmen.</p><p>Omdat haar in fases groeit, is één sessie nooit genoeg — vandaar de kuur. Standaard: 6 tot 8 sessies, met tussenpozen die passen bij je haargroeicyclus.</p><p>Duur per sessie hangt af van de zone. Lichte roodheid direct na de sessie is normaal en meestal binnen enkele uren weg.</p>' },
     lipblush: { t:'Lip blush', b:'<p>Lip blush is semi-permanente pigmentatie van de lippen: een natuurlijke kleurcorrectie en subtiele contourverbetering, geen felle ‘getatoeëerde’ lipstick-look. De pigmentkeuze wordt afgestemd op je huidtype en de kleur die je lippen van nature al hebben.</p><p>De eerste dagen is de kleur intenser dan het eindresultaat — die zet zich na een week of twee op de uiteindelijke, zachtere tint. Een retouchesessie na 4 tot 6 weken hoort standaard bij het traject.</p><p>Duur van de eerste sessie: circa 2 uur, inclusief kleuroverleg vooraf.</p>' },
+    m1: { t:'3D-scanner met AI', b:'<figure class="ba ba--sq"><img src="img/r-ai-face2.jpg" alt="Illustratie van een 3D-huidanalyse: links de huid, rechts met meetpunten voor vocht, ogen, glans en textuur"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>Fotografeert je huid in drie dimensies en zet er meetwaarden op: pigment, poriën, vocht, roodheid, fijne lijnen — en haardichtheid op de hoofdhuid. De scan bepaalt het plan en meet het resultaat terug.</p><p>Gebruikt bij: de 3D-huid- &amp; haaranalyse, aan het begin van elke kuur en opnieuw erna.</p><p class="spec">Huid + hoofdhuid · nulmeting en hermeting</p>' },
+    m2: { t:'Hydra-dermabrasie', b:'<figure class="ba ba--w"><img src="img/r-ba-hydro.jpg" alt="Voor en na een hydrofacial: doffe huid links, frisse stralende huid rechts"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>Aqua peeling: het apparaat zuigt vuil en talg uit de poriën terwijl het vocht en antioxidanten naar binnen brengt. Multifunctioneel, dus reinigen, exfoliëren en hydrateren gaan in één doorloop.</p><p>Gebruikt bij: de hydrofacial.</p><p class="spec">60 min · geen hersteltijd</p>' },
+    m3: { t:'RF-microneedling', b:'<figure class="ba ba--w"><img src="img/r-ba-rf.jpg" alt="Voor en na RF-microneedling: slappere kaaklijn links, strakkere kaaklijn rechts"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>Microneedling met radiofrequentie: de naaldjes brengen warmte tot in de diepere huidlaag, waar bestaand collageen samentrekt en de huid nieuw collageen aanmaakt. Verstevigend.</p><p>Gebruikt bij: RF-microneedling, bijvoorbeeld voor verslapping en diepere littekens.</p><p class="spec">Kuur van 3 · verstevigend</p>' },
+    m4: { t:'Medische laser', b:'<figure class="ba ba--w"><img src="img/r-ba-laser.jpg" alt="Voor en na laserontharing: behaarde onderbenen links, gladde huid rechts"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>Gebundeld licht verzwakt de haarwortel, zodat haar geleidelijk dunner terugkomt. Vooraf doen we altijd een testvlek om de instelling op jouw huid af te stemmen.</p><p>Gebruikt bij: laserontharing.</p><p class="spec">Kuur van 6–8 · testvlek vooraf</p>' },
+    m5: { t:'RF & cavitatie', b:'<figure class="ba ba--w"><img src="img/r-ba-cavi.jpg" alt="Voor en na RF en cavitatie: slappere huid op de bovenarm links, strakkere gladdere huid rechts"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>Een apparaat met meerdere koppen voor een verstevigende behandeling. Welke kop wanneer wordt gebruikt, bepaalt de scan en het gesprek vooraf.</p><p class="spec">Meerdere koppen · verstevigend</p>' },
+    m6: { t:'Zuurstoftherapie', b:'<figure class="ba ba--w"><img src="img/r-ba-o2.jpg" alt="Voor en na zuurstoftherapie: vermoeide, rode huid links, rustige stralende huid rechts"><span class="ba-b">Voor</span><span class="ba-a">Na</span><figcaption>Illustratief beeld — resultaten verschillen per persoon.</figcaption></figure><p>H2-O2 bubble: een kalmerende diepreiniging met zuurstof. Fijn voor een huid die rust nodig heeft.</p><p class="spec">H2-O2 bubble · kalmerende diepreiniging</p>' },
   },
 
   legalPrivacy:'Privacybeleid',
-  legalPrivacyBody:'<p>Aya Beauty &amp; Skin (Samar Tinawi), gevestigd in Rotterdam, verwerkt persoonsgegevens die je zelf invult in het aanvraagformulier op deze site: naam, e-mailadres, telefoonnummer, gewenste behandeling en eventuele opmerkingen. Deze gegevens worden uitsluitend gebruikt om je afspraak te bevestigen, te plannen en — indien nodig — te herinneren of te wijzigen.</p><p>Je gegevens worden niet verkocht en niet gedeeld met derden voor marketingdoeleinden. Ze worden bewaard zolang dat nodig is voor de af handeling van je afspraak en een redelijke administratieve termijn daarna, en daarna verwijderd.</p><p>Deze site plaatst geen trackingcookies en gebruikt geen advertentienetwerken. Onder de AVG/GDPR heb je het recht op inzage, correctie en verwijdering van je gegevens, en het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens. Neem voor een verzoek contact op via Instagram of het aanvraagformulier.</p>',
+  legalPrivacyBody:'<p><strong>Wie wij zijn.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is verantwoordelijk voor de verwerking van je persoonsgegevens. Zie ook de <button type="button" class="linkbtn" data-page="biz">bedrijfsgegevens</button>.</p><p><strong>Welke gegevens en waarom.</strong> Alleen wat nodig is om je afspraak te plannen: naam, een telefoonnummer of e-mailadres, de gewenste behandeling, datum en eventuele opmerkingen. Grondslag is jouw toestemming (het vinkje in het formulier) en het uitvoeren van je afspraak. Medische gegevens hoef je hier niet te delen; die bespreken we tijdens de intake.</p><p><strong>Kinderen.</strong> Het formulier is bedoeld voor mensen vanaf 16 jaar. Is iemand jonger, dan vult een ouder of voogd het in en geeft die toestemming.</p><p><strong>Delen en bewaren.</strong> Je gegevens worden niet verkocht en niet gebruikt voor marketing. We delen ze met niemand, behalve via het kanaal dat jij zelf kiest om je aanvraag te versturen (WhatsApp, Instagram of e-mail). We bewaren ze zolang nodig voor je afspraak en een redelijke administratieve termijn (<mark class="ph">invullen: bijv. 12 maanden</mark>), daarna worden ze verwijderd.</p><p><strong>Cookies en externe diensten.</strong> Geen tracking- of advertentiecookies. Lettertypen van Google Fonts laden we alleen na jouw toestemming. Zie het <button type="button" class="linkbtn" data-page="cookies">cookiebeleid</button>.</p><p><strong>E-mails.</strong> We sturen geen nieuwsbrieven of reclame. Je ontvangt alleen berichten over je eigen afspraak. Gaan we ooit nieuwsbrieven versturen, dan vragen we eerst toestemming en staat er in elke mail een afmeldlink.</p><p><strong>Jouw rechten.</strong> Inzage, correctie, verwijdering, beperking, bezwaar, overdracht en het intrekken van je toestemming. Verwijdering vraag je aan via <button type="button" class="linkbtn" data-page="delete">gegevens laten verwijderen</button>. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p>',
   legalTerms:'Servicevoorwaarden',
-  legalTermsBody:'<p>Door een afspraak aan te vragen via deze site ga je akkoord met het volgende. Een aanvraag is geen automatische bevestiging: Samar bevestigt de definitieve datum en tijd persoonlijk. Bij verhindering wordt gevraagd tijdig af te zeggen of te verzetten, zodat de tijd aan iemand anders kan worden aangeboden.</p><p>Sommige behandelingen zijn niet geschikt tijdens zwangerschap, bij bepaalde huidaandoeningen of medicijngebruik — meld dit altijd vooraf zodat de juiste afweging gemaakt kan worden. Resultaten van behandelingen verschillen per persoon; de informatie op deze site is algemeen van aard en vervangt geen persoonlijk advies tijdens de intake.</p><p>Prijzen en beschikbaarheid worden persoonlijk gecommuniceerd en kunnen wijzigen. Deze voorwaarden kunnen worden aangepast; de meest recente versie staat altijd op deze pagina.</p>',
+  legalTermsBody:'<p>Door een afspraak aan te vragen via deze site ga je akkoord met deze voorwaarden. Een aanvraag is geen automatische bevestiging: Samar bevestigt de definitieve datum en tijd persoonlijk.</p><p><strong>Prijzen.</strong> Je hoort het volledige bedrag tijdens de intake, voordat er iets gebeurt. Er komen geen kosten bij die vooraf niet zijn genoemd. <mark class="ph">invullen: prijzen inclusief btw, en welke betaalmethoden</mark></p><p><strong>Annuleren, verzetten en terugbetaling.</strong> Zie het <button type="button" class="linkbtn" data-page="refund">annulerings- en terugbetalingsbeleid</button>.</p><p><strong>Gezondheid.</strong> Sommige behandelingen zijn niet geschikt tijdens zwangerschap, bij bepaalde huidaandoeningen of medicijngebruik. Meld dit altijd vooraf. Resultaten verschillen per persoon; de informatie op deze site is algemeen en vervangt geen persoonlijk advies tijdens de intake.</p><p><strong>Leeftijd.</strong> Afspraken worden gemaakt door personen vanaf 16 jaar; voor jongere personen is toestemming van een ouder of voogd nodig.</p><p><strong>Wijzigingen.</strong> Deze voorwaarden kunnen worden aangepast; de laatste versie staat altijd op deze pagina.</p>',
   legalDmca:'DMCA / auteursrecht',
   legalDmcaBody:'<p>De foto\'s, teksten en het ontwerp op deze site zijn eigendom van Aya Beauty &amp; Skin of worden gebruikt onder een geldige licentie. Als je van mening bent dat materiaal op deze site inbreuk maakt op jouw auteursrecht, kun je dit melden via Instagram met: (1) een omschrijving van het werk waarop je rechten claimt, (2) de exacte locatie van het materiaal op deze site, en (3) je contactgegevens.</p><p>Meldingen worden serieus en zo snel mogelijk behandeld. Bij een ten onrechte ingediende melding kan de andere partij een tegenmelding indienen.</p>',
   legalContact:'Contact',
   legalContactBody:'<p>De snelste manier om iets te vragen of een afspraak aan te vragen is via het formulier onderaan deze site of via een DM op Instagram <span class="ltr">@ayaa_beauty.skin</span>. Telefoon en WhatsApp volgen binnenkort — zodra dat nummer actief is, verschijnt het hier en in de footer.</p><p>Aya Beauty &amp; Skin is gevestigd in Rotterdam, op afspraak. De exacte locatie ontvang je bij bevestiging.</p>',
+  skip:'Naar de inhoud',
+  ariaClose:'Sluiten', ariaQuick:'Snel naar sectie', ariaJump:'Snel naar een behandeling',
+  cbTitle:'Cookies en lettertypen',
+  cbText:'Deze site gebruikt geen tracking- of advertentiecookies. Alleen met jouw toestemming laden we de lettertypen van Google Fonts; Google ontvangt dan je IP-adres. Je taalkeuze bewaren we lokaal in je browser.',
+  cbAccept:'Accepteren', cbDecline:'Weigeren', cbMore:'Cookiebeleid', cbSettings:'Cookie-instellingen',
+  cons1:'Ik ga akkoord met het <button type="button" class="linkbtn" data-page="privacy">privacybeleid</button> en de <button type="button" class="linkbtn" data-page="terms">voorwaarden</button> en geef toestemming dat Aya Beauty &amp; Skin mijn gegevens gebruikt om mijn afspraak te plannen.',
+  cons2:'Ik ben 16 jaar of ouder, of mijn ouder of voogd vult dit formulier in en geeft toestemming.',
+  consErr:'Vink beide vakjes aan om je aanvraag te versturen.',
+  noteHint:'Deel alleen wat nodig is. Medische details bespreken we tijdens de intake.',
+  legalRefund:'Annuleren & terugbetaling',
+  legalRefundBody:'<p><strong>Annuleren of verzetten.</strong> Kosteloos tot <mark class="ph">24 uur</mark> voor je afspraak, via Instagram <span class="ltr">@ayaa_beauty.skin</span> of <mark class="ph">e-mail / telefoon</mark>.</p><p><strong>Te laat annuleren of niet komen.</strong> <mark class="ph">invullen: bijv. aanbetaling vervalt of een percentage van het tarief</mark>. Dit hoor je altijd vooraf, bij het maken van je afspraak.</p><p><strong>Kuren.</strong> Nog niet gebruikte sessies van een kuur: <mark class="ph">invullen: terugbetaling of tegoed, en binnen welke termijn</mark>.</p><p><strong>Niet tevreden?</strong> Neem binnen <mark class="ph">7 dagen</mark> contact op. Samar kijkt persoonlijk met je naar een oplossing.</p><p><strong>Terugbetalen.</strong> Een terugbetaling gaat via dezelfde betaalmethode, binnen <mark class="ph">14 dagen</mark>. Je wettelijke rechten als consument blijven altijd gelden.</p>',
+  legalCookies:'Cookiebeleid',
+  legalCookiesBody:'<p>Deze site gebruikt geen tracking-, analyse- of advertentiecookies.</p><p><strong>Altijd aan (functioneel).</strong> Je taalkeuze (NL of AR) en je cookiekeuze worden lokaal in je browser bewaard. Die gegevens verlaten je apparaat niet.</p><p><strong>Alleen met toestemming.</strong> Google Fonts (de lettertypen van de site). Als je accepteert, haalt je browser de lettertypen op bij Google en ontvangt Google je IP-adres. Weiger je, dan toont de site standaardlettertypen en wordt er niets bij Google opgehaald.</p><p><strong>Zelf gehost.</strong> De animatiebibliotheek (GSAP) en de foto\'s worden vanaf deze site zelf geladen, zonder externe partij.</p><p>Je keuze wijzigen kan altijd met de knop <em>Cookie-instellingen</em> onderaan de pagina.</p>',
+  legalDelete:'Gegevens laten verwijderen',
+  legalDeleteBody:'<p>Je kunt op elk moment vragen om je gegevens in te zien, te laten corrigeren of te laten verwijderen. Je hoeft daar geen reden voor te geven.</p><p><strong>Zo doe je dat.</strong> Stuur een bericht via Instagram <span class="ltr">@ayaa_beauty.skin</span> of per e-mail naar <mark class="ph">e-mailadres</mark>. Zet erbij: je naam, het telefoonnummer of e-mailadres dat je in je aanvraag gebruikte, en de tekst <em>Verwijder mijn gegevens</em>.</p><p>We controleren kort dat het verzoek van jou komt, verwijderen je gegevens en bevestigen dat uiterlijk binnen een maand. Gegevens die we wettelijk moeten bewaren, zoals een factuur, bewaren we alleen zolang dat verplicht is.</p><p>Doe je dit namens een kind onder de 16, geef dan aan dat je ouder of voogd bent.</p>',
+  legalBiz:'Bedrijfsgegevens',
+  legalBizBody:'<ul><li>Handelsnaam: Aya Beauty &amp; Skin</li><li>Eigenaar: Samar Tinawi</li><li>Adres: <mark class="ph">straat, huisnummer, postcode, Rotterdam</mark></li><li>KvK-nummer: <mark class="ph">invullen</mark></li><li>BTW-id: <mark class="ph">invullen</mark></li><li>E-mail: <mark class="ph">invullen</mark></li><li>Telefoon / WhatsApp: <mark class="ph">volgt</mark></li><li>Instagram: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">Op afspraak. De exacte locatie krijg je bij de bevestiging van je afspraak.</p>',
+  legalLic:'Licenties & bronnen',
+  legalLicBody:'<p><strong>Lettertypen.</strong> Instrument Serif, Outfit, Amiri en IBM Plex Sans Arabic vallen onder de SIL Open Font License en worden via Google Fonts geladen, na jouw toestemming.</p><p><strong>Animaties.</strong> GSAP (GreenSock), gebruikt onder de GSAP Standard License.</p><p><strong>Foto\'s.</strong> <mark class="ph">invullen: bron of licentie per afbeelding (eigen foto of gelicentieerde beeldbank)</mark></p>',
   legalInfo:'Informatie',
   legalQuals:'Kwalificaties',
   legalQualsBody:'<p>Samar Tinawi is schoonheidsspecialist in Rotterdam, opgeleid en gecertificeerd bij Atres Center. Elke behandeling op deze site wordt door haar persoonlijk uitgevoerd — geen personeel, geen wisselende behandelaars.</p><ul style="margin:14px 0 0;padding-inline-start:20px;line-height:1.9"><li>Mesotherapie Allround — Atres Center, behaald 11-06-2022</li><li>Mesotherapie Haar — Atres Center, behaald 07-02-2022</li></ul><p style="margin-top:16px">Certificaten hangen in de studio en zijn ter plekke in te zien.</p>',
+},
+
+en: {
+  _title:'Aya Beauty & Skin — Skin studio Rotterdam',
+  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling with exosomes, skin improvement and lip blush by beauty specialist Samar Tinawi. Request your appointment directly.',
+  _marquee:['3D Skin & hair analysis','Hydrofacial','Microneedling','RF Microneedling','Exosomes','Skin improvement','Laser hair removal','Lip Blush','Rotterdam'],
+  _locale:'en-GB',
+  brand:'Aya', brandSub:'Beauty & Skin',
+  navTreat:'Treatments', navKit:'Equipment', navWork:'How it works', navStudio:'Studio', navFaq:'Questions', ctaNav:'Book an appointment',
+  heroKicker:'Beauty specialist · Rotterdam',
+  heroTitle:'Skin that looks <span class="it">healthy</span>, not filtered.',
+  heroLede:'AI-powered 3D skin and hair analysis, hydrofacial, RF microneedling with exosomes, laser hair removal and lip blush — done calmly, always after honest advice. By Samar Tinawi.',
+  ctaHero1:'Book an appointment', ctaHero2:'View treatments', scroll:'Scroll',
+  introLabel:'Who you will meet',
+  introScrub:'I do not treat trends. I treat skin — with a plan that fits your face, your skin type and your pace. Look first, then choose.',
+  introBody:'Samar Tinawi is a beauty specialist in Rotterdam. Every treatment starts with a skin analysis: what is going on, what can be done now, and what needs time. No packages you do not need. Dutch, Arabic and English spoken.',
+  sigName:'Samar Tinawi', sigSub:'Aya Beauty & Skin · Rotterdam',
+  svcTitle:'Eight routes to calmer skin.',
+  kitTitle:'Six machines behind the treatments.',
+  kitMore:'More info',
+  kitLede:'None of these devices does everything. That is why there are six: the scan decides which one is switched on, and in what order.',
+  k1t:'3D scanner with AI',
+  k1d:'Photographs your skin in three dimensions and puts numbers on it: pigment, pores, moisture, redness, fine lines — and hair density on the scalp. It sets the plan and measures the result afterwards.',
+  k1s:'Skin + scalp · baseline and re-measurement',
+  k2t:'Hydra-dermabrasion',
+  k2d:'Aqua peeling: draws dirt and sebum out of the pores while bringing in moisture and antioxidants. Multifunctional, so cleansing, exfoliating and hydrating happen in one pass.',
+  k2s:'60 min · no downtime',
+  k3t:'RF microneedling', k3s:'Course of 3 · firming',
+  k4t:'Medical laser', k4s:'Course of 6–8 · patch test first',
+  k5t:'RF & cavitation', k5s:'Multiple heads · firming',
+  k6t:'Oxygen therapy', k6s:'H2-O2 bubble · calming deep cleanse',
+  a1t:'Pigment',
+  a1d:'An uneven tone rarely has one cause. The scan separates sun damage, scar pigment and redness, so the course treats the right thing instead of everything at once.',
+  a2t:'Lips',
+  a2d:'Lip blush restores your natural colour and sharpens the outline. Two sessions, because the second corrects what the skin did not hold from the first.',
+  a3t:'Recovery',
+  a3d:'Exosomes and collagen go in when the skin absorbs the most: straight after needling or peeling. That can shorten the red days; results vary from person to person.',
+  a4t:'Scars',
+  a4d:'Needling creates micro-channels that stimulate your own collagen. With radiofrequency added, the heat goes deeper, which is needed for sunken scars.',
+  svcLede:'Which route suits you is largely read out by the 3D scan. Often it is a combination — sometimes less is enough.',
+  bookThis:'Book treatment', readMore:'Read more',
+  sAt:'3D <em>skin &amp; hair analysis</em>', sAp:'3D skin & hair analysis (AI)',
+  sAd:'A 3D scan of your skin and scalp, read by AI: pigment, pores, moisture level, redness and fine lines — plus hair density and hair growth. You see what is going on beneath the surface, and after your course we measure again.',
+  sAc1:'Scan + report', sAc2:'Skin & hair', sAc3:'Start of every course',
+  sLt:'Laser <em>hair removal</em>', sLp:'Laser hair removal',
+  sLd:'Long-term hair reduction with a medical laser — face, underarms, legs or bikini line. The 3D scan measures your hair density beforehand, so you see the difference per session in black and white. Always a patch test first.',
+  sLc1:'Course of 6–8', sLc2:'Face & body', sLc3:'Patch test first',
+  s1t:'Hydro<em>facial</em>', s1p:'Hydrofacial',
+  s1d:'Aqua peeling with a multifunctional hydra-dermabrasion device: dirt and sebum are drawn out of the pores while moisture and antioxidants go in. Cleansing, exfoliation and hydration in one session — usually without downtime.',
+  s1c1:'60 min', s1c2:'No downtime', s1c3:'Aqua peel',
+  sRt:'RF <em>microneedling</em>', sRp:'RF microneedling',
+  sRd:'Microneedling with radiofrequency: the needles carry heat into the deeper layer. There, existing collagen tightens and your skin builds new collagen. For a firmer jawline, sagging and deeper acne scars.',
+  sRc1:'Course of 3', sRc2:'Firming', sRc3:'Jawline & scars',
+  s2t:'Micro<em>needling</em>', s2p:'Microneedling',
+  s2d:'Micro-channels that stimulate your own collagen, combined with a serum made for you. For acne scars, pores and fine lines.',
+  s2c1:'Course of 3–4', s2c2:'Tailored serum', s2c3:'Scars & pores',
+  s3t:'Exosomes &amp; <em>collagen</em>', s3p:'Exosomes & collagen',
+  s3d:'Active ingredients used to support skin recovery after needling or peeling. Intended for more firmness, a more even tone and less redness over time. Results vary from person to person.',
+  s3c1:'Aftercare', s3c2:'Firmness', s3c3:'Recovery',
+  s4t:'Skin <em>improvement</em>', s4p:'Skin improvement',
+  s4d:'A targeted course for pigment, dull patches and an uneven tone — face, neck or body. Built up in steps, with home care in between.',
+  s4c1:'Course treatment', s4c2:'Pigment', s4c3:'Neck & body',
+  s5t:'Lip <em>blush</em>', s5p:'Lip blush',
+  s5d:'Soft pigmentation that restores your natural lip colour and sharpens the line. Natural up close — no hard edge, no loud colour.',
+  s5c1:'2 sessions', s5c2:'Semi-permanent', s5c3:'Natural tint',
+  galTitle:'A look inside the studio.',
+  g1:'Microneedling', g2:'The studio', g3:'Lip blush', g4:'Skin improvement',
+  g5:'Products', g6:'Products', g7:'Lip blush', g8:'Exosomes', g9:'Skin analysis',
+  galNote:'Scroll to browse sideways',
+  wTitle:'Four steps, no surprises.',
+  wLede:'From the first message to aftercare you know exactly what happens, what it costs and how long your skin needs.',
+  w1t:'Intake & 3D skin analysis',
+  w1d:'We scan your skin in 3D and read the AI analysis together: pigment, pores, moisture, redness. An honest plan comes out of it — even if that means doing nothing at first.',
+  w2t:'Preparation',
+  w2d:'Sterile working, everything set out before you lie down. Products are chosen per treatment, not laid out on the shelf in advance.',
+  w3t:'The treatment',
+  w3d:'A calm pace, explanation at every step. You feel what is happening and you can say at any moment that it should be lighter.',
+  w4t:'Aftercare',
+  w4d:'You go home with concrete instructions for the first days and a follow-up appointment only if you really need one.',
+  stTitle:'Small, quiet, and yours for as long as you are there.',
+  stBody:'One treatment room, one client at a time. No waiting room full of people, no rushed twenty-minute session. You come in, we take our time, and you leave with skin you can look after yourself.',
+  f1a:'Rotterdam', f1b:'Location by appointment', f2a:'Instagram',
+  f3a:'NL · AR · EN', f3b:'Languages spoken', f4a:'1 to 1', f4b:'Always personal',
+  bkTitle:'Request your appointment in three steps.',
+  bkLede:'Fill in what you want done and when it suits you. Your request goes straight to Samar — she confirms the final date and time personally.',
+  lblTreat:'Treatment', optAsk:'I do not know yet — advise me',
+  lblDate:'Preferred date', lblPart:'Part of the day',
+  lblTime:'Preferred time (optional)',
+  partAM:'Morning', partPM:'Afternoon', partEve:'Evening',
+  lblName:'Name', lblContact:'Phone or e-mail', lblNotes:'What would you like to treat? (optional)',
+  phNotes:'E.g. pigment spots on my cheeks, for two years now.',
+  bkSubmit:'Send request', bkSumTitle:'Your request',
+  bkErr:'Please fill in your name and contact details.',
+  bkNote:'This is a request, not a confirmed appointment. Samar confirms the date and time personally.',
+  bkSendWa:'Send via WhatsApp', bkSendIg:'Send via Instagram DM', bkSendMail:'Send via e-mail',
+  bkCopied:'Text copied — paste it into the conversation.',
+  bkMsgLabel:'Your request as text — copy and paste',
+  calLoading:'Loading free times…',
+  stepTreat:'Choose your treatment', stepDay:'Choose a day and time', stepYou:'Your details',
+  lblEmail:'E-mail address', lblPhone:'Phone (optional)',
+  confirmBtn:'Confirm appointment', atWord:'at',
+  noSlots:'No free times on this day. Choose another day.',
+  okTitle:'Your appointment is booked.',
+  okBody:'The confirmation is on its way to your inbox, with a calendar file. Keep your reference — you can use it to cancel the appointment yourself.',
+  refLabel:'Reference', icsBtn:'Add to my calendar', cancelBtn:'Cancel appointment',
+  cancelledTitle:'Appointment cancelled.', cancelledBody:'The time is free again. You can pick a new moment above.',
+  errTaken:'That time has just been booked by someone else. Choose another moment — the list has been updated.',
+  errEmail:'Please enter a valid e-mail address.',
+  errTooMany:'Too many requests in a row. Try again in an hour.',
+  errGeneric:'Something went wrong. Please try again shortly.',
+  calNote:'The times above come straight from the studio diary: what you see is really free. As soon as you confirm, the time is yours and you get an e-mail right away.',
+  bkTitleLive:'Choose your treatment and a free moment.',
+  bkLedeLive:'All times below are really available. Choose a treatment, pick a moment that suits you and your confirmation arrives immediately.',
+  a1live:'Choose your treatment above, pick a free moment in the diary and fill in your details. Your confirmation arrives by e-mail straight away — the appointment is then fixed. Rescheduling or cancelling is possible via the link in that e-mail.',
+  bkMsgHead:'Appointment request — Aya Beauty & Skin',
+  bkFlex:'As soon as possible', bkNotesShort:'Skin',
+  faqTitle:'What people usually ask.',
+  q1:'How does requesting an appointment work?',
+  a1:'Fill in the form above. Your request arrives via WhatsApp, Instagram or e-mail — whichever you choose. Samar checks the diary and confirms a date and time personally.',
+  q2:'What does a treatment cost?',
+  a2:'The price depends on the treatment and whether it is a single session or a course. You hear the full amount during the intake, before anything happens — never a surprise afterwards.',
+  q3:'Do I need recovery time?',
+  a3:'With a hydrofacial, no: you can simply walk out afterwards. With microneedling and lip blush your skin is redder and more sensitive for a few days. You are told exactly how many days to plan for.',
+  q4:'Is it suitable for sensitive or darker skin?',
+  a4:'Yes, but the approach differs. Skin type, pigment sensitivity and your reaction to earlier treatments determine the strength and build-up of the course. That is exactly why the intake exists.',
+  q6:'What does the 3D skin analysis give me?',
+  a6:'Measurements for pigment, pores, moisture level, redness and fine lines — and for hair density and hair growth on your scalp — plus the same scan again after your course. So you see progress in numbers, not just in a feeling. The analysis also decides which treatment you really need.',
+  q5:'Which language can I use?',
+  a5:'Dutch, Arabic or English — whichever you feel most comfortable in. نتكلم العربية.',
+  q7:'Where is the studio?',
+  a7:'In Rotterdam, by appointment. You receive the exact location when your appointment is confirmed. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">View on Google Maps</a>.',
+  cTitle:'Start with <span class="it">honest</span> skin advice.',
+  cBody:'Request your appointment and write what your skin is doing. You get an answer from Samar herself, not a standard text.',
+  cBtn1:'Book an appointment', cBtn2:'View Instagram',
+  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Netherlands', fAppt:'By appointment',
+  fTreat:'Treatments', fT1:'3D skin & hair analysis', fT2:'Hydrofacial', fT3:'RF microneedling', fT4:'Laser hair removal',
+  fCopy:'Aya Beauty & Skin — Samar Tinawi', fRole:'Beauty specialist · Rotterdam',
+  skip:'Skip to content',
+  ariaClose:'Close', ariaQuick:'Jump to section', ariaJump:'Jump to a treatment',
+  cbTitle:'Cookies and fonts',
+  cbText:'This site uses no tracking or advertising cookies. Only with your permission do we load the fonts from Google Fonts; Google then receives your IP address. We keep your language choice locally in your browser.',
+  cbAccept:'Accept', cbDecline:'Decline', cbMore:'Cookie policy', cbSettings:'Cookie settings',
+  cons1:'I agree to the <button type="button" class="linkbtn" data-page="privacy">privacy policy</button> and the <button type="button" class="linkbtn" data-page="terms">terms</button>, and I consent to Aya Beauty &amp; Skin using my details to plan my appointment.',
+  cons2:'I am 16 or older, or my parent or guardian is filling in this form and gives consent.',
+  consErr:'Tick both boxes to send your request.',
+  noteHint:'Share only what is needed. We discuss medical details during the intake.',
+  legalPrivacy:'Privacy policy',
+  legalPrivacyBody:'<p><strong>Who we are.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is responsible for processing your personal data. See also the <button type="button" class="linkbtn" data-page="biz">business details</button>.</p><p><strong>Which data and why.</strong> Only what is needed to plan your appointment: name, a phone number or e-mail address, the treatment you want, date and any remarks. The basis is your consent (the tick box in the form) and carrying out your appointment. You do not need to share medical details here; we discuss those during the intake.</p><p><strong>Children.</strong> The form is meant for people aged 16 and over. If someone is younger, a parent or guardian fills it in and gives consent.</p><p><strong>Sharing and retention.</strong> Your data is not sold and not used for marketing. We share it with nobody, except through the channel you choose yourself to send your request (WhatsApp, Instagram or e-mail). We keep it as long as needed for your appointment and a reasonable administrative period (<mark class="ph">fill in: e.g. 12 months</mark>), after which it is deleted.</p><p><strong>Cookies and external services.</strong> No tracking or advertising cookies. We load fonts from Google Fonts only with your consent. See the <button type="button" class="linkbtn" data-page="cookies">cookie policy</button>.</p><p><strong>E-mails.</strong> We do not send newsletters or advertising. You only receive messages about your own appointment. If we ever send newsletters, we will ask for consent first and every e-mail will have an unsubscribe link.</p><p><strong>Your rights.</strong> Access, correction, deletion, restriction, objection, portability and withdrawing your consent. Request deletion via <button type="button" class="linkbtn" data-page="delete">have my data deleted</button>. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>',
+  legalTerms:'Terms of service',
+  legalTermsBody:'<p>By requesting an appointment through this site you agree to these terms. A request is not an automatic confirmation: Samar confirms the final date and time personally.</p><p><strong>Prices.</strong> You hear the full amount during the intake, before anything happens. No costs are added that were not mentioned beforehand. <mark class="ph">fill in: prices including VAT, and which payment methods</mark></p><p><strong>Cancelling, rescheduling and refunds.</strong> See the <button type="button" class="linkbtn" data-page="refund">cancellation and refund policy</button>.</p><p><strong>Health.</strong> Some treatments are not suitable during pregnancy, with certain skin conditions or when taking medication. Always tell us beforehand. Results differ from person to person; the information on this site is general and does not replace personal advice during the intake.</p><p><strong>Age.</strong> Appointments are made by people aged 16 and over; for younger people a parent or guardian must consent.</p><p><strong>Changes.</strong> These terms may be amended; the latest version is always on this page.</p>',
+  legalDmca:'DMCA / copyright',
+  legalDmcaBody:'<p>The photos, texts and design on this site belong to Aya Beauty &amp; Skin or are used under a valid licence. If you believe material on this site infringes your copyright, you can report it via Instagram with: (1) a description of the work you claim rights to, (2) the exact location of the material on this site, and (3) your contact details.</p><p>Reports are taken seriously and handled as quickly as possible. If a report was submitted wrongly, the other party can file a counter-notice.</p>',
+  legalContact:'Contact',
+  legalContactBody:'<p>The fastest way to ask something or request an appointment is the form at the bottom of this site or a DM on Instagram <span class="ltr">@ayaa_beauty.skin</span>. Phone and WhatsApp follow soon — once that number is active it will appear here and in the footer.</p><p>Aya Beauty &amp; Skin is based in Rotterdam, by appointment. You receive the exact location with your confirmation.</p>',
+  legalRefund:'Cancellation & refunds',
+  legalRefundBody:'<p><strong>Cancelling or rescheduling.</strong> Free of charge up to <mark class="ph">24 hours</mark> before your appointment, via Instagram <span class="ltr">@ayaa_beauty.skin</span> or <mark class="ph">e-mail / phone</mark>.</p><p><strong>Late cancellation or no-show.</strong> <mark class="ph">fill in: e.g. deposit is forfeited or a percentage of the fee</mark>. You always hear this beforehand, when you make your appointment.</p><p><strong>Courses.</strong> Unused sessions of a course: <mark class="ph">fill in: refund or credit, and within which period</mark>.</p><p><strong>Not satisfied?</strong> Get in touch within <mark class="ph">7 days</mark>. Samar will look for a solution with you personally.</p><p><strong>Refunding.</strong> A refund goes back via the same payment method, within <mark class="ph">14 days</mark>. Your statutory consumer rights always apply.</p>',
+  legalCookies:'Cookie policy',
+  legalCookiesBody:'<p>This site uses no tracking, analytics or advertising cookies.</p><p><strong>Always on (functional).</strong> Your language choice (NL, EN or AR) and your cookie choice are stored locally in your browser. That data does not leave your device.</p><p><strong>Only with consent.</strong> Google Fonts (the site fonts). If you accept, your browser fetches the fonts from Google and Google receives your IP address. If you decline, the site shows standard fonts and nothing is fetched from Google.</p><p><strong>Self-hosted.</strong> The animation library (GSAP) and the photos are loaded from this site itself, without an outside party.</p><p>You can change your choice at any time with the <em>Cookie settings</em> button at the bottom of the page.</p>',
+  legalDelete:'Have my data deleted',
+  legalDeleteBody:'<p>You can ask at any time to see, correct or delete your data. You do not have to give a reason.</p><p><strong>How.</strong> Send a message via Instagram <span class="ltr">@ayaa_beauty.skin</span> or by e-mail to <mark class="ph">e-mail address</mark>. Include your name, the phone number or e-mail address you used in your request, and the words <em>Delete my data</em>.</p><p>We briefly check that the request comes from you, delete your data and confirm within one month at the latest. Data we are legally required to keep, such as an invoice, is kept only for as long as required.</p><p>If you are doing this for a child under 16, say that you are the parent or guardian.</p>',
+  legalBiz:'Business details',
+  legalBizBody:'<ul><li>Trade name: Aya Beauty &amp; Skin</li><li>Owner: Samar Tinawi</li><li>Address: <mark class="ph">street, number, postcode, Rotterdam</mark></li><li>Chamber of Commerce (KvK) number: <mark class="ph">fill in</mark></li><li>VAT number: <mark class="ph">fill in</mark></li><li>E-mail: <mark class="ph">fill in</mark></li><li>Phone / WhatsApp: <mark class="ph">to follow</mark></li><li>Instagram: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">By appointment. You receive the exact location with your appointment confirmation.</p>',
+  legalLic:'Licences & credits',
+  legalLicBody:'<p><strong>Fonts.</strong> Instrument Serif, Outfit, Amiri and IBM Plex Sans Arabic fall under the SIL Open Font License and are loaded via Google Fonts, after your consent.</p><p><strong>Animation.</strong> GSAP (GreenSock), used under the GSAP Standard License.</p><p><strong>Photos.</strong> <mark class="ph">fill in: source or licence per image (own photo or licensed image library)</mark></p>',
+  legalInfo:'Information',
+  legalQuals:'Qualifications',
+  legalQualsBody:'<p>Samar Tinawi is a beauty specialist in Rotterdam, trained and certified at Atres Center. Every treatment on this site is carried out by her personally — no staff, no changing practitioners.</p><ul style="margin:14px 0 0;padding-inline-start:20px;line-height:1.9"><li>Mesotherapie Allround — Atres Center, obtained 11-06-2022</li><li>Mesotherapie Haar — Atres Center, obtained 07-02-2022</li></ul><p style="margin-top:16px">Certificates hang in the studio and can be viewed there.</p>',
+
+  pages: {
+    analyse: { t:'3D skin & hair analysis', b:'<p>Every appointment at Aya Beauty &amp; Skin starts here, even if you actually come for something else. The AI scanner photographs your skin in three dimensions and puts numbers on it: pigment distribution, pore size, moisture level, redness, fine lines — and on the scalp hair density and hair growth.</p><p>The result is not a loose report you never look at again. Samar reads the scan through with you and turns the numbers into a plan: which treatment makes sense now, what can wait, and why. After your course the same scan follows again, so progress is something you see in numbers, not just in a feeling.</p><p>Duration: about 30 minutes. No preparation needed, no downtime. Suitable for many skin types and skin tones; where that differs, we discuss it beforehand.</p>' },
+    hydrofacial: { t:'Hydrofacial', b:'<p>A hydrofacial is an aqua peel: the device draws dirt, sebum and dead skin cells out of the pores while at the same time bringing in moisture and antioxidants. Cleansing, exfoliating and hydrating happen in one pass, instead of three separate steps.</p><p>You notice it straight away: a fresher, more even complexion without your skin feeling red or irritated. There is no downtime — most people deliberately book it just before an evening when they want to look good.</p><p>Duration: about 60 minutes. Suitable as a single refresh or as a regular part of a longer course.</p>' },
+    microneedling: { t:'Microneedling', b:'<p>Microneedling uses very fine needles to make microscopic channels in the skin. That triggers your own collagen production and lets active serums work deeper than if you simply applied them to the skin.</p><p>It is mainly used for fine lines, uneven texture, enlarged pores and light scars. Because it puts your own repair process to work, you do not see the result after one time; it builds up over a course.</p><p>Your skin is redder and more sensitive for the first days after the treatment — how many days to plan for, you hear exactly beforehand.</p>' },
+    rf: { t:'RF microneedling', b:'<p>RF microneedling combines microneedling with radiofrequency energy delivered through the needles into the deeper skin layers. Where regular microneedling mainly triggers the upper layers, the RF component also firms the tissue underneath — the difference you feel as “tighter”, not just “smoother”.</p><p>It is used for sagging, scar tissue and skin that asks for more than surface-level improvement. It is a course of several sessions, built up in consultation based on your 3D analysis.</p><p>Standard: a course of 3, firming effect. Recovery takes a little longer than with regular microneedling.</p>' },
+    exosomen: { t:'Exosomes & collagen', b:'<p>After microneedling or another skin-opening treatment you bring active ingredients deeper into the skin than a day cream ever could. Exosomes and collagen boosters are used to support recovery and help the build-up of new, firmer tissue. Results vary from person to person.</p><p>This is usually not a treatment on its own, but an addition to a needling course — the combination is where the difference lies between “the skin reacted for a moment” and a lasting visible result.</p><p>Always added in consultation, never imposed as standard.</p>' },
+    huidverbetering: { t:'Skin improvement', b:'<p>A collective name for treatments that aim at a more even, brighter complexion: against pigment spots, dull skin, uneven texture and the aftermath of scars or sun. Which specific approach — peeling, LED, active serums, or a combination — depends entirely on what your 3D analysis shows.</p><p>This is not a ready-made package. Samar builds the programme around your skin, not around what happens to be on the schedule.</p>' },
+    laser: { t:'Laser hair removal', b:'<p>Medical laser hair removal weakens the hair root with focused light, so hair grows back gradually thinner and less and less remains over a course. It works on most skin and hair types; before the first session a patch test is always done to tune the setting to your skin.</p><p>Because hair grows in phases, one session is never enough — hence the course. Standard: 6 to 8 sessions, with intervals that fit your hair growth cycle.</p><p>Duration per session depends on the area. Slight redness straight after the session is normal and usually gone within a few hours.</p>' },
+    lipblush: { t:'Lip blush', b:'<p>Lip blush is semi-permanent pigmentation of the lips: a natural colour correction and subtle contour improvement, not a bright “tattooed” lipstick look. The pigment choice is matched to your skin type and the colour your lips naturally have.</p><p>For the first days the colour is more intense than the final result — it settles after a week or two into the final, softer tint. A touch-up session after 4 to 6 weeks is a standard part of the process.</p><p>Duration of the first session: about 2 hours, including a colour consultation beforehand.</p>' },
+    m1: { t:'3D scanner with AI', b:'<figure class="ba ba--sq"><img src="img/r-ai-face2.jpg" alt="Illustration of a 3D skin analysis: skin on the left, measurement points for moisture, eyes, glow and texture on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>Photographs your skin in three dimensions and puts numbers on it: pigment, pores, moisture, redness, fine lines — and hair density on the scalp. The scan sets the plan and measures the result afterwards.</p><p>Used for: the 3D skin &amp; hair analysis, at the start of every course and again afterwards.</p><p class="spec">Skin + scalp · baseline and re-measurement</p>' },
+    m2: { t:'Hydra-dermabrasion', b:'<figure class="ba ba--w"><img src="img/r-ba-hydro.jpg" alt="Before and after a hydrofacial: dull skin on the left, fresh glowing skin on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>Aqua peeling: the device draws dirt and sebum out of the pores while bringing in moisture and antioxidants. Multifunctional, so cleansing, exfoliating and hydrating happen in one pass.</p><p>Used for: the hydrofacial.</p><p class="spec">60 min · no downtime</p>' },
+    m3: { t:'RF microneedling', b:'<figure class="ba ba--w"><img src="img/r-ba-rf.jpg" alt="Before and after RF microneedling: softer jawline on the left, firmer jawline on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>Microneedling with radiofrequency: the needles carry heat into the deeper skin layer, where existing collagen tightens and the skin builds new collagen. Firming.</p><p>Used for: RF microneedling, for example for sagging and deeper scars.</p><p class="spec">Course of 3 · firming</p>' },
+    m4: { t:'Medical laser', b:'<figure class="ba ba--w"><img src="img/r-ba-laser.jpg" alt="Before and after laser hair removal: hairy lower legs on the left, smooth skin on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>Focused light weakens the hair root, so hair grows back gradually thinner. Beforehand we always do a patch test to tune the setting to your skin.</p><p>Used for: laser hair removal.</p><p class="spec">Course of 6–8 · patch test first</p>' },
+    m5: { t:'RF & cavitation', b:'<figure class="ba ba--w"><img src="img/r-ba-cavi.jpg" alt="Before and after RF and cavitation: looser skin on the upper arm on the left, firmer smoother skin on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>A device with multiple heads for a firming treatment. Which head is used when is decided by the scan and the conversation beforehand.</p><p class="spec">Multiple heads · firming</p>' },
+    m6: { t:'Oxygen therapy', b:'<figure class="ba ba--w"><img src="img/r-ba-o2.jpg" alt="Before and after oxygen therapy: tired, red skin on the left, calm luminous skin on the right"><span class="ba-b">Before</span><span class="ba-a">After</span><figcaption>Illustration — results vary from person to person.</figcaption></figure><p>H2-O2 bubble: a calming deep cleanse with oxygen. Nice for skin that needs rest.</p><p class="spec">H2-O2 bubble · calming deep cleanse</p>' },
+  },
 },
 
 ar: {
@@ -1362,6 +1762,7 @@ ar: {
   sigName:'سمر تيناوي', sigSub:'آية للجمال والعناية بالبشرة · روتردام',
   svcTitle:'ثمان طرق لبشرة هادئة.',
   kitTitle:'ست أجهزة ورا العلاجات.',
+  kitMore:'اعرفي أكتر',
   kitLede:'ولا جهاز فيهن بيعمل كل شي. مشان هيك موجودين الستة: السكان بيحدد أي واحد بيشتغل، وبأي ترتيب.',
   k1t:'سكانر ثلاثي الأبعاد بالـ AI',
   k1d:'بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: التصبغ، المسام، الترطيب، الاحمرار، الخطوط الرفيعة — وكثافة الشعر على فروة الراس. هو اللي بيحدد الخطة وبيقيس النتيجة.',
@@ -1378,7 +1779,7 @@ ar: {
   a2t:'الشفايف',
   a2d:'التوريد بيرجّع اللون الطبيعي وبيوضّح الحدود. جلستين، لأن التانية بتصحّح اللي ما ثبّت من الأولى.',
   a3t:'التعافي',
-  a3d:'الإكسوزومات والكولاجين بيدخلوا بالوقت اللي البشرة فيه أكتر شي بتمتصّ: مباشرة بعد النيدلينغ أو التقشير. هيك بتقلّ أيام الاحمرار وبتثبت النتيجة.',
+  a3d:'الإكسوزومات والكولاجين بيدخلوا بالوقت اللي البشرة فيه أكتر شي بتمتصّ: مباشرة بعد النيدلينغ أو التقشير. هيك ممكن تقلّ أيام الاحمرار؛ والنتائج بتختلف من شخص لشخص.',
   a4t:'الآثار والمسام',
   a4d:'النيدلينغ بيعمل قنوات دقيقة بتحفّز الكولاجين عندك. ومع موجات الراديو الحرارة بتنزل أعمق، وهاد اللازم للآثار الغائرة.',
   svcLede:'أي طريق بيناسبك بيحدده السكان ثلاثي الأبعاد لحاله تقريباً. غالباً بتكون خلطة بينهن — وأحياناً الأقل بيكون كافي.',
@@ -1387,10 +1788,10 @@ ar: {
   sAd:'سكان ثلاثي الأبعاد لبشرتك ولفروة راسك كمان، بيقراه الذكاء الاصطناعي: التصبغ، المسام، نسبة الترطيب، الاحمرار والخطوط الرفيعة — وكمان كثافة الشعر ونموّه. بتشوفي شو عم يصير تحت السطح، وبعد الكورس منعيد القياس.',
   sAc1:'سكان وتقرير', sAc2:'بشرة وشعر', sAc3:'بداية كل كورس',
   sLt:'إزالة الشعر <em>بالليزر</em>', sLp:'إزالة الشعر بالليزر',
-  sLd:'تخفيف دائم للشعر بليزر طبي — الوجه، الإبط، الساقين أو منطقة البيكيني. منقيس كثافة الشعر قبل بالسكان ثلاثي الأبعاد، هيك بتشوفي الفرق كل جلسة بالأرقام. ودائماً منبلّش بتجربة على منطقة صغيرة.',
+  sLd:'تخفيف طويل الأمد للشعر بليزر طبي — الوجه، الإبط، الساقين أو منطقة البيكيني. منقيس كثافة الشعر قبل بالسكان ثلاثي الأبعاد، هيك بتشوفي الفرق كل جلسة بالأرقام. ودائماً منبلّش بتجربة على منطقة صغيرة.',
   sLc1:'كورس ٦–٨ جلسات', sLc2:'وجه وجسم', sLc3:'تجربة مسبقة',
   s1t:'هيدرو<em>فيشل</em>', s1p:'هيدروفيشل',
-  s1d:'تقشير مائي بجهاز هيدرا ديرمابريژن متعدد الوظائف: الأوساخ والدهون بتنشفط من المسام، وبنفس الوقت البشرة بتاخد رطوبة ومضادات أكسدة. تنظيف وتقشير وترطيب بجلسة وحدة — النتيجة مباشرة وبدون فترة نقاهة.',
+  s1d:'تقشير مائي بجهاز هيدرا ديرمابريژن متعدد الوظائف: الأوساخ والدهون بتنشفط من المسام، وبنفس الوقت البشرة بتاخد رطوبة ومضادات أكسدة. تنظيف وتقشير وترطيب بجلسة وحدة — وعادة بدون فترة نقاهة.',
   s1c1:'٦٠ دقيقة', s1c2:'بدون نقاهة', s1c3:'تقشير مائي',
   sRt:'ميكرونيدلينغ <em>RF</em>', sRp:'ميكرونيدلينغ بالراديو فريكونسي (RF)',
   sRd:'ميكرونيدلينغ مع موجات راديو: الإبر بتوصّل حرارة للطبقة العميقة. هنيك الكولاجين الموجود بينكمش والبشرة بتصنّع كولاجين جديد. لشدّ خط الفك، الترهل، وآثار حب الشباب العميقة.',
@@ -1399,7 +1800,7 @@ ar: {
   s2d:'قنوات دقيقة بتحفّز الكولاجين الطبيعي عندك، مع سيروم مختار حسب حالتك. لآثار حب الشباب والمسام والخطوط الرفيعة.',
   s2c1:'كورس ٣–٤ جلسات', s2c2:'سيروم مخصص', s2c3:'آثار ومسام',
   s3t:'إكسوزومات و<em>كولاجين</em>', s3p:'إكسوزومات وكولاجين',
-  s3d:'مواد فعّالة بتسرّع تعافي البشرة بعد النيدلينغ أو التقشير. شدّ أكتر، لون أوحد، واحمرار أقل مع الوقت.',
+  s3d:'مواد فعّالة بتنستخدم لدعم تعافي البشرة بعد النيدلينغ أو التقشير. هدفها شدّ أكتر، لون أوحد، واحمرار أقل مع الوقت. النتائج بتختلف من شخص لشخص.',
   s3c1:'بعد الجلسة', s3c2:'شدّ', s3c3:'تعافي',
   s4t:'تفتيح و<em>توحيد اللون</em>', s4p:'تفتيح وتوحيد لون البشرة',
   s4d:'كورس موجّه للتصبغات والبقع والبشرة غير الموحّدة — للوجه أو الرقبة أو الجسم. منبنيه على مراحل، مع عناية بيتية بين الجلسات.',
@@ -1407,9 +1808,9 @@ ar: {
   s5t:'توريد <em>الشفايف</em>', s5p:'توريد الشفايف',
   s5d:'تصبيغ ناعم بيرجّع لون الشفايف الطبيعي ويوضّح الحدود. طبيعي من قريب — بدون حدّ قاسي ولا لون صارخ.',
   s5c1:'جلستين', s5c2:'شبه دائم', s5c3:'لون طبيعي',
-  galTitle:'من جوّا الاستوديو، مو من بنك صور.',
-  g1:'نيدلينغ · سيروم مخصص', g2:'الاستوديو', g3:'توريد الشفايف · النتيجة', g4:'تفتيح البشرة',
-  g5:'التحضير', g6:'كولاجين', g7:'توريد الشفايف · الجلسة', g8:'إكسوزومات', g9:'بعد الجلسة',
+  galTitle:'نظرة على الاستوديو.',
+  g1:'ميكرونيدلينغ', g2:'الاستوديو', g3:'توريد الشفايف', g4:'تفتيح البشرة',
+  g5:'منتجات', g6:'منتجات', g7:'توريد الشفايف', g8:'إكسوزومات', g9:'تحليل البشرة',
   galNote:'مرّري لتتصفحي أفقياً',
   wTitle:'أربع خطوات، بدون مفاجآت.',
   wLede:'من أول رسالة لحدّ العناية بعد الجلسة، بتعرفي بالضبط شو رح يصير، شو التكلفة، وقدّيش بشرتك بدها وقت.',
@@ -1423,12 +1824,13 @@ ar: {
   w4d:'بتروحي عالبيت مع تعليمات واضحة لأول كم يوم، وموعد متابعة بس إذا فعلاً بتحتاجيه.',
   stTitle:'صغير، هادئ، وإلك إنتِ طول ما إنتِ فيه.',
   stBody:'غرفة علاج وحدة، وزبونة وحدة بنفس الوقت. ما في صالة انتظار مليانة، ولا جلسة مستعجلة بعشرين دقيقة. بتدخلي، مناخد وقتنا، وبتطلعي ببشرة فيكي تحافظي عليها لحالك.',
-  f1a:'روتردام', f1b:'الموقع بموعد مسبق', f2b:'متابع على إنستغرام',
+  f1a:'روتردام', f1b:'الموقع بموعد مسبق', f2a:'Instagram',
   f3a:'هولندي · عربي · إنجليزي', f3b:'اللغات', f4a:'واحد لواحد', f4b:'دائماً شخصي',
   bkTitle:'اطلبي موعدك بثلاث خطوات.',
   bkLede:'عبّي شو بدك تعملي وإيمتى بيناسبك. طلبك بيوصل مباشرة لسمر — وهي بتأكدلك التاريخ والوقت النهائي شخصياً.',
   lblTreat:'العلاج', optAsk:'لسا ما قررت — انصحيني',
   lblDate:'التاريخ المفضل', lblPart:'الوقت',
+  lblTime:'الساعة المفضلة (اختياري)',
   partAM:'صباحاً', partPM:'بعد الظهر', partEve:'مساءً',
   lblName:'الاسم', lblContact:'رقم الهاتف أو الإيميل', lblNotes:'شو بدك تعالجي؟ (اختياري)',
   phNotes:'مثلاً: تصبغات على خدودي من سنتين.',
@@ -1480,29 +1882,127 @@ ar: {
   fCopy:'آية للجمال والعناية بالبشرة — سمر تيناوي', fRole:'أخصائية عناية بالبشرة · روتردام',
 
   pages: {
-    analyse: { t:'تحليل ثلاثي الأبعاد للبشرة والشعر', b:'<p>كل موعد بستوديو آية بيبدأ من هون، حتى لو جيتِ أصلاً لشي تاني. السكانر بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: توزيع التصبغ، حجم المسام، نسبة الترطيب، الاحمرار، الخطوط الرفيعة — وعلى فروة الراس كثافة الشعر ونموّه.</p><p>النتيجة مش ورقة بتشوفيها مرة وبترميها. سمر بتقرا معك الأرقام وبتحوّلها لخطة: أي علاج منطقي هلق، وأيا ممكن يستنى، وليش. بعد الكورس، نفس السكان بينعاد، فالتحسّن بتشوفيه بالأرقام مو بس بالإحساس.</p><p>المدة: حوالي 30 دقيقة. بدون تحضير، وبدون نقاهة. مناسب لكل أنواع وألوان البشرة.</p>' },
+    analyse: { t:'تحليل ثلاثي الأبعاد للبشرة والشعر', b:'<p>كل موعد بستوديو آية بيبدأ من هون، حتى لو جيتِ أصلاً لشي تاني. السكانر بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: توزيع التصبغ، حجم المسام، نسبة الترطيب، الاحمرار، الخطوط الرفيعة — وعلى فروة الراس كثافة الشعر ونموّه.</p><p>النتيجة مش ورقة بتشوفيها مرة وبترميها. سمر بتقرا معك الأرقام وبتحوّلها لخطة: أي علاج منطقي هلق، وأيا ممكن يستنى، وليش. بعد الكورس، نفس السكان بينعاد، فالتحسّن بتشوفيه بالأرقام مو بس بالإحساس.</p><p>المدة: حوالي 30 دقيقة. بدون تحضير، وبدون نقاهة. مناسب لكتير من أنواع وألوان البشرة؛ وإذا في استثناء منحكي فيه قبل.</p>' },
     hydrofacial: { t:'هيدروفيشل', b:'<p>الهيدروفيشل تقشير مائي: الجهاز بيشفط الأوساخ والدهون وخلايا الجلد الميتة من المسام، وبنفس الوقت بيدخّل رطوبة ومضادات أكسدة. التنظيف والتقشير والترطيب بيصيروا بجلسة وحدة بدل ثلاث خطوات منفصلة.</p><p>بتلاحظي الفرق فوراً: بشرة أنعش وأصفى بدون احمرار أو تهيّج. بدون نقاهة — كتير ناس بيحجزوها قصداً قبل سهرة أو مناسبة.</p><p>المدة: حوالي 60 دقيقة. مناسبة كجلسة منفردة أو كجزء ثابت من كورس أطول.</p>' },
     microneedling: { t:'ميكرونيدلينغ', b:'<p>الميكرونيدلينغ بيستخدم إبر دقيقة جداً لعمل قنوات مجهرية بالبشرة، وهيك بيحفّز إنتاج الكولاجين الطبيعي عندك وبيخلّي السيرومات الفعّالة توصل لعمق أكتر من مجرد دهنها ع البشرة.</p><p>بيُستخدم خصوصاً للخطوط الرفيعة، عدم انتظام الملمس، توسّع المسام، وآثار خفيفة. لأنو بيشغّل عملية الترميم الطبيعية عندك، النتيجة مش من أول مرة، هي بتتراكم عبر الكورس.</p><p>بشرتك أول كم يوم بعد الجلسة بتكون أحمر وأكتر حساسية — قديش يوم لازم تحسبي له، بتعرفي بالضبط قبل ما تبدي.</p>' },
     rf: { t:'ميكرونيدلينغ RF', b:'<p>ميكرونيدلينغ RF بيجمع بين الإبر الدقيقة وطاقة الراديو فريكونسي اللي بتوصل لطبقات أعمق من الجلد عبر نفس الإبر. الميكرونيدلينغ العادي بيشتغل ع الطبقات العلوية، أما الـRF فبيشدّ النسيج تحتها كمان — هو الفرق يلي حاسّة فيه إنو "مشدود" مو بس "أنعم".</p><p>بيُستخدم للترهّل، آثار الندبات، وبشرة بدها أكتر من تحسّن سطحي. كورس من عدة جلسات، بينبنى بالتنسيق حسب نتيجة التحليل ثلاثي الأبعاد.</p><p>الافتراضي: كورس ٣ جلسات، تأثير شدّ وتمتين. النقاهة أطول شوي من الميكرونيدلينغ العادي.</p>' },
-    exosomen: { t:'إكسوزومات وكولاجين', b:'<p>بعد الميكرونيدلينغ أو أي علاج بيفتح البشرة، فينا ندخّل مواد فعّالة لعمق ما بتوصله أي كريم يومي. الإكسوزومات ومعزّزات الكولاجين بتُستخدم لتسريع الترميم ودعم بناء نسيج جديد أمتن.</p><p>عادة مش علاج لحاله، هو إضافة لكورس الميكرونيدلينغ — والفرق يبين بين "البشرة تفاعلت شوي" ونتيجة ثابتة وواضحة.</p><p>بينضاف دايماً بالتنسيق، ما بيُفرض كخيار ثابت.</p>' },
+    exosomen: { t:'إكسوزومات وكولاجين', b:'<p>بعد الميكرونيدلينغ أو أي علاج بيفتح البشرة، فينا ندخّل مواد فعّالة لعمق ما بتوصله أي كريم يومي. الإكسوزومات ومعزّزات الكولاجين بتُستخدم لدعم الترميم وبناء نسيج جديد أمتن. النتائج بتختلف من شخص لشخص.</p><p>عادة مش علاج لحاله، هو إضافة لكورس الميكرونيدلينغ — والفرق يبين بين "البشرة تفاعلت شوي" ونتيجة ثابتة وواضحة.</p><p>بينضاف دايماً بالتنسيق، ما بيُفرض كخيار ثابت.</p>' },
     huidverbetering: { t:'تفتيح وتحسين البشرة', b:'<p>اسم شامل للعلاجات يلي هدفها بشرة أصفى وموحّدة اللون: ضد التصبغات، البهتان، عدم انتظام الملمس، وآثار الندبات أو الشمس. أي أسلوب بالتحديد — تقشير، LED، سيرومات فعّالة، أو مزيج — بيعتمد كلياً ع نتيجة التحليل ثلاثي الأبعاد.</p><p>مش باقة جاهزة. سمر بتبني الخطة حسب بشرتك، مو حسب شو موجود بالجدول هلق.</p>' },
     laser: { t:'ليزر إزالة الشعر', b:'<p>الليزر الطبي بيضعّف جذر الشعرة بالضوء المركّز، فالشعر بيرجع أرفع تدريجياً وبيقل مع الكورس. بيشتغل مع أغلب أنواع البشرة والشعر؛ قبل أول جلسة دايماً في تجربة على بقعة صغيرة لضبط الإعداد ع بشرتك.</p><p>لأنو الشعر بينمو على مراحل، جلسة وحدة مش كفاية — من هون الكورس. الافتراضي: ٦ إلى ٨ جلسات، بفواصل حسب دورة نمو شعرك.</p><p>مدة الجلسة بتعتمد ع المنطقة. احمرار خفيف بعد الجلسة طبيعي وبيروح خلال ساعات.</p>' },
     lipblush: { t:'توريد الشفايف', b:'<p>توريد الشفايف تصبيغ شبه دائم للشفايف: تصحيح لون طبيعي وتحسين بسيط بالكونتور، مش لون "وشم" فاقع. اختيار الصبغة بيعتمد على نوع بشرتك ولون شفايفك الطبيعي.</p><p>أول كم يوم اللون بيكون أغمق من النتيجة النهائية — بيهدا بعد أسبوعين للدرجة الأخف الثابتة. جلسة تعديل بعد ٤-٦ أسابيع جزء أساسي من الخطة.</p><p>مدة الجلسة الأولى: حوالي ساعتين، وفيها نقاش اللون قبل البدء.</p>' },
+    m1: { t:'سكانر ثلاثي الأبعاد بالـ AI', b:'<figure class="ba ba--sq"><img src="img/r-ai-face2.jpg" alt="رسم توضيحي لتحليل البشرة ثلاثي الأبعاد: البشرة يسار ونقاط القياس للترطيب والعيون واللمعان والملمس يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>بيصوّر بشرتك بثلاثة أبعاد وبيطلّع أرقام: التصبغ، المسام، الترطيب، الاحمرار، الخطوط الرفيعة — وكثافة الشعر على فروة الراس. هو اللي بيحدد الخطة وبيقيس النتيجة.</p><p>بيُستخدم بـ: تحليل البشرة والشعر ثلاثي الأبعاد، بأول كل كورس وبعده.</p><p class="spec">بشرة وفروة راس · قياس قبل وبعد</p>' },
+    m2: { t:'جهاز التقشير المائي', b:'<figure class="ba ba--w"><img src="img/r-ba-hydro.jpg" alt="قبل وبعد الهيدروفيشل: بشرة باهتة يسار وبشرة منتعشة ومشرقة يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>تقشير مائي: الجهاز بيشفط الأوساخ والدهون من المسام وبنفس الوقت بيدخّل رطوبة ومضادات أكسدة. متعدد الوظائف، فالتنظيف والتقشير والترطيب بجلسة وحدة.</p><p>بيُستخدم بـ: الهيدروفيشل.</p><p class="spec">٦٠ دقيقة · بدون نقاهة</p>' },
+    m3: { t:'ميكرونيدلينغ RF', b:'<figure class="ba ba--w"><img src="img/r-ba-rf.jpg" alt="قبل وبعد ميكرونيدلينغ RF: خط فك مترهل يسار وأكثر شداً يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>ميكرونيدلينغ مع موجات راديو: الإبر بتوصّل حرارة للطبقة العميقة، فالكولاجين الموجود بينكمش والبشرة بتصنّع كولاجين جديد. شدّ وتمتين.</p><p>بيُستخدم بـ: ميكرونيدلينغ RF، مثلاً للترهل والآثار الغائرة.</p><p class="spec">كورس ٣ · شدّ وتمتين</p>' },
+    m4: { t:'ليزر طبي', b:'<figure class="ba ba--w"><img src="img/r-ba-laser.jpg" alt="قبل وبعد إزالة الشعر بالليزر: ساقان بشعر يسار وبشرة ناعمة يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>ضوء مركّز بيضعّف جذر الشعرة، فالشعر بيرجع أرفع تدريجياً. قبل البداية دايماً منعمل تجربة على بقعة صغيرة لضبط الإعداد على بشرتك.</p><p>بيُستخدم بـ: إزالة الشعر بالليزر.</p><p class="spec">كورس ٦–٨ · تجربة مسبقة</p>' },
+    m5: { t:'RF وكافيتيشن', b:'<figure class="ba ba--w"><img src="img/r-ba-cavi.jpg" alt="قبل وبعد RF وكافيتيشن: جلد مترهل بأعلى الذراع يسار وجلد أشد وأنعم يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>جهاز برؤوس متعددة لعلاج الشدّ والتمتين. أي رأس بيشتغل ومتى، بيحدده السكان والحديث قبل الجلسة.</p><p class="spec">رؤوس متعددة · شدّ وتمتين</p>' },
+    m6: { t:'علاج الأكسجين', b:'<figure class="ba ba--w"><img src="img/r-ba-o2.jpg" alt="قبل وبعد علاج الأكسجين: بشرة متعبة ومحمرّة يسار وبشرة هادئة ومشرقة يمين"><span class="ba-b">قبل</span><span class="ba-a">بعد</span><figcaption>صورة توضيحية — النتائج بتختلف من شخص لشخص.</figcaption></figure><p>H2-O2 بابل: تنظيف عميق ومهدّئ بالأكسجين. مناسب لبشرة بدها هدوء.</p><p class="spec">H2-O2 بابل · تنظيف عميق ومهدّئ</p>' },
   },
 
   legalPrivacy:'سياسة الخصوصية',
-  legalPrivacyBody:'<p>آية للجمال والعناية بالبشرة (سمر تيناوي)، بروتردام، بتعالج بيانات شخصية بتعبّيها بنفسك بفورم طلب الموعد: الاسم، الإيميل، رقم الهاتف، العلاج المطلوب، وأي ملاحظات. هاد البيانات بتُستخدم بس لتأكيد موعدك وتنظيمه، وللتذكير أو التعديل إذا لزم.</p><p>بياناتك ما بتنباع وما بتنشارك مع طرف تالت لأهداف تسويقية. بتضل محفوظة للمدة اللازمة لإنجاز موعدك وفترة إدارية معقولة بعدها، وبعدين بتنمسح.</p><p>هاد الموقع ما بيحط كوكيز تتبّع وما بيستخدم شبكات إعلانات. حسب قانون حماية البيانات الأوروبي (GDPR)، إلك الحق بالاطّلاع، والتصحيح، والحذف، وتقديم شكوى للجهة المختصة بهولندا. للتواصل بخصوص أي طلب، عبر إنستغرام أو فورم الطلب.</p>',
+  legalPrivacyBody:'<p><strong>مين نحنا.</strong> آية للجمال والعناية بالبشرة (سمر تيناوي)، روتردام، هي المسؤولة عن معالجة بياناتك الشخصية. شوفي كمان <button type="button" class="linkbtn" data-page="biz">بيانات الشركة</button>.</p><p><strong>أي بيانات وليش.</strong> بس اللي لازم لتنظيم موعدك: الاسم، رقم هاتف أو إيميل، العلاج المطلوب، التاريخ وأي ملاحظات. الأساس هو موافقتك (الإشارة بالفورم) وتنفيذ موعدك. ما لازم تشاركي معلومات طبية هون؛ منحكي فيها بجلسة الاستشارة.</p><p><strong>الأطفال.</strong> الفورم لمين عمره ١٦ سنة أو أكتر. إذا كان أصغر، الأهل أو الوصي بيعبّوه وبيعطوا الموافقة.</p><p><strong>المشاركة والحفظ.</strong> بياناتك ما بتنباع وما بتنستخدم للتسويق. ما منشاركها مع حدا، إلا عبر القناة اللي بتختاريها لإرسال طلبك (واتساب أو إنستغرام أو إيميل). بنحفظها للمدة اللازمة لموعدك وفترة إدارية معقولة (<mark class="ph">للتعبئة: مثلاً ١٢ شهر</mark>)، وبعدين بتنحذف.</p><p><strong>الكوكيز والخدمات الخارجية.</strong> ما في كوكيز تتبّع أو إعلانات. الخطوط من Google Fonts بنحمّلها بس بعد موافقتك. شوفي <button type="button" class="linkbtn" data-page="cookies">سياسة الكوكيز</button>.</p><p><strong>الإيميلات.</strong> ما منبعت نشرات أو إعلانات. بتوصلك بس رسائل عن موعدك. إذا يوم قررنا نبعت نشرات، منطلب موافقتك أول، وبكل إيميل في رابط لإلغاء الاشتراك.</p><p><strong>حقوقك.</strong> الاطّلاع، التصحيح، الحذف، التقييد، الاعتراض، النقل، وسحب الموافقة. لطلب الحذف استخدمي <button type="button" class="linkbtn" data-page="delete">طلب حذف البيانات</button>. وفيكي كمان تقدّمي شكوى للجهة الهولندية لحماية البيانات (Autoriteit Persoonsgegevens).</p>',
   legalTerms:'شروط الخدمة',
-  legalTermsBody:'<p>بطلبك موعد عبر هاد الموقع، معناها موافقة على التالي: الطلب مش تأكيد أوتوماتيكي — سمر بتأكد التاريخ والوقت النهائي بنفسها. إذا في ظرف، منرجو الإلغاء أو التأجيل بوقت مبكر مشان الوقت ينعطى لحدا تاني.</p><p>بعض العلاجات مش مناسبة وقت الحمل، أو مع بعض حالات البشرة أو الأدوية — لازم تخبري قبل الموعد مشان القرار الصح ينعمل. نتائج العلاجات بتختلف من شخص لتاني؛ المعلومات بهاد الموقع عامة وما بتعوّض عن الاستشارة الشخصية وقت المعاينة.</p><p>الأسعار والمواعيد المتاحة بتنحكى شخصياً وممكن تتغيّر. هاد الشروط ممكن تتحدّث؛ آخر نسخة دايماً هون.</p>',
+  legalTermsBody:'<p>بطلبك موعد عبر هاد الموقع بتوافقي على هاي الشروط. الطلب مش تأكيد أوتوماتيكي: سمر بتأكد التاريخ والوقت النهائي شخصياً.</p><p><strong>الأسعار.</strong> بتعرفي المبلغ كامل بجلسة الاستشارة، قبل ما يصير أي شي. ما في تكاليف بتنضاف ما انذكرت قبل. <mark class="ph">للتعبئة: الأسعار شاملة الضريبة، وطرق الدفع</mark></p><p><strong>الإلغاء والتأجيل والاسترداد.</strong> شوفي <button type="button" class="linkbtn" data-page="refund">سياسة الإلغاء والاسترداد</button>.</p><p><strong>الصحة.</strong> بعض العلاجات مش مناسبة وقت الحمل، أو مع بعض حالات البشرة أو الأدوية. خبّري دايماً قبل الموعد. النتائج بتختلف من شخص لشخص؛ المعلومات بهاد الموقع عامة وما بتعوّض عن الاستشارة الشخصية.</p><p><strong>العمر.</strong> المواعيد بتنحجز من أشخاص عمرهم ١٦ سنة أو أكتر؛ للأصغر لازم موافقة الأهل أو الوصي.</p><p><strong>التعديلات.</strong> ممكن تنعدّل هاي الشروط؛ آخر نسخة دايماً هون.</p>',
   legalDmca:'حقوق النشر (DMCA)',
   legalDmcaBody:'<p>الصور والنصوص والتصميم بهاد الموقع ملك آية للجمال والعناية بالبشرة أو مستخدمة برخصة قانونية. إذا حاسّة إنو في مادة عم تنتهك حقوقك، بلّغي عبر إنستغرام مع: (١) وصف العمل يلي بتطالبي بحقوقه، (٢) مكان المادة بالضبط بالموقع، (٣) بيانات التواصل معك.</p><p>البلاغات بتنعالج بجدّية وبأسرع وقت. إذا بلاغ انحطّ بشكل غير صحيح، الطرف التاني فيه يقدّم اعتراض.</p>',
   legalContact:'تواصل',
   legalContactBody:'<p>أسرع طريقة تسألي أو تطلبي موعد هي عبر الفورم بآخر الموقع أو رسالة على إنستغرام <span class="ltr">@ayaa_beauty.skin</span>. الهاتف والواتساب جايين قريب — لما الرقم يصير فعّال، بيظهر هون وبالفوتر.</p><p>آية للجمال والعناية بالبشرة بروتردام، بموعد مسبق. الموقع بالضبط بيوصلك مع تأكيد الموعد.</p>',
+  skip:'انتقلي للمحتوى',
+  ariaClose:'إغلاق', ariaQuick:'انتقال سريع لقسم', ariaJump:'انتقال سريع لعلاج',
+  cbTitle:'الكوكيز والخطوط',
+  cbText:'هاد الموقع ما بيستخدم كوكيز تتبّع أو إعلانات. بس بموافقتك منحمّل الخطوط من Google Fonts، وبهاي الحالة بيوصل لـ Google عنوان الـ IP تبعك. اختيارك للغة بينحفظ محلياً بمتصفحك.',
+  cbAccept:'موافقة', cbDecline:'رفض', cbMore:'سياسة الكوكيز', cbSettings:'إعدادات الكوكيز',
+  cons1:'بوافق على <button type="button" class="linkbtn" data-page="privacy">سياسة الخصوصية</button> و<button type="button" class="linkbtn" data-page="terms">الشروط</button>، وبعطي موافقتي إنو آية للجمال والعناية بالبشرة تستخدم بياناتي لتنظيم موعدي.',
+  cons2:'عمري ١٦ سنة أو أكتر، أو إنو أهلي أو وصيّي عم يعبّي الفورم ومعطي موافقته.',
+  consErr:'حطّي إشارة عالخيارين لإرسال الطلب.',
+  noteHint:'شاركي بس اللي لازم. التفاصيل الطبية منحكي فيها بجلسة الاستشارة.',
+  legalRefund:'الإلغاء والاسترداد',
+  legalRefundBody:'<p><strong>الإلغاء أو التأجيل.</strong> بدون رسوم لحد <mark class="ph">٢٤ ساعة</mark> قبل موعدك، عبر إنستغرام <span class="ltr">@ayaa_beauty.skin</span> أو <mark class="ph">إيميل / هاتف</mark>.</p><p><strong>الإلغاء المتأخر أو عدم الحضور.</strong> <mark class="ph">للتعبئة: مثلاً بتروح العربون أو نسبة من السعر</mark>. هاد دايماً بتعرفيه قبل، لما تحجزي موعدك.</p><p><strong>الكورسات.</strong> الجلسات اللي ما انستخدمت من الكورس: <mark class="ph">للتعبئة: استرداد أو رصيد، وخلال قديش مدة</mark>.</p><p><strong>مش راضية؟</strong> تواصلي معنا خلال <mark class="ph">٧ أيام</mark>. سمر بتشوف معك شخصياً حل مناسب.</p><p><strong>الاسترداد.</strong> بيرجع المبلغ بنفس طريقة الدفع خلال <mark class="ph">١٤ يوم</mark>. حقوقك القانونية كمستهلكة بتضل محفوظة دايماً.</p>',
+  legalCookies:'سياسة الكوكيز',
+  legalCookiesBody:'<p>هاد الموقع ما بيستخدم كوكيز تتبّع أو تحليل أو إعلانات.</p><p><strong>دايماً شغّال (وظيفي).</strong> اختيارك للغة (هولندي أو عربي) واختيارك للكوكيز بينحفظوا محلياً بمتصفحك، وما بيطلعوا من جهازك.</p><p><strong>بس بموافقتك.</strong> Google Fonts (خطوط الموقع). إذا وافقتي، متصفحك بيجيب الخطوط من Google وبيوصلها عنوان الـ IP تبعك. إذا رفضتي، الموقع بيعرض خطوط عادية وما بيتحمّل شي من Google.</p><p><strong>مستضاف عنا.</strong> مكتبة الحركة (GSAP) والصور بتتحمّل من الموقع نفسه، بدون أي طرف خارجي.</p><p>فيكي تغيّري اختيارك بأي وقت من زر <em>إعدادات الكوكيز</em> بآخر الصفحة.</p>',
+  legalDelete:'طلب حذف البيانات',
+  legalDeleteBody:'<p>فيكي بأي وقت تطلبي تشوفي بياناتك أو تصحّحيها أو تحذفيها. ما في داعي تعطي سبب.</p><p><strong>كيف؟</strong> ابعتي رسالة عبر إنستغرام <span class="ltr">@ayaa_beauty.skin</span> أو إيميل على <mark class="ph">الإيميل</mark>. اكتبي اسمك، ورقم الهاتف أو الإيميل اللي استخدمتيه بطلبك، وجملة <em>احذفوا بياناتي</em>.</p><p>منتأكد بسرعة إنو الطلب منك، وبنحذف بياناتك وبنأكدلك خلال شهر كحد أقصى. البيانات اللي القانون بيلزمنا نحفظها، مثل الفاتورة، بنحفظها بس للمدة المطلوبة.</p><p>إذا عم تطلبي عن ولد عمره أقل من ١٦، وضّحي إنك الأم أو الأب أو الوصي.</p>',
+  legalBiz:'بيانات الشركة',
+  legalBizBody:'<ul><li>الاسم التجاري: آية للجمال والعناية بالبشرة</li><li>المالكة: سمر تيناوي</li><li>العنوان: <mark class="ph">الشارع، رقم البناية، الرمز البريدي، روتردام</mark></li><li>رقم KvK: <mark class="ph">للتعبئة</mark></li><li>رقم الضريبة (BTW): <mark class="ph">للتعبئة</mark></li><li>الإيميل: <mark class="ph">للتعبئة</mark></li><li>الهاتف / واتساب: <mark class="ph">قريباً</mark></li><li>إنستغرام: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">بموعد مسبق. الموقع بالضبط بيوصلك مع تأكيد الموعد.</p>',
+  legalLic:'التراخيص والمصادر',
+  legalLicBody:'<p><strong>الخطوط.</strong> Instrument Serif وOutfit وAmiri وIBM Plex Sans Arabic تحت رخصة SIL Open Font License، وبتتحمّل من Google Fonts بعد موافقتك.</p><p><strong>الحركة.</strong> GSAP (GreenSock)، مستخدمة تحت رخصة GSAP Standard License.</p><p><strong>الصور.</strong> <mark class="ph">للتعبئة: المصدر أو الرخصة لكل صورة (صورة خاصة أو بنك صور مرخّص)</mark></p>',
   legalInfo:'معلومات',
   legalQuals:'المؤهلات',
   legalQualsBody:'<p>سمر تيناوي أخصائية عناية بالبشرة بروتردام، متدرّبة ومعتمدة من Atres Center. كل علاج بهاد الموقع هي شخصياً يلي بتنفّذه — بدون موظفين، بدون تبديل بالمعالِجين.</p><ul style="margin:14px 0 0;padding-inline-start:20px;line-height:1.9"><li>Mesotherapie Allround — Atres Center، بتاريخ ١١-٠٦-٢٠٢٢</li><li>Mesotherapie Haar — Atres Center، بتاريخ ٠٧-٠٢-٢٠٢٢</li></ul><p style="margin-top:16px">الشهادات معلّقة بالاستوديو وفينا تشوفيها هناك.</p>',
 }};
 
+
+
+/* legal / info pages share the page overlay with the treatment pages */
+[['privacy','legalPrivacy'],['terms','legalTerms'],['dmca','legalDmca'],['contact','legalContact'],['quals','legalQuals'],
+ ['refund','legalRefund'],['cookies','legalCookies'],['biz','legalBiz'],['delete','legalDelete'],['lic','legalLic']]
+  .forEach(([id, k]) => Object.keys(I18N).forEach(l => { I18N[l].pages[id] = { t: I18N[l][k], b: I18N[l][k + 'Body'] }; }));
+
+/* meaningful alt text for every photo (hero is decorative, gallery frames carry a caption) */
+const ALT = {
+  'r-scanner-clean': ['3D-huidscanner met touchscreen en scankop', 'سكانر ثلاثي الأبعاد للبشرة مع شاشة لمس ورأس مسح'],
+  'r-ai-face2':       ['Illustratie van een 3D-huidanalyse: gezicht met meetpunten voor vocht, ogen, glans en textuur', 'رسم توضيحي لتحليل البشرة ثلاثي الأبعاد: وجه مع نقاط قياس للترطيب والعيون واللمعان والملمس'],
+  'r-scanner-real':  ['3D-huidscanner met touchscreen en scankop op een wit meubel', 'سكانر ثلاثي الأبعاد للبشرة مع شاشة لمس على خزانة بيضا'],
+  'r-hydra-clean':   ['Hydra-dermabrasieapparaat met beeldscherm op een trolley', 'جهاز التقشير المائي بشاشة على عربة'],
+  'r-hydro-real':    ['Hydrofacial-apparaat met blauw scherm op een wit meubel', 'جهاز هيدروفيشل بشاشة زرقا على خزانة بيضا'],
+  'r-rf':            ['Vrouw ligt ontspannen tijdens een gezichtsbehandeling met een handstuk', 'سيدة مرتاحة خلال علاج للوجه بجهاز يدوي'],
+  'r-microneedling': ['Microneedling-pen op de wang van een vrouw met handdoek om het haar', 'قلم ميكرونيدلينغ على خد سيدة ملفوف شعرها بمنشفة'],
+  'r-laser-clean':   ['Medisch laserapparaat met touchscreen', 'جهاز ليزر طبي بشاشة لمس'],
+  'r-laser-n':       ['Medisch laserapparaat (Alma) met touchscreen in de studio', 'جهاز ليزر طبي (Alma) بشاشة لمس بالاستوديو'],
+  'r-laser-real':    ['Behandelkamer met lasertoestel en behandelstoel', 'غرفة علاج فيها جهاز ليزر وكرسي علاج'],
+  'r-cavitation-clean': ['RF- en cavitatieapparaat met meerdere koppen', 'جهاز RF وكافيتيشن برؤوس متعددة'],
+  'r-o2machine2-clean': ['Zuurstof- en bubbelapparaat op een trolley', 'جهاز الأكسجين والبابل على عربة'],
+  'r-brighten2':     ['Vrouw met gezichtsmasker en haarband tijdens een huidverbeterende behandeling', 'سيدة بماسك للوجه وبرباط شعر خلال علاج لتحسين البشرة'],
+  'r-lipblush':      ['Close-up van lippen met een natuurlijke roze kleur', 'لقطة قريبة لشفايف بلون وردي طبيعي'],
+  'r-exosome':       ['Druppel serum boven een glazen flesje', 'نقطة سيروم فوق قارورة زجاج'],
+  'r-studio-real':   ['Behandelkamer van de studio met behandelstoel en roze fauteuil', 'غرفة العلاج بالاستوديو مع كرسي العلاج وكنبة وردية'],
+  'r-studio-ai':     ['Opgeruimde behandelkamer met behandelstoel, roze fauteuils en lasertoestel (foto digitaal opgeschoond)', 'غرفة العلاج مرتبة مع كرسي العلاج وكنبات وردية وجهاز ليزر (الصورة منقّحة رقمياً)'],
+  'r-shelf-real':    ['Kast met huidverzorgingsproducten', 'خزانة فيها منتجات العناية بالبشرة'],
+  'r-product':       ['Planken met huidverzorgingsproducten in een gang', 'رفوف منتجات العناية بالبشرة بممر'],
+  'r-consult2':      ['Close-up van het gezicht van een vrouw', 'لقطة قريبة لوجه سيدة']
+};
+const ALT_EN = {
+  'r-scanner-clean':'3D skin scanner with touchscreen and scan head','r-ai-face2':'Illustration of a 3D skin analysis: face with measurement points for moisture, eyes, glow and texture','r-scanner-real':'3D skin scanner with touchscreen and scan head on a white cabinet',
+  'r-hydra-clean':'Hydra-dermabrasion device with screen on a trolley','r-hydro-real':'Hydrofacial device with blue screen on a white cabinet',
+  'r-rf':'Woman relaxing during a facial treatment with a handpiece','r-microneedling':'Microneedling pen on a woman’s cheek, hair wrapped in a towel',
+  'r-laser-clean':'Medical laser device with touchscreen','r-laser-n':'Medical laser device (Alma) with touchscreen in the studio','r-laser-real':'Treatment room with laser device and treatment chair',
+  'r-cavitation-clean':'RF and cavitation device with multiple heads','r-o2machine2-clean':'Oxygen and bubble device on a trolley',
+  'r-brighten2':'Woman with face mask and headband during a skin-improving treatment','r-lipblush':'Close-up of lips with a natural pink colour',
+  'r-exosome':'Drop of serum above a glass bottle','r-studio-real':'Studio treatment room with treatment chair and pink armchair','r-studio-ai':'Tidy treatment room with treatment chair, pink armchairs and laser device (photo digitally retouched)',
+  'r-shelf-real':'Cabinet with skincare products','r-product':'Shelves of skincare products in a hallway','r-consult2':'Close-up of a woman’s face'
+};
+function applyAlt(){
+  const i = lang === 'ar' ? 1 : 0;
+  document.querySelectorAll('img[src^="img/"]').forEach(img => {
+    if (img.closest('.frame')) { img.alt = ''; return; }
+    const m = img.getAttribute('src').match(/img\/([^.]+)\./);
+    if (m && ALT[m[1]]) img.alt = lang === 'en' ? ALT_EN[m[1]] : ALT[m[1]][i];
+  });
+}
+
+/* ═══════════════ cookie choice: Google Fonts only after consent ═══════════════ */
+const FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@200;300;400;500&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&display=swap';
+const cookieBar = document.getElementById('cookieBar');
+function getConsent(){ try { return localStorage.getItem('ayaa-consent'); } catch(e){ return null; } }
+function applyFonts(on){
+  const el = document.getElementById('gfonts');
+  if (on && !el){
+    const l = document.createElement('link');
+    l.id = 'gfonts'; l.rel = 'stylesheet'; l.href = FONTS_HREF;
+    document.head.appendChild(l);
+  } else if (!on && el){ el.remove(); }
+}
+function setConsent(v){
+  try { localStorage.setItem('ayaa-consent', v); } catch(e){}
+  applyFonts(v === 'yes');
+  cookieBar.hidden = true;
+}
+document.getElementById('cbAccept').addEventListener('click', () => setConsent('yes'));
+document.getElementById('cbDecline').addEventListener('click', () => setConsent('no'));
+document.getElementById('cookieSettings').addEventListener('click', () => {
+  cookieBar.hidden = false;
+  document.getElementById('cbAccept').focus();
+});
+{ const c = getConsent(); applyFonts(c === 'yes'); cookieBar.hidden = c !== null; }
 
 const htmlEl = document.documentElement;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1574,7 +2074,12 @@ function setLang(next, initial){
     body.style.height = body.firstElementChild.offsetHeight + 'px';
   });
 
+  applyAlt();
+  document.querySelectorAll('.site-menu-close,.page-view-close').forEach(b => b.setAttribute('aria-label', d.ariaClose));
+  document.getElementById('quicknav').setAttribute('aria-label', d.ariaQuick);
+  document.querySelector('.marquee').setAttribute('aria-label', d.ariaJump);
   buildMenuTreatList();
+  buildSvcSeg();
   if (document.getElementById('pageView').dataset.page) openPage(document.getElementById('pageView').dataset.page, true);
 
   try { localStorage.setItem('ayaa-lang', next); } catch(e){}
@@ -1621,6 +2126,7 @@ function renderSummary(){
   setRow('sumTreat',   treatLabel());
   setRow('sumDate',    val('bkDate') ? dateLabel() : '');
   setRow('sumPart',    partLabel());
+  setRow('sumTime',    val('bkTime'));
   setRow('sumName',    val('bkName'));
   setRow('sumContact', val('bkContact'));
 }
@@ -1632,6 +2138,7 @@ function buildMessage(){
     d.lblTreat   + ': ' + treatLabel(),
     d.lblDate    + ': ' + dateLabel(),
     d.lblPart    + ': ' + partLabel(),
+    ...(val('bkTime') ? [d.lblTime + ': ' + val('bkTime')] : []),
     d.lblName    + ': ' + val('bkName'),
     d.lblContact + ': ' + val('bkContact')
   ];
@@ -1640,7 +2147,9 @@ function buildMessage(){
 }
 
 form.addEventListener('input',  () => { renderSummary(); errEl.dataset.show = '0'; });
-form.addEventListener('change', renderSummary);
+form.addEventListener('change', () => { renderSummary();
+  if (document.getElementById('bkC1').checked && document.getElementById('bkC2').checked){
+    document.getElementById('fConsent').dataset.invalid = '0'; document.getElementById('bkConsErr').dataset.show = '0'; } });
 
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -1651,6 +2160,14 @@ form.addEventListener('submit', e => {
   if (!name || !contact){
     errEl.dataset.show = '1';
     document.getElementById(name ? 'bkContact' : 'bkName').focus();
+    return;
+  }
+
+  const c1 = document.getElementById('bkC1').checked, c2 = document.getElementById('bkC2').checked;
+  document.getElementById('fConsent').dataset.invalid = (c1 && c2) ? '0' : '1';
+  document.getElementById('bkConsErr').dataset.show = (c1 && c2) ? '0' : '1';
+  if (!c1 || !c2){
+    document.getElementById(c1 ? 'bkC2' : 'bkC1').focus();
     return;
   }
 
@@ -1821,7 +2338,8 @@ function updateChosen(){
 function validateLive(){
   const ok = liveSlot !== null
     && document.getElementById('lvName').value.trim().length > 0
-    && /^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(document.getElementById('lvEmail').value.trim());
+    && /^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(document.getElementById('lvEmail').value.trim())
+    && document.getElementById('lvC1').checked && document.getElementById('lvC2').checked;
   document.getElementById('lvSubmit').disabled = !ok || liveBusy;
   return ok;
 }
@@ -1847,6 +2365,7 @@ async function submitLive(ev){
     email: document.getElementById('lvEmail').value.trim(),
     phone: document.getElementById('lvPhone').value.trim(),
     notes: document.getElementById('lvNotes').value.trim(),
+    consent: true,
     website: document.getElementById('lvHp').value,
     lang
   });
@@ -1928,6 +2447,7 @@ async function initLive(){
   document.getElementById('liveForm').addEventListener('submit', submitLive);
   ['lvName', 'lvEmail'].forEach(id =>
     document.getElementById(id).addEventListener('input', () => { liveError(''); validateLive(); }));
+  ['lvC1', 'lvC2'].forEach(id => document.getElementById(id).addEventListener('change', validateLive));
   document.getElementById('okCancel').addEventListener('click', cancelLive);
 
   refreshLive();
@@ -1971,12 +2491,14 @@ document.addEventListener('click', e => {
 /* ═══════════════ FAQ accordion ═══════════════ */
 document.querySelectorAll('#faqList .qa').forEach(qa => {
   const btn = qa.querySelector('button'), body = qa.querySelector('.qa-body');
+  btn.setAttribute('aria-expanded', 'false');
   btn.addEventListener('click', () => {
     const open = qa.dataset.open === '1';
     document.querySelectorAll('#faqList .qa[data-open="1"]').forEach(o => {
-      if (o !== qa){ o.dataset.open = '0'; o.querySelector('.qa-body').style.height = '0px'; }
+      if (o !== qa){ o.dataset.open = '0'; o.querySelector('.qa-body').style.height = '0px'; o.querySelector('button').setAttribute('aria-expanded', 'false'); }
     });
     qa.dataset.open = open ? '0' : '1';
+    btn.setAttribute('aria-expanded', String(!open));
     body.style.transition = 'height .55s cubic-bezier(.2,.8,.2,1)';
     body.style.height = open ? '0px' : body.firstElementChild.offsetHeight + 'px';
     if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 620);
@@ -1986,43 +2508,41 @@ document.querySelectorAll('#faqList .qa').forEach(qa => {
 /* ═══════════════ brand menu ═══════════════ */
 const siteMenu = document.getElementById('siteMenu');
 const brandBtn = document.getElementById('brandBtn');
+let menuReturn = null;
 function openMenu(){
+  menuReturn = document.activeElement;
   siteMenu.hidden = false;
   requestAnimationFrame(() => siteMenu.classList.add('is-open'));
   brandBtn.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('siteMenuClose').focus(), 60);
 }
 function closeMenu(){
   siteMenu.classList.remove('is-open');
   brandBtn.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
+  if (!pageView || pageView.hidden) document.body.style.overflow = '';
   setTimeout(() => { siteMenu.hidden = true; }, 500);
+  if (menuReturn && menuReturn.focus && !pageView.dataset.page){ try { menuReturn.focus({ preventScroll:true }); } catch(e){} }
 }
 brandBtn.addEventListener('click', () => siteMenu.classList.contains('is-open') ? closeMenu() : openMenu());
 document.getElementById('siteMenuClose').addEventListener('click', closeMenu);
 siteMenu.addEventListener('click', e => { if (e.target === siteMenu) closeMenu(); });
 document.querySelectorAll('.site-menu-links a').forEach(a => a.addEventListener('click', closeMenu));
 
-/* treatments live in D().pages; legal/contact/quals sit beside it as legalX / legalXBody */
-const LEGAL_PAGES = { quals:'legalQuals', contact:'legalContact', terms:'legalTerms', privacy:'legalPrivacy', dmca:'legalDmca' };
-function getPage(id){
-  const d = D();
-  if (d.pages && Object.prototype.hasOwnProperty.call(d.pages, id)) return d.pages[id];
-  const k = Object.prototype.hasOwnProperty.call(LEGAL_PAGES, id) && LEGAL_PAGES[id];
-  return k && d[k] ? { t: d[k], b: d[k + 'Body'] } : null;
-}
 function buildMenuTreatList(){
   document.querySelectorAll('#menuTreatList button').forEach(b => {
-    const p = getPage(b.dataset.page);
+    const p = D().pages && D().pages[b.dataset.page];
     if (p) b.textContent = p.t;
   });
 }
 
 /* ═══════════════ content page overlay (treatments + legal/contact/quals) ═══════════════ */
 const pageView = document.getElementById('pageView');
+let pageReturn = null;
 function openPage(id, fromBoot){
-  const p = getPage(id);
+  const p = D().pages && D().pages[id];
   if (!p) return;
+  if (pageView.hidden) pageReturn = document.activeElement;
   document.getElementById('pageViewTitle').textContent = p.t;
   document.getElementById('pageViewBody').innerHTML = p.b;
   pageView.dataset.page = id;
@@ -2031,12 +2551,14 @@ function openPage(id, fromBoot){
   document.body.style.overflow = 'hidden';
   if (!fromBoot) history.pushState({ page:id }, '', '#p-' + id);
   closeMenu();
+  if (!fromBoot) setTimeout(() => document.getElementById('pageViewClose').focus(), 80);
 }
 function closePage(skipHistory){
   pageView.classList.remove('is-open');
   document.body.style.overflow = '';
   delete pageView.dataset.page;
   setTimeout(() => { pageView.hidden = true; }, 400);
+  if (pageReturn && pageReturn.focus){ try { pageReturn.focus({ preventScroll:true }); } catch(e){} }
   if (!skipHistory && location.hash.indexOf('#p-') === 0) history.pushState({}, '', location.pathname + location.search);
 }
 document.addEventListener('click', e => {
@@ -2045,6 +2567,19 @@ document.addEventListener('click', e => {
 });
 document.getElementById('pageViewClose').addEventListener('click', () => closePage());
 pageView.addEventListener('click', e => { if (e.target === pageView) closePage(); });
+/* keep Tab inside whichever dialog is open */
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const box = !pageView.hidden ? pageView.querySelector('.page-view-panel')
+            : siteMenu.classList.contains('is-open') ? document.getElementById('siteMenuPanel') : null;
+  if (!box) return;
+  const f = [...box.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')]
+    .filter(el => el.offsetParent !== null || el === document.activeElement);
+  if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && (document.activeElement === first || !box.contains(document.activeElement))){ e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && (document.activeElement === last || !box.contains(document.activeElement))){ e.preventDefault(); first.focus(); }
+});
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
   if (!pageView.hidden) closePage();
@@ -2059,10 +2594,88 @@ window.addEventListener('popstate', () => {
   if (m) pageView.dataset.page = m[1];
 }
 
+
+/* machine cards: keyboard open + CTA closes the popup */
+document.querySelectorAll('#apparatuur .cell').forEach(c => c.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openPage(c.dataset.page); }
+}));
+document.querySelector('.page-view-cta').addEventListener('click', () => closePage());
+
+/* ═══════════════ treatment section: focus index + segmented progress ═══════════════ */
+const SVC_SLUGS = ['analyse','hydrofacial','microneedling','rf','exosomen','huidverbetering','laser','lipblush'];
+let svcActive = -1;
+const svcCards = () => [...document.querySelectorAll('#svcList .card')];
+svcCards().forEach((c, i) => c.insertAdjacentHTML('beforeend',
+  '<span class="card-n" aria-hidden="true">' + String(i + 1).padStart(2, '0') + '</span>'));
+function svcLabel(){
+  const el = document.getElementById('svcNow'); if (!el) return;
+  const i = Math.max(svcActive, 0), d = D(), p = d.pages && d.pages[SVC_SLUGS[i]];
+  el.textContent = (p ? p.t : '') + (CARD_META[i] && d[CARD_META[i]] ? ' \u00b7 ' + d[CARD_META[i]] : '');
+}
+function buildSvcSeg(){
+  document.querySelectorAll('#svcSeg button').forEach((b, i) => {
+    const p = D().pages && D().pages[SVC_SLUGS[i]];
+    if (p) b.setAttribute('aria-label', p.t);
+  });
+  svcLabel();
+}
+function resetSvc(){
+  svcActive = -1;
+  svcCards().forEach(c => c.classList.remove('is-active'));
+  document.querySelectorAll('#svcSeg button').forEach(b => { b.classList.remove('is-active', 'is-done'); b.setAttribute('aria-current', 'false'); });
+  document.getElementById('svcIdx').textContent = '01';
+  svcLabel();
+}
+function setSvcActive(i){
+  if (i < 0 || i === svcActive) return;
+  const dir = i > svcActive ? 1 : -1, first = svcActive < 0;
+  svcActive = i;
+  svcCards().forEach((c, k) => c.classList.toggle('is-active', k === i));
+  document.querySelectorAll('#svcSeg button').forEach((b, k) => {
+    b.classList.toggle('is-active', k === i);
+    b.classList.toggle('is-done', k < i);
+    b.setAttribute('aria-current', k === i ? 'true' : 'false');
+  });
+  const n = document.getElementById('svcIdx');
+  n.textContent = String(i + 1).padStart(2, '0');
+  if (!first && !reduce && window.gsap)
+    gsap.fromTo(n, { yPercent: dir * 70, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .55, ease: 'expo.out', overwrite: true });
+  svcLabel();
+}
+if ('IntersectionObserver' in window){
+  /* the card crossing a thin band just below the middle of the screen is "in focus" */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const i = svcCards().indexOf(e.target);
+    if (e.isIntersecting) setSvcActive(i);
+    else if (i === 0 && e.rootBounds && e.boundingClientRect.top >= e.rootBounds.bottom) resetSvc();
+  }), { rootMargin: '-55% 0px -43% 0px', threshold: 0 });
+  svcCards().forEach(c => io.observe(c));
+}
+document.getElementById('svcSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const c = svcCards()[+b.dataset.i];
+  if (c) c.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+});
+
+/* ═══════════════ hover details: button fill direction + card spotlight ═══════════════ */
+if (matchMedia('(hover:hover)').matches){
+  const edge = (el, e) => { const r = el.getBoundingClientRect();
+    el.style.setProperty('--hx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+    el.style.setProperty('--hy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%'); };
+  document.addEventListener('pointerover', e => { const b = e.target.closest('.btn'); if (b && !b.contains(e.relatedTarget)) edge(b, e); });
+  document.addEventListener('pointerout',  e => { const b = e.target.closest('.btn'); if (b && !b.contains(e.relatedTarget)) edge(b, e); });
+  document.querySelectorAll('#apparatuur .cell').forEach(c => c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }));
+}
+
 /* ═══════════════ language boot ═══════════════ */
 let saved = null;
 try { saved = localStorage.getItem('ayaa-lang'); } catch(e){}
-setLang(saved || ((navigator.language || '').toLowerCase().indexOf('ar') === 0 ? 'ar' : 'nl'), true);
+const nav0 = (navigator.language || '').toLowerCase();
+setLang((saved && I18N[saved]) ? saved : (nav0.indexOf('ar') === 0 ? 'ar' : nav0.indexOf('nl') === 0 ? 'nl' : 'en'), true);
 initLive();
 
 /* ═══════════════ motion ═══════════════ */
@@ -2084,11 +2697,20 @@ if (!reduce && window.gsap){
       onToggle:self => document.getElementById('nav').classList.toggle('on-dark', self.isActive) }));
 
   /* quick-jump side nav: highlight the dot for whichever section is in view */
+  let qnFirst = true; setTimeout(() => { qnFirst = false; }, 600);   /* no flash for the section already in view on load */
   document.querySelectorAll('.quicknav a').forEach(dot => {
     const sec = document.getElementById(dot.dataset.sec);
     if (!sec) return;
     ScrollTrigger.create({ trigger:sec, start:'top 55%', end:'bottom 55%',
-      onToggle:self => dot.classList.toggle('is-active', self.isActive) });
+      onToggle:self => {
+        dot.classList.toggle('is-active', self.isActive);
+        /* entering a section: show its name next to the dot for ~2 s so you can see where you are */
+        if (self.isActive && !qnFirst){
+          clearTimeout(dot._qnT);
+          dot.classList.add('qn-flash');
+          dot._qnT = setTimeout(() => dot.classList.remove('qn-flash'), 2000);
+        } else if (!self.isActive){ clearTimeout(dot._qnT); dot.classList.remove('qn-flash'); }
+      } });
   });
 
   const mqEl = document.getElementById('mq');
@@ -2102,6 +2724,13 @@ if (!reduce && window.gsap){
   marqueeEl.addEventListener('pointerenter', () => loop.pause());
   marqueeEl.addEventListener('pointerleave', () => loop.play());
   marqueeEl.addEventListener('touchstart', () => loop.pause(), { passive:true });
+  marqueeEl.addEventListener('focusin', () => loop.pause());
+  marqueeEl.addEventListener('focusout', () => loop.play());
+
+  /* quick-jump side nav: show every label for ~2 s on arrival, then fold them away */
+  { const qn = document.getElementById('quicknav');
+    setTimeout(() => qn.classList.add('qn-intro'), 900);
+    setTimeout(() => qn.classList.remove('qn-intro'), 900 + 2400); }
 
   /* machines bento: wipe-reveal entrance + continuous image parallax + pointer tilt */
   gsap.utils.toArray('#apparatuur .cell').forEach((cell, i) => {
@@ -2161,16 +2790,42 @@ if (!reduce && window.gsap){
     });
   }
 
-  document.querySelectorAll('#svcList .card').forEach((card, i) => {
-    gsap.fromTo(card, { scale:.88, opacity:0, y:60 },
-      { scale:1, opacity:1, y:0, ease:'none',
-        scrollTrigger:{ trigger:card, start:'top 92%', end:'top 46%', scrub:.6 } });
-    gsap.to(card, { opacity:.34, scale:.95, ease:'none',
-      scrollTrigger:{ trigger:card, start:'bottom 46%', end:'bottom 6%', scrub:.6 } });
-    ScrollTrigger.create({ trigger:card, start:'top 60%', end:'bottom 60%',
-      onToggle:self => { if (self.isActive)
-        document.getElementById('svcNow').textContent = CARD_META[i] ? D()[CARD_META[i]] : ''; } });
-  });
+  /* treatment cards: every motion is a pure function of scroll position (scrub), so scrolling
+     down and scrolling up are the same film played forwards and backwards. Nothing is timed,
+     nothing replays, nothing fades or shrinks when a card re-enters from above. */
+  function svcCardsScrub(d){
+    const rtl = document.documentElement.dir === 'rtl';
+    svcCards().forEach((card, i) => {
+      const media = card.querySelector('.card-media'), img = card.querySelector('.card-media img');
+      const txt = card.querySelectorAll('.card-body > h3, .card-body > p, .card-meta > *');
+      const num = card.querySelector('.card-n');
+      if (!media.querySelector('.card-scan'))
+        media.insertAdjacentHTML('beforeend',
+          '<span class="card-scan" aria-hidden="true"><i class="cs-veil"></i><i class="cs-line"></i></span>');
+      const veil = media.querySelector('.cs-veil'), line = media.querySelector('.cs-line');
+      const side = (i % 2 ? -1 : 1) * (rtl ? -1 : 1);     /* cards swing in alternately from each side */
+      /* scrub:.9 = the film trails your scroll a little and glides to a stop: smooth, never jerky */
+      const tl = gsap.timeline({ defaults:{ ease:'none' },
+        scrollTrigger:{ trigger:card, start:'top bottom', end:'bottom top', scrub:.9 } });
+      tl.set(card, { transformOrigin:'50% 100%' })
+        .fromTo(card, { y:d.y, x:side * d.x, rotateX:d.rx, rotateZ:side * d.rz, scale:d.s },
+                      { y:0, x:0, rotateX:0, rotateZ:0, scale:1, ease:'expo.out', duration:.4 }, 0)
+        .fromTo(card, { opacity:0 }, { opacity:1, duration:.12 }, 0)
+        .fromTo(img, { scale:1.5 }, { scale:1, ease:'power3.out', duration:.46 }, 0)
+        .fromTo(txt, { y:60, opacity:0 }, { y:0, opacity:1, ease:'power3.out', duration:.18, stagger:.022 }, .12)
+        .fromTo(num, { scale:2.8, opacity:0, transformOrigin: rtl ? '0% 0%' : '100% 0%' },
+                     { scale:1, opacity:1, ease:'back.out(1.7)', duration:.3 }, .14)
+        /* the glow: a band of warm light glides down; the blush haze lifts behind it */
+        .fromTo(line, { top:'-34%', opacity:1 }, { top:'100%', ease:'sine.inOut', duration:.28 }, .04)
+        .to(line, { opacity:0, duration:.06 }, .27)
+        .fromTo(veil, { clipPath:'inset(0% 0 0 0)' }, { clipPath:'inset(100% 0 0 0)', ease:'sine.inOut', duration:.28 }, .04)
+        .to({}, { duration:1 }, 0);       /* fixes the timeline at exactly 1: the rest of the pass is a calm hold */
+      gsap.fromTo(img, { yPercent:-d.drift }, { yPercent:d.drift, ease:'none',
+        scrollTrigger:{ trigger:card, start:'top bottom', end:'bottom top', scrub:.9 } });
+    });
+  }
+  mm.add('(min-width: 941px)', () => { svcCardsScrub({ x:90, y:170, rx:16, rz:2.2, s:.84, drift:7 }); });
+  mm.add('(max-width: 940px)', () => { svcCardsScrub({ x:0, y:110, rx:10, rz:0, s:.9, drift:5 }); });
 
   mm.add('(min-width: 861px)', () => {
     const steps = gsap.utils.toArray('#stack .step');
@@ -2274,7 +2929,7 @@ if (!reduce && window.gsap){
 }
 .note-btn:hover{background:#fff;border-color:var(--ink);translate:0 -2px}
 .note-btn:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
-.note-btn i{width:7px;height:7px;border-radius:50%;background:var(--clay);flex:none}
+.note-btn i{width:7px;height:7px;border-radius:50%;background:var(--clay-deep);flex:none}
 @media(max-width:520px){.note-btn{font-size:12.5px;padding-inline:15px}}
 @media(prefers-reduced-motion:reduce){.note-btn{transition:none}}
 </style>
@@ -2285,7 +2940,7 @@ if (!reduce && window.gsap){
 
 <script>
 (async () => {
-  const LABEL = { nl: 'Opmerking plaatsen', ar: 'اكتبي ملاحظة' };
+  const LABEL = { nl: 'Opmerking plaatsen', en: 'Leave a note', ar: 'اكتبي ملاحظة' };
   const btn = document.getElementById('noteBtn');
   const lbl = document.getElementById('noteLbl');
 
@@ -2322,3 +2977,5 @@ if (!reduce && window.gsap){
 })();
 </script>
 
+
+</body></html>
