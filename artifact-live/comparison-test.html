@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Before & After Comparison - Aya Beauty & Skin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf9f5;
+      color: #141413;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-family: Georgia, serif;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #6b5b50;
+      margin-bottom: 40px;
+    }
+
+    .comparison-slider {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      user-select: none;
+      touch-action: none;
+      border-radius: 4px;
+    }
+
+    .comparison-slider img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .comparison-slider-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .comparison-slider-before img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .comparison-slider-handle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: col-resize;
+      transform: translateX(-50%);
+      z-index: 10;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .comparison-slider-handle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .comparison-slider-handle::after {
+      content: '‹    ›';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: #a87856;
+      font-weight: bold;
+      letter-spacing: -4px;
+      z-index: 11;
+    }
+
+    .comparison-slider-label {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 5;
+      pointer-events: none;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .comparison-slider-label-before {
+      top: 16px;
+      left: 16px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .comparison-slider-label-after {
+      top: 16px;
+      right: 16px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .treatments {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 48px;
+      margin-top: 60px;
+    }
+
+    .treatment {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .treatment h2 {
+      font-size: 20px;
+      font-family: Georgia, serif;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    .treatment p {
+      font-size: 14px;
+      color: #6b5b50;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Before & After Results</h1>
+    <p class="subtitle">Drag the slider to see the transformation</p>
+
+    <div class="treatments">
+      <!-- HydraFacial -->
+      <div class="treatment">
+        <h2>HydraFacial</h2>
+        <p>Deep hydration and radiance boost</p>
+        <div class="comparison-slider" data-comparison>
+          <img src="/img/r-ba-hydro.png" alt="After HydraFacial">
+          <div class="comparison-slider-before">
+            <img src="/img/r-ba-hydro-before.png" alt="Before HydraFacial">
+          </div>
+          <div class="comparison-slider-label comparison-slider-label-before">Before</div>
+          <div class="comparison-slider-label comparison-slider-label-after">After</div>
+          <div class="comparison-slider-handle"></div>
+        </div>
+      </div>
+
+      <!-- RadioFrequency -->
+      <div class="treatment">
+        <h2>RF Microneedling</h2>
+        <p>Lifting and tightening effect</p>
+        <div class="comparison-slider" data-comparison>
+          <img src="/img/r-ba-rf.png" alt="After RF Microneedling">
+          <div class="comparison-slider-before">
+            <img src="/img/r-ba-rf-before.png" alt="Before RF Microneedling">
+          </div>
+          <div class="comparison-slider-label comparison-slider-label-before">Before</div>
+          <div class="comparison-slider-label comparison-slider-label-after">After</div>
+          <div class="comparison-slider-handle"></div>
+        </div>
+      </div>
+
+      <!-- Laser -->
+      <div class="treatment">
+        <h2>Laser Treatment</h2>
+        <p>Spot removal and skin clarity</p>
+        <div class="comparison-slider" data-comparison>
+          <img src="/img/r-ba-laser.png" alt="After Laser">
+          <div class="comparison-slider-before">
+            <img src="/img/r-ba-laser-before.png" alt="Before Laser">
+          </div>
+          <div class="comparison-slider-label comparison-slider-label-before">Before</div>
+          <div class="comparison-slider-label comparison-slider-label-after">After</div>
+          <div class="comparison-slider-handle"></div>
+        </div>
+      </div>
+
+      <!-- Cavitation -->
+      <div class="treatment">
+        <h2>Ultrasonic Cavitation</h2>
+        <p>Cellulite reduction and smoothing</p>
+        <div class="comparison-slider" data-comparison>
+          <img src="/img/r-ba-cavi.png" alt="After Cavitation">
+          <div class="comparison-slider-before">
+            <img src="/img/r-ba-cavi-before.png" alt="Before Cavitation">
+          </div>
+          <div class="comparison-slider-label comparison-slider-label-before">Before</div>
+          <div class="comparison-slider-label comparison-slider-label-after">After</div>
+          <div class="comparison-slider-handle"></div>
+        </div>
+      </div>
+
+      <!-- Oxygen -->
+      <div class="treatment">
+        <h2>Oxygen Infusion</h2>
+        <p>Radiance and glow enhancement</p>
+        <div class="comparison-slider" data-comparison>
+          <img src="/img/r-ba-o2.png" alt="After Oxygen Infusion">
+          <div class="comparison-slider-before">
+            <img src="/img/r-ba-o2-before.png" alt="Before Oxygen Infusion">
+          </div>
+          <div class="comparison-slider-label comparison-slider-label-before">Before</div>
+          <div class="comparison-slider-label comparison-slider-label-after">After</div>
+          <div class="comparison-slider-handle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function initComparisonSliders() {
+      const sliders = document.querySelectorAll('[data-comparison]');
+
+      sliders.forEach(slider => {
+        const before = slider.querySelector('.comparison-slider-before');
+        const handle = slider.querySelector('.comparison-slider-handle');
+        let isActive = false;
+
+        function updateSlider(e) {
+          if (!isActive) return;
+
+          const rect = slider.getBoundingClientRect();
+          let x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+
+          x = x - rect.left;
+          x = Math.max(0, Math.min(x, rect.width));
+
+          const percentage = (x / rect.width) * 100;
+          before.style.width = percentage + '%';
+          handle.style.left = percentage + '%';
+        }
+
+        function startDrag(e) {
+          isActive = true;
+          e.preventDefault();
+          updateSlider(e);
+        }
+
+        function stopDrag() {
+          isActive = false;
+        }
+
+        handle.addEventListener('mousedown', startDrag);
+        document.addEventListener('mousemove', updateSlider);
+        document.addEventListener('mouseup', stopDrag);
+
+        handle.addEventListener('touchstart', startDrag, { passive: false });
+        document.addEventListener('touchmove', updateSlider, { passive: false });
+        document.addEventListener('touchend', stopDrag);
+
+        slider.addEventListener('click', (e) => {
+          const rect = slider.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          x = Math.max(0, Math.min(x, rect.width));
+          const percentage = (x / rect.width) * 100;
+          before.style.width = percentage + '%';
+          handle.style.left = percentage + '%';
+        });
+
+        before.style.width = '50%';
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initComparisonSliders);
+  </script>
+</body>
+</html>
