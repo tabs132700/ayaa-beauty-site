@@ -132,11 +132,10 @@
     ['#apparatuur', 'corner', 'd-corner-tr'], ['#apparatuur', 'corner', 'd-corner-bl'],
     ['#werkwijze', 'sprig', 'd-side-l'], ['#werkwijze', 'butterfly', 'd-fly d-fly-3'],
     ['#studio', 'sprig', 'd-side-r'], ['#studio', 'branch', 'd-side-l2'],
-    ['#afspraak', 'corner', 'd-corner-tr'], ['#afspraak', 'sprig', 'd-side-l'],
     ['#vragen', 'sprig', 'd-side-l'], ['#vragen', 'corner', 'd-corner-tr'],
     ['.cta.sec', 'branch', 'd-cta-l'], ['.cta.sec', 'branch', 'd-cta-r'], ['.cta.sec', 'butterfly', 'd-fly d-fly-1'],
     ['#apparatuur', 'divider', 'd-div'], ['#werkwijze', 'divider', 'd-div'], ['#studio', 'divider', 'd-div'],
-    ['#afspraak', 'divider', 'd-div'], ['#vragen', 'divider', 'd-div'],
+    ['#vragen', 'divider', 'd-div'],
     ['footer', 'divider', 'd-foot'],
     
     ['section.sec.shell', 'icon:brush', 'd-icon', 'left:2%;top:14%;--r:-24deg'],
@@ -144,7 +143,7 @@
     ['#apparatuur', 'icon:polish', 'd-icon', 'left:3%;top:10%;--r:-10deg'], ['#apparatuur', 'icon:perfume', 'd-icon', 'right:5%;bottom:12%;--r:9deg'],
     ['#werkwijze', 'icon:lipstick', 'd-icon', 'right:4%;top:14%;--r:12deg'],
     ['#studio', 'icon:mirror', 'd-icon', 'left:4%;top:12%;--r:-10deg'], ['#studio', 'icon:dropper', 'd-icon', 'right:3%;bottom:10%;--r:8deg'],
-    ['#afspraak', 'icon:brush', 'd-icon', 'right:3%;bottom:12%;--r:-18deg'],
+    
     ['#vragen', 'icon:perfume', 'd-icon', 'right:4%;top:12%;--r:10deg'],
     ['.cta.sec', 'icon:lipstick', 'd-icon', 'left:24%;bottom:16%;--r:-12deg'], ['.cta.sec', 'icon:polish', 'd-icon', 'right:24%;top:14%;--r:12deg'],
     ['.page-view-panel', 'icon:dropper', 'd-icon d-icon-sm', 'right:70px;top:14px;--r:8deg'],
