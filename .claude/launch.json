@@ -4,8 +4,9 @@
     {
       "name": "ayaa-static",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "5173"],
-      "port": 5173
+      "runtimeArgs": ["-c", "import os,functools,http.server as h; h.ThreadingHTTPServer(('',int(os.environ.get('PORT','5173'))),functools.partial(h.SimpleHTTPRequestHandler,directory='deploy')).serve_forever()"],
+      "port": 5173,
+      "autoPort": true
     }
   ]
 }

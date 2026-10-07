@@ -593,6 +593,392 @@ html[lang="ar"] .msgbox span{letter-spacing:0;text-transform:none;font-size:12.5
 .msgbox textarea:focus{outline:0;border-color:var(--clay-soft)}
 @media(max-width:640px){.msgbox textarea{min-height:84px}}
 
+
+/* ─────────────── REQUEST A VISIT ─────────────── */
+.rq{max-width:760px}
+.rq-kicker{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--clay-deep);margin:0 0 18px!important}
+html[lang="ar"] .rq-kicker{letter-spacing:0;text-transform:none;font-size:13px}
+.rq-steps{list-style:none;display:flex;gap:8px;margin:0 0 clamp(24px,3.6vh,38px);padding:0}
+.rq-steps li{flex:1;min-width:0;display:flex;align-items:flex-start;gap:9px;min-height:44px;padding-top:12px;
+  border-top:2px solid var(--line);font-size:13px;line-height:1.3;color:var(--muted);transition:border-color .6s,color .6s}
+.rq-steps li[aria-current="step"]{border-color:var(--clay-deep);color:var(--ink)}
+.rq-steps li[data-done="1"]{border-color:var(--ink);color:var(--ink)}
+.rq-n{width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;
+  border:1px solid currentColor;transition:background .6s,color .6s,border-color .6s}
+.rq-steps li[aria-current="step"] .rq-n{background:var(--clay-deep);border-color:var(--clay-deep);color:#fff}
+.rq-steps li[data-done="1"] .rq-n{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+@media(max-width:520px){.rq-steps{gap:6px}.rq-steps li{font-size:12px;gap:6px;flex-direction:column;align-items:flex-start}}
+
+.rq-h{font-family:var(--display);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2;margin:0 0 18px}
+.rq-h:focus{outline:0}
+.rq-lead{margin:-6px 0 22px;max-width:52ch}
+@media(prefers-reduced-motion:no-preference){
+  .rq-pane,.rq-review{animation:rqIn .55s cubic-bezier(.2,.8,.2,1)}
+  @keyframes rqIn{from{opacity:0;translate:0 10px}}
+}
+.rq .field input,.rq .field select,.rq .field textarea{min-height:48px;font-size:16px}
+.rq .field textarea{min-height:112px}
+.rq-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.rq-fields .wide{grid-column:1/-1}
+@media(max-width:640px){.rq-fields{grid-template-columns:1fr}}
+.rq .field[data-bad="1"] input,.rq input[aria-invalid="true"]{border-color:#B4485A}
+.field-err{font-size:13.5px;line-height:1.45;color:#9E3D4E}
+.field-err:empty{display:none}
+
+.rq-set{border:0;padding:0;margin:0 0 26px;min-width:0}
+.rq-set legend{padding:0;margin-bottom:12px;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--muted)}
+html[lang="ar"] .rq-set legend{letter-spacing:0;text-transform:none;font-size:12.5px}
+.rq-chips{display:flex;flex-wrap:wrap;gap:10px}
+.rq-chip{position:relative;display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  min-width:64px;min-height:48px;padding:8px 16px;border-radius:16px;background:#fff;border:1px solid var(--line);
+  font-size:14.5px;color:var(--ink);font-variant-numeric:tabular-nums;
+  transition:border-color .35s,background .35s,color .35s}
+.rq-chip.time{border-radius:999px;padding-inline:20px}
+.rq-chip input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.rq-chip:hover{border-color:var(--ink)}
+.rq-chip:has(input:checked){background:var(--ink);border-color:var(--ink);color:var(--bone)}
+.rq-chip:has(input:focus-visible){outline:2px solid var(--clay-deep);outline-offset:3px}
+.rq-chip span{display:block;line-height:1.2}
+.rq-chip small{display:block;font-size:11px;color:var(--muted);text-transform:capitalize}
+.rq-chip b{display:block;font-family:var(--display);font-weight:400;font-size:21px;margin-block:2px}
+.rq-chip i{display:block;font-style:normal;font-size:11px;color:var(--muted);text-transform:capitalize}
+.rq-chip:has(input:checked) small,.rq-chip:has(input:checked) i{color:rgba(244,239,233,.75)}
+
+.rq .consents{margin-top:24px;gap:4px}
+.rq .check{min-height:44px;padding-block:6px;align-items:flex-start}
+.rq .check input{width:24px;height:24px;margin-top:0}
+.rq .consents[data-invalid="1"] .check{color:#9E3D4E}
+.rq .linkbtn{min-height:0}
+
+.rq-nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3.4vh,34px)}
+.rq-nav .btn{min-height:48px}
+.rq-nav .btn[hidden]{display:none}
+.btn-line{border:1px solid var(--line);background:none;color:var(--ink);--fill:var(--ink)}
+.btn-line:hover,.btn-line:focus-visible{border-color:var(--ink);background:none;color:var(--bone)}
+.btn-line:focus-visible{outline:3px solid var(--clay-deep);outline-offset:2px}
+.rq-back-arrow{rotate:135deg}
+[dir="rtl"] .rq-back-arrow{rotate:-45deg}
+
+.rq-review{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(22px,3vw,36px)}
+.rq-row{display:grid;grid-template-columns:minmax(92px,.38fr) minmax(0,1fr) auto;gap:4px 14px;align-items:baseline;
+  padding-block:10px;border-top:1px solid var(--line);font-size:15px}
+.rq-row span{font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--muted)}
+html[lang="ar"] .rq-row span{letter-spacing:0;text-transform:none;font-size:12.5px}
+.rq-row b{font-weight:400;overflow-wrap:anywhere;white-space:pre-line}
+.rq-edit{min-height:44px;min-width:44px;padding:0 6px;background:none;border:0;cursor:pointer;
+  font-size:14px;color:var(--clay-deep);text-decoration:underline;text-underline-offset:3px}
+.rq-edit:hover{color:var(--ink)}
+.rq-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:480px){.rq-row{grid-template-columns:minmax(0,1fr) auto}.rq-row span{grid-column:1/-1}}
+.rq-chan{margin-top:20px}
+.rq-chan .btn{width:100%;min-height:48px}
+.rq-chan[hidden]{display:none}
+.rq-remind{margin-top:8px;font-size:13px;line-height:1.5;color:var(--muted)}
+.rq-ok{margin-top:20px;padding:14px 18px;border-radius:14px;background:var(--clay-soft);color:var(--ink);font-size:15px;line-height:1.5}
+.rq-ok:empty{display:none}
+.rq-review .msgbox{margin-top:22px}
+.rq-review .msgbox span{color:var(--muted)}
+.rq-review .msgbox textarea{background:#FBF8F5;border-color:var(--line);color:var(--ink);font-size:14px}
+
+/* ── refinement pass: quieter, editorial, more air ── */
+.rq{max-width:720px}
+.rq-steps{gap:0;margin-bottom:clamp(40px,6vh,64px);counter-reset:none;position:relative}
+.rq-steps li{border-top:0;padding-top:0;align-items:baseline;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);position:relative;padding-bottom:14px;border-bottom:1px solid var(--line)}
+html[lang="ar"] .rq-steps li{letter-spacing:0;text-transform:none;font-size:13px}
+.rq-steps li::after{content:'';position:absolute;inset-inline-start:0;bottom:-1px;height:1px;width:0;background:var(--ink);transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.rq-steps li[aria-current="step"]{border-color:var(--line);color:var(--ink)}
+.rq-steps li[aria-current="step"]::after{width:100%;background:var(--clay-deep)}
+.rq-steps li[data-done="1"]{border-color:var(--line);color:var(--ink)}
+.rq-steps li[data-done="1"]::after{width:100%}
+.rq-n,.rq-steps li[aria-current="step"] .rq-n,.rq-steps li[data-done="1"] .rq-n{width:auto;height:auto;border:0;background:none;border-radius:0;
+  display:inline;font-family:var(--display);font-style:italic;font-size:22px;letter-spacing:0;text-transform:none;color:var(--clay-deep)}
+.rq-steps li[data-done="1"] .rq-n{color:var(--ink)}
+@media(max-width:520px){.rq-steps li{flex-direction:column;gap:2px;font-size:10.5px;letter-spacing:.1em;padding-right:6px}}
+
+.rq-h{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:26px}
+.rq-lead{margin:-10px 0 34px;font-size:14.5px}
+
+/* fields: a single hairline, no boxes */
+.rq .field{gap:4px}
+.rq .field label,.rq-set legend{letter-spacing:.14em}
+.rq .field input,.rq .field select,.rq .field textarea{background:transparent;border:0;border-bottom:1px solid rgba(23,18,15,.28);border-radius:0;
+  padding:12px 2px;font-weight:300;transition:border-color .5s,box-shadow .5s}
+.rq .field textarea{min-height:96px;resize:none;line-height:1.6}
+.rq .field input:focus,.rq .field select:focus,.rq .field textarea:focus{border-color:var(--clay-deep);box-shadow:0 1px 0 0 var(--clay-deep)}
+.rq .field input:focus-visible,.rq .field select:focus-visible,.rq .field textarea:focus-visible{outline:0}
+.rq .field select{appearance:none;-webkit-appearance:none;padding-inline-end:28px;cursor:pointer;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none' stroke='%237C6B60' stroke-width='1.2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 4px center}
+[dir="rtl"] .rq .field select{background-position:left 4px center}
+.rq .field[data-bad="1"] input,.rq input[aria-invalid="true"]{border-bottom-color:#B4485A}
+.rq-fields{gap:clamp(26px,3vw,40px)}
+
+/* chips: hairline, transparent, ink on select */
+.rq-chip{background:transparent;border-color:rgba(23,18,15,.16);border-radius:14px;min-width:60px;transition:border-color .45s,background .45s,color .45s}
+.rq-chip:hover{border-color:var(--ink)}
+.rq-chip:has(input:checked){background:var(--ink);border-color:var(--ink)}
+.rq-chip b{font-size:20px;font-style:italic}
+.rq-chip.time{font-weight:300;letter-spacing:.04em}
+.rq-chips{gap:8px}
+.rq-set{margin-bottom:38px}
+
+/* consents */
+.rq .check{font-size:13.5px;font-weight:300}
+.rq .check input{width:22px;height:22px}
+
+/* buttons: lighter, more air */
+.rq-nav{margin-top:44px;align-items:center;gap:22px}
+.rq .btn{font-weight:300;letter-spacing:.03em}
+.rq-nav .btn-accent,.rq-chan .btn{padding-inline:36px}
+.btn-line{border:0;padding-inline:4px;color:var(--muted);--fill:transparent;text-decoration:underline;text-decoration-color:rgba(23,18,15,.25);text-underline-offset:6px}
+.btn-line:hover,.btn-line:focus-visible{color:var(--ink);background:none;text-decoration-color:var(--ink)}
+.btn-line::before{display:none}
+
+/* review: open page, serif values, hairlines */
+.rq-review{background:transparent;border:0;border-radius:0;padding:0}
+.rq-row{padding-block:18px;border-top:1px solid var(--line);grid-template-columns:minmax(96px,.34fr) minmax(0,1fr) auto}
+.rq-row:last-of-type{border-bottom:1px solid var(--line)}
+.rq-row b{font-family:var(--display);font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.35}
+.rq-edit{font-size:13px;color:var(--muted);text-decoration-color:rgba(23,18,15,.25)}
+.rq-chan{margin-top:26px}
+.rq-remind{text-align:center;font-style:italic;font-family:var(--display);font-size:15px;color:var(--muted);margin-top:12px}
+.rq-ok{background:none;border:0;border-top:1px solid var(--clay-deep);border-radius:0;padding:18px 0 0;font-family:var(--display);font-size:clamp(1.15rem,1.7vw,1.4rem)}
+.rq-review .msgbox textarea{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding-inline:2px;font-weight:300}
+@media(max-width:480px){.rq-row{padding-block:14px}}
+
+/* treatment list: an open index of names, no dropdown */
+.rq-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,56px)}
+@media(max-width:640px){.rq-list{grid-template-columns:1fr}}
+.rq-opt{position:relative;display:flex;align-items:center;gap:16px;min-height:56px;padding-block:10px;cursor:pointer;
+  border-bottom:1px solid var(--line);font-family:var(--display);font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.25;color:var(--muted);
+  transition:color .45s,padding .45s cubic-bezier(.2,.8,.2,1)}
+.rq-opt::before{content:'';flex:none;width:9px;height:9px;border-radius:50%;border:1px solid rgba(23,18,15,.35);transition:background .45s,border-color .45s,scale .45s}
+.rq-opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.rq-opt:hover{color:var(--ink)}
+.rq-opt:has(input:checked){color:var(--ink);padding-inline-start:6px}
+.rq-opt:has(input:checked)::before{background:var(--clay-deep);border-color:var(--clay-deep);scale:1.25}
+.rq-opt:has(input:focus-visible){outline:2px solid var(--clay-deep);outline-offset:2px}
+.rq-opt:last-child{font-style:italic}
+/* ── royal: the request section becomes a dark, ceremonial room ── */
+.book{border-top:0}
+.rq-stage{background:radial-gradient(120% 60% at 50% 0%,rgba(180,115,90,.16),rgba(14,11,10,0) 62%),var(--night);color:var(--bone);border-radius:clamp(22px,3.2vw,48px);box-shadow:0 50px 110px -60px rgba(23,18,15,.75)}
+.book :focus-visible{outline-color:var(--clay-soft)}
+.book-head{max-width:760px;margin-inline:auto;text-align:center;margin-bottom:clamp(44px,7vh,84px)}
+.book-head h2{max-width:none;color:var(--bone);font-size:clamp(2.4rem,6vw,5rem);line-height:1.04}
+.book-head p{margin-inline:auto;color:rgba(244,239,233,.7);font-weight:200;font-size:clamp(15px,1.3vw,17px);line-height:1.7}
+.rq-kicker{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--clay-soft);letter-spacing:.32em;margin-bottom:26px!important}
+.rq-kicker::before,.rq-kicker::after{content:'';width:clamp(28px,8vw,72px);height:1px;background:linear-gradient(90deg,transparent,rgba(231,210,198,.7))}
+.rq-kicker::after{transform:scaleX(-1)}
+.rq{margin-inline:auto}
+
+.rq-steps li{color:rgba(244,239,233,.5);border-bottom-color:rgba(244,239,233,.16)}
+.rq-steps li[aria-current="step"],.rq-steps li[data-done="1"]{color:var(--bone);border-bottom-color:rgba(244,239,233,.16)}
+.rq-steps li::after,.rq-steps li[data-done="1"]::after{background:var(--clay-soft)}
+.rq-steps li[aria-current="step"]::after{background:var(--clay-soft)}
+.rq-n,.rq-steps li[aria-current="step"] .rq-n{color:var(--clay-soft)}
+.rq-steps li[data-done="1"] .rq-n{color:var(--bone)}
+
+.rq-h,.rq-review .rq-h{text-align:center;color:var(--bone);font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:34px}
+.rq-h::before{content:'';display:block;width:7px;height:7px;margin:0 auto 20px;rotate:45deg;background:var(--clay-soft)}
+.rq-lead{text-align:center;margin-inline:auto;color:rgba(244,239,233,.62)}
+.field-hint{color:rgba(244,239,233,.55)}
+.rq-set legend,.rq .field label{color:rgba(244,239,233,.58)}
+.rq-set legend:not(.rq-sr){text-align:center;width:100%}
+
+.rq .field input,.rq .field select,.rq .field textarea{color:var(--bone);border-bottom-color:rgba(244,239,233,.3)}
+.rq .field input:focus,.rq .field textarea:focus{border-color:var(--clay-soft);box-shadow:0 1px 0 0 var(--clay-soft)}
+.rq .field input::placeholder,.rq .field textarea::placeholder{color:rgba(244,239,233,.32)}
+.rq .field input:-webkit-autofill{-webkit-text-fill-color:var(--bone);transition:background-color 9999s}
+.field-err{color:#E9A5B0}
+.rq .field[data-bad="1"] input,.rq input[aria-invalid="true"]{border-bottom-color:#E9A5B0}
+
+.rq-opt{color:rgba(244,239,233,.55);border-bottom-color:rgba(244,239,233,.14)}
+.rq-opt::before{width:7px;height:7px;border-radius:0;rotate:45deg;border-color:rgba(244,239,233,.4)}
+.rq-opt:hover{color:var(--bone)}
+.rq-opt:has(input:checked){color:var(--bone)}
+.rq-opt:has(input:checked)::before{background:var(--clay-soft);border-color:var(--clay-soft);scale:1.35}
+
+.rq-chip{border-color:rgba(244,239,233,.2);color:var(--bone)}
+.rq-chip:hover{border-color:var(--clay-soft)}
+.rq-chip:has(input:checked){background:var(--bone);border-color:var(--bone);color:var(--ink)}
+.rq-chip small,.rq-chip i{color:rgba(244,239,233,.55)}
+.rq-chip:has(input:checked) small,.rq-chip:has(input:checked) i{color:var(--muted)}
+.rq-chips{justify-content:center}
+
+.rq .check{color:rgba(244,239,233,.72)}
+.rq .check input{accent-color:var(--clay-soft)}
+.rq .consents[data-invalid="1"] .check{color:#E9A5B0}
+.book .linkbtn{color:var(--clay-soft)}
+.book .linkbtn:hover{color:#fff}
+
+.rq-nav{justify-content:center}
+.btn-line{color:rgba(244,239,233,.62);text-decoration-color:rgba(244,239,233,.3)}
+.btn-line:hover,.btn-line:focus-visible{color:var(--bone);text-decoration-color:var(--bone)}
+.btn-line:focus-visible{outline-color:var(--clay-soft)}
+.book .btn-accent{--fill:var(--bone)}
+.book .btn-accent:hover,.book .btn-accent:focus-visible{color:var(--ink)}
+.book .btn-accent:focus-visible{outline-color:var(--bone);box-shadow:0 0 0 2px var(--night)}
+
+.rq-row{border-top-color:rgba(244,239,233,.14)}
+.rq-row:last-of-type{border-bottom-color:rgba(244,239,233,.14)}
+.rq-row span{color:rgba(244,239,233,.5)}
+.rq-row b{color:var(--bone)}
+.rq-edit{color:var(--clay-soft);text-decoration-color:rgba(231,210,198,.4)}
+.rq-edit:hover{color:#fff}
+.rq-remind{color:rgba(244,239,233,.6)}
+.rq-ok{color:var(--bone);border-top-color:var(--clay-soft);text-align:center}
+.rq-review .msgbox span{color:rgba(244,239,233,.5)}
+.rq-review .msgbox textarea{color:var(--bone);border-bottom-color:rgba(244,239,233,.2)}
+
+/* ── full-tab: the request room fills the whole viewport ── */
+.book.sec{padding-block:clamp(72px,10vh,110px) clamp(20px,3vh,36px)}
+.book .shell{max-width:none;padding-inline:clamp(10px,1.6vw,26px)}
+.rq-stage{min-height:calc(100svh - 110px);display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,100px) clamp(20px,5vw,84px)}
+.book-head{max-width:900px;margin-bottom:clamp(22px,4vh,52px)}
+.book-head h2{font-size:clamp(2.3rem,5.4vw,4.6rem)}
+.book-head p{margin-top:14px}
+.rq-kicker{margin:0 auto 16px!important}
+.rq{max-width:min(1040px,100%)}
+.rq-steps{margin-bottom:clamp(22px,4vh,44px)}
+.rq-h{margin-bottom:clamp(20px,3.4vh,34px)}
+.rq-h::before{margin-bottom:14px}
+.rq-steps li{font-size:13px}
+.rq-list{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(28px,4vw,64px)}
+@media(max-width:1000px){.rq-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.rq-list{grid-template-columns:1fr}}
+.rq-opt{min-height:60px;font-size:clamp(1.15rem,1.6vw,1.45rem)}
+.rq-chip{min-width:72px;min-height:56px}
+.rq-fields{gap:clamp(30px,4vh,48px) clamp(32px,5vw,72px)}
+/* ── motion: slow, ceremonial, and off for anyone who asked for reduced motion ── */
+.rq-stage{position:relative;overflow:hidden;isolation:isolate}
+.rq-stage>*{position:relative;z-index:1}
+.rq-stage::before,.rq-stage::after{content:'';position:absolute;pointer-events:none;z-index:0}
+/* a candle-glow that follows the pointer */
+.rq-stage::before{inset:0;opacity:0;transition:opacity .8s;
+  background:radial-gradient(520px circle at var(--sx,50%) var(--sy,40%),rgba(231,210,198,.11),transparent 62%)}
+.rq-stage.is-lit::before{opacity:1}
+/* two slow ambient lights */
+.rq-stage::after{inset:-25%;background:
+  radial-gradient(40% 36% at 18% 28%,rgba(180,115,90,.20),transparent 70%),
+  radial-gradient(34% 32% at 82% 74%,rgba(231,210,198,.09),transparent 70%)}
+.rq-kicker::before,.rq-kicker::after{width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1) .3s}
+.rq-stage.is-in .rq-kicker::before,.rq-stage.is-in .rq-kicker::after{width:clamp(28px,8vw,72px)}
+
+@media(prefers-reduced-motion:no-preference){
+  .rq-stage::after{animation:rqDrift 24s ease-in-out infinite alternate}
+  @keyframes rqDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.12) rotate(4deg)}}
+
+  /* steps glide in from the side you are travelling toward, their contents rising one after another */
+  .rq{--dx:1}
+  .rq[data-dir="-1"]{--dx:-1}
+  [dir="rtl"] .rq{--dx:-1}
+  [dir="rtl"] .rq[data-dir="-1"]{--dx:1}
+  .rq-pane,.rq-review{animation:rqPane .9s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rqPane{from{opacity:0;translate:calc(var(--dx) * 44px) 0;filter:blur(6px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+  .rq-pane .rq-opt,.rq-pane .rq-chip,.rq-pane .field,.rq-pane .check,.rq-row,.rq-chan{
+    animation:rqRise .8s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(.12s + var(--i,0) * .045s)}
+  @keyframes rqRise{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+  .rq-h::before{animation:rqDia 1.1s cubic-bezier(.2,.8,.2,1) .15s both}
+  @keyframes rqDia{from{rotate:-225deg;scale:0;opacity:0}to{rotate:45deg;scale:1;opacity:1}}
+  .rq-ok{animation:rqRise .9s cubic-bezier(.2,.8,.2,1) backwards}
+
+  /* options: a champagne line is drawn beneath the one you hover or choose */
+  .rq-opt{background:linear-gradient(var(--clay-soft),var(--clay-soft)) no-repeat left bottom/0 1px;
+    transition:color .45s,padding .6s cubic-bezier(.2,.8,.2,1),background-size .8s cubic-bezier(.2,.8,.2,1)}
+  [dir="rtl"] .rq-opt{background-position:right bottom}
+  .rq-opt:hover,.rq-opt:has(input:checked){background-size:100% 1px;padding-inline-start:10px}
+  .rq-opt:hover::before{rotate:225deg}
+  .rq-opt::before{transition:background .5s,border-color .5s,scale .6s cubic-bezier(.2,.8,.2,1),rotate .8s cubic-bezier(.2,.8,.2,1)}
+  .rq-opt:has(input:checked)::before{rotate:225deg}
+
+  /* chips lift, and the chosen one settles with a small bloom */
+  .rq-chip{transition:border-color .45s,background .45s,color .45s,translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .6s}
+  .rq-chip:hover{translate:0 -3px}
+  .rq-chip:has(input:checked){box-shadow:0 14px 34px -14px rgba(231,210,198,.55);animation:rqPop .6s cubic-bezier(.2,.8,.2,1)}
+  @keyframes rqPop{0%{scale:.92}60%{scale:1.05}100%{scale:1}}
+
+  /* a slow glint crosses the primary button */
+  .rq-nav .btn-accent::after,.rq-chan .btn-accent::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.34) 50%,transparent 62%);
+    translate:-130% 0;animation:rqGlint 5.5s ease-in-out 1.8s infinite}
+  [dir="rtl"] .rq-nav .btn-accent::after,[dir="rtl"] .rq-chan .btn-accent::after{scale:-1 1}
+  @keyframes rqGlint{0%,62%{translate:-130% 0}100%{translate:130% 0}}
+  .rq-nav .btn-accent:hover::after,.rq-chan .btn-accent:hover::after{animation-play-state:paused}
+
+  /* the stepper's numerals bow in as each step opens */
+  .rq-steps li[aria-current="step"] .rq-n{animation:rqNum .9s cubic-bezier(.2,.8,.2,1)}
+  @keyframes rqNum{from{translate:0 10px;opacity:0;scale:.6}to{translate:0 0;opacity:1;scale:1}}
+}
+
+/* ── cream & gold: the request section keeps the page's own cream; the clay-gold carries the ceremony ── */
+.rq-stage{background:transparent;color:var(--ink);box-shadow:none;border:1px solid rgba(143,86,64,.3);outline:1px solid rgba(143,86,64,.16);outline-offset:-11px}
+.rq-stage::before{mix-blend-mode:multiply;transition:opacity .9s;
+  background:
+    radial-gradient(calc(var(--r,300px) * .38) circle at var(--sx,50%) var(--sy,40%),rgba(255,196,120,.55),transparent 100%),
+    radial-gradient(var(--r,300px) circle at var(--sx,50%) var(--sy,40%),rgba(236,168,98,.42) 0,rgba(214,140,92,.22) 38%,rgba(180,115,90,.08) 70%,transparent 100%)}
+.rq-stage::after{background:radial-gradient(40% 36% at 18% 28%,rgba(231,210,198,.7),transparent 70%),radial-gradient(34% 32% at 82% 74%,rgba(180,115,90,.10),transparent 70%)}
+.book :focus-visible{outline-color:var(--clay-deep)}
+.book-head h2{color:var(--ink)}
+.book-head p{color:var(--muted)}
+.rq-kicker{color:var(--clay-deep)}
+.rq-kicker::before,.rq-kicker::after{background:linear-gradient(90deg,transparent,rgba(143,86,64,.7))}
+.rq-steps li{color:var(--muted);border-bottom-color:var(--line)}
+.rq-steps li[aria-current="step"],.rq-steps li[data-done="1"]{color:var(--ink);border-bottom-color:var(--line)}
+.rq-steps li::after,.rq-steps li[data-done="1"]::after,.rq-steps li[aria-current="step"]::after{background:var(--clay-deep)}
+.rq-n,.rq-steps li[aria-current="step"] .rq-n{color:var(--clay-deep)}
+.rq-steps li[data-done="1"] .rq-n{color:var(--ink)}
+.rq-h,.rq-review .rq-h{color:var(--ink)}
+.rq-h::before{background:var(--clay-deep)}
+.rq-lead{color:var(--muted)}
+.field-hint{color:var(--muted)}
+.rq-set legend,.rq .field label{color:var(--muted)}
+.rq .field input,.rq .field select,.rq .field textarea{color:var(--ink);border-bottom-color:rgba(23,18,15,.28)}
+.rq .field input:focus,.rq .field textarea:focus{border-color:var(--clay-deep);box-shadow:0 1px 0 0 var(--clay-deep)}
+.rq .field input::placeholder,.rq .field textarea::placeholder{color:rgba(23,18,15,.35)}
+.rq .field input:-webkit-autofill{-webkit-text-fill-color:var(--ink)}
+.field-err{color:#9E3D4E}
+.rq .field[data-bad="1"] input,.rq input[aria-invalid="true"]{border-bottom-color:#B4485A}
+.rq-opt{color:var(--muted);border-bottom-color:var(--line);background-image:linear-gradient(var(--clay-deep),var(--clay-deep))}
+.rq-opt::before{border-color:rgba(23,18,15,.35)}
+.rq-opt:hover,.rq-opt:has(input:checked){color:var(--ink)}
+.rq-opt:has(input:checked)::before{background:var(--clay-deep);border-color:var(--clay-deep)}
+.rq-chip{border-color:rgba(23,18,15,.16);color:var(--ink)}
+.rq-chip:hover{border-color:var(--ink)}
+.rq-chip:has(input:checked){background:var(--ink);border-color:var(--ink);color:var(--bone);box-shadow:0 14px 30px -14px rgba(23,18,15,.5)}
+.rq-chip small,.rq-chip i{color:var(--muted)}
+.rq-chip:has(input:checked) small,.rq-chip:has(input:checked) i{color:rgba(244,239,233,.75)}
+.rq .check{color:var(--muted)}
+.rq .check input{accent-color:var(--clay-deep)}
+.rq .consents[data-invalid="1"] .check{color:#9E3D4E}
+.book .linkbtn{color:var(--clay-deep)}
+.book .linkbtn:hover{color:var(--ink)}
+.btn-line{color:var(--muted);text-decoration-color:rgba(23,18,15,.25)}
+.btn-line:hover,.btn-line:focus-visible{color:var(--ink);text-decoration-color:var(--ink)}
+.btn-line:focus-visible{outline-color:var(--clay-deep)}
+.book .btn-accent{--fill:var(--ink)}
+.book .btn-accent:hover,.book .btn-accent:focus-visible{color:#fff}
+.book .btn-accent:focus-visible{outline-color:var(--ink);box-shadow:0 0 0 2px var(--bone)}
+.rq-row{border-top-color:var(--line)}
+.rq-row:last-of-type{border-bottom-color:var(--line)}
+.rq-row span{color:var(--muted)}
+.rq-row b{color:var(--ink)}
+.rq-edit{color:var(--clay-deep);text-decoration-color:rgba(143,86,64,.4)}
+.rq-edit:hover{color:var(--ink)}
+.rq-remind{color:var(--muted)}
+.rq-ok{color:var(--ink);border-top-color:var(--clay-deep)}
+.rq-review .msgbox span{color:var(--muted)}
+.rq-review .msgbox textarea{color:var(--ink);border-bottom-color:var(--line)}
+
+/* primary call-to-action: accent pill, floods with a second colour from the side the pointer enters */
+.btn-accent{background:var(--clay-deep);color:#fff;--fill:var(--ink)}
+.btn-accent:hover,.btn-accent:focus-visible{background:var(--clay-deep);color:#fff}
+.btn-accent:focus-visible{outline:3px solid var(--ink);outline-offset:2px;box-shadow:0 0 0 2px var(--bone)}
+.hero-cta .btn-accent,.cta .btn-accent,.nav.on-dark .btn-accent{--fill:var(--bone)}
+.hero-cta .btn-accent:hover,.hero-cta .btn-accent:focus-visible,.cta .btn-accent:hover,.cta .btn-accent:focus-visible,
+.nav.on-dark .btn-accent:hover,.nav.on-dark .btn-accent:focus-visible{color:var(--ink)}
+.hero-cta .btn-accent:focus-visible,.cta .btn-accent:focus-visible,.nav.on-dark .btn-accent:focus-visible{outline-color:var(--bone);box-shadow:0 0 0 2px var(--ink)}
+.btn.nav-cta{padding:11px 22px;font-size:13.5px;min-height:44px}
+@media(max-width:520px){.btn.nav-cta{padding:10px 14px;font-size:12px}}
+
 /* live availability, served by the booking API in server.py */
 .book-live{display:none}
 .book-live[data-on="1"]{display:block}
@@ -780,7 +1166,7 @@ html[lang="ar"] .foot-legal button{font-size:14px}
     <button type="button" data-lang="en" aria-pressed="false">EN</button>
     <button type="button" data-lang="ar" aria-pressed="false">ع</button>
   </div>
-  <a class="nav-cta" href="#afspraak" data-i18n="ctaNav">Afspraak maken</a>
+  <a class="btn btn-accent nav-cta" href="#afspraak" data-i18n="ctaNav">Afspraak maken</a>
 </nav>
 
 <!-- QUICK-JUMP SIDE NAV -->
@@ -825,7 +1211,6 @@ html[lang="ar"] .foot-legal button{font-size:14px}
       <button type="button" data-page="refund" data-i18n="legalRefund"></button>
       <button type="button" data-page="cookies" data-i18n="legalCookies"></button>
       <button type="button" data-page="biz" data-i18n="legalBiz"></button>
-      <button type="button" data-page="delete" data-i18n="legalDelete"></button>
       <button type="button" data-page="lic" data-i18n="legalLic"></button>
       <button type="button" data-page="dmca" data-i18n="legalDmca"></button>
     </div>
@@ -851,7 +1236,7 @@ html[lang="ar"] .foot-legal button{font-size:14px}
     <h1 data-hero data-i18n-html="heroTitle">Huid die er <span class="it">gezond</span> uitziet, niet gefilterd.</h1>
     <p class="hero-lede" data-hero data-i18n="heroLede"></p>
     <div class="hero-cta" data-hero>
-      <a class="btn btn-solid" href="#afspraak"><span data-i18n="ctaHero1">Afspraak maken</span> <i class="arrow"></i></a>
+      <a class="btn btn-accent" href="#afspraak"><span data-i18n="ctaHero1">Afspraak maken</span> <i class="arrow"></i></a>
       <a class="btn btn-ghost" href="#behandelingen" data-i18n="ctaHero2">Bekijk behandelingen</a>
     </div>
   </div>
@@ -1132,161 +1517,115 @@ html[lang="ar"] .foot-legal button{font-size:14px}
 <!-- BOOKING -->
 <section class="book sec" id="afspraak">
   <div class="shell">
+   <div class="rq-stage">
     <div class="book-head">
+      <p class="rq-kicker" data-i18n="rqKicker"></p>
       <h2 data-i18n="bkTitle"></h2>
       <p data-i18n="bkLede"></p>
     </div>
 
-    <!-- live availability, backed by server.py; falls back to the request form -->
-    <div class="book-live" id="bkLive">
+    <div class="rq" id="rq">
+      <ol class="rq-steps" id="rqSteps">
+        <li data-s="1"><span class="rq-n" aria-hidden="true">I</span><span data-i18n="stepTreat"></span></li>
+        <li data-s="2"><span class="rq-n" aria-hidden="true">II</span><span data-i18n="stepDay"></span></li>
+        <li data-s="3"><span class="rq-n" aria-hidden="true">III</span><span data-i18n="stepYou"></span></li>
+      </ol>
 
-      <div class="live-block">
-        <p class="step-label"><b>1</b><span data-i18n="stepTreat"></span></p>
-        <div class="picker" id="pickTreat" role="group"></div>
-      </div>
-
-      <div class="live-block">
-        <p class="step-label"><b>2</b><span data-i18n="stepDay"></span></p>
-        <div class="days" id="pickDay"></div>
-        <div class="slots" id="pickSlot" role="group" aria-live="polite"></div>
-        <p class="chosen" id="chosen"></p>
-      </div>
-
-      <div class="live-block">
-        <p class="step-label"><b>3</b><span data-i18n="stepYou"></span></p>
-        <form class="live-form" id="liveForm" novalidate>
-          <div class="field" id="lfName">
-            <label for="lvName" data-i18n="lblName"></label>
-            <input type="text" id="lvName" autocomplete="name">
-          </div>
-          <div class="field" id="lfEmail">
-            <label for="lvEmail" data-i18n="lblEmail"></label>
-            <input type="email" id="lvEmail" autocomplete="email" inputmode="email">
-          </div>
-          <div class="field">
-            <label for="lvPhone" data-i18n="lblPhone"></label>
-            <input type="tel" id="lvPhone" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="lvNotes" data-i18n="lblNotes"></label>
-            <input type="text" id="lvNotes" data-i18n-ph="phNotes">
-          </div>
-          <div class="consents">
-            <label class="check"><input type="checkbox" id="lvC1"><span data-i18n-html="cons1"></span></label>
-            <label class="check"><input type="checkbox" id="lvC2"><span data-i18n-html="cons2"></span></label>
-          </div>
-          <div class="hp" aria-hidden="true">
-            <label>Website<input type="text" id="lvHp" tabindex="-1" autocomplete="off"></label>
-          </div>
-          <div class="live-actions wide">
-            <button type="submit" class="btn btn-ink" id="lvSubmit" disabled>
-              <span data-i18n="confirmBtn"></span> <i class="arrow"></i>
-            </button>
-            <p class="live-err" id="lvErr"></p>
-          </div>
-        </form>
-      </div>
-
-      <p class="live-note" data-i18n="calNote"></p>
-
-      <div class="done" id="lvDone" role="status">
-        <h3 data-i18n="okTitle"></h3>
-        <p id="okWhen"></p>
-        <p class="ref"><span data-i18n="refLabel"></span><b id="okRef"></b></p>
-        <p data-i18n="okBody"></p>
-        <div class="done-actions">
-          <a class="btn btn-solid" id="okIcs" data-i18n="icsBtn"></a>
-          <button type="button" class="btn btn-ghost" id="okCancel" data-i18n="cancelBtn"></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="book-grid" id="bkRequest">
-      <form class="fields" id="bkForm" novalidate>
-        <div class="field wide">
-          <label for="bkTreat" data-i18n="lblTreat">Behandeling</label>
-          <select id="bkTreat" name="treatment">
-            <option value="ask" data-i18n="optAsk"></option>
-            <option value="analyse" data-i18n="sAp"></option>
-            <option value="hydrofacial" data-i18n="s1p"></option>
-            <option value="microneedling" data-i18n="s2p"></option>
-            <option value="rf" data-i18n="sRp"></option>
-            <option value="exosomen" data-i18n="s3p"></option>
-            <option value="huidverbetering" data-i18n="s4p"></option>
-            <option value="laser" data-i18n="sLp"></option>
-            <option value="lipblush" data-i18n="s5p"></option>
-          </select>
+      <form id="rqForm" novalidate>
+        <!-- step 1 -->
+        <div class="rq-pane" data-pane="1">
+          <h3 class="rq-h" tabindex="-1" data-i18n="stepTreat"></h3>
+          <fieldset class="rq-set">
+            <legend class="rq-sr" data-i18n="lblTreat"></legend>
+            <div class="rq-list">
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="analyse"><span data-i18n="sAp"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="hydrofacial"><span data-i18n="s1p"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="microneedling"><span data-i18n="s2p"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="rf"><span data-i18n="sRp"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="exosomen"><span data-i18n="s3p"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="huidverbetering"><span data-i18n="s4p"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="laser"><span data-i18n="sLp"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="lipblush"><span data-i18n="s5p"></span></label>
+              <label class="rq-opt"><input type="radio" name="rqTreat" value="ask" checked><span data-i18n="optAsk"></span></label>
+            </div>
+          </fieldset>
         </div>
 
-        <div class="field">
-          <label for="bkDate" data-i18n="lblDate">Voorkeursdatum</label>
-          <input type="date" id="bkDate" name="date">
+        <!-- step 2 -->
+        <div class="rq-pane" data-pane="2" hidden>
+          <h3 class="rq-h" tabindex="-1" data-i18n="stepDay"></h3>
+          <p class="field-hint rq-lead" id="rqTimeHint" data-i18n="timeHint"></p>
+          <fieldset class="rq-set" aria-describedby="rqTimeHint errDay">
+            <legend data-i18n="lblDay"></legend>
+            <div class="rq-chips" id="rqDays"></div>
+            <p class="field-err" id="errDay" role="alert"></p>
+          </fieldset>
+          <fieldset class="rq-set" id="rqTimeSet" aria-describedby="rqTimeHint">
+            <legend data-i18n="lblTime"></legend>
+            <div class="rq-chips" id="rqTimes"></div>
+          </fieldset>
         </div>
 
-        <div class="field">
-          <label data-i18n="lblPart">Dagdeel</label>
-          <div class="parts">
-            <label><input type="radio" name="part" value="am" checked><span data-i18n="partAM">Ochtend</span></label>
-            <label><input type="radio" name="part" value="pm"><span data-i18n="partPM">Middag</span></label>
-            <label><input type="radio" name="part" value="eve"><span data-i18n="partEve">Avond</span></label>
+        <!-- step 3 -->
+        <div class="rq-pane" data-pane="3" hidden>
+          <h3 class="rq-h" tabindex="-1" data-i18n="stepYou"></h3>
+          <div class="rq-fields">
+            <div class="field">
+              <label for="rqName" data-i18n="lblName"></label>
+              <input type="text" id="rqName" name="name" autocomplete="name" aria-describedby="errName">
+              <p class="field-err" id="errName" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="rqContact" data-i18n="lblContact"></label>
+              <input type="text" id="rqContact" name="contact" autocomplete="tel" aria-describedby="errContact">
+              <p class="field-err" id="errContact" role="alert"></p>
+            </div>
+            <div class="field wide">
+              <label for="rqNotes" data-i18n="lblNotes"></label>
+              <textarea id="rqNotes" name="notes" data-i18n-ph="phNotes" aria-describedby="rqNotesHint"></textarea>
+              <p class="field-hint" id="rqNotesHint" data-i18n="noteHint"></p>
+            </div>
+          </div>
+          <div class="consents" id="rqConsents">
+            <label class="check"><input type="checkbox" id="rqC1" aria-describedby="errConsent"><span data-i18n-html="cons1"></span></label>
+            <label class="check"><input type="checkbox" id="rqC2" aria-describedby="errConsent"><span data-i18n-html="cons2"></span></label>
+            <p class="field-err" id="errConsent" role="alert"></p>
           </div>
         </div>
 
-        <div class="field">
-          <label for="bkTime" data-i18n="lblTime"></label>
-          <input type="time" id="bkTime" name="time" step="900">
-        </div>
-
-        <div class="field" id="fName">
-          <label for="bkName" data-i18n="lblName">Naam</label>
-          <input type="text" id="bkName" name="name" autocomplete="name">
-        </div>
-
-        <div class="field" id="fContact">
-          <label for="bkContact" data-i18n="lblContact">Telefoon of e-mail</label>
-          <input type="text" id="bkContact" name="contact" autocomplete="tel">
-        </div>
-
-        <div class="field wide">
-          <label for="bkNotes" data-i18n="lblNotes">Wat wil je aanpakken?</label>
-          <textarea id="bkNotes" name="notes" data-i18n-ph="phNotes" aria-describedby="bkNotesHint"></textarea>
-          <p class="field-hint" id="bkNotesHint" data-i18n="noteHint"></p>
-        </div>
-
-        <div class="consents" id="fConsent">
-          <label class="check"><input type="checkbox" id="bkC1"><span data-i18n-html="cons1"></span></label>
-          <label class="check"><input type="checkbox" id="bkC2"><span data-i18n-html="cons2"></span></label>
-          <p class="book-err" id="bkConsErr" data-i18n="consErr"></p>
-        </div>
-
-        <div class="book-actions wide">
-          <button type="submit" class="btn btn-ink"><span data-i18n="bkSubmit">Aanvraag versturen</span> <i class="arrow"></i></button>
-          <p class="book-err" id="bkErr" data-i18n="bkErr"></p>
+        <div class="rq-nav">
+          <button type="button" class="btn btn-line" id="rqBack" hidden><i class="arrow rq-back-arrow"></i> <span data-i18n="bkBack"></span></button>
+          <button type="submit" class="btn btn-accent" id="rqNext"><span id="rqNextLabel"></span> <i class="arrow"></i></button>
         </div>
       </form>
 
-      <aside class="summary">
-        <h3 data-i18n="bkSumTitle">Jouw aanvraag</h3>
-        <div class="sum-row"><span data-i18n="lblTreat"></span><b id="sumTreat" class="empty">—</b></div>
-        <div class="sum-row"><span data-i18n="lblDate"></span><b id="sumDate" class="empty">—</b></div>
-        <div class="sum-row"><span data-i18n="lblPart"></span><b id="sumPart" class="empty">—</b></div>
-        <div class="sum-row"><span data-i18n="lblTime"></span><b id="sumTime" class="empty">—</b></div>
-        <div class="sum-row"><span data-i18n="lblName"></span><b id="sumName" class="empty">—</b></div>
-        <div class="sum-row"><span data-i18n="lblContact"></span><b id="sumContact" class="empty">—</b></div>
-        <p class="bk-note" data-i18n="bkNote"></p>
+      <!-- review + send -->
+      <section class="rq-review" id="rqReview" hidden aria-labelledby="rqRevH">
+        <h3 class="rq-h" id="rqRevH" tabindex="-1" data-i18n="bkSumTitle"></h3>
+        <div id="rqRows"></div>
 
-        <div class="send" id="bkSend">
-          <a class="btn btn-solid" id="sendWa" target="_blank" rel="noopener" data-i18n="bkSendWa"></a>
-          <a class="btn btn-ghost" id="sendIg" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener" data-i18n="bkSendIg"></a>
-          <a class="btn btn-ghost" id="sendMail" data-i18n="bkSendMail"></a>
-          <label class="msgbox">
-            <span data-i18n="bkMsgLabel"></span>
-            <textarea id="bkMsg" readonly rows="6"></textarea>
-          </label>
-          <p class="copied" id="bkCopied"></p>
+        <div class="rq-chan" id="chanWa" hidden>
+          <a class="btn btn-accent" id="sendWa" target="_blank" rel="noopener"><span data-i18n="bkSendWa"></span> <i class="arrow"></i></a>
+          <p class="rq-remind" data-i18n="bkReminder"></p>
         </div>
-      </aside>
+        <div class="rq-chan" id="chanMail" hidden>
+          <a class="btn btn-accent" id="sendMail"><span data-i18n="bkSendMail"></span> <i class="arrow"></i></a>
+          <p class="rq-remind" data-i18n="bkReminder"></p>
+        </div>
+        <div class="rq-chan" id="chanIg" hidden>
+          <a class="btn btn-accent" id="sendIg" target="_blank" rel="noopener"><span data-i18n="bkSendIg"></span> <i class="arrow"></i></a>
+          <p class="rq-remind" data-i18n="bkReminder"></p>
+        </div>
+
+        <p class="rq-ok" id="rqOk" role="status"></p>
+
+        <label class="msgbox">
+          <span data-i18n="bkMsgLabel"></span>
+          <textarea id="rqMsg" readonly rows="7"></textarea>
+        </label>
+      </section>
     </div>
+   </div>
   </div>
 </section>
 
@@ -1312,7 +1651,7 @@ html[lang="ar"] .foot-legal button{font-size:14px}
     <h2 data-i18n-html="cTitle"></h2>
     <p data-i18n="cBody"></p>
     <div class="hero-cta">
-      <a class="btn btn-solid" href="#afspraak"><span data-i18n="cBtn1">Afspraak maken</span> <i class="arrow"></i></a>
+      <a class="btn btn-accent" href="#afspraak"><span data-i18n="cBtn1">Afspraak maken</span> <i class="arrow"></i></a>
       <a class="btn btn-ghost" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener" data-i18n="cBtn2">Instagram</a>
     </div>
   </div>
@@ -1343,7 +1682,6 @@ html[lang="ar"] .foot-legal button{font-size:14px}
       <button type="button" data-page="refund" data-i18n="legalRefund"></button>
       <button type="button" data-page="cookies" data-i18n="legalCookies"></button>
       <button type="button" data-page="biz" data-i18n="legalBiz"></button>
-      <button type="button" data-page="delete" data-i18n="legalDelete"></button>
       <button type="button" data-page="lic" data-i18n="legalLic"></button>
       <button type="button" id="cookieSettings" data-i18n="cbSettings"></button>
     </div>
@@ -1372,40 +1710,90 @@ html[lang="ar"] .foot-legal button{font-size:14px}
 <script src="js/ScrollTrigger.min.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════════════
-   CONFIG — fill these in and the booking form routes straight to them.
-   Leave whatsapp/email empty and the form falls back to an Instagram
-   DM with the request text copied to the visitor's clipboard.
+   CONFIG — everything the "Request a visit" form needs, in one place.
+   A channel with an empty value is hidden from the visitor.
    ═══════════════════════════════════════════════════════════════════ */
 const CONFIG = {
-  /* ── LIVE BOOKING ───────────────────────────────────────────────
-     Served by server.py on the same origin. Start it with
-       python server.py
-     and the page books against the real diary: live free slots,
-     no double-bookings, confirmation mail, .ics, self-service cancel.
-     If the API is unreachable (plain static hosting) the page falls
-     back to the request form below on its own. */
-  api: null,   /* no backend on this origin - the request form is used */
+  whatsapp:  '',   /* [MY WHATSAPP NUMBER] — country code, no + and no spaces, e.g. '31612345678' */
+  email:     '',   /* [MY EMAIL ADDRESS]   — e.g. 'hallo@ayabeautyskin.studio' */
+  instagram: 'https://www.instagram.com/ayaa_beauty.skin/',   /* '' hides the Instagram DM option */
 
-  /* ── FALLBACK: used only when the booking API cannot be reached ── */
-  whatsapp:  '',   /* e.g. '31612345678'  — country code, no + and no spaces */
-  email:     '',   /* e.g. 'hallo@ayaabeautyskin.nl' */
-  instagram: 'https://www.instagram.com/ayaa_beauty.skin/'
+  /* Preferred-time options offered in step 2. These are choices for the visitor to lean on,
+     NOT availability — every request is still answered personally.
+     [MY TIME OPTIONS] — placeholder values, replace with your own ('' list hides the time choice) */
+  slotTimes: ['10:00', '12:00', '14:00', '16:00'],
+
+  daysAhead: 14,            /* how many days from tomorrow the day picker covers */
+  closedWeekdays: []        /* [MY CLOSED DAYS] — 0 = Sunday … 6 = Saturday, e.g. [0, 1] */
 };
-
-let LIVE = false;   /* flipped on once /api/treatments answers */
 
 const I18N = {
 nl: {
+  /* ── request a visit ── */
+  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi. Vraag een bezoek aan in drie korte stappen.',
+  ctaNav:'Bezoek aanvragen',
+  ctaHero1:'Bezoek aanvragen',
+  cBtn1:'Vraag je bezoek aan',
+  bookThis:'Vraag deze behandeling aan',
+  rqKicker:'Bezoek aanvragen',
+  bkTitle:'Vraag om jouw moment.',
+  bkLede:'Drie korte stappen. Je stuurt een aanvraag en wij bevestigen persoonlijk. Dit is dus nog geen bevestigde afspraak.',
+  stepTreat:'Behandeling / Dienst',
+  stepDay:'Dag en tijd',
+  stepYou:'Gegevens',
+  lblTreat:'Behandeling',
+  lblDay:'Voorkeursdag',
+  lblTime:'Voorkeurstijd',
+  timeHint:'Kies een voorkeursdag en -tijd. Wij laten je weten wat mogelijk is.',
+  timeFlex:'Flexibel',
+  lblName:'Naam',
+  lblContact:'Telefoon of e-mail',
+  lblNotes:'Iets wat we moeten weten? (optioneel)',
+  noteHint:'Deel hier liever geen medische gegevens.',
+  bkBack:'Terug',
+  bkNext:'Volgende',
+  bkPrepare:'Aanvraag voorbereiden',
+  bkEdit:'Wijzigen',
+  bkSumTitle:'Jouw aanvraag',
+  stepOf:'Stap {n} van 3',
+  bkSendWa:'Verstuur via WhatsApp',
+  bkSendMail:'Verstuur via e-mail',
+  bkSendIg:'Verstuur via Instagram DM',
+  bkReminder:'Dit is een aanvraag, geen bevestigde afspraak. Wij antwoorden persoonlijk.',
+  bkOk:'Aanvraag ontvangen. We laten je persoonlijk weten of het moment past.',
+  bkMsgLabel:'Je aanvraag als tekst — kopieer en plak',
+  errDay:'Kies een voorkeursdag.',
+  errName:'Vul je naam in.',
+  errContact:'Vul een telefoonnummer of e-mailadres in waarop we je kunnen bereiken.',
+  errContactBad:'Dit lijkt geen telefoonnummer of e-mailadres. Controleer het even.',
+  consErr:'Vink beide vakjes aan om verder te gaan.',
+  cons1:'Ik ga akkoord met het <button type="button" class="linkbtn" data-page="privacy">privacybeleid</button> en de <button type="button" class="linkbtn" data-page="terms">voorwaarden</button> en geef toestemming dat Aya Beauty &amp; Skin mijn gegevens gebruikt om op mijn aanvraag te reageren.',
+  cons2:'Ik ben 16 jaar of ouder.',
+  bkMsgHead:'Bezoekaanvraag — Aya Beauty & Skin',
+  msgHello:'Hallo, ik wil graag een afspraak aanvragen.',
+  msgTreat:'Behandeling',
+  msgPref:'Voorkeur',
+  msgName:'Naam',
+  msgContact:'Contact',
+  msgNote:'Opmerking',
+  msgFoot:'Ik begrijp dat dit een aanvraag is en nog geen bevestigde afspraak.',
+  f1b:'Locatie op aanvraag',
+  fAppt:'Op aanvraag',
+  q1:'Hoe werkt het aanvragen van een bezoek?',
+  a1:'Doorloop de drie korte stappen hierboven. Je aanvraag komt bij ons binnen via WhatsApp of e-mail — wat jij kiest. Samar kijkt in de agenda en laat je persoonlijk weten of het moment past.',
+  a7:'In Rotterdam, op aanvraag. De exacte locatie krijg je zodra we op je aanvraag hebben gereageerd. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">Bekijk op Google Maps</a>.',
+  cBody:'Stuur een aanvraag en schrijf erbij wat je huid doet. Je krijgt antwoord van Samar zelf, geen standaardtekst.',
+
   _title:'Aya Beauty & Skin — Huidstudio Rotterdam',
-  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi. Vraag direct een afspraak aan.',
+  
   _marquee:['3D Huid- & haaranalyse','Hydrofacial','Microneedling','RF Microneedling','Exosomen','Huidverbetering','Laserontharing','Lip Blush','Rotterdam'],
   _locale:'nl-NL',
   brand:'Aya', brandSub:'Beauty & Skin',
-  navTreat:'Behandelingen', navKit:'Apparatuur', navWork:'Werkwijze', navStudio:'Studio', navFaq:'Vragen', ctaNav:'Afspraak maken',
+  navTreat:'Behandelingen', navKit:'Apparatuur', navWork:'Werkwijze', navStudio:'Studio', navFaq:'Vragen', 
   heroKicker:'Schoonheidsspecialist · Rotterdam',
   heroTitle:'Huid die er <span class="it">gezond</span> uitziet, niet gefilterd.',
   heroLede:'3D-huid- en haaranalyse met AI, hydrofacial, RF-microneedling met exosomen, laserontharing en lip blush — rustig uitgevoerd, altijd na een eerlijk advies. Door Samar Tinawi.',
-  ctaHero1:'Afspraak maken', ctaHero2:'Bekijk behandelingen', scroll:'Scroll',
+  ctaHero2:'Bekijk behandelingen', scroll:'Scroll',
   introLabel:'Wie je voor je hebt',
   introScrub:'Ik behandel geen trends. Ik behandel huid — met een plan dat bij jouw gezicht, jouw huidtype en jouw tempo past. Eerst kijken, dan pas kiezen.',
   introBody:'Samar Tinawi is schoonheidsspecialist in Rotterdam. Elke behandeling begint met een huidanalyse: wat is er aan de hand, wat kan er nu, en wat heeft tijd nodig. Geen pakketten die je niet nodig hebt. Nederlands, Arabisch en Engels gesproken.',
@@ -1433,7 +1821,7 @@ nl: {
   a4t:'Littekens',
   a4d:'Needling maakt micro-kanaaltjes die je eigen collageen aanzetten. Met radiofrequentie erbij gaat de warmte dieper, wat nodig is bij ingezakte littekens.',
   svcLede:'Welke route past, leest de 3D-scan grotendeels voor ons uit. Vaak is het een combinatie — soms is minder genoeg.',
-  bookThis:'Boek behandeling', readMore:'Meer lezen',
+  readMore:'Meer lezen',
   sAt:'3D <em>huid- &amp; haaranalyse</em>', sAp:'3D-huid- & haaranalyse (AI)',
   sAd:'Een 3D-scan van je huid én hoofdhuid, gelezen door AI: pigment, poriën, vochtgehalte, roodheid en fijne lijnen — plus haardichtheid en haargroei. Je ziet wat er onder de oppervlakte speelt, en na je kuur meten we opnieuw.',
   sAc1:'Scan + rapport', sAc2:'Huid & haar', sAc3:'Start van elke kuur',
@@ -1474,44 +1862,44 @@ nl: {
   w4d:'Je gaat naar huis met concrete instructies voor de eerste dagen en een vervolgafspraak alleen als je die echt nodig hebt.',
   stTitle:'Klein, rustig, en van jou zolang je er bent.',
   stBody:'Eén behandelkamer, één klant tegelijk. Geen wachtruimte vol mensen, geen gehaaste sessie van twintig minuten. Je komt binnen, we nemen de tijd, en je gaat weg met een huid die je zelf kunt onderhouden.',
-  f1a:'Rotterdam', f1b:'Locatie op afspraak', f2a:'Instagram',
+  f1a:'Rotterdam', f2a:'Instagram',
   f3a:'NL · AR · EN', f3b:'Gesproken talen', f4a:'1 op 1', f4b:'Altijd persoonlijk',
-  bkTitle:'Vraag je afspraak aan in drie stappen.',
-  bkLede:'Vul in wat je wilt laten doen en wanneer het je uitkomt. Je aanvraag gaat rechtstreeks naar Samar — zij bevestigt de definitieve datum en tijd persoonlijk.',
-  lblTreat:'Behandeling', optAsk:'Weet ik nog niet — adviseer me',
-  lblDate:'Voorkeursdatum', lblPart:'Dagdeel',
-  lblTime:'Voorkeurstijd (optioneel)',
-  partAM:'Ochtend', partPM:'Middag', partEve:'Avond',
-  lblName:'Naam', lblContact:'Telefoon of e-mail', lblNotes:'Wat wil je aanpakken? (optioneel)',
+  
+  
+  optAsk:'Weet ik nog niet — adviseer me',
+  
+  
+  
+  
   phNotes:'Bijv. pigmentvlekken op mijn wangen, al twee jaar.',
-  bkSubmit:'Aanvraag versturen', bkSumTitle:'Jouw aanvraag',
-  bkErr:'Vul je naam en contactgegevens in.',
-  bkNote:'Dit is een aanvraag, geen bevestigde afspraak. Samar bevestigt de datum en tijd persoonlijk.',
-  bkSendWa:'Verstuur via WhatsApp', bkSendIg:'Verstuur via Instagram DM', bkSendMail:'Verstuur via e-mail',
-  bkCopied:'Tekst gekopieerd — plak hem in het gesprek.',
-  bkMsgLabel:'Je aanvraag als tekst — kopieer en plak',
-  calLoading:'Vrije tijden laden…',
-  stepTreat:'Kies je behandeling', stepDay:'Kies een dag en tijd', stepYou:'Jouw gegevens',
-  lblEmail:'E-mailadres', lblPhone:'Telefoon (optioneel)',
-  confirmBtn:'Afspraak bevestigen', atWord:'om',
-  noSlots:'Geen vrije tijden op deze dag. Kies een andere dag.',
-  okTitle:'Je afspraak staat vast.',
-  okBody:'De bevestiging is onderweg naar je mail, met een agendabestand erbij. Bewaar je referentie — daarmee kun je de afspraak zelf annuleren.',
-  refLabel:'Referentie', icsBtn:'Zet in mijn agenda', cancelBtn:'Afspraak annuleren',
-  cancelledTitle:'Afspraak geannuleerd.', cancelledBody:'De tijd staat weer vrij. Je kunt hierboven een nieuw moment kiezen.',
-  errTaken:'Die tijd is net door iemand anders geboekt. Kies een ander moment — de lijst is bijgewerkt.',
-  errEmail:'Vul een geldig e-mailadres in.',
-  errTooMany:'Te veel aanvragen achter elkaar. Probeer het over een uur nog eens.',
-  errGeneric:'Er ging iets mis. Probeer het zo nog eens.',
-  calNote:'De tijden hierboven komen rechtstreeks uit de agenda van de studio: wat je ziet is echt vrij. Zodra je bevestigt is de tijd van jou en krijg je meteen een mail.',
-  bkTitleLive:'Kies je behandeling en een vrij moment.',
-  bkLedeLive:'Alle tijden hieronder zijn echt beschikbaar. Kies een behandeling, pak een moment dat je uitkomt en je bevestiging is direct binnen.',
-  a1live:'Kies hierboven je behandeling, pak een vrij moment in de agenda en vul je gegevens in. Je bevestiging komt meteen per mail binnen — de afspraak staat dan vast. Verzetten of annuleren kan via de link in die mail.',
-  bkMsgHead:'Afspraakaanvraag — Aya Beauty & Skin',
-  bkFlex:'Zo snel mogelijk', bkNotesShort:'Huid',
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   faqTitle:'Wat mensen meestal vragen.',
-  q1:'Hoe werkt het aanvragen van een afspraak?',
-  a1:'Vul het formulier hierboven in. Je aanvraag komt binnen via WhatsApp, Instagram of e-mail — wat jij kiest. Samar kijkt in de agenda en bevestigt persoonlijk een datum en tijd.',
+  
+  
   q2:'Wat kost een behandeling?',
   a2:'De prijs hangt af van de behandeling en of het om één sessie of een kuur gaat. Je krijgt het volledige bedrag te horen tijdens de intake, vóórdat er iets gebeurt — nooit achteraf een verrassing.',
   q3:'Heb ik hersteltijd nodig?',
@@ -1523,11 +1911,11 @@ nl: {
   q5:'In welke taal kan ik terecht?',
   a5:'Nederlands, Arabisch of Engels — wat voor jou het prettigst praat. نتكلم العربية.',
   q7:'Waar is de studio?',
-  a7:'In Rotterdam, op afspraak. De exacte locatie krijg je bij het bevestigen van je afspraak. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">Bekijk op Google Maps</a>.',
+  
   cTitle:'Begin met een <span class="it">eerlijk</span> huidadvies.',
-  cBody:'Vraag je afspraak aan en schrijf erbij wat je huid doet. Je krijgt antwoord van Samar zelf, geen standaardtekst.',
-  cBtn1:'Afspraak maken', cBtn2:'Bekijk Instagram',
-  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Nederland', fAppt:'Op afspraak',
+  
+  cBtn2:'Bekijk Instagram',
+  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Nederland', 
   fTreat:'Behandelingen', fT1:'3D-huid- & haaranalyse', fT2:'Hydrofacial', fT3:'RF microneedling', fT4:'Laserontharing',
   fCopy:'Aya Beauty & Skin — Samar Tinawi', fRole:'Schoonheidsspecialist · Rotterdam',
 
@@ -1549,7 +1937,7 @@ nl: {
   },
 
   legalPrivacy:'Privacybeleid',
-  legalPrivacyBody:'<p><strong>Wie wij zijn.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is verantwoordelijk voor de verwerking van je persoonsgegevens. Zie ook de <button type="button" class="linkbtn" data-page="biz">bedrijfsgegevens</button>.</p><p><strong>Welke gegevens en waarom.</strong> Alleen wat nodig is om je afspraak te plannen: naam, een telefoonnummer of e-mailadres, de gewenste behandeling, datum en eventuele opmerkingen. Grondslag is jouw toestemming (het vinkje in het formulier) en het uitvoeren van je afspraak. Medische gegevens hoef je hier niet te delen; die bespreken we tijdens de intake.</p><p><strong>Kinderen.</strong> Het formulier is bedoeld voor mensen vanaf 16 jaar. Is iemand jonger, dan vult een ouder of voogd het in en geeft die toestemming.</p><p><strong>Delen en bewaren.</strong> Je gegevens worden niet verkocht en niet gebruikt voor marketing. We delen ze met niemand, behalve via het kanaal dat jij zelf kiest om je aanvraag te versturen (WhatsApp, Instagram of e-mail). We bewaren ze zolang nodig voor je afspraak en een redelijke administratieve termijn (<mark class="ph">invullen: bijv. 12 maanden</mark>), daarna worden ze verwijderd.</p><p><strong>Cookies en externe diensten.</strong> Geen tracking- of advertentiecookies. Lettertypen van Google Fonts laden we alleen na jouw toestemming. Zie het <button type="button" class="linkbtn" data-page="cookies">cookiebeleid</button>.</p><p><strong>E-mails.</strong> We sturen geen nieuwsbrieven of reclame. Je ontvangt alleen berichten over je eigen afspraak. Gaan we ooit nieuwsbrieven versturen, dan vragen we eerst toestemming en staat er in elke mail een afmeldlink.</p><p><strong>Jouw rechten.</strong> Inzage, correctie, verwijdering, beperking, bezwaar, overdracht en het intrekken van je toestemming. Verwijdering vraag je aan via <button type="button" class="linkbtn" data-page="delete">gegevens laten verwijderen</button>. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p>',
+  legalPrivacyBody:'<p><strong>Wie wij zijn.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is verantwoordelijk voor de verwerking van je persoonsgegevens. Zie ook de <button type="button" class="linkbtn" data-page="biz">bedrijfsgegevens</button>.</p><p><strong>Welke gegevens en waarom.</strong> Alleen wat nodig is om je afspraak te plannen: naam, een telefoonnummer of e-mailadres, de gewenste behandeling, datum en eventuele opmerkingen. Grondslag is jouw toestemming (het vinkje in het formulier) en het uitvoeren van je afspraak. Medische gegevens hoef je hier niet te delen; die bespreken we tijdens de intake.</p><p><strong>Kinderen.</strong> Het formulier is bedoeld voor mensen vanaf 16 jaar. Is iemand jonger, dan vult een ouder of voogd het in en geeft die toestemming.</p><p><strong>Delen en bewaren.</strong> Je gegevens worden niet verkocht en niet gebruikt voor marketing. We delen ze met niemand, behalve via het kanaal dat jij zelf kiest om je aanvraag te versturen (WhatsApp, Instagram of e-mail). We bewaren ze zolang nodig voor je afspraak en een redelijke administratieve termijn (<mark class="ph">invullen: bijv. 12 maanden</mark>), daarna worden ze verwijderd.</p><p><strong>Cookies en externe diensten.</strong> Geen tracking- of advertentiecookies. Lettertypen van Google Fonts laden we alleen na jouw toestemming. Zie het <button type="button" class="linkbtn" data-page="cookies">cookiebeleid</button>.</p><p><strong>E-mails.</strong> We sturen geen nieuwsbrieven of reclame. Je ontvangt alleen berichten over je eigen afspraak. Gaan we ooit nieuwsbrieven versturen, dan vragen we eerst toestemming en staat er in elke mail een afmeldlink.</p><p><strong>Jouw rechten.</strong> Inzage, correctie, verwijdering, beperking, bezwaar, overdracht en het intrekken van je toestemming. Verwijdering vraag je aan via een bericht op Instagram <span class="ltr">@ayaa_beauty.skin</span>. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p>',
   legalTerms:'Servicevoorwaarden',
   legalTermsBody:'<p>Door een afspraak aan te vragen via deze site ga je akkoord met deze voorwaarden. Een aanvraag is geen automatische bevestiging: Samar bevestigt de definitieve datum en tijd persoonlijk.</p><p><strong>Prijzen.</strong> Je hoort het volledige bedrag tijdens de intake, voordat er iets gebeurt. Er komen geen kosten bij die vooraf niet zijn genoemd. <mark class="ph">invullen: prijzen inclusief btw, en welke betaalmethoden</mark></p><p><strong>Annuleren, verzetten en terugbetaling.</strong> Zie het <button type="button" class="linkbtn" data-page="refund">annulerings- en terugbetalingsbeleid</button>.</p><p><strong>Gezondheid.</strong> Sommige behandelingen zijn niet geschikt tijdens zwangerschap, bij bepaalde huidaandoeningen of medicijngebruik. Meld dit altijd vooraf. Resultaten verschillen per persoon; de informatie op deze site is algemeen en vervangt geen persoonlijk advies tijdens de intake.</p><p><strong>Leeftijd.</strong> Afspraken worden gemaakt door personen vanaf 16 jaar; voor jongere personen is toestemming van een ouder of voogd nodig.</p><p><strong>Wijzigingen.</strong> Deze voorwaarden kunnen worden aangepast; de laatste versie staat altijd op deze pagina.</p>',
   legalDmca:'DMCA / auteursrecht',
@@ -1561,16 +1949,14 @@ nl: {
   cbTitle:'Cookies en lettertypen',
   cbText:'Deze site gebruikt geen tracking- of advertentiecookies. Alleen met jouw toestemming laden we de lettertypen van Google Fonts; Google ontvangt dan je IP-adres. Je taalkeuze bewaren we lokaal in je browser.',
   cbAccept:'Accepteren', cbDecline:'Weigeren', cbMore:'Cookiebeleid', cbSettings:'Cookie-instellingen',
-  cons1:'Ik ga akkoord met het <button type="button" class="linkbtn" data-page="privacy">privacybeleid</button> en de <button type="button" class="linkbtn" data-page="terms">voorwaarden</button> en geef toestemming dat Aya Beauty &amp; Skin mijn gegevens gebruikt om mijn afspraak te plannen.',
-  cons2:'Ik ben 16 jaar of ouder, of mijn ouder of voogd vult dit formulier in en geeft toestemming.',
-  consErr:'Vink beide vakjes aan om je aanvraag te versturen.',
-  noteHint:'Deel alleen wat nodig is. Medische details bespreken we tijdens de intake.',
+  
+  
+  
+  
   legalRefund:'Annuleren & terugbetaling',
   legalRefundBody:'<p><strong>Annuleren of verzetten.</strong> Kosteloos tot <mark class="ph">24 uur</mark> voor je afspraak, via Instagram <span class="ltr">@ayaa_beauty.skin</span> of <mark class="ph">e-mail / telefoon</mark>.</p><p><strong>Te laat annuleren of niet komen.</strong> <mark class="ph">invullen: bijv. aanbetaling vervalt of een percentage van het tarief</mark>. Dit hoor je altijd vooraf, bij het maken van je afspraak.</p><p><strong>Kuren.</strong> Nog niet gebruikte sessies van een kuur: <mark class="ph">invullen: terugbetaling of tegoed, en binnen welke termijn</mark>.</p><p><strong>Niet tevreden?</strong> Neem binnen <mark class="ph">7 dagen</mark> contact op. Samar kijkt persoonlijk met je naar een oplossing.</p><p><strong>Terugbetalen.</strong> Een terugbetaling gaat via dezelfde betaalmethode, binnen <mark class="ph">14 dagen</mark>. Je wettelijke rechten als consument blijven altijd gelden.</p>',
   legalCookies:'Cookiebeleid',
   legalCookiesBody:'<p>Deze site gebruikt geen tracking-, analyse- of advertentiecookies.</p><p><strong>Altijd aan (functioneel).</strong> Je taalkeuze (NL of AR) en je cookiekeuze worden lokaal in je browser bewaard. Die gegevens verlaten je apparaat niet.</p><p><strong>Alleen met toestemming.</strong> Google Fonts (de lettertypen van de site). Als je accepteert, haalt je browser de lettertypen op bij Google en ontvangt Google je IP-adres. Weiger je, dan toont de site standaardlettertypen en wordt er niets bij Google opgehaald.</p><p><strong>Zelf gehost.</strong> De animatiebibliotheek (GSAP) en de foto\'s worden vanaf deze site zelf geladen, zonder externe partij.</p><p>Je keuze wijzigen kan altijd met de knop <em>Cookie-instellingen</em> onderaan de pagina.</p>',
-  legalDelete:'Gegevens laten verwijderen',
-  legalDeleteBody:'<p>Je kunt op elk moment vragen om je gegevens in te zien, te laten corrigeren of te laten verwijderen. Je hoeft daar geen reden voor te geven.</p><p><strong>Zo doe je dat.</strong> Stuur een bericht via Instagram <span class="ltr">@ayaa_beauty.skin</span> of per e-mail naar <mark class="ph">e-mailadres</mark>. Zet erbij: je naam, het telefoonnummer of e-mailadres dat je in je aanvraag gebruikte, en de tekst <em>Verwijder mijn gegevens</em>.</p><p>We controleren kort dat het verzoek van jou komt, verwijderen je gegevens en bevestigen dat uiterlijk binnen een maand. Gegevens die we wettelijk moeten bewaren, zoals een factuur, bewaren we alleen zolang dat verplicht is.</p><p>Doe je dit namens een kind onder de 16, geef dan aan dat je ouder of voogd bent.</p>',
   legalBiz:'Bedrijfsgegevens',
   legalBizBody:'<ul><li>Handelsnaam: Aya Beauty &amp; Skin</li><li>Eigenaar: Samar Tinawi</li><li>Adres: <mark class="ph">straat, huisnummer, postcode, Rotterdam</mark></li><li>KvK-nummer: <mark class="ph">invullen</mark></li><li>BTW-id: <mark class="ph">invullen</mark></li><li>E-mail: <mark class="ph">invullen</mark></li><li>Telefoon / WhatsApp: <mark class="ph">volgt</mark></li><li>Instagram: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">Op afspraak. De exacte locatie krijg je bij de bevestiging van je afspraak.</p>',
   legalLic:'Licenties & bronnen',
@@ -1581,16 +1967,71 @@ nl: {
 },
 
 en: {
+  /* ── request a visit ── */
+  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling with exosomes, skin improvement and lip blush by beauty specialist Samar Tinawi. Request a visit in three short steps.',
+  ctaNav:'Request a visit',
+  ctaHero1:'Request a visit',
+  cBtn1:'Request your visit',
+  bookThis:'Request this treatment',
+  rqKicker:'Request a visit',
+  bkTitle:'Ask for your moment.',
+  bkLede:'Three short steps. You send a request and we confirm personally. So this is not yet a confirmed appointment.',
+  stepTreat:'Treatment / Service',
+  stepDay:'Day and time',
+  stepYou:'Details',
+  lblTreat:'Treatment',
+  lblDay:'Preferred day',
+  lblTime:'Preferred time',
+  timeHint:'Pick a preferred day and time. We\'ll let you know what\'s possible.',
+  timeFlex:'Flexible',
+  lblName:'Name',
+  lblContact:'Phone or email',
+  lblNotes:'Anything we should know? (optional)',
+  noteHint:'Please don\'t share medical details here.',
+  bkBack:'Back',
+  bkNext:'Next',
+  bkPrepare:'Prepare request',
+  bkEdit:'Edit',
+  bkSumTitle:'Your request',
+  stepOf:'Step {n} of 3',
+  bkSendWa:'Send via WhatsApp',
+  bkSendMail:'Send via email',
+  bkSendIg:'Send via Instagram DM',
+  bkReminder:'This is a request, not a confirmed appointment. We will reply personally.',
+  bkOk:'Request received. We\'ll tell you personally whether the moment works.',
+  bkMsgLabel:'Your request as text — copy and paste',
+  errDay:'Please choose a preferred day.',
+  errName:'Please add your name.',
+  errContact:'Add a phone number or email address we can reach you on.',
+  errContactBad:'That doesn\'t look like a phone number or email address. Please check it.',
+  consErr:'Please tick both boxes to continue.',
+  cons1:'I agree to the <button type="button" class="linkbtn" data-page="privacy">privacy policy</button> and the <button type="button" class="linkbtn" data-page="terms">terms</button>, and I consent to Aya Beauty &amp; Skin using my details to reply to my request.',
+  cons2:'I am 16 years or older.',
+  bkMsgHead:'Visit request — Aya Beauty & Skin',
+  msgHello:'Hello, I would like to request an appointment.',
+  msgTreat:'Treatment',
+  msgPref:'Preference',
+  msgName:'Name',
+  msgContact:'Contact',
+  msgNote:'Note',
+  msgFoot:'I understand this is a request and not yet a confirmed appointment.',
+  f1b:'Location shared on request',
+  fAppt:'By request',
+  q1:'How does requesting a visit work?',
+  a1:'Fill in the three short steps above. Your request goes to us via WhatsApp or e-mail — whichever you choose. Samar checks the diary and tells you personally whether the moment works.',
+  a7:'In Rotterdam, by request. You receive the exact location once we have replied to your request. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">View on Google Maps</a>.',
+  cBody:'Send a request and write what your skin is doing. You get an answer from Samar herself, not a standard text.',
+
   _title:'Aya Beauty & Skin — Skin studio Rotterdam',
-  _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling with exosomes, skin improvement and lip blush by beauty specialist Samar Tinawi. Request your appointment directly.',
+  
   _marquee:['3D Skin & hair analysis','Hydrofacial','Microneedling','RF Microneedling','Exosomes','Skin improvement','Laser hair removal','Lip Blush','Rotterdam'],
   _locale:'en-GB',
   brand:'Aya', brandSub:'Beauty & Skin',
-  navTreat:'Treatments', navKit:'Equipment', navWork:'How it works', navStudio:'Studio', navFaq:'Questions', ctaNav:'Book an appointment',
+  navTreat:'Treatments', navKit:'Equipment', navWork:'How it works', navStudio:'Studio', navFaq:'Questions', 
   heroKicker:'Beauty specialist · Rotterdam',
   heroTitle:'Skin that looks <span class="it">healthy</span>, not filtered.',
   heroLede:'AI-powered 3D skin and hair analysis, hydrofacial, RF microneedling with exosomes, laser hair removal and lip blush — done calmly, always after honest advice. By Samar Tinawi.',
-  ctaHero1:'Book an appointment', ctaHero2:'View treatments', scroll:'Scroll',
+  ctaHero2:'View treatments', scroll:'Scroll',
   introLabel:'Who you will meet',
   introScrub:'I do not treat trends. I treat skin — with a plan that fits your face, your skin type and your pace. Look first, then choose.',
   introBody:'Samar Tinawi is a beauty specialist in Rotterdam. Every treatment starts with a skin analysis: what is going on, what can be done now, and what needs time. No packages you do not need. Dutch, Arabic and English spoken.',
@@ -1618,7 +2059,7 @@ en: {
   a4t:'Scars',
   a4d:'Needling creates micro-channels that stimulate your own collagen. With radiofrequency added, the heat goes deeper, which is needed for sunken scars.',
   svcLede:'Which route suits you is largely read out by the 3D scan. Often it is a combination — sometimes less is enough.',
-  bookThis:'Book treatment', readMore:'Read more',
+  readMore:'Read more',
   sAt:'3D <em>skin &amp; hair analysis</em>', sAp:'3D skin & hair analysis (AI)',
   sAd:'A 3D scan of your skin and scalp, read by AI: pigment, pores, moisture level, redness and fine lines — plus hair density and hair growth. You see what is going on beneath the surface, and after your course we measure again.',
   sAc1:'Scan + report', sAc2:'Skin & hair', sAc3:'Start of every course',
@@ -1659,44 +2100,44 @@ en: {
   w4d:'You go home with concrete instructions for the first days and a follow-up appointment only if you really need one.',
   stTitle:'Small, quiet, and yours for as long as you are there.',
   stBody:'One treatment room, one client at a time. No waiting room full of people, no rushed twenty-minute session. You come in, we take our time, and you leave with skin you can look after yourself.',
-  f1a:'Rotterdam', f1b:'Location by appointment', f2a:'Instagram',
+  f1a:'Rotterdam', f2a:'Instagram',
   f3a:'NL · AR · EN', f3b:'Languages spoken', f4a:'1 to 1', f4b:'Always personal',
-  bkTitle:'Request your appointment in three steps.',
-  bkLede:'Fill in what you want done and when it suits you. Your request goes straight to Samar — she confirms the final date and time personally.',
-  lblTreat:'Treatment', optAsk:'I do not know yet — advise me',
-  lblDate:'Preferred date', lblPart:'Part of the day',
-  lblTime:'Preferred time (optional)',
-  partAM:'Morning', partPM:'Afternoon', partEve:'Evening',
-  lblName:'Name', lblContact:'Phone or e-mail', lblNotes:'What would you like to treat? (optional)',
+  
+  
+  optAsk:'I do not know yet — advise me',
+  
+  
+  
+  
   phNotes:'E.g. pigment spots on my cheeks, for two years now.',
-  bkSubmit:'Send request', bkSumTitle:'Your request',
-  bkErr:'Please fill in your name and contact details.',
-  bkNote:'This is a request, not a confirmed appointment. Samar confirms the date and time personally.',
-  bkSendWa:'Send via WhatsApp', bkSendIg:'Send via Instagram DM', bkSendMail:'Send via e-mail',
-  bkCopied:'Text copied — paste it into the conversation.',
-  bkMsgLabel:'Your request as text — copy and paste',
-  calLoading:'Loading free times…',
-  stepTreat:'Choose your treatment', stepDay:'Choose a day and time', stepYou:'Your details',
-  lblEmail:'E-mail address', lblPhone:'Phone (optional)',
-  confirmBtn:'Confirm appointment', atWord:'at',
-  noSlots:'No free times on this day. Choose another day.',
-  okTitle:'Your appointment is booked.',
-  okBody:'The confirmation is on its way to your inbox, with a calendar file. Keep your reference — you can use it to cancel the appointment yourself.',
-  refLabel:'Reference', icsBtn:'Add to my calendar', cancelBtn:'Cancel appointment',
-  cancelledTitle:'Appointment cancelled.', cancelledBody:'The time is free again. You can pick a new moment above.',
-  errTaken:'That time has just been booked by someone else. Choose another moment — the list has been updated.',
-  errEmail:'Please enter a valid e-mail address.',
-  errTooMany:'Too many requests in a row. Try again in an hour.',
-  errGeneric:'Something went wrong. Please try again shortly.',
-  calNote:'The times above come straight from the studio diary: what you see is really free. As soon as you confirm, the time is yours and you get an e-mail right away.',
-  bkTitleLive:'Choose your treatment and a free moment.',
-  bkLedeLive:'All times below are really available. Choose a treatment, pick a moment that suits you and your confirmation arrives immediately.',
-  a1live:'Choose your treatment above, pick a free moment in the diary and fill in your details. Your confirmation arrives by e-mail straight away — the appointment is then fixed. Rescheduling or cancelling is possible via the link in that e-mail.',
-  bkMsgHead:'Appointment request — Aya Beauty & Skin',
-  bkFlex:'As soon as possible', bkNotesShort:'Skin',
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   faqTitle:'What people usually ask.',
-  q1:'How does requesting an appointment work?',
-  a1:'Fill in the form above. Your request arrives via WhatsApp, Instagram or e-mail — whichever you choose. Samar checks the diary and confirms a date and time personally.',
+  
+  
   q2:'What does a treatment cost?',
   a2:'The price depends on the treatment and whether it is a single session or a course. You hear the full amount during the intake, before anything happens — never a surprise afterwards.',
   q3:'Do I need recovery time?',
@@ -1708,11 +2149,11 @@ en: {
   q5:'Which language can I use?',
   a5:'Dutch, Arabic or English — whichever you feel most comfortable in. نتكلم العربية.',
   q7:'Where is the studio?',
-  a7:'In Rotterdam, by appointment. You receive the exact location when your appointment is confirmed. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">View on Google Maps</a>.',
+  
   cTitle:'Start with <span class="it">honest</span> skin advice.',
-  cBody:'Request your appointment and write what your skin is doing. You get an answer from Samar herself, not a standard text.',
-  cBtn1:'Book an appointment', cBtn2:'View Instagram',
-  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Netherlands', fAppt:'By appointment',
+  
+  cBtn2:'View Instagram',
+  fBrand:'Aya Beauty & Skin', fContact:'Contact', fCity:'Rotterdam, Netherlands', 
   fTreat:'Treatments', fT1:'3D skin & hair analysis', fT2:'Hydrofacial', fT3:'RF microneedling', fT4:'Laser hair removal',
   fCopy:'Aya Beauty & Skin — Samar Tinawi', fRole:'Beauty specialist · Rotterdam',
   skip:'Skip to content',
@@ -1720,12 +2161,12 @@ en: {
   cbTitle:'Cookies and fonts',
   cbText:'This site uses no tracking or advertising cookies. Only with your permission do we load the fonts from Google Fonts; Google then receives your IP address. We keep your language choice locally in your browser.',
   cbAccept:'Accept', cbDecline:'Decline', cbMore:'Cookie policy', cbSettings:'Cookie settings',
-  cons1:'I agree to the <button type="button" class="linkbtn" data-page="privacy">privacy policy</button> and the <button type="button" class="linkbtn" data-page="terms">terms</button>, and I consent to Aya Beauty &amp; Skin using my details to plan my appointment.',
-  cons2:'I am 16 or older, or my parent or guardian is filling in this form and gives consent.',
-  consErr:'Tick both boxes to send your request.',
-  noteHint:'Share only what is needed. We discuss medical details during the intake.',
+  
+  
+  
+  
   legalPrivacy:'Privacy policy',
-  legalPrivacyBody:'<p><strong>Who we are.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is responsible for processing your personal data. See also the <button type="button" class="linkbtn" data-page="biz">business details</button>.</p><p><strong>Which data and why.</strong> Only what is needed to plan your appointment: name, a phone number or e-mail address, the treatment you want, date and any remarks. The basis is your consent (the tick box in the form) and carrying out your appointment. You do not need to share medical details here; we discuss those during the intake.</p><p><strong>Children.</strong> The form is meant for people aged 16 and over. If someone is younger, a parent or guardian fills it in and gives consent.</p><p><strong>Sharing and retention.</strong> Your data is not sold and not used for marketing. We share it with nobody, except through the channel you choose yourself to send your request (WhatsApp, Instagram or e-mail). We keep it as long as needed for your appointment and a reasonable administrative period (<mark class="ph">fill in: e.g. 12 months</mark>), after which it is deleted.</p><p><strong>Cookies and external services.</strong> No tracking or advertising cookies. We load fonts from Google Fonts only with your consent. See the <button type="button" class="linkbtn" data-page="cookies">cookie policy</button>.</p><p><strong>E-mails.</strong> We do not send newsletters or advertising. You only receive messages about your own appointment. If we ever send newsletters, we will ask for consent first and every e-mail will have an unsubscribe link.</p><p><strong>Your rights.</strong> Access, correction, deletion, restriction, objection, portability and withdrawing your consent. Request deletion via <button type="button" class="linkbtn" data-page="delete">have my data deleted</button>. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>',
+  legalPrivacyBody:'<p><strong>Who we are.</strong> Aya Beauty &amp; Skin (Samar Tinawi), Rotterdam, is responsible for processing your personal data. See also the <button type="button" class="linkbtn" data-page="biz">business details</button>.</p><p><strong>Which data and why.</strong> Only what is needed to plan your appointment: name, a phone number or e-mail address, the treatment you want, date and any remarks. The basis is your consent (the tick box in the form) and carrying out your appointment. You do not need to share medical details here; we discuss those during the intake.</p><p><strong>Children.</strong> The form is meant for people aged 16 and over. If someone is younger, a parent or guardian fills it in and gives consent.</p><p><strong>Sharing and retention.</strong> Your data is not sold and not used for marketing. We share it with nobody, except through the channel you choose yourself to send your request (WhatsApp, Instagram or e-mail). We keep it as long as needed for your appointment and a reasonable administrative period (<mark class="ph">fill in: e.g. 12 months</mark>), after which it is deleted.</p><p><strong>Cookies and external services.</strong> No tracking or advertising cookies. We load fonts from Google Fonts only with your consent. See the <button type="button" class="linkbtn" data-page="cookies">cookie policy</button>.</p><p><strong>E-mails.</strong> We do not send newsletters or advertising. You only receive messages about your own appointment. If we ever send newsletters, we will ask for consent first and every e-mail will have an unsubscribe link.</p><p><strong>Your rights.</strong> Access, correction, deletion, restriction, objection, portability and withdrawing your consent. Request deletion by sending a message on Instagram <span class="ltr">@ayaa_beauty.skin</span>. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>',
   legalTerms:'Terms of service',
   legalTermsBody:'<p>By requesting an appointment through this site you agree to these terms. A request is not an automatic confirmation: Samar confirms the final date and time personally.</p><p><strong>Prices.</strong> You hear the full amount during the intake, before anything happens. No costs are added that were not mentioned beforehand. <mark class="ph">fill in: prices including VAT, and which payment methods</mark></p><p><strong>Cancelling, rescheduling and refunds.</strong> See the <button type="button" class="linkbtn" data-page="refund">cancellation and refund policy</button>.</p><p><strong>Health.</strong> Some treatments are not suitable during pregnancy, with certain skin conditions or when taking medication. Always tell us beforehand. Results differ from person to person; the information on this site is general and does not replace personal advice during the intake.</p><p><strong>Age.</strong> Appointments are made by people aged 16 and over; for younger people a parent or guardian must consent.</p><p><strong>Changes.</strong> These terms may be amended; the latest version is always on this page.</p>',
   legalDmca:'DMCA / copyright',
@@ -1736,8 +2177,6 @@ en: {
   legalRefundBody:'<p><strong>Cancelling or rescheduling.</strong> Free of charge up to <mark class="ph">24 hours</mark> before your appointment, via Instagram <span class="ltr">@ayaa_beauty.skin</span> or <mark class="ph">e-mail / phone</mark>.</p><p><strong>Late cancellation or no-show.</strong> <mark class="ph">fill in: e.g. deposit is forfeited or a percentage of the fee</mark>. You always hear this beforehand, when you make your appointment.</p><p><strong>Courses.</strong> Unused sessions of a course: <mark class="ph">fill in: refund or credit, and within which period</mark>.</p><p><strong>Not satisfied?</strong> Get in touch within <mark class="ph">7 days</mark>. Samar will look for a solution with you personally.</p><p><strong>Refunding.</strong> A refund goes back via the same payment method, within <mark class="ph">14 days</mark>. Your statutory consumer rights always apply.</p>',
   legalCookies:'Cookie policy',
   legalCookiesBody:'<p>This site uses no tracking, analytics or advertising cookies.</p><p><strong>Always on (functional).</strong> Your language choice (NL, EN or AR) and your cookie choice are stored locally in your browser. That data does not leave your device.</p><p><strong>Only with consent.</strong> Google Fonts (the site fonts). If you accept, your browser fetches the fonts from Google and Google receives your IP address. If you decline, the site shows standard fonts and nothing is fetched from Google.</p><p><strong>Self-hosted.</strong> The animation library (GSAP) and the photos are loaded from this site itself, without an outside party.</p><p>You can change your choice at any time with the <em>Cookie settings</em> button at the bottom of the page.</p>',
-  legalDelete:'Have my data deleted',
-  legalDeleteBody:'<p>You can ask at any time to see, correct or delete your data. You do not have to give a reason.</p><p><strong>How.</strong> Send a message via Instagram <span class="ltr">@ayaa_beauty.skin</span> or by e-mail to <mark class="ph">e-mail address</mark>. Include your name, the phone number or e-mail address you used in your request, and the words <em>Delete my data</em>.</p><p>We briefly check that the request comes from you, delete your data and confirm within one month at the latest. Data we are legally required to keep, such as an invoice, is kept only for as long as required.</p><p>If you are doing this for a child under 16, say that you are the parent or guardian.</p>',
   legalBiz:'Business details',
   legalBizBody:'<ul><li>Trade name: Aya Beauty &amp; Skin</li><li>Owner: Samar Tinawi</li><li>Address: <mark class="ph">street, number, postcode, Rotterdam</mark></li><li>Chamber of Commerce (KvK) number: <mark class="ph">fill in</mark></li><li>VAT number: <mark class="ph">fill in</mark></li><li>E-mail: <mark class="ph">fill in</mark></li><li>Phone / WhatsApp: <mark class="ph">to follow</mark></li><li>Instagram: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">By appointment. You receive the exact location with your appointment confirmation.</p>',
   legalLic:'Licences & credits',
@@ -1765,16 +2204,71 @@ en: {
 },
 
 ar: {
+  /* ── request a visit ── */
+  _desc:'آية للجمال والعناية بالبشرة في روتردام. هيدروفيشل، ميكرونيدلينغ مع الإكسوزومات، تحسين البشرة وتوريد الشفاه مع الأخصائية سمر تينوي. اطلبي زيارة بثلاث خطوات قصيرة.',
+  ctaNav:'اطلبي زيارة',
+  ctaHero1:'اطلبي زيارة',
+  cBtn1:'اطلبي زيارتك',
+  bookThis:'اطلبي هاد العلاج',
+  rqKicker:'اطلبي زيارة',
+  bkTitle:'اطلبي لحظتك.',
+  bkLede:'ثلاث خطوات قصيرة. بتبعتي طلب ونأكّد معك شخصياً. يعني هاد لسّا مو موعد مؤكّد.',
+  stepTreat:'العلاج / الخدمة',
+  stepDay:'اليوم والوقت',
+  stepYou:'المعلومات',
+  lblTreat:'العلاج',
+  lblDay:'اليوم المفضّل',
+  lblTime:'الوقت المفضّل',
+  timeHint:'اختاري يوم ووقت مفضّلين. منخبرك شو ممكن.',
+  timeFlex:'مرن',
+  lblName:'الاسم',
+  lblContact:'الهاتف أو الإيميل',
+  lblNotes:'في شي لازم نعرفه؟ (اختياري)',
+  noteHint:'لو سمحتي، لا تشاركي معلومات طبية هون.',
+  bkBack:'رجوع',
+  bkNext:'التالي',
+  bkPrepare:'تجهيز الطلب',
+  bkEdit:'تعديل',
+  bkSumTitle:'طلبك',
+  stepOf:'الخطوة {n} من 3',
+  bkSendWa:'إرسال عبر واتساب',
+  bkSendMail:'إرسال عبر الإيميل',
+  bkSendIg:'إرسال عبر رسالة إنستغرام',
+  bkReminder:'هاد طلب، مو موعد مؤكّد. منرد عليكي شخصياً.',
+  bkOk:'وصلنا طلبك. منخبرك شخصياً إذا الوقت مناسب.',
+  bkMsgLabel:'طلبك كنص — انسخيه والصقيه',
+  errDay:'اختاري يوم مفضّل.',
+  errName:'اكتبي اسمك.',
+  errContact:'اكتبي رقم هاتف أو إيميل منقدر نوصلك عليه.',
+  errContactBad:'هاد مو شكل رقم هاتف أو إيميل. تأكدي منه.',
+  consErr:'حطّي إشارة عالخيارين للمتابعة.',
+  cons1:'بوافق على <button type="button" class="linkbtn" data-page="privacy">سياسة الخصوصية</button> و<button type="button" class="linkbtn" data-page="terms">الشروط</button>، وبعطي موافقتي إنو آية للجمال والعناية بالبشرة تستخدم معلوماتي للرد على طلبي.',
+  cons2:'عمري ١٦ سنة أو أكتر.',
+  bkMsgHead:'طلب زيارة — آية للجمال والعناية بالبشرة',
+  msgHello:'مرحباً، بدي أطلب موعد.',
+  msgTreat:'العلاج',
+  msgPref:'التفضيل',
+  msgName:'الاسم',
+  msgContact:'التواصل',
+  msgNote:'ملاحظة',
+  msgFoot:'أنا فاهمة إنو هاد طلب وهو لسّا مو موعد مؤكّد.',
+  f1b:'الموقع بيوصلك عند الطلب',
+  fAppt:'عند الطلب',
+  q1:'كيف بطلب زيارة؟',
+  a1:'عبّي الخطوات الثلاث القصيرة فوق. طلبك بيوصلنا عبر واتساب أو الإيميل — حسب اختيارك. سمر بتشوف الأجندة وبتخبرك شخصياً إذا الوقت مناسب.',
+  a7:'بروتردام، عند الطلب. الموقع بالضبط بيوصلك لما نرد على طلبك. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">شوفيه على Google Maps</a>.',
+  cBody:'ابعتي طلب واكتبيلنا شو عم تعمل بشرتك. بيجيكي ردّ من سمر شخصياً، مو نصّ جاهز.',
+
   _title:'آية للجمال والعناية بالبشرة — استوديو العناية بالبشرة في روتردام',
-  _desc:'آية للجمال والعناية بالبشرة في روتردام. هيدروفيشل، ميكرونيدلينغ مع الإكسوزومات، تفتيح وتوحيد لون البشرة، وتوريد الشفايف — مع أخصائية العناية بالبشرة سمر تيناوي. اطلبي موعدك مباشرة.',
+  
   _marquee:['تحليل ثلاثي الأبعاد','هيدروفيشل','ميكرونيدلينغ','RF ميكرونيدلينغ','إكسوزومات','تفتيح البشرة','ليزر','توريد الشفايف','روتردام'],
   _locale:'ar-EG',
   brand:'آية', brandSub:'للجمال والعناية بالبشرة',
-  navTreat:'العلاجات', navKit:'الأجهزة', navWork:'طريقة العمل', navStudio:'الاستوديو', navFaq:'أسئلة شائعة', ctaNav:'احجزي موعدك',
+  navTreat:'العلاجات', navKit:'الأجهزة', navWork:'طريقة العمل', navStudio:'الاستوديو', navFaq:'أسئلة شائعة', 
   heroKicker:'أخصائية عناية بالبشرة · روتردام',
   heroTitle:'بشرة تبدو <span class="it">صحية</span>، مو مفلترة.',
   heroLede:'تحليل بشرة وشعر ثلاثي الأبعاد بالذكاء الاصطناعي، هيدروفيشل، ميكرونيدلينغ وRF مع الإكسوزومات، إزالة شعر بالليزر، وتوريد الشفايف — بهدوء وعلى راحتك، وبعد استشارة صادقة. مع سمر تيناوي.',
-  ctaHero1:'احجزي موعدك', ctaHero2:'شوفي العلاجات', scroll:'مرّري',
+  ctaHero2:'شوفي العلاجات', scroll:'مرّري',
   introLabel:'مين رح تقابلي',
   introScrub:'أنا ما بعالج موضة. أنا بعالج بشرة — بخطة تناسب وجهك ونوع بشرتك وإيقاعك إنتِ. أول شي منشوف، وبعدين منقرّر.',
   introBody:'سمر تيناوي أخصائية عناية بالبشرة في روتردام. كل جلسة بتبدأ بتحليل للبشرة: شو القصة، شو فينا نعمل اليوم، وشو بدّو وقت. بدون باقات ما إلك حاجة فيها. منحكي هولندي وعربي وإنجليزي.',
@@ -1802,7 +2296,7 @@ ar: {
   a4t:'الآثار والمسام',
   a4d:'النيدلينغ بيعمل قنوات دقيقة بتحفّز الكولاجين عندك. ومع موجات الراديو الحرارة بتنزل أعمق، وهاد اللازم للآثار الغائرة.',
   svcLede:'أي طريق بيناسبك بيحدده السكان ثلاثي الأبعاد لحاله تقريباً. غالباً بتكون خلطة بينهن — وأحياناً الأقل بيكون كافي.',
-  bookThis:'احجزي هاي', readMore:'اقرأ أكتر',
+  readMore:'اقرأ أكتر',
   sAt:'تحليل <em>بشرة وشعر</em>', sAp:'تحليل البشرة والشعر ثلاثي الأبعاد (AI)',
   sAd:'سكان ثلاثي الأبعاد لبشرتك ولفروة راسك كمان، بيقراه الذكاء الاصطناعي: التصبغ، المسام، نسبة الترطيب، الاحمرار والخطوط الرفيعة — وكمان كثافة الشعر ونموّه. بتشوفي شو عم يصير تحت السطح، وبعد الكورس منعيد القياس.',
   sAc1:'سكان وتقرير', sAc2:'بشرة وشعر', sAc3:'بداية كل كورس',
@@ -1843,44 +2337,44 @@ ar: {
   w4d:'بتروحي عالبيت مع تعليمات واضحة لأول كم يوم، وموعد متابعة بس إذا فعلاً بتحتاجيه.',
   stTitle:'صغير، هادئ، وإلك إنتِ طول ما إنتِ فيه.',
   stBody:'غرفة علاج وحدة، وزبونة وحدة بنفس الوقت. ما في صالة انتظار مليانة، ولا جلسة مستعجلة بعشرين دقيقة. بتدخلي، مناخد وقتنا، وبتطلعي ببشرة فيكي تحافظي عليها لحالك.',
-  f1a:'روتردام', f1b:'الموقع بموعد مسبق', f2a:'Instagram',
+  f1a:'روتردام', f2a:'Instagram',
   f3a:'هولندي · عربي · إنجليزي', f3b:'اللغات', f4a:'واحد لواحد', f4b:'دائماً شخصي',
-  bkTitle:'اطلبي موعدك بثلاث خطوات.',
-  bkLede:'عبّي شو بدك تعملي وإيمتى بيناسبك. طلبك بيوصل مباشرة لسمر — وهي بتأكدلك التاريخ والوقت النهائي شخصياً.',
-  lblTreat:'العلاج', optAsk:'لسا ما قررت — انصحيني',
-  lblDate:'التاريخ المفضل', lblPart:'الوقت',
-  lblTime:'الساعة المفضلة (اختياري)',
-  partAM:'صباحاً', partPM:'بعد الظهر', partEve:'مساءً',
-  lblName:'الاسم', lblContact:'رقم الهاتف أو الإيميل', lblNotes:'شو بدك تعالجي؟ (اختياري)',
+  
+  
+  optAsk:'لسا ما قررت — انصحيني',
+  
+  
+  
+  
   phNotes:'مثلاً: تصبغات على خدودي من سنتين.',
-  bkSubmit:'إرسال الطلب', bkSumTitle:'طلبك',
-  bkErr:'عبّي اسمك ومعلومات التواصل.',
-  bkNote:'هاد طلب، مو موعد مؤكد. سمر بتأكدلك التاريخ والوقت شخصياً.',
-  bkSendWa:'أرسلي عبر واتساب', bkSendIg:'أرسلي عبر رسالة إنستغرام', bkSendMail:'أرسلي عبر الإيميل',
-  bkCopied:'تم نسخ النص — الصقيه بالمحادثة.',
-  bkMsgLabel:'طلبك كنص — انسخيه والصقيه',
-  calLoading:'عم نحمّل الأوقات المتاحة…',
-  stepTreat:'اختاري العلاج', stepDay:'اختاري اليوم والوقت', stepYou:'معلوماتك',
-  lblEmail:'الإيميل', lblPhone:'رقم الهاتف (اختياري)',
-  confirmBtn:'تأكيد الموعد', atWord:'الساعة',
-  noSlots:'ما في أوقات متاحة بهاليوم. جرّبي يوم تاني.',
-  okTitle:'موعدك تأكّد.',
-  okBody:'التأكيد عم يوصلك عالإيميل، ومعه ملف للتقويم. احتفظي برقم الحجز — فيكي تلغي الموعد فيه لحالك.',
-  refLabel:'رقم الحجز', icsBtn:'أضيفيه للتقويم', cancelBtn:'إلغاء الموعد',
-  cancelledTitle:'تم إلغاء الموعد.', cancelledBody:'الوقت رجع متاح. فيكي تختاري وقت جديد من فوق.',
-  errTaken:'هالوقت انحجز هلق من حدا تاني. اختاري وقت تاني — اللائحة انحدّثت.',
-  errEmail:'عبّي إيميل صحيح.',
-  errTooMany:'طلبات كتير ورا بعض. جرّبي بعد ساعة.',
-  errGeneric:'صار خطأ. جرّبي كمان مرة.',
-  calNote:'الأوقات فوق جاية مباشرة من أجندة الاستوديو: اللي بتشوفيه متاح فعلاً. أول ما تأكّدي بيصير الوقت إلك وبيوصلك إيميل علطول.',
-  bkTitleLive:'اختاري العلاج ووقت فاضي.',
-  bkLedeLive:'كل الأوقات تحت متاحة فعلاً. اختاري علاج، وقت بيناسبك، والتأكيد بيوصلك علطول.',
-  a1live:'اختاري العلاج فوق، وقت فاضي من الأجندة، وعبّي معلوماتك. التأكيد بيوصلك عالإيميل مباشرة — والموعد بيصير مؤكّد. التعديل أو الإلغاء من الرابط بنفس الإيميل.',
-  bkMsgHead:'طلب موعد — آية للجمال والعناية بالبشرة',
-  bkFlex:'بأقرب وقت ممكن', bkNotesShort:'البشرة',
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   faqTitle:'أسئلة بتتكرر كتير.',
-  q1:'كيف بطلب موعد؟',
-  a1:'عبّي الفورم فوق. طلبك بيوصل عبر واتساب أو إنستغرام أو الإيميل — حسب اللي بتختاريه. سمر بتشوف الأجندة وبتأكدلك التاريخ والوقت شخصياً.',
+  
+  
   q2:'قدّيش تكلفة الجلسة؟',
   a2:'السعر بيعتمد على نوع العلاج وإذا كانت جلسة وحدة أو كورس. بتعرفي المبلغ كامل بجلسة الاستشارة، قبل ما يصير أي شي — مو بعدين مفاجأة.',
   q3:'بدي فترة نقاهة؟',
@@ -1892,11 +2386,11 @@ ar: {
   q5:'بأي لغة فيني إحكي؟',
   a5:'عربي أو هولندي أو إنجليزي — اللي بترتاحي فيه. <span class="ltr">Nederlands, Arabisch of Engels.</span>',
   q7:'وين الاستوديو؟',
-  a7:'بروتردام، بموعد مسبق. الموقع بالضبط بتوصلك لما تأكدي موعدك. <a href="https://www.google.com/maps/search/?api=1&query=Aya+Beauty+%26+Skin+Rotterdam" target="_blank" rel="noopener">شوفي عالخريطة</a>.',
+  
   cTitle:'ابدأي باستشارة <span class="it">صادقة</span> لبشرتك.',
-  cBody:'اطلبي موعدك واكتبيلنا شو عم تعمل بشرتك. بيجيكي ردّ من سمر شخصياً، مو نصّ جاهز.',
-  cBtn1:'احجزي موعدك', cBtn2:'شوفي إنستغرام',
-  fBrand:'آية للجمال والعناية بالبشرة', fContact:'تواصل', fCity:'روتردام، هولندا', fAppt:'بموعد مسبق',
+  
+  cBtn2:'شوفي إنستغرام',
+  fBrand:'آية للجمال والعناية بالبشرة', fContact:'تواصل', fCity:'روتردام، هولندا', 
   fTreat:'العلاجات', fT1:'تحليل بشرة وشعر', fT2:'هيدروفيشل', fT3:'ميكرونيدلينغ RF', fT4:'إزالة الشعر بالليزر',
   fCopy:'آية للجمال والعناية بالبشرة — سمر تيناوي', fRole:'أخصائية عناية بالبشرة · روتردام',
 
@@ -1918,7 +2412,7 @@ ar: {
   },
 
   legalPrivacy:'سياسة الخصوصية',
-  legalPrivacyBody:'<p><strong>مين نحنا.</strong> آية للجمال والعناية بالبشرة (سمر تيناوي)، روتردام، هي المسؤولة عن معالجة بياناتك الشخصية. شوفي كمان <button type="button" class="linkbtn" data-page="biz">بيانات الشركة</button>.</p><p><strong>أي بيانات وليش.</strong> بس اللي لازم لتنظيم موعدك: الاسم، رقم هاتف أو إيميل، العلاج المطلوب، التاريخ وأي ملاحظات. الأساس هو موافقتك (الإشارة بالفورم) وتنفيذ موعدك. ما لازم تشاركي معلومات طبية هون؛ منحكي فيها بجلسة الاستشارة.</p><p><strong>الأطفال.</strong> الفورم لمين عمره ١٦ سنة أو أكتر. إذا كان أصغر، الأهل أو الوصي بيعبّوه وبيعطوا الموافقة.</p><p><strong>المشاركة والحفظ.</strong> بياناتك ما بتنباع وما بتنستخدم للتسويق. ما منشاركها مع حدا، إلا عبر القناة اللي بتختاريها لإرسال طلبك (واتساب أو إنستغرام أو إيميل). بنحفظها للمدة اللازمة لموعدك وفترة إدارية معقولة (<mark class="ph">للتعبئة: مثلاً ١٢ شهر</mark>)، وبعدين بتنحذف.</p><p><strong>الكوكيز والخدمات الخارجية.</strong> ما في كوكيز تتبّع أو إعلانات. الخطوط من Google Fonts بنحمّلها بس بعد موافقتك. شوفي <button type="button" class="linkbtn" data-page="cookies">سياسة الكوكيز</button>.</p><p><strong>الإيميلات.</strong> ما منبعت نشرات أو إعلانات. بتوصلك بس رسائل عن موعدك. إذا يوم قررنا نبعت نشرات، منطلب موافقتك أول، وبكل إيميل في رابط لإلغاء الاشتراك.</p><p><strong>حقوقك.</strong> الاطّلاع، التصحيح، الحذف، التقييد، الاعتراض، النقل، وسحب الموافقة. لطلب الحذف استخدمي <button type="button" class="linkbtn" data-page="delete">طلب حذف البيانات</button>. وفيكي كمان تقدّمي شكوى للجهة الهولندية لحماية البيانات (Autoriteit Persoonsgegevens).</p>',
+  legalPrivacyBody:'<p><strong>مين نحنا.</strong> آية للجمال والعناية بالبشرة (سمر تيناوي)، روتردام، هي المسؤولة عن معالجة بياناتك الشخصية. شوفي كمان <button type="button" class="linkbtn" data-page="biz">بيانات الشركة</button>.</p><p><strong>أي بيانات وليش.</strong> بس اللي لازم لتنظيم موعدك: الاسم، رقم هاتف أو إيميل، العلاج المطلوب، التاريخ وأي ملاحظات. الأساس هو موافقتك (الإشارة بالفورم) وتنفيذ موعدك. ما لازم تشاركي معلومات طبية هون؛ منحكي فيها بجلسة الاستشارة.</p><p><strong>الأطفال.</strong> الفورم لمين عمره ١٦ سنة أو أكتر. إذا كان أصغر، الأهل أو الوصي بيعبّوه وبيعطوا الموافقة.</p><p><strong>المشاركة والحفظ.</strong> بياناتك ما بتنباع وما بتنستخدم للتسويق. ما منشاركها مع حدا، إلا عبر القناة اللي بتختاريها لإرسال طلبك (واتساب أو إنستغرام أو إيميل). بنحفظها للمدة اللازمة لموعدك وفترة إدارية معقولة (<mark class="ph">للتعبئة: مثلاً ١٢ شهر</mark>)، وبعدين بتنحذف.</p><p><strong>الكوكيز والخدمات الخارجية.</strong> ما في كوكيز تتبّع أو إعلانات. الخطوط من Google Fonts بنحمّلها بس بعد موافقتك. شوفي <button type="button" class="linkbtn" data-page="cookies">سياسة الكوكيز</button>.</p><p><strong>الإيميلات.</strong> ما منبعت نشرات أو إعلانات. بتوصلك بس رسائل عن موعدك. إذا يوم قررنا نبعت نشرات، منطلب موافقتك أول، وبكل إيميل في رابط لإلغاء الاشتراك.</p><p><strong>حقوقك.</strong> الاطّلاع، التصحيح، الحذف، التقييد، الاعتراض، النقل، وسحب الموافقة. لطلب الحذف ابعتي رسالة عبر إنستغرام <span class="ltr">@ayaa_beauty.skin</span>. وفيكي كمان تقدّمي شكوى للجهة الهولندية لحماية البيانات (Autoriteit Persoonsgegevens).</p>',
   legalTerms:'شروط الخدمة',
   legalTermsBody:'<p>بطلبك موعد عبر هاد الموقع بتوافقي على هاي الشروط. الطلب مش تأكيد أوتوماتيكي: سمر بتأكد التاريخ والوقت النهائي شخصياً.</p><p><strong>الأسعار.</strong> بتعرفي المبلغ كامل بجلسة الاستشارة، قبل ما يصير أي شي. ما في تكاليف بتنضاف ما انذكرت قبل. <mark class="ph">للتعبئة: الأسعار شاملة الضريبة، وطرق الدفع</mark></p><p><strong>الإلغاء والتأجيل والاسترداد.</strong> شوفي <button type="button" class="linkbtn" data-page="refund">سياسة الإلغاء والاسترداد</button>.</p><p><strong>الصحة.</strong> بعض العلاجات مش مناسبة وقت الحمل، أو مع بعض حالات البشرة أو الأدوية. خبّري دايماً قبل الموعد. النتائج بتختلف من شخص لشخص؛ المعلومات بهاد الموقع عامة وما بتعوّض عن الاستشارة الشخصية.</p><p><strong>العمر.</strong> المواعيد بتنحجز من أشخاص عمرهم ١٦ سنة أو أكتر؛ للأصغر لازم موافقة الأهل أو الوصي.</p><p><strong>التعديلات.</strong> ممكن تنعدّل هاي الشروط؛ آخر نسخة دايماً هون.</p>',
   legalDmca:'حقوق النشر (DMCA)',
@@ -1930,16 +2424,14 @@ ar: {
   cbTitle:'الكوكيز والخطوط',
   cbText:'هاد الموقع ما بيستخدم كوكيز تتبّع أو إعلانات. بس بموافقتك منحمّل الخطوط من Google Fonts، وبهاي الحالة بيوصل لـ Google عنوان الـ IP تبعك. اختيارك للغة بينحفظ محلياً بمتصفحك.',
   cbAccept:'موافقة', cbDecline:'رفض', cbMore:'سياسة الكوكيز', cbSettings:'إعدادات الكوكيز',
-  cons1:'بوافق على <button type="button" class="linkbtn" data-page="privacy">سياسة الخصوصية</button> و<button type="button" class="linkbtn" data-page="terms">الشروط</button>، وبعطي موافقتي إنو آية للجمال والعناية بالبشرة تستخدم بياناتي لتنظيم موعدي.',
-  cons2:'عمري ١٦ سنة أو أكتر، أو إنو أهلي أو وصيّي عم يعبّي الفورم ومعطي موافقته.',
-  consErr:'حطّي إشارة عالخيارين لإرسال الطلب.',
-  noteHint:'شاركي بس اللي لازم. التفاصيل الطبية منحكي فيها بجلسة الاستشارة.',
+  
+  
+  
+  
   legalRefund:'الإلغاء والاسترداد',
   legalRefundBody:'<p><strong>الإلغاء أو التأجيل.</strong> بدون رسوم لحد <mark class="ph">٢٤ ساعة</mark> قبل موعدك، عبر إنستغرام <span class="ltr">@ayaa_beauty.skin</span> أو <mark class="ph">إيميل / هاتف</mark>.</p><p><strong>الإلغاء المتأخر أو عدم الحضور.</strong> <mark class="ph">للتعبئة: مثلاً بتروح العربون أو نسبة من السعر</mark>. هاد دايماً بتعرفيه قبل، لما تحجزي موعدك.</p><p><strong>الكورسات.</strong> الجلسات اللي ما انستخدمت من الكورس: <mark class="ph">للتعبئة: استرداد أو رصيد، وخلال قديش مدة</mark>.</p><p><strong>مش راضية؟</strong> تواصلي معنا خلال <mark class="ph">٧ أيام</mark>. سمر بتشوف معك شخصياً حل مناسب.</p><p><strong>الاسترداد.</strong> بيرجع المبلغ بنفس طريقة الدفع خلال <mark class="ph">١٤ يوم</mark>. حقوقك القانونية كمستهلكة بتضل محفوظة دايماً.</p>',
   legalCookies:'سياسة الكوكيز',
   legalCookiesBody:'<p>هاد الموقع ما بيستخدم كوكيز تتبّع أو تحليل أو إعلانات.</p><p><strong>دايماً شغّال (وظيفي).</strong> اختيارك للغة (هولندي أو عربي) واختيارك للكوكيز بينحفظوا محلياً بمتصفحك، وما بيطلعوا من جهازك.</p><p><strong>بس بموافقتك.</strong> Google Fonts (خطوط الموقع). إذا وافقتي، متصفحك بيجيب الخطوط من Google وبيوصلها عنوان الـ IP تبعك. إذا رفضتي، الموقع بيعرض خطوط عادية وما بيتحمّل شي من Google.</p><p><strong>مستضاف عنا.</strong> مكتبة الحركة (GSAP) والصور بتتحمّل من الموقع نفسه، بدون أي طرف خارجي.</p><p>فيكي تغيّري اختيارك بأي وقت من زر <em>إعدادات الكوكيز</em> بآخر الصفحة.</p>',
-  legalDelete:'طلب حذف البيانات',
-  legalDeleteBody:'<p>فيكي بأي وقت تطلبي تشوفي بياناتك أو تصحّحيها أو تحذفيها. ما في داعي تعطي سبب.</p><p><strong>كيف؟</strong> ابعتي رسالة عبر إنستغرام <span class="ltr">@ayaa_beauty.skin</span> أو إيميل على <mark class="ph">الإيميل</mark>. اكتبي اسمك، ورقم الهاتف أو الإيميل اللي استخدمتيه بطلبك، وجملة <em>احذفوا بياناتي</em>.</p><p>منتأكد بسرعة إنو الطلب منك، وبنحذف بياناتك وبنأكدلك خلال شهر كحد أقصى. البيانات اللي القانون بيلزمنا نحفظها، مثل الفاتورة، بنحفظها بس للمدة المطلوبة.</p><p>إذا عم تطلبي عن ولد عمره أقل من ١٦، وضّحي إنك الأم أو الأب أو الوصي.</p>',
   legalBiz:'بيانات الشركة',
   legalBizBody:'<ul><li>الاسم التجاري: آية للجمال والعناية بالبشرة</li><li>المالكة: سمر تيناوي</li><li>العنوان: <mark class="ph">الشارع، رقم البناية، الرمز البريدي، روتردام</mark></li><li>رقم KvK: <mark class="ph">للتعبئة</mark></li><li>رقم الضريبة (BTW): <mark class="ph">للتعبئة</mark></li><li>الإيميل: <mark class="ph">للتعبئة</mark></li><li>الهاتف / واتساب: <mark class="ph">قريباً</mark></li><li>إنستغرام: <span class="ltr">@ayaa_beauty.skin</span></li></ul><p style="margin-top:16px">بموعد مسبق. الموقع بالضبط بيوصلك مع تأكيد الموعد.</p>',
   legalLic:'التراخيص والمصادر',
@@ -1953,7 +2445,7 @@ ar: {
 
 /* legal / info pages share the page overlay with the treatment pages */
 [['privacy','legalPrivacy'],['terms','legalTerms'],['dmca','legalDmca'],['contact','legalContact'],['quals','legalQuals'],
- ['refund','legalRefund'],['cookies','legalCookies'],['biz','legalBiz'],['delete','legalDelete'],['lic','legalLic']]
+ ['refund','legalRefund'],['cookies','legalCookies'],['biz','legalBiz'],['lic','legalLic']]
   .forEach(([id, k]) => Object.keys(I18N).forEach(l => { I18N[l].pages[id] = { t: I18N[l][k], b: I18N[l][k + 'Body'] }; }));
 
 /* meaningful alt text for every photo (hero is decorative, gallery frames carry a caption) */
@@ -2030,10 +2522,6 @@ const D = () => I18N[lang];
 
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* a visitor should never be able to request a date in the past */
-const dateEl = document.getElementById('bkDate');
-dateEl.min = new Date().toISOString().slice(0, 10);
-
 /* ═══════════════ i18n ═══════════════ */
 const MARQUEE_SLUGS = ['analyse','hydrofacial','microneedling','rf','exosomen','huidverbetering','laser','lipblush'];
 function buildMarquee(){
@@ -2081,8 +2569,6 @@ function setLang(next, initial){
   document.querySelectorAll('.lang button').forEach(b =>
     b.setAttribute('aria-pressed', String(b.dataset.lang === next)));
 
-  refreshLive();
-
   buildScrub();
   buildMarquee();
   renderSummary();
@@ -2108,389 +2594,276 @@ function setLang(next, initial){
 document.querySelectorAll('.lang button').forEach(b =>
   b.addEventListener('click', () => { if (b.dataset.lang !== lang) setLang(b.dataset.lang); }));
 
-/* ═══════════════ booking ═══════════════ */
-const form   = document.getElementById('bkForm');
-const sendEl = document.getElementById('bkSend');
-const errEl  = document.getElementById('bkErr');
-const copied = document.getElementById('bkCopied');
+/* ═══════════════ request a visit ═══════════════
+   Three steps -> review ("Your request", each row editable) -> prefilled WhatsApp / e-mail.
+   Nothing is booked here: it is a request, and a person replies. */
 const TREAT_KEY = { analyse:'sAp', hydrofacial:'s1p', microneedling:'s2p', rf:'sRp',
                     exosomen:'s3p', huidverbetering:'s4p', laser:'sLp', lipblush:'s5p' };
 /* the pinned column reports the visible card's real duration, in card order */
 const CARD_META = ['sAc1','s1c1','s2c1','sRc1','s3c1','s4c1','sLc1','s5c1'];
 
-const val = id => document.getElementById(id).value.trim();
+const rqForm   = document.getElementById('rqForm');
+const rqReview = document.getElementById('rqReview');
+const rqEl  = id => document.getElementById(id);
+const rqVal = id => rqEl(id).value.trim();
+const rqPad = n => String(n).padStart(2, '0');
+const rq = { step: 1, reviewing: false };
 
-function treatLabel(){
-  const v = document.getElementById('bkTreat').value;
+/* ── choices ─────────────────────────────────────────────── */
+function rqDayList(){
+  const out = [], t = new Date();
+  for (let i = 1; i <= CONFIG.daysAhead; i++){
+    const d = new Date(t.getFullYear(), t.getMonth(), t.getDate() + i);
+    if (!CONFIG.closedWeekdays.includes(d.getDay())) out.push(d);
+  }
+  return out;
+}
+const rqIso = d => d.getFullYear() + '-' + rqPad(d.getMonth() + 1) + '-' + rqPad(d.getDate());
+const rqFromIso = s => { const p = s.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); };
+const rqChecked = name => { const el = rqForm.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; };
+
+function rqChip(name, value, html, cls, checked){
+  const l = document.createElement('label');
+  l.className = 'rq-chip ' + cls;
+  const i = document.createElement('input');
+  i.type = 'radio'; i.name = name; i.value = value; i.checked = checked;
+  const s = document.createElement('span');
+  s.innerHTML = html;
+  l.append(i, s);
+  return l;
+}
+
+/* day + time chips are rebuilt on every language switch so weekday/month names follow the language */
+function rqBuildChoices(){
+  const d = D(), loc = d._locale;
+  const day = rqChecked('rqDay'), time = rqChecked('rqTime');
+
+  const days = rqEl('rqDays'); days.replaceChildren();
+  rqDayList().forEach(dt => {
+    const iso = rqIso(dt);
+    days.append(rqChip('rqDay', iso,
+      '<small>' + dt.toLocaleDateString(loc, { weekday:'short' }) + '</small>' +
+      '<b>' + dt.getDate() + '</b>' +
+      '<i>' + dt.toLocaleDateString(loc, { month:'short' }) + '</i>', 'rq-d', iso === day));
+  });
+
+  const times = rqEl('rqTimes'); times.replaceChildren();
+  CONFIG.slotTimes.forEach(tm => times.append(rqChip('rqTime', tm, tm, 'time', tm === time)));
+  times.append(rqChip('rqTime', 'flex', d.timeFlex, 'time', time === 'flex'));
+}
+
+/* ── wording of the request ──────────────────────────────── */
+function rqTreatLabel(){
+  const v = rqChecked('rqTreat');
   return v === 'ask' ? D().optAsk : D()[TREAT_KEY[v]];
 }
-function partLabel(){
-  const el = form.querySelector('input[name="part"]:checked');
-  return el ? { am: D().partAM, pm: D().partPM, eve: D().partEve }[el.value] : '';
+function rqPrefLabel(){
+  const d = D(), day = rqChecked('rqDay'), time = rqChecked('rqTime');
+  const dayTxt = day ? rqFromIso(day).toLocaleDateString(d._locale, { weekday:'long', day:'numeric', month:'long' }) : '';
+  const timeTxt = (!time || time === 'flex') ? d.timeFlex : time;
+  return dayTxt ? dayTxt + ', ' + timeTxt : timeTxt;
 }
-function dateLabel(){
-  const v = val('bkDate');
-  if (!v) return D().bkFlex;
-  const p = v.split('-').map(Number);
-  return new Date(p[0], p[1] - 1, p[2])
-    .toLocaleDateString(D()._locale, { weekday:'long', day:'numeric', month:'long' });
-}
-
-function setRow(id, text){
-  const el = document.getElementById(id);
-  el.textContent = text || '—';
-  el.classList.toggle('empty', !text);
-}
-function renderSummary(){
-  setRow('sumTreat',   treatLabel());
-  setRow('sumDate',    val('bkDate') ? dateLabel() : '');
-  setRow('sumPart',    partLabel());
-  setRow('sumTime',    val('bkTime'));
-  setRow('sumName',    val('bkName'));
-  setRow('sumContact', val('bkContact'));
-}
-
-function buildMessage(){
-  const d = D(), notes = val('bkNotes');
+function rqMessage(){
+  const d = D(), note = rqVal('rqNotes');
   const lines = [
-    d.bkMsgHead, '',
-    d.lblTreat   + ': ' + treatLabel(),
-    d.lblDate    + ': ' + dateLabel(),
-    d.lblPart    + ': ' + partLabel(),
-    ...(val('bkTime') ? [d.lblTime + ': ' + val('bkTime')] : []),
-    d.lblName    + ': ' + val('bkName'),
-    d.lblContact + ': ' + val('bkContact')
+    d.msgHello, '',
+    d.msgTreat   + ': ' + rqTreatLabel(),
+    d.msgPref    + ': ' + rqPrefLabel(),
+    d.msgName    + ': ' + rqVal('rqName'),
+    d.msgContact + ': ' + rqVal('rqContact')
   ];
-  if (notes) lines.push(d.bkNotesShort + ': ' + notes);
+  if (note) lines.push(d.msgNote + ': ' + note);
+  lines.push('', d.msgFoot);
   return lines.join('\n');
 }
 
-form.addEventListener('input',  () => { renderSummary(); errEl.dataset.show = '0'; });
-form.addEventListener('change', () => { renderSummary();
-  if (document.getElementById('bkC1').checked && document.getElementById('bkC2').checked){
-    document.getElementById('fConsent').dataset.invalid = '0'; document.getElementById('bkConsErr').dataset.show = '0'; } });
+/* ── validation: inline, one message under the field ─────── */
+function rqErr(errId, inputId, key){
+  const e = rqEl(errId);
+  e.textContent = key ? D()[key] : '';
+  e.dataset.key = key || '';
+  if (inputId) rqEl(inputId).setAttribute('aria-invalid', key ? 'true' : 'false');
+  return !key;
+}
+const rqEmailOk = v => /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v);
+const rqPhoneOk = v => /^[+\d][\d\s().\-]*$/.test(v) && v.replace(/\D/g, '').length >= 7;
 
-form.addEventListener('submit', e => {
+function rqValidate(step){
+  if (step === 2){
+    const ok = !!rqChecked('rqDay');
+    rqErr('errDay', null, ok ? '' : 'errDay');
+    if (!ok) rqEl('rqDays').querySelector('input').focus();
+    return ok;
+  }
+  if (step === 3){
+    const name = rqVal('rqName'), contact = rqVal('rqContact');
+    const okName = rqErr('errName', 'rqName', name ? '' : 'errName');
+    const okContact = rqErr('errContact', 'rqContact', !contact ? 'errContact' : (rqEmailOk(contact) || rqPhoneOk(contact)) ? '' : 'errContactBad');
+    const okCons = rqEl('rqC1').checked && rqEl('rqC2').checked;
+    rqErr('errConsent', null, okCons ? '' : 'consErr');
+    rqEl('rqConsents').dataset.invalid = okCons ? '0' : '1';
+    if (!okName) rqEl('rqName').focus();
+    else if (!okContact) rqEl('rqContact').focus();
+    else if (!okCons) rqEl(rqEl('rqC1').checked ? 'rqC2' : 'rqC1').focus();
+    return okName && okContact && okCons;
+  }
+  return true;
+}
+
+/* ── navigation ──────────────────────────────────────────── */
+function rqRender(){
+  const d = D();
+  document.querySelectorAll('#rqSteps li').forEach(li => {
+    const n = +li.dataset.s;
+    if (!rq.reviewing && n === rq.step) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
+    li.dataset.done = (rq.reviewing || n < rq.step) ? '1' : '0';
+  });
+  rqForm.querySelectorAll('.rq-pane').forEach(p => { p.hidden = rq.reviewing || +p.dataset.pane !== rq.step; });
+  rqEl('rqBack').hidden = rq.step === 1;
+  rqEl('rqNextLabel').textContent = rq.step === 3 ? d.bkPrepare : d.bkNext;
+  rqEl('rqTimeSet').hidden = !CONFIG.slotTimes.length;
+  rqForm.hidden = rq.reviewing;
+  rqEl('rqSteps').setAttribute('aria-label', d.stepOf.replace('{n}', rq.step));
+  rqReview.hidden = !rq.reviewing;
+  if (rq.reviewing) rqBuildReview();
+  /* stagger index: contents of the open step rise one after another */
+  document.querySelectorAll('.rq-pane:not([hidden]) :is(.rq-opt,.rq-chip,.field,.check), .rq-row, .rq-chan')
+    .forEach((el, i) => el.style.setProperty('--i', i));
+}
+
+/* the heading takes focus so a screen reader announces the new step; the page only
+   scrolls if the form has drifted out of view, never to jump around */
+function rqGo(n, focus){
+  rqEl('rq').dataset.dir = n >= rq.step ? '1' : '-1';
+  rq.step = n; rq.reviewing = false;
+  rqRender();
+  if (!focus) return;
+  const h = rqForm.querySelector('.rq-pane:not([hidden]) .rq-h');
+  if (h) h.focus({ preventScroll: true });
+  rqKeepInView(rqEl('rq'));
+}
+function rqKeepInView(el){
+  const r = el.getBoundingClientRect();
+  if (r.top < 70 || r.top > innerHeight * .6) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+}
+
+function rqBuildReview(){
+  const d = D(), rows = rqEl('rqRows'); rows.replaceChildren();
+  const add = (label, text, step) => {
+    const row = document.createElement('div'); row.className = 'rq-row';
+    const s = document.createElement('span'); s.textContent = label;
+    const b = document.createElement('b'); b.textContent = text;
+    const e = document.createElement('button'); e.type = 'button'; e.className = 'rq-edit'; e.dataset.go = step;
+    e.append(d.bkEdit);
+    const sr = document.createElement('span'); sr.className = 'rq-sr'; sr.textContent = ' ' + label;
+    e.append(sr);
+    row.append(s, b, e); rows.append(row);
+  };
+  add(d.msgTreat, rqTreatLabel(), 1);
+  add(d.msgPref, rqPrefLabel(), 2);
+  add(d.msgName, rqVal('rqName'), 3);
+  add(d.msgContact, rqVal('rqContact'), 3);
+  if (rqVal('rqNotes')) add(d.msgNote, rqVal('rqNotes'), 3);
+
+  const msg = rqMessage(), enc = encodeURIComponent(msg);
+  rqEl('rqMsg').value = msg;
+
+  /* a channel with no value in CONFIG is not offered at all */
+  const wa = String(CONFIG.whatsapp || '').replace(/\D/g, '');
+  rqEl('chanWa').hidden = !wa;
+  if (wa) rqEl('sendWa').href = 'https://wa.me/' + wa + '?text=' + enc;
+
+  rqEl('chanMail').hidden = !CONFIG.email;
+  if (CONFIG.email) rqEl('sendMail').href =
+    'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(d.bkMsgHead) + '&body=' + enc;
+
+  rqEl('chanIg').hidden = !CONFIG.instagram;
+  if (CONFIG.instagram) rqEl('sendIg').href = CONFIG.instagram;
+
+  rqEl('rqOk').textContent = '';
+}
+
+rqForm.addEventListener('submit', e => {
   e.preventDefault();
-  const name = val('bkName'), contact = val('bkContact');
-  document.getElementById('fName').dataset.invalid    = name ? '0' : '1';
-  document.getElementById('fContact').dataset.invalid = contact ? '0' : '1';
-
-  if (!name || !contact){
-    errEl.dataset.show = '1';
-    document.getElementById(name ? 'bkContact' : 'bkName').focus();
-    return;
-  }
-
-  const c1 = document.getElementById('bkC1').checked, c2 = document.getElementById('bkC2').checked;
-  document.getElementById('fConsent').dataset.invalid = (c1 && c2) ? '0' : '1';
-  document.getElementById('bkConsErr').dataset.show = (c1 && c2) ? '0' : '1';
-  if (!c1 || !c2){
-    document.getElementById(c1 ? 'bkC2' : 'bkC1').focus();
-    return;
-  }
-
-  const msg = buildMessage(), enc = encodeURIComponent(msg);
-
-  const wa = document.getElementById('sendWa');
-  if (CONFIG.whatsapp){ wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + enc; wa.style.display = ''; }
-  else wa.style.display = 'none';
-
-  const mail = document.getElementById('sendMail');
-  if (CONFIG.email){
-    mail.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(D().bkMsgHead) + '&body=' + enc;
-    mail.style.display = '';
-  } else mail.style.display = 'none';
-
-  document.getElementById('sendIg').href = CONFIG.instagram;
-
-  /* Instagram has no prefill: show the text so it can always be copied by hand,
-     and put it on the clipboard too when the browser allows it */
-  const box = document.getElementById('bkMsg');
-  box.value = msg;
-  copied.textContent = '';
-  if (navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(msg).then(() => { copied.textContent = D().bkCopied; }, () => {});
-  }
-  box.addEventListener('focus', () => box.select(), { once: true });
-
-  sendEl.dataset.show = '1';
+  if (!rqValidate(rq.step)) return;
+  if (rq.step < 3) return rqGo(rq.step + 1, true);
+  rq.reviewing = true;
+  rqRender();
+  rqEl('rqRevH').focus({ preventScroll: true });
+  rqKeepInView(rqEl('rq'));
   if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 80);
-  sendEl.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+});
+rqEl('rqBack').addEventListener('click', () => rqGo(rq.step - 1, true));
+
+/* clearing an error as soon as the visitor fixes it keeps the form calm */
+rqForm.addEventListener('input', e => {
+  const t = e.target;
+  if (t.id === 'rqName') rqErr('errName', 'rqName', '');
+  if (t.id === 'rqContact') rqErr('errContact', 'rqContact', '');
+  if (t.name === 'rqDay') rqErr('errDay', null, '');
+  if (t.id === 'rqC1' || t.id === 'rqC2'){
+    if (rqEl('rqC1').checked && rqEl('rqC2').checked){ rqErr('errConsent', null, ''); rqEl('rqConsents').dataset.invalid = '0'; }
+  }
 });
 
-/* ═══════════════ live availability (booking API in server.py) ═══════════════
-   Free slots come from the real diary and every booking is re-checked server
-   side before it is written, so a slot cannot be sold twice. If the API is not
-   reachable the request form stays up instead. */
-const API = CONFIG.api;
-let liveSlugs = [], liveTreat = 'analyse', liveDays = [], liveDay = null,
-    liveSlot = null, liveRef = null, liveBusy = false;
-
-const pad2 = v => String(v).padStart(2, '0');
-const hhmm = m => pad2(Math.floor(m / 60)) + ':' + pad2(m % 60);
-const dayOf = iso => { const p = iso.split('-').map(Number);
-                       return new Date(p[0], p[1] - 1, p[2]); };
-
-async function apiGet(path){
-  const r = await fetch(API + path, { cache: 'no-store' });
-  if (!r.ok) throw new Error('http ' + r.status);
-  return r.json();
-}
-async function apiPost(path, body){
-  const r = await fetch(API + path, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body || {})
-  });
-  let data = {};
-  try { data = await r.json(); } catch(e){}
-  return { ok: r.ok, status: r.status, data };
-}
-
-/* ── step 1: treatment ── */
-function buildPicker(){
-  if (!LIVE) return;
-  const box = document.getElementById('pickTreat');
-  box.innerHTML = '';
-  liveSlugs.forEach(slug => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.textContent = D()[TREAT_KEY[slug]] || slug;
-    b.setAttribute('aria-pressed', String(slug === liveTreat));
-    b.addEventListener('click', () => {
-      if (slug === liveTreat) return;
-      liveTreat = slug;
-      box.querySelectorAll('button').forEach(o => o.setAttribute('aria-pressed', 'false'));
-      b.setAttribute('aria-pressed', 'true');
-      loadDays();
-    });
-    box.appendChild(b);
-  });
-}
-
-/* ── step 2: day + slot ── */
-async function loadDays(keepDay){
-  if (!LIVE) return;
-  const slotBox = document.getElementById('pickSlot');
-  slotBox.innerHTML = '<p class="slots-msg">' + D().calLoading + '</p>';
-  try {
-    const data = await apiGet('/availability?treatment=' + encodeURIComponent(liveTreat) + '&days=21');
-    liveDays = data.days || [];
-  } catch(e){
-    liveDays = [];
-    slotBox.innerHTML = '<p class="slots-msg">' + D().errGeneric + '</p>';
-    return;
+/* Edit links on the review go straight back to the step that owns the field */
+rqReview.addEventListener('click', e => {
+  const b = e.target.closest('.rq-edit');
+  if (b) { rqGo(+b.dataset.go, true); return; }
+  /* the message is only "received" once the visitor has actually opened a channel */
+  if (e.target.closest('#sendWa, #sendMail, #sendIg')){
+    if (e.target.closest('#sendIg') && navigator.clipboard && navigator.clipboard.writeText)
+      navigator.clipboard.writeText(rqEl('rqMsg').value).catch(() => {});
+    rqEl('rqOk').textContent = D().bkOk;
   }
-  const open = liveDays.filter(d => d.slots.length);
-  if (!(keepDay && liveDays.some(d => d.date === liveDay && d.slots.length))){
-    liveDay = open.length ? open[0].date : null;
+});
+rqEl('rqMsg').addEventListener('focus', e => e.target.select());
+
+/* candle-glow follows the pointer; the section's ornaments draw in once it is seen */
+(function(){
+  const sec = document.querySelector('.rq-stage');
+  new IntersectionObserver((en, ob) => { if (en.some(e => e.isIntersecting)){ sec.classList.add('is-in'); ob.disconnect(); } },
+    { threshold: .25 }).observe(sec);
+  if (matchMedia('(hover:hover)').matches && !reduce){
+    /* the flame trails the pointer a little and breathes, like a candle carried through the room */
+    let tx = 0, ty = 0, cx = 0, cy = 0, run = false, seen = false;
+    const tick = t => {
+      cx += (tx - cx) * .09; cy += (ty - cy) * .09;
+      const flick = Math.sin(t / 310) * 14 + Math.sin(t / 97) * 7 + Math.sin(t / 53) * 3;
+      sec.style.setProperty('--sx', cx.toFixed(1) + 'px'); sec.style.setProperty('--sy', cy.toFixed(1) + 'px');
+      sec.style.setProperty('--r', (400 + flick).toFixed(1) + 'px');
+      if (run) requestAnimationFrame(tick);
+    };
+    sec.addEventListener('pointermove', e => { const r = sec.getBoundingClientRect();
+      tx = e.clientX - r.left; ty = e.clientY - r.top;
+      if (!seen){ cx = tx; cy = ty; seen = true; }
+      sec.classList.add('is-lit');
+      if (!run){ run = true; requestAnimationFrame(tick); } });
+    sec.addEventListener('pointerleave', () => { sec.classList.remove('is-lit'); run = false; });
   }
-  liveSlot = null;
-  renderDays();
-  renderSlots();
-  updateChosen();
+})();
+
+/* setLang() calls this: day names, labels and the review follow the active language */
+function renderSummary(){
+  rqErrRefresh();
+  rqBuildChoices();
+  rqRender();
+}
+/* error messages already on screen are re-worded when the language changes */
+function rqErrRefresh(){
+  document.querySelectorAll('.field-err').forEach(e => { if (e.dataset.key) e.textContent = D()[e.dataset.key]; });
 }
 
-function renderDays(){
-  const box = document.getElementById('pickDay');
-  box.innerHTML = '';
-  liveDays.forEach(d => {
-    const dt = dayOf(d.date);
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'day';
-    b.disabled = !d.slots.length;
-    b.setAttribute('aria-pressed', String(d.date === liveDay));
-    b.innerHTML = '<small>' + dt.toLocaleDateString(D()._locale, { weekday: 'short' }) + '</small>'
-                + '<b>' + dt.toLocaleDateString(D()._locale, { day: 'numeric' }) + '</b>'
-                + '<i>' + dt.toLocaleDateString(D()._locale, { month: 'short' }) + '</i>';
-    b.addEventListener('click', () => {
-      liveDay = d.date; liveSlot = null;
-      renderDays(); renderSlots(); updateChosen();
-    });
-    box.appendChild(b);
-  });
-  const active = box.querySelector('[aria-pressed="true"]');
-  if (active) active.scrollIntoView({ block: 'nearest', inline: 'center' });
-}
-
-function renderSlots(){
-  const box = document.getElementById('pickSlot');
-  box.innerHTML = '';
-  const day = liveDays.find(d => d.date === liveDay);
-  if (!day || !day.slots.length){
-    box.innerHTML = '<p class="slots-msg">' + D().noSlots + '</p>';
-    return;
-  }
-  day.slots.forEach(m => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'slot';
-    b.textContent = hhmm(m);
-    b.setAttribute('aria-pressed', String(m === liveSlot));
-    b.addEventListener('click', () => {
-      liveSlot = m;
-      box.querySelectorAll('.slot').forEach(o => o.setAttribute('aria-pressed', 'false'));
-      b.setAttribute('aria-pressed', 'true');
-      updateChosen();
-    });
-    box.appendChild(b);
-  });
-}
-
-function updateChosen(){
-  const el = document.getElementById('chosen');
-  if (liveDay === null || liveSlot === null){
-    el.dataset.show = '0'; el.textContent = '';
-  } else {
-    const dt = dayOf(liveDay).toLocaleDateString(D()._locale,
-      { weekday: 'long', day: 'numeric', month: 'long' });
-    el.textContent = (D()[TREAT_KEY[liveTreat]] || liveTreat) + ' — ' + dt
-                   + ' ' + D().atWord + ' ' + hhmm(liveSlot);
-    el.dataset.show = '1';
-  }
-  validateLive();
-}
-
-/* ── step 3: details + confirm ── */
-function validateLive(){
-  const ok = liveSlot !== null
-    && document.getElementById('lvName').value.trim().length > 0
-    && /^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(document.getElementById('lvEmail').value.trim())
-    && document.getElementById('lvC1').checked && document.getElementById('lvC2').checked;
-  document.getElementById('lvSubmit').disabled = !ok || liveBusy;
-  return ok;
-}
-
-function liveError(msg){
-  const e = document.getElementById('lvErr');
-  e.textContent = msg || '';
-  e.dataset.show = msg ? '1' : '0';
-}
-
-async function submitLive(ev){
-  ev.preventDefault();
-  if (!validateLive() || liveBusy) return;
-  liveBusy = true;
-  document.getElementById('lvSubmit').disabled = true;
-  liveError('');
-
-  const res = await apiPost('/bookings', {
-    treatment: liveTreat,
-    date: liveDay,
-    start: liveSlot,
-    name:  document.getElementById('lvName').value.trim(),
-    email: document.getElementById('lvEmail').value.trim(),
-    phone: document.getElementById('lvPhone').value.trim(),
-    notes: document.getElementById('lvNotes').value.trim(),
-    consent: true,
-    website: document.getElementById('lvHp').value,
-    lang
-  });
-
-  liveBusy = false;
-  if (res.ok){
-    liveRef = res.data.ref;
-    showDone(res.data);
-  } else {
-    if (res.status === 409){
-      liveError(D().errTaken);
-      await loadDays();                 /* someone else took it: refresh */
-    } else if (res.status === 429){
-      liveError(D().errTooMany);
-    } else if (res.data && res.data.error === 'invalid_email'){
-      liveError(D().errEmail);
-    } else {
-      liveError(D().errGeneric);
-    }
-    validateLive();
-  }
-}
-
-function showDone(b){
-  const dt = dayOf(b.date).toLocaleDateString(D()._locale,
-    { weekday: 'long', day: 'numeric', month: 'long' });
-  document.getElementById('okWhen').textContent =
-    (D()[TREAT_KEY[b.treatment]] || b.treatment) + ' — ' + dt
-    + ' ' + D().atWord + ' ' + hhmm(b.start) + ' – ' + hhmm(b.end);
-  document.getElementById('okRef').textContent = b.ref;
-  document.getElementById('okIcs').href = API + '/bookings/' + b.ref + '.ics';
-  document.getElementById('lvDone').dataset.show = '1';
-  document.getElementById('liveForm').style.display = 'none';
-  document.getElementById('lvDone').scrollIntoView(
-    { behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
-  if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 120);
-}
-
-async function cancelLive(){
-  if (!liveRef) return;
-  const res = await apiPost('/bookings/' + liveRef + '/cancel');
-  const done = document.getElementById('lvDone');
-  if (res.ok){
-    done.querySelector('h3').textContent = D().cancelledTitle;
-    document.getElementById('okWhen').textContent = D().cancelledBody;
-    done.querySelector('.ref').style.display = 'none';
-    done.querySelector('.done-actions').style.display = 'none';
-    liveRef = null;
-    loadDays();
-  }
-}
-
-function refreshLive(){
-  if (!LIVE) return;
-  const d = D();
-  const h2 = document.querySelector('.book-head h2'), lede = document.querySelector('.book-head p');
-  if (d.bkTitleLive) h2.textContent = d.bkTitleLive;
-  if (d.bkLedeLive)  lede.textContent = d.bkLedeLive;
-  const a1 = document.querySelector('[data-i18n="a1"]');
-  if (a1 && d.a1live) a1.textContent = d.a1live;
-  buildPicker(); renderDays(); renderSlots(); updateChosen();
-}
-
-async function initLive(){
-  if (!CONFIG.api) { LIVE = false; return; }
-  try {
-    const data = await apiGet('/treatments');
-    liveSlugs = (data.treatments || []).map(t => t.slug).filter(x => TREAT_KEY[x]);
-    if (!liveSlugs.length) throw new Error('no treatments');
-  } catch(e){
-    LIVE = false;                       /* static hosting: request form stays */
-    return;
-  }
-  LIVE = true;
-  if (!liveSlugs.includes(liveTreat)) liveTreat = liveSlugs[0];
-  document.getElementById('bkLive').dataset.on = '1';
-  document.getElementById('bkRequest').dataset.off = '1';
-
-  document.getElementById('liveForm').addEventListener('submit', submitLive);
-  ['lvName', 'lvEmail'].forEach(id =>
-    document.getElementById(id).addEventListener('input', () => { liveError(''); validateLive(); }));
-  ['lvC1', 'lvC2'].forEach(id => document.getElementById(id).addEventListener('change', validateLive));
-  document.getElementById('okCancel').addEventListener('click', cancelLive);
-
-  refreshLive();
-  await loadDays();
-  if (window.ScrollTrigger) ScrollTrigger.refresh();
-}
-
-/* "Boek behandeling" on a treatment card (or the marquee) preselects it and jumps to
-   the form. Delegated on document since the marquee rebuilds its buttons on language switch. */
+/* "Request this treatment" on a card (or the marquee) preselects it and returns to step 1.
+   Delegated on document since the marquee rebuilds its buttons on language switch. */
 document.addEventListener('click', e => {
   const b = e.target.closest('.card-book');
   if (!b) return;
-  if (LIVE){
-    if (liveSlugs.includes(b.dataset.book)){
-      liveTreat = b.dataset.book;
-      buildPicker();
-      loadDays();
-    }
-  } else {
-    document.getElementById('bkTreat').value = b.dataset.book;
-    renderSummary();
-  }
+  const opt = rqForm.querySelector('input[name="rqTreat"][value="' + b.dataset.book + '"]');
+  if (opt) opt.checked = true;
+  rqGo(1, false);
   document.getElementById('afspraak').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-  if (!LIVE) setTimeout(() => document.getElementById('bkName').focus({ preventScroll: true }), reduce ? 0 : 750);
+  setTimeout(() => rqForm.querySelector('input[name="rqTreat"]:checked').focus({ preventScroll: true }), reduce ? 0 : 750);
 });
 
 /* ═══════════════ horizontal accordion ═══════════════ */
@@ -2695,7 +3068,6 @@ let saved = null;
 try { saved = localStorage.getItem('ayaa-lang'); } catch(e){}
 const nav0 = (navigator.language || '').toLowerCase();
 setLang((saved && I18N[saved]) ? saved : (nav0.indexOf('ar') === 0 ? 'ar' : nav0.indexOf('nl') === 0 ? 'nl' : 'en'), true);
-initLive();
 
 /* ═══════════════ motion ═══════════════ */
 if (!reduce && window.gsap){
@@ -2780,7 +3152,7 @@ if (!reduce && window.gsap){
     y: 34, opacity: 0, duration: 1, ease: 'expo.out', stagger: .07,
     scrollTrigger: { trigger: '#acc', start: 'top 90%', once: true } });
 
-  document.querySelectorAll('.kit-head, .intro-label, .intro-foot, .ritual-head, .gal-head, .studio-copy > *, .book-head, .fields > *, .summary, .faq h2, .qa, .cta h2, .cta p, .cta .hero-cta, .foot-grid > *')
+  document.querySelectorAll('.kit-head, .intro-label, .intro-foot, .ritual-head, .gal-head, .studio-copy > *, .book-head, .rq, .faq h2, .qa, .cta h2, .cta p, .cta .hero-cta, .foot-grid > *')
     .forEach(el => gsap.from(el, { y:32, opacity:0, duration:1.15, ease:'expo.out',
       scrollTrigger:{ trigger:el, start:'top 88%', once: true } }));
 
