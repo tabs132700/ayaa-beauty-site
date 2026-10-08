@@ -1145,6 +1145,32 @@ html[lang="ar"] .foot-legal button{font-size:14px}
 </style>
 <link rel="stylesheet" href="compare.css">
 <link rel="stylesheet" href="decor.css">
+<style>
+.ig{background:var(--sand);position:relative}
+.ig-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,7vw,110px);align-items:center}
+.ig-copy h2{font-size:clamp(2.3rem,5vw,4.3rem);margin-bottom:22px;text-wrap:balance}
+.ig-copy p{max-width:44ch;color:var(--muted);margin-bottom:34px}
+.ig-copy .kicker{color:var(--clay);margin-bottom:22px}
+.ig-stage{display:flex;justify-content:center;position:relative}
+.ig-stage::before{content:'';position:absolute;inset:8% 6% 2%;border-radius:50%;background:radial-gradient(closest-side,rgba(217,177,95,.32),transparent 72%);filter:blur(10px);z-index:0}
+.ig-phone{position:relative;z-index:1;display:block;width:min(340px,78vw);padding:10px;border-radius:46px;background:#17120F;
+  box-shadow:0 0 0 1px rgba(201,162,75,.6),0 0 0 6px rgba(244,239,233,.5),0 46px 80px -34px rgba(23,18,15,.6),0 16px 30px -18px rgba(23,18,15,.5);
+  rotate:-3deg;transition:rotate .7s cubic-bezier(.2,.8,.2,1),translate .7s cubic-bezier(.2,.8,.2,1),opacity .9s ease}
+.ig-phone:hover,.ig-phone:focus-visible{rotate:0deg;translate:0 -10px}
+.ig-phone:focus-visible{outline:3px solid var(--clay);outline-offset:6px}
+.ig-phone::before{content:'';position:absolute;top:19px;left:50%;translate:-50% 0;width:78px;height:20px;border-radius:12px;background:#17120F;z-index:2}
+.ig-screen{display:block;border-radius:36px;overflow:hidden;background:#0c1017;aspect-ratio:760/1572}
+.ig-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.ig-phone.ig-pre{opacity:0;translate:0 36px}
+.ig-copy .btn{width:fit-content}
+@media(max-width:820px){
+  .ig-wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .ig-copy p{margin-inline:auto}
+  .ig-copy .btn{margin-inline:auto}
+  .ig-phone{rotate:-2deg}
+}
+@media(prefers-reduced-motion:reduce){.ig-phone{transition:none}.ig-phone.ig-pre{opacity:1;translate:none}}
+</style>
 </head>
 <body>
 <main id="main" tabindex="-1">
@@ -1651,6 +1677,23 @@ html[lang="ar"] .foot-legal button{font-size:14px}
 </section>
 
 <!-- CTA -->
+<!-- INSTAGRAM -->
+<section class="ig sec" id="instagram">
+  <div class="shell ig-wrap">
+    <div class="ig-copy">
+      <p class="kicker" data-i18n="igKick"></p>
+      <h2 data-i18n="igTitle"></h2>
+      <p data-i18n="igText"></p>
+      <a class="btn btn-line" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener"><span data-i18n="igFollow"></span> <span class="ltr">@ayaa_beauty.skin</span> <i class="arrow"></i></a>
+    </div>
+    <div class="ig-stage">
+      <a class="ig-phone" href="https://www.instagram.com/ayaa_beauty.skin/" target="_blank" rel="noopener" aria-label="Instagram @ayaa_beauty.skin" data-i18n-attr="igAlt">
+        <span class="ig-screen"><img src="img/instagram-profile.webp" width="760" height="1572" loading="lazy" alt=""></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="cta sec">
   <div class="shell">
     <h2 data-i18n-html="cTitle"></h2>
@@ -1737,6 +1780,7 @@ nl: {
   /* ── request a visit ── */
   _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling met exosomen, huidverbetering en lip blush door schoonheidsspecialist Samar Tinawi. Vraag een bezoek aan in drie korte stappen.',
   ctaNav:'Bezoek aanvragen',
+  igKick:'Instagram', igTitle:'Volg het werk, dag na dag.', igText:'Behandelingen, apparatuur en een kijkje in de studio, zoals ze op Instagram te zien zijn.', igFollow:'Volg', igAlt:'Screenshot van het Instagram-profiel van Aya Beauty & Skin',
   ctaHero1:'Bezoek aanvragen',
   cBtn1:'Vraag je bezoek aan',
   bookThis:'Vraag deze behandeling aan',
@@ -1975,6 +2019,7 @@ en: {
   /* ── request a visit ── */
   _desc:'Aya Beauty & Skin in Rotterdam. Hydrofacial, microneedling with exosomes, skin improvement and lip blush by beauty specialist Samar Tinawi. Request a visit in three short steps.',
   ctaNav:'Request a visit',
+  igKick:'Instagram', igTitle:'See the studio as it happens.', igText:'Treatments, equipment and everyday life in the studio, as shared on Instagram.', igFollow:'Follow', igAlt:'Screenshot of the Instagram profile of Aya Beauty & Skin',
   ctaHero1:'Request a visit',
   cBtn1:'Request your visit',
   bookThis:'Request this treatment',
@@ -2212,6 +2257,7 @@ ar: {
   /* ── request a visit ── */
   _desc:'آية للجمال والعناية بالبشرة في روتردام. هيدروفيشل، ميكرونيدلينغ مع الإكسوزومات، تحسين البشرة وتوريد الشفاه مع الأخصائية سمر تينوي. اطلبي زيارة بثلاث خطوات قصيرة.',
   ctaNav:'اطلبي زيارة',
+  igKick:'إنستغرام', igTitle:'تابعي شغلنا خطوة بخطوة.', igText:'علاجات وأجهزة ولحظات من يوميات الاستوديو، كما نشاركها على إنستغرام.', igFollow:'تابعي', igAlt:'لقطة شاشة لحساب آية بيوتي على إنستغرام',
   ctaHero1:'اطلبي زيارة',
   cBtn1:'اطلبي زيارتك',
   bookThis:'اطلبي هاد العلاج',

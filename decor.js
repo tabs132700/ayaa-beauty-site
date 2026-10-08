@@ -137,6 +137,7 @@
     ['#apparatuur', 'divider', 'd-div'], ['#werkwijze', 'divider', 'd-div'], ['#studio', 'divider', 'd-div'],
     ['#vragen', 'divider', 'd-div'],
     ['footer', 'divider', 'd-foot'],
+    ['#instagram', 'corner', 'd-corner-tr'], ['#instagram', 'branch', 'd-side-l2'], ['#instagram', 'butterfly', 'd-fly d-fly-2'], ['#instagram', 'divider', 'd-div'],
     
     ['section.sec.shell', 'icon:brush', 'd-icon', 'left:2%;top:14%;--r:-24deg'],
     ['#behandelingen', 'icon:dropper', 'd-icon', 'right:4%;top:12%;--r:10deg'], ['#behandelingen', 'icon:mirror', 'd-icon', 'left:3%;bottom:10%;--r:-8deg'],
@@ -170,4 +171,13 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     made.forEach(function (d) { io.observe(d); });
   } else made.forEach(function (d) { d.classList.add('in', 'live'); });
+
+  var phone = document.querySelector('.ig-phone');
+  if (phone && 'IntersectionObserver' in window && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    phone.classList.add('ig-pre');
+    var pio = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { phone.classList.remove('ig-pre'); pio.disconnect(); }
+    }, { threshold: 0.25 });
+    pio.observe(phone);
+  }
 })();
