@@ -7,6 +7,9 @@
       ph: '[أضف صورة قبل/بعد]',
       illustration: 'رسم توضيحي - تختلف النتائج من شخص لآخر.',
       consent: 'صور مشاركة بموافقة خطية من العميلة. تختلف النتائج من شخص لآخر.' },
+    tr: { before: 'Önce', after: 'Sonra', aria: 'Önce ve sonrayı karşılaştır', ph: '[ÖNCE/SONRA GÖRSELİ EKLEYİN]',
+      illustration: 'Çizimdir - sonuçlar kişiden kişiye değişir.',
+      consent: 'Fotoğraflar, müşterinin yazılı onayıyla paylaşılmıştır. Sonuçlar kişiden kişiye değişir.' },
     en: { before: 'Before', after: 'After', aria: 'Compare before and after', ph: '[ADD BEFORE/AFTER IMAGE]',
       illustration: 'Illustration - results vary from person to person.',
       consent: 'Photos shared with the client’s written consent. Results vary from person to person.' }

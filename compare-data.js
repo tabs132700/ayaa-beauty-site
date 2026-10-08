@@ -10,12 +10,14 @@ window.COMPARE_PAIRS = [
     altBefore: {
       nl: 'Close-up van een gezicht met een wat doffe, ongelijkmatige huidtextuur',
       ar: 'لقطة قريبة لوجه ببشرة باهتة وملمس غير متجانس',
-      en: 'Close-up of a face with dull, slightly uneven skin texture'
+      en: 'Close-up of a face with dull, slightly uneven skin texture',
+      tr: 'Mat ve hafif düzensiz cilt dokusuna sahip bir yüzün yakın çekimi'
     },
     altAfter: {
       nl: 'Hetzelfde gezicht met een gladdere, egalere en stralendere huid',
       ar: 'الوجه نفسه ببشرة أكثر نعومة وتجانسًا وإشراقًا',
-      en: 'The same face with smoother, more even, glowing skin'
+      en: 'The same face with smoother, more even, glowing skin',
+      tr: 'Aynı yüz; daha pürüzsüz, daha eşit ve ışıltılı bir cilt'
     },
     caption: 'illustration'
   },
@@ -26,12 +28,14 @@ window.COMPARE_PAIRS = [
     altBefore: {
       nl: 'Gezicht en hals met zichtbare fijne lijntjes en een slappere huid',
       ar: 'الوجه والرقبة مع خطوط دقيقة ظاهرة وبشرة أقل شدًّا',
-      en: 'Face and neck with visible fine lines and looser skin'
+      en: 'Face and neck with visible fine lines and looser skin',
+      tr: 'İnce çizgileri belirgin ve daha gevşek cilde sahip yüz ve boyun'
     },
     altAfter: {
       nl: 'Hetzelfde gezicht en dezelfde hals met een gladdere, steviger ogende huid',
       ar: 'الوجه والرقبة نفسهما ببشرة أكثر نعومة وشدًّا',
-      en: 'The same face and neck with smoother, firmer-looking skin'
+      en: 'The same face and neck with smoother, firmer-looking skin',
+      tr: 'Aynı yüz ve boyun; daha pürüzsüz ve daha sıkı görünen cilt'
     },
     caption: 'illustration'
   },
@@ -43,12 +47,14 @@ window.COMPARE_PAIRS = [
     altBefore: {
       nl: 'Onderbenen en knieën met dichte, donkere beharing',
       ar: 'الساقان والركبتان مع نمو كثيف للشعر الداكن',
-      en: 'Lower legs and knees with dense, dark hair growth'
+      en: 'Lower legs and knees with dense, dark hair growth',
+      tr: 'Yoğun, koyu tüylü alt bacaklar ve dizler'
     },
     altAfter: {
       nl: 'Dezelfde benen met gladde, haarvrije huid',
       ar: 'الساقان نفسهما ببشرة ناعمة خالية من الشعر',
-      en: 'The same legs with smooth, hair-free skin'
+      en: 'The same legs with smooth, hair-free skin',
+      tr: 'Aynı bacaklar; pürüzsüz, tüysüz cilt'
     },
     caption: 'illustration'
   },
@@ -59,12 +65,14 @@ window.COMPARE_PAIRS = [
     altBefore: {
       nl: 'Staande vrouw, bovenbenen met zichtbaar oneffen huid (cellulitis)',
       ar: 'امرأة واقفة، الفخذان ببشرة غير مستوية ظاهرة (سيلوليت)',
-      en: 'Standing woman, thighs with visible dimpled skin (cellulite)'
+      en: 'Standing woman, thighs with visible dimpled skin (cellulite)',
+      tr: 'Ayakta duran kadın; uyluklarda belirgin çukurlaşmış cilt (selülit)'
     },
     altAfter: {
       nl: 'Dezelfde benen met een gladdere huid',
       ar: 'الساقان نفسهما ببشرة أكثر نعومة',
-      en: 'The same legs with smoother skin'
+      en: 'The same legs with smoother skin',
+      tr: 'Aynı bacaklar; daha pürüzsüz cilt'
     },
     caption: 'illustration'
   },
@@ -75,12 +83,14 @@ window.COMPARE_PAIRS = [
     altBefore: {
       nl: 'Gezicht met een droge, onregelmatige huid en fijne lijntjes',
       ar: 'وجه ببشرة جافة وملمس غير منتظم وخطوط دقيقة',
-      en: 'Face with dry, textured skin and fine lines'
+      en: 'Face with dry, textured skin and fine lines',
+      tr: 'Kuru, dokulu cilt ve ince çizgileri olan yüz'
     },
     altAfter: {
       nl: 'Hetzelfde gezicht met een gladdere, stralendere huid',
       ar: 'الوجه نفسه ببشرة أكثر نعومة وإشراقًا',
-      en: 'The same face with smoother, more radiant skin'
+      en: 'The same face with smoother, more radiant skin',
+      tr: 'Aynı yüz; daha pürüzsüz ve daha ışıltılı cilt'
     },
     caption: 'illustration'
   }

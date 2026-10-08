@@ -1196,6 +1196,7 @@ html[lang="ar"] .foot-legal button{font-size:14px}
   <div class="lang" role="group" aria-label="Taal / Language / اللغة">
     <button type="button" data-lang="nl" aria-pressed="true">NL</button>
     <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
     <button type="button" data-lang="ar" aria-pressed="false">ع</button>
   </div>
   <a class="btn btn-accent nav-cta" href="#afspraak" data-i18n="ctaNav">Afspraak maken</a>
@@ -1755,6 +1756,7 @@ html[lang="ar"] .foot-legal button{font-size:14px}
 
 </main>
 
+<script src="i18n-tr.js"></script>
 <script src="js/gsap.min.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
 <script>
@@ -2495,6 +2497,7 @@ ar: {
 
 
 
+I18N.tr = Object.assign({}, I18N.en, window.I18N_TR || {});
 /* legal / info pages share the page overlay with the treatment pages */
 [['privacy','legalPrivacy'],['terms','legalTerms'],['dmca','legalDmca'],['contact','legalContact'],['quals','legalQuals'],
  ['refund','legalRefund'],['cookies','legalCookies'],['biz','legalBiz'],['lic','legalLic']]
@@ -2538,7 +2541,7 @@ function applyAlt(){
   document.querySelectorAll('img[src^="img/"]').forEach(img => {
     if (img.closest('.frame')) { img.alt = ''; return; }
     const m = img.getAttribute('src').match(/img\/([^.]+)\./);
-    if (m && ALT[m[1]]) img.alt = lang === 'en' ? ALT_EN[m[1]] : ALT[m[1]][i];
+    if (m && ALT[m[1]]) img.alt = lang === 'tr' ? ((window.ALT_TR && ALT_TR[m[1]]) || ALT_EN[m[1]]) : lang === 'en' ? ALT_EN[m[1]] : ALT[m[1]][i];
   });
 }
 
@@ -3125,7 +3128,7 @@ if (matchMedia('(hover:hover)').matches){
 let saved = null;
 try { saved = localStorage.getItem('ayaa-lang'); } catch(e){}
 const nav0 = (navigator.language || '').toLowerCase();
-setLang((saved && I18N[saved]) ? saved : (nav0.indexOf('ar') === 0 ? 'ar' : nav0.indexOf('nl') === 0 ? 'nl' : 'en'), true);
+setLang((saved && I18N[saved]) ? saved : (nav0.indexOf('ar') === 0 ? 'ar' : nav0.indexOf('nl') === 0 ? 'nl' : nav0.indexOf('tr') === 0 ? 'tr' : 'en'), true);
 
 /* ═══════════════ motion ═══════════════ */
 if (!reduce && window.gsap){
