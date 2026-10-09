@@ -5,8 +5,8 @@
 window.COMPARE_PAIRS = [
   {
     treatmentId: 'hydrofacial',
-    beforeSrc: 'img/r-ba-hydro-before.webp',
-    afterSrc: 'img/r-ba-hydro.webp',
+    beforeSrc: '/img/r-ba-hydro-before.webp',
+    afterSrc: '/img/r-ba-hydro.webp',
     altBefore: {
       nl: 'Close-up van een gezicht met een wat doffe, ongelijkmatige huidtextuur',
       ar: 'لقطة قريبة لوجه ببشرة باهتة وملمس غير متجانس',
@@ -23,8 +23,8 @@ window.COMPARE_PAIRS = [
   },
   {
     treatmentId: 'rf',
-    beforeSrc: 'img/r-ba-rf-before.webp',
-    afterSrc: 'img/r-ba-rf.webp',
+    beforeSrc: '/img/r-ba-rf-before.webp',
+    afterSrc: '/img/r-ba-rf.webp',
     altBefore: {
       nl: 'Gezicht en hals met zichtbare fijne lijntjes en een slappere huid',
       ar: 'الوجه والرقبة مع خطوط دقيقة ظاهرة وبشرة أقل شدًّا',
@@ -42,8 +42,8 @@ window.COMPARE_PAIRS = [
   {
     treatmentId: 'laser',
     w: 832, h: 1248,
-    beforeSrc: 'img/r-ba-laser-before.webp',
-    afterSrc: 'img/r-ba-laser.webp',
+    beforeSrc: '/img/r-ba-laser-before.webp',
+    afterSrc: '/img/r-ba-laser.webp',
     altBefore: {
       nl: 'Onderbenen en knieën met dichte, donkere beharing',
       ar: 'الساقان والركبتان مع نمو كثيف للشعر الداكن',
@@ -60,8 +60,8 @@ window.COMPARE_PAIRS = [
   },
   {
     treatmentId: 'cavitation',
-    beforeSrc: 'img/r-ba-cavi-before.webp',
-    afterSrc: 'img/r-ba-cavi.webp',
+    beforeSrc: '/img/r-ba-cavi-before.webp',
+    afterSrc: '/img/r-ba-cavi.webp',
     altBefore: {
       nl: 'Staande vrouw, bovenbenen met zichtbaar oneffen huid (cellulitis)',
       ar: 'امرأة واقفة، الفخذان ببشرة غير مستوية ظاهرة (سيلوليت)',
@@ -78,8 +78,8 @@ window.COMPARE_PAIRS = [
   },
   {
     treatmentId: 'oxygen',
-    beforeSrc: 'img/r-ba-o2-before.webp',
-    afterSrc: 'img/r-ba-o2.webp',
+    beforeSrc: '/img/r-ba-o2-before.webp',
+    afterSrc: '/img/r-ba-o2.webp',
     altBefore: {
       nl: 'Gezicht met een droge, onregelmatige huid en fijne lijntjes',
       ar: 'وجه ببشرة جافة وملمس غير منتظم وخطوط دقيقة',

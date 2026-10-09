@@ -1,7 +1,7 @@
 /* Turkish. Anything missing here falls back to English (see I18N.tr in index.html). */
 window.I18N_TR = {
-  _desc:'Rotterdam’da Aya Beauty & Skin. Güzellik uzmanı Samar Tinawi’den hydrofacial, ekzozomlu mikroiğneleme, cilt iyileştirme ve lip blush. Üç kısa adımda randevu talep edin.',
-  _title:'Aya Beauty & Skin — Rotterdam Cilt Stüdyosu',
+  _desc:'Rotterdam’da güzellik uzmanı Samar Tinawi ile hydrofacial, mikroiğneleme, RF mikroiğneleme, lazer epilasyon ve lip blush. Kolayca randevu talep edin.',
+  _title:'Rotterdam Güzellik Uzmanı — Aya Beauty & Skin',
   _locale:'tr-TR',
   _marquee:['3D cilt ve saç analizi','Hydrofacial','Mikroiğneleme','RF mikroiğneleme','Ekzozom','Cilt iyileştirme','Lazer epilasyon','Lip Blush','Rotterdam'],
 
@@ -33,6 +33,7 @@ window.I18N_TR = {
   stepOf:'Adım {n} / 3',
   bkSendWa:'WhatsApp ile gönder',
   bkSendMail:'E-posta ile gönder',
+  bkSend:'Talebi gönder', bkSendErr:'Gönderme şu an olmadı. Lütfen talebinizi göndermek için aşağıdan başka bir yol seçin.', bkAutoReply:'Aya Beauty & Skin’e yaptığınız talep için teşekkürler. Talebiniz bize ulaştı; Samar zamanın uygun olup olmadığını size kişisel olarak bildirecek. Bu henüz onaylanmış bir randevu değildir.',
   bkSendIg:'Instagram DM ile gönder',
   bkReminder:'Bu bir taleptir, onaylanmış bir randevu değildir. Size kişisel olarak yanıt vereceğiz.',
   bkOk:'Talebiniz alındı. Zamanın uygun olup olmadığını size kişisel olarak bildireceğiz.',
