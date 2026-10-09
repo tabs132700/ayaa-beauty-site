@@ -138,7 +138,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:200;
   padding:9px 18px;border-radius:999px;box-shadow:0 10px 30px -14px rgba(23,18,15,.6);
   opacity:0;pointer-events:none;
   transition:opacity .25s,translate .55s cubic-bezier(.34,1.56,.64,1),scale .55s cubic-bezier(.34,1.56,.64,1),background .3s}
-[dir="rtl"] .quicknav a::after{inset-inline-end:auto;inset-inline-start:48px;transform-origin:left center}
+[dir="rtl"] .quicknav a::after{inset-inline-end:auto;inset-inline-start:auto;right:auto;left:48px;transform-origin:left center}
 /* hover the rail: every label springs out in a quick stagger; the current one is always visible */
 .quicknav:hover a::after,.quicknav a:focus-visible::after,.quicknav.qn-intro a::after,.quicknav a.qn-flash::after{opacity:1;translate:0 -50%;scale:1}
 /* on arrival every label shows for a moment (see script), then folds away; afterwards they only open on hover / focus */
